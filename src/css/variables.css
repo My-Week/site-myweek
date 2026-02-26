@@ -1,0 +1,87 @@
+/* ============================================
+   MyWeek - Variáveis (Design System)
+   Cores neon / roxo / ciano e tokens globais
+   ============================================ */
+
+:root {
+  /* Fundo (Rich Black) */
+  --bg-deep: #050508;
+  --bg-deep-darker: #020204;
+  --bg-surface: #0f0f13;
+  --cta-neon: 0 0 20px rgba(124, 58, 237, 0.4);
+  --text-shadow-btn: 0 1px 2px rgba(0, 0, 0, 0.25);
+
+  /* Ações (Electric Accents) — cores oficiais MyWeek */
+  --primary: #7c3aed;
+  --secondary: #10b981;
+  --primary-vibrant: #7c3aed;
+  --secondary-vibrant: #10b981;
+
+  /* Texto (High Contrast) */
+  --text-high: #ffffff;
+  --text-low: #b8b8c4;
+  --text-muted: #b8b8c4;
+
+  /* Bordas */
+  --border-subtle: rgba(255, 255, 255, 0.05);
+  --card-inner-glow: inset 0 1px 1px rgba(255, 255, 255, 0.1);
+  --border-definition: 1px solid var(--border-subtle);
+  --btn-glow-hover: 0 0 25px rgba(124, 58, 237, 0.5);
+  --accent-drop-shadow: 0 4px 24px rgba(124, 58, 237, 0.2);
+  --glow-primary: rgba(124, 58, 237, 0.35);
+  --glow-secondary: rgba(16, 185, 129, 0.25);
+  --overlay-dark: rgba(5, 5, 8, 0.88);
+  --overlay-darker: rgba(5, 5, 8, 0.94);
+  --overlay-top: rgba(2, 2, 4, 0.6);
+  --glass-bg: rgba(15, 15, 19, 0.6);
+  --glass-border: var(--border-subtle);
+  --focus-neon: 0 0 0 1px var(--primary-vibrant), 0 0 14px var(--glow-primary);
+  --glass-blur: 12px;
+
+  --bg-deep-mid: #0a0a10;
+  --bg-deep-soft: #08080d;
+  --shadow-deep: rgba(0, 0, 0, 0.2);
+  --shadow-deep-soft: rgba(0, 0, 0, 0.15);
+  --bg-primary-tint: rgba(124, 58, 237, 0.18);
+  --bg-secondary-tint: rgba(16, 185, 129, 0.18);
+  --bg-primary-tint-hover: rgba(124, 58, 237, 0.15);
+  --gradient-primary-start: rgba(124, 58, 237, 0.2);
+  --message-success-bg: rgba(16, 185, 129, 0.15);
+  --message-success-border: rgba(16, 185, 129, 0.35);
+  --message-error-bg: rgba(220, 53, 69, 0.1);
+  --message-error-border: rgba(220, 53, 69, 0.35);
+  --message-error-text: #f8a5b0;
+  --card-hover-bg: rgba(15, 15, 19, 0.85);
+
+  /* Tipografia — corpo: Inter; títulos: Plus Jakarta Sans (moderna, elegante) */
+  --font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  --font-family-heading: 'Plus Jakarta Sans', var(--font-family);
+
+  /* Espaçamento */
+  --space-xs: 0.25rem;
+  --space-sm: 0.5rem;
+  --space-md: 1rem;
+  --space-lg: 1.5rem;
+  --space-xl: 2rem;
+  --space-2xl: 3rem;
+  --space-3xl: 4rem;
+  --space-4xl: 5rem;
+  --space-5xl: 6rem;
+
+  --section-padding-y: 5rem;
+  --section-padding-y-desktop: 7.5rem;
+  --text-column-max: 37.5rem;
+  --line-height-body: 1.8;
+  --line-height-title: 1.4;
+  --title-letter-spacing: -0.01em;
+  --title-gradient: linear-gradient(180deg, #ffffff 0%, #e2e2ec 35%, #b8b8c8 100%);
+  --title-glow: 0 0 20px rgba(124, 58, 237, 0.3);
+  --container-max: 87.5rem;
+  --container-padding: var(--space-xl);
+
+  --radius-sm: 6px;
+  --radius-md: 10px;
+  --radius-lg: 16px;
+  --radius-full: 9999px;
+  --reveal-transition: 0.8s ease-out;
+}

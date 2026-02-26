@@ -1,0 +1,24 @@
+/* ============================================
+   MyWeek - Footer
+   ============================================ */
+
+.footer {
+  margin-top: auto;
+  padding: var(--space-2xl) 0;
+  background: rgba(5, 5, 8, 0.95);
+  border-top: 1px solid var(--border-subtle);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+}
+
+.footer__bottom {
+  margin-top: var(--space-xl);
+  text-align: center;
+}
+
+.footer__copy {
+  font-size: 0.9375rem;
+  font-weight: 300;
+  color: var(--text-low);
+  text-align: center;
+}

@@ -1,0 +1,13 @@
+/* ============================================
+   MyWeek - Entry point CSS
+   Importar todos os módulos na ordem correta
+   ============================================ */
+
+@import "variables.css";
+@import "base.css";
+@import "header.css";
+@import "hero.css";
+@import "sections.css";
+@import "forms.css";
+@import "footer.css";
+@import "animations.css";

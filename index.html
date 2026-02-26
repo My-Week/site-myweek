@@ -1,0 +1,455 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="MyWeek - Hub de Inteligência Cultural. Curadoria inteligente de eventos de nicho, divulgação para produtores e descoberta para o público. Jazz, techno, underground e mais.">
+  <meta name="keywords" content="MyWeek, eventos culturais, curadoria, produtores, divulgação eventos, cena cultural, hub inteligência cultural">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="MyWeek - Hub de Inteligência Cultural">
+  <meta property="og:description" content="O hub definitivo de divulgação e descoberta da cena cultural de nicho com IA. Curadoria inteligente para produtores e público.">
+  <meta property="og:locale" content="pt_BR">
+  <title>MyWeek - Hub de Inteligência Cultural | Curadoria Inteligente de Eventos</title>
+  <link rel="icon" type="image/svg+xml" href="assets/images/logo-myweek.svg">
+  <link rel="apple-touch-icon" href="assets/images/logo-myweek.svg">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Lora:ital@0;1&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="src/css/main.css">
+</head>
+<body>
+  <div class="layout">
+    <!-- ========== Header / Navegação ========== -->
+    <header class="header">
+      <div class="container">
+        <a href="#top" class="logo" aria-label="MyWeek - Voltar ao topo">
+          <img src="assets/images/logo-myweek.svg" alt="Logo MyWeek" class="logo__icon" width="38" height="38">
+          <div class="logo-wrapper">
+            <span class="logo__text">MyWeek</span>
+          </div>
+        </a>
+        <nav class="nav" aria-label="Navegação principal">
+          <a href="#b2b-platform" aria-label="Ir para seção Para Produtores">Para Produtores</a>
+          <a href="#b2c-experience" aria-label="Ir para seção Funcionalidades">Funcionalidades</a>
+          <a href="#download-app" aria-label="Ir para seção Download do App">App</a>
+          <a href="#sobre" aria-label="Ir para seção Sobre">Sobre</a>
+          <a href="#contact-form" aria-label="Ir para formulário de Contato">Contato</a>
+          <a href="#" class="btn btn--primary nav__login js-login-url" id="header-login" aria-label="Acessar login MyWeek">Login</a>
+        </nav>
+        <button type="button" class="nav-toggle" aria-label="Abrir menu" aria-expanded="false">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+      </div>
+    </header>
+
+    <main class="main">
+      <!-- ========== Hero (vídeo + CTA) ========== -->
+      <section class="hero" id="top">
+        <video class="hero-video" autoplay muted loop playsinline preload="metadata" aria-hidden="true" title="Vídeo decorativo de fundo">
+          <source src="assets/videos/hero-bokeh.mp4" type="video/mp4">
+        </video>
+        <div class="hero__overlay" aria-hidden="true"></div>
+        <div class="container hero__content hidden" data-reveal>
+          <h1 class="hero__title">Sua Curadoria Inteligente, descubra onde está sua cena</h1>
+          <p class="hero__subtitle">O hub definitivo de divulgação e descoberta da cena cultural de nicho com IA</p>
+        </div>
+      </section>
+
+      <!-- ========== Countdown (lançamento) ========== -->
+      <section class="countdown" id="countdown-timer">
+        <div class="container countdown__inner">
+          <p class="countdown__eyebrow">O futuro da cena cultural está chegando</p>
+          <div class="countdown__grid" aria-label="Contagem regressiva para o lançamento do MyWeek">
+            <div class="countdown__item">
+              <span class="countdown__number" id="days">00</span>
+              <span class="countdown__label">Dias</span>
+            </div>
+            <div class="countdown__item">
+              <span class="countdown__number" id="hours">00</span>
+              <span class="countdown__label">Horas</span>
+            </div>
+            <div class="countdown__item">
+              <span class="countdown__number" id="minutes">00</span>
+              <span class="countdown__label">Minutos</span>
+            </div>
+            <div class="countdown__item">
+              <span class="countdown__number" id="seconds">00</span>
+              <span class="countdown__label">Segundos</span>
+            </div>
+          </div>
+          <p class="countdown__footer">Prepare-se para a revolução na gestão de eventos e descoberta de nichos.</p>
+        </div>
+      </section>
+
+      <!-- ========== B2B — Para Produtores ========== -->
+      <section id="b2b-platform" class="b2b-platform">
+        <div class="container">
+          <p class="b2b-platform__lead">O produtor é quem alimenta o ecossistema com eventos de nicho. Nossa IA transforma cada evento em dados valiosos — tags, previsões e curadoria — que beneficiam toda a rede.</p>
+          <!-- Bloco 1: texto à esquerda, mídia à direita — Enriquecimento de Dados (IA sugerindo tags) -->
+          <div class="z-row z-row--reverse hidden" data-reveal>
+            <div class="z-row__inner">
+              <div class="z-row__body">
+                <h2 class="z-section__title">Sua essência, traduzida por dados.</h2>
+                <p class="z-section__text">Não perca tempo decifrando algoritmos. Nossa IA processa o conteúdo do seu evento para identificar e aplicar as <strong>tags de nicho mais precisas</strong>. Garantimos que sua produção chegue exatamente aos olhos da tribo que a valoriza, maximizando o alcance orgânico dentro da nossa rede de curadoria.</p>
+              </div>
+              <div class="z-row__media">
+                <div class="z-section__visual z-section__visual--tags z-section__visual--shadow" aria-hidden="true">
+                  <div class="tag-cloud">
+                    <span class="tag-cloud__tag">jazz</span>
+                    <span class="tag-cloud__tag tag-cloud__tag--m">underground</span>
+                    <span class="tag-cloud__tag tag-cloud__tag--s">live</span>
+                    <span class="tag-cloud__tag tag-cloud__tag--m">noite</span>
+                    <span class="tag-cloud__tag tag-cloud__tag--l">techno</span>
+                    <span class="tag-cloud__tag">house</span>
+                    <span class="tag-cloud__tag tag-cloud__tag--s">21+</span>
+                    <span class="tag-cloud__tag tag-cloud__tag--m">curadoria</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Bloco 2: mídia à esquerda, texto à direita (row-reverse) — Gestão Completa -->
+          <div class="z-row hidden" data-reveal>
+            <div class="z-row__inner">
+              <div class="z-row__body">
+                <h2 class="z-section__title">Controle total, do primeiro lote ao último clique.</h2>
+                <p class="z-section__text">Uma central de comando intuitiva para o seu evento. Gerencie atrações, controle a virada de lotes de ingressos e atualize sua galeria em tempo real. Com o MyWeek, a <strong>gestão operacional</strong> deixa de ser um gargalo e passa a ser sua maior vantagem competitiva.</p>
+              </div>
+              <div class="z-row__media">
+                <div class="z-section__visual z-section__visual--glass z-section__visual--shadow z-section__visual--shadow-green" aria-hidden="true">
+                  <div class="mini-dashboard">
+                    <span class="mini-dashboard__title">Status de Lotes</span>
+                    <ul class="mini-dashboard__lots">
+                      <li class="mini-dashboard__lot">
+                        <span class="mini-dashboard__lot-label">Lote 1</span>
+                        <span class="mini-dashboard__lot-pct">80% vendido</span>
+                        <div class="mini-dashboard__track"><span class="mini-dashboard__fill" style="--w: 80%"></span></div>
+                      </li>
+                      <li class="mini-dashboard__lot">
+                        <span class="mini-dashboard__lot-label">Lote 2</span>
+                        <span class="mini-dashboard__lot-pct">45% vendido</span>
+                        <div class="mini-dashboard__track"><span class="mini-dashboard__fill" style="--w: 45%"></span></div>
+                      </li>
+                      <li class="mini-dashboard__lot">
+                        <span class="mini-dashboard__lot-label">Lote 3</span>
+                        <span class="mini-dashboard__lot-pct">90% vendido</span>
+                        <div class="mini-dashboard__track"><span class="mini-dashboard__fill" style="--w: 90%"></span></div>
+                      </li>
+                      <li class="mini-dashboard__lot">
+                        <span class="mini-dashboard__lot-label">Lote 4</span>
+                        <span class="mini-dashboard__lot-pct">60% vendido</span>
+                        <div class="mini-dashboard__track"><span class="mini-dashboard__fill" style="--w: 60%"></span></div>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Bloco 3: texto à esquerda, mídia à direita — Conselhos Estratégicos (Otimização de timing e agenda) -->
+          <div class="z-row z-row--reverse hidden" data-reveal>
+            <div class="z-row__inner">
+              <div class="z-row__body">
+                <h2 class="z-section__title">Otimização que evita o silêncio.</h2>
+                <p class="z-section__text">O sucesso de um evento começa na agenda. Nosso <strong>Otimizador de Timing</strong> analisa o cenário cultural da cidade para sugerir os melhores dias e horários. Evite conflitos com outros grandes eventos de nicho e garanta que o fluxo de público esteja focado apenas na sua atração.</p>
+              </div>
+              <div class="z-row__media">
+                <div class="z-section__visual z-section__visual--heatmap z-section__visual--shadow" aria-hidden="true">
+                  <div class="heatmap">
+                    <span class="heatmap__label heatmap__label--y">Horário</span>
+                    <span class="heatmap__label heatmap__label--x">Dia</span>
+                    <div class="heatmap__grid" role="img" aria-label="Mapa de calor: melhores horários para evento">
+                      <span class="heatmap__cell heatmap__cell--low" title="Qui 18h"></span>
+                      <span class="heatmap__cell heatmap__cell--mid" title="Qui 20h"></span>
+                      <span class="heatmap__cell heatmap__cell--high" title="Qui 22h"></span>
+                      <span class="heatmap__cell heatmap__cell--mid" title="Qui 00h"></span>
+                      <span class="heatmap__cell heatmap__cell--low" title="Sex 18h"></span>
+                      <span class="heatmap__cell heatmap__cell--mid" title="Sex 20h"></span>
+                      <span class="heatmap__cell heatmap__cell--high" title="Sex 22h"></span>
+                      <span class="heatmap__cell heatmap__cell--best" title="Sex 23h"></span>
+                      <span class="heatmap__cell heatmap__cell--low" title="Sáb 18h"></span>
+                      <span class="heatmap__cell heatmap__cell--high" title="Sáb 20h"></span>
+                      <span class="heatmap__cell heatmap__cell--best" title="Sáb 21h"></span>
+                      <span class="heatmap__cell heatmap__cell--high" title="Sáb 22h"></span>
+                      <span class="heatmap__cell heatmap__cell--mid" title="Dom 18h"></span>
+                      <span class="heatmap__cell heatmap__cell--high" title="Dom 20h"></span>
+                      <span class="heatmap__cell heatmap__cell--mid" title="Dom 22h"></span>
+                      <span class="heatmap__cell heatmap__cell--low" title="Dom 00h"></span>
+                    </div>
+                    <span class="heatmap__caption">Qui · Sex · Sáb · Dom</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Bloco 4: mídia à esquerda, texto à direita (row-reverse) — Previsão de Público -->
+          <div class="z-row hidden" data-reveal>
+            <div class="z-row__inner">
+              <div class="z-row__body">
+                <h2 class="z-section__title">Previsão real para decisões seguras.</h2>
+                <p class="z-section__text">Chega de trabalhar no escuro. Utilizamos <strong>Machine Learning</strong> para estimar seu público provável com alta taxa de confiança. Dimensione sua equipe, estoque e orçamento com base em dados concretos de interesse regional, transformando incerteza em lucro.</p>
+              </div>
+              <div class="z-row__media">
+                <div class="z-section__visual z-section__visual--chart z-section__visual--shadow" aria-hidden="true">
+                  <div class="line-chart">
+                    <span class="line-chart__title">Interesse Estimado</span>
+                    <div class="line-chart__svg-wrap">
+                      <svg class="line-chart__svg" viewBox="0 0 260 100" preserveAspectRatio="none" aria-hidden="true">
+                        <defs>
+                          <linearGradient id="lineChartGradient" x1="0" y1="1" x2="0" y2="0">
+                            <stop offset="0%" stop-color="#a78bfa" stop-opacity="0"/>
+                            <stop offset="100%" stop-color="#7c3aed" stop-opacity="0.25"/>
+                          </linearGradient>
+                          <filter id="neonPurple" x="-20%" y="-20%" width="140%" height="140%">
+                            <feGaussianBlur stdDeviation="1.5" result="blur"/>
+                            <feMerge>
+                              <feMergeNode in="blur"/>
+                              <feMergeNode in="SourceGraphic"/>
+                            </feMerge>
+                          </filter>
+                        </defs>
+                        <path class="line-chart__area" fill="url(#lineChartGradient)" d="M0 85 C30 80 60 65 90 50 S150 25 180 18 S240 8 260 5 L260 100 L0 100 Z"/>
+                        <path class="line-chart__line" fill="none" stroke="#a78bfa" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" filter="url(#neonPurple)" d="M0 85 C30 80 60 65 90 50 S150 25 180 18 S240 8 260 5"/>
+                      </svg>
+                    </div>
+                    <div class="line-chart__axis">
+                      <span>Sem 1</span>
+                      <span>Sem 2</span>
+                      <span>Sem 3</span>
+                      <span>Sem 4</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ========== Transição B2B → B2C ========== -->
+      <section class="transition-lead" id="transition-b2b-b2c" aria-hidden="true">
+        <div class="container">
+          <p class="transition-lead__text">Da inteligência do produtor para a palma da sua mão.</p>
+        </div>
+      </section>
+
+      <!-- ========== B2C — Funcionalidades (usuário final) ========== -->
+      <section id="b2c-experience" class="b2c-experience">
+        <div class="container">
+          <p class="b2c-experience__lead">Toda a inteligência gerada pelos produtores chega até você de forma personalizada. Pergunte ao nosso Concierge o que fazer agora — ou descubra no seu feed.</p>
+          <!-- Bloco 1: texto à esquerda, mídia à direita — Concierge IA -->
+          <div class="z-row hidden" data-reveal>
+            <div class="z-row__inner">
+              <div class="z-row__body">
+                <h2 class="z-section__title">Seu guia pessoal para o underground.</h2>
+                <p class="z-section__text">'Tenho 3 horas livres, o que está acontecendo no meu nicho?'. Nosso <strong>Concierge IA</strong> entende seu gosto e localização para entregar roteiros instantâneos. É a inteligência artificial a serviço da sua curiosidade cultural.</p>
+              </div>
+              <div class="z-row__media">
+                <div class="z-section__visual z-section__visual--chat z-section__visual--shadow b2c-visual b2c-visual--concert" aria-hidden="true">
+                  <div class="chat-mockup">
+                    <div class="chat-mockup__msg chat-mockup__msg--user">
+                      <span class="chat-mockup__text">O que tem de bom hoje à noite perto de mim?</span>
+                    </div>
+                    <div class="chat-mockup__msg chat-mockup__msg--ia">
+                      <span class="chat-mockup__label">Concierge IA</span>
+                      <span class="chat-mockup__text">3 eventos no seu nicho: Jazz no Blue Note 21h, Techno no D-Edge 23h e um open mic no Bar do Zé. Quer roteiro com tempo de deslocamento?</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Bloco 2: mídia à esquerda, texto à direita — Smart Feed Personalizado -->
+          <div class="z-row hidden" data-reveal>
+            <div class="z-row__inner">
+              <div class="z-row__body">
+                <h2 class="z-section__title">Chega de ruído. Apenas sua cena.</h2>
+                <p class="z-section__text">Esqueça o mainstream. Nosso <strong>Smart Feed</strong> prioriza eventos por afinidade real, distância e benefícios exclusivos. Visualize apenas o que importa para você, de Jazz Experimental a Post-Punk.</p>
+              </div>
+              <div class="z-row__media">
+                <div class="z-section__visual z-section__visual--feed z-section__visual--shadow b2c-visual b2c-visual--venue" aria-hidden="true">
+                  <div class="feed-mockup">
+                    <div class="feed-mockup__card feed-mockup__card--1">
+                      <span class="feed-mockup__tag feed-mockup__tag--purple">Jazz</span>
+                      <span class="feed-mockup__title">Blue Note — Hoje 21h</span>
+                    </div>
+                    <div class="feed-mockup__card feed-mockup__card--2">
+                      <span class="feed-mockup__tag feed-mockup__tag--green">Techno</span>
+                      <span class="feed-mockup__title">D-Edge — Sáb 23h</span>
+                    </div>
+                    <div class="feed-mockup__card feed-mockup__card--3">
+                      <span class="feed-mockup__tag feed-mockup__tag--purple">Post-Punk</span>
+                      <span class="feed-mockup__title">Casa da Música — Sex 22h</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Bloco 3: texto à esquerda, mídia à direita — Experiência Completa (Vouchers) -->
+          <div class="z-row hidden" data-reveal>
+            <div class="z-row__inner">
+              <div class="z-row__body">
+                <h2 class="z-section__title">Uma experiência que vai além do evento.</h2>
+                <p class="z-section__text">O MyWeek conecta você a parceiros locais. Ganhe <strong>vouchers exclusivos</strong> em restaurantes, bares e transporte ao registrar interesse em um evento. Criamos o roteiro completo para que sua única preocupação seja aproveitar a noite.</p>
+              </div>
+              <div class="z-row__media">
+                <div class="z-section__visual z-section__visual--voucher z-section__visual--shadow z-section__visual--shadow-green b2c-visual b2c-visual--night" aria-hidden="true">
+                  <div class="ticket-mockup">
+                    <div class="ticket-mockup__paper">
+                      <div class="ticket-mockup__main">
+                        <span class="ticket-mockup__event">Jazz Night — Blue Note</span>
+                        <span class="ticket-mockup__meta">Sáb 21h · 1 ingresso</span>
+                      </div>
+                      <div class="ticket-mockup__perf" aria-hidden="true"></div>
+                      <div class="ticket-mockup__seal">
+                        <span class="ticket-mockup__seal-pct">-20%</span>
+                        <span class="ticket-mockup__seal-label">jantar parceiro</span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ========== Download do App — mesma fluidez que Contato e Feedbacks ========== -->
+      <section class="download-app hidden" id="download-app" data-reveal>
+        <div class="download-app__orbs" aria-hidden="true">
+          <span class="download-app__orb download-app__orb--purple"></span>
+          <span class="download-app__orb download-app__orb--cyan"></span>
+        </div>
+        <div class="container download-app__container">
+          <div class="download-app__card">
+            <div class="download-app__inner">
+              <h2 class="download-app__title">Leve a cena no seu bolso</h2>
+              <p class="download-app__desc">Descubra eventos underground e de nicho em tempo real. Curadoria inteligente no seu celular.</p>
+              <div class="download-app__stores">
+                <a href="#" class="download-app__btn download-app__btn--ios js-store-link" data-store="ios" target="_blank" rel="noopener noreferrer" aria-label="Baixar na App Store">
+                  <img src="assets/images/icons8-apple-inc-50.png" alt="" class="download-app__icon download-app__icon--apple" width="24" height="24" loading="lazy">
+                  <span>App Store</span>
+                </a>
+                <a href="#" class="download-app__btn download-app__btn--android js-store-link" data-store="android" target="_blank" rel="noopener noreferrer" aria-label="Baixar no Google Play">
+                  <img src="assets/images/icons8-google-play-50.png" alt="" class="download-app__icon download-app__icon--play" width="24" height="24" loading="lazy">
+                  <span>Google Play</span>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ========== Sobre (pillars, manifesto) ========== -->
+      <section class="content content--about hidden" id="sobre" data-reveal>
+        <div class="container">
+          <div class="about-text">
+            <h2 class="content__title">A Inteligência por trás da Cena.</h2>
+            <p class="content__lead about-text__manifesto">
+              O MyWeek nasceu para preencher o vazio deixado pelos canais de divulgação em massa. Somos um Hub de Inteligência Cultural projetado para dar voz a eventos de nicho — do Jazz Experimental ao Post-Punk — e conectar tribos a experiências autênticas que o mainstream ignora.
+            </p>
+            <p class="content__lead about-text__differential">
+              <strong>Diferencial:</strong> Não somos apenas um calendário. Somos uma plataforma que utiliza Agentes de IA para transformar eventos em dados estratégicos para produtores e curadoria personalizada para usuários.
+            </p>
+          </div>
+
+          <div class="content__pillars" role="list">
+            <article class="content__pillar" role="listitem">
+              <span class="content__pillar-icon" aria-hidden="true">
+                <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2l1.5 4.5L18 8l-4.5 1.5L12 14l-1.5-4.5L6 8l4.5-1.5L12 2z"/><path d="M8 16l1 3 3-1 1-3-3 1-2-2z"/></svg>
+              </span>
+              <h3 class="content__pillar-title">Curadoria Humana, IA Inteligente</h3>
+              <p class="content__pillar-text">Algoritmos que respeitam o gosto do usuário.</p>
+            </article>
+            <article class="content__pillar content__pillar--center" role="listitem">
+              <span class="content__pillar-icon" aria-hidden="true">
+                <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="3"/><path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M6.34 17.66l-1.41 1.41M19.07 4.93l-1.41 1.41"/><path d="M12 5a7 7 0 0 1 7 7 7 7 0 0 1-7 7 7 7 0 0 1-7-7 7 7 0 0 1 7-7z"/></svg>
+              </span>
+              <h3 class="content__pillar-title">Ecossistema Sustentável</h3>
+              <p class="content__pillar-text">Conexão direta entre produtores, parceiros locais e público.</p>
+            </article>
+            <article class="content__pillar" role="listitem">
+              <span class="content__pillar-icon" aria-hidden="true">
+                <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M3 3v18h18"/><path d="M18 17V9M13 17V5M8 17v-3"/></svg>
+              </span>
+              <h3 class="content__pillar-title">Dados que Geram Valor</h3>
+              <p class="content__pillar-text">Transformação de métricas em decisões para o mercado cultural.</p>
+            </article>
+          </div>
+
+          <p class="content__cta-subtitle">Pronto para descobrir sua próxima cena ou escalar seu evento?</p>
+        </div>
+      </section>
+
+      <!-- ========== Interesse Comercial (formulário) ========== -->
+      <section class="commercial hidden" id="contact-form" data-reveal>
+        <div class="container commercial__inner">
+          <div class="commercial__copy">
+            <h2 class="commercial__title">Interesse Comercial</h2>
+            <p class="commercial__lead">
+              Somos um Hub de Inteligência Cultural. Ao entrar em contato, você dá o primeiro passo para acessar dados estratégicos sobre público, timing e performance dos seus eventos de nicho.
+            </p>
+          </div>
+
+          <div class="commercial__form-wrap">
+            <form class="commercial__form" action="#" method="post">
+              <div class="form-group form-group--float">
+                <input class="form-input" type="text" id="empresa" name="empresa" placeholder=" " required autocomplete="organization">
+                <label class="form-label" for="empresa">Nome da Empresa</label>
+              </div>
+              <div class="form-group form-group--float">
+                <input class="form-input" type="email" id="email" name="email" placeholder=" " required autocomplete="email">
+                <label class="form-label" for="email">E-mail Corporativo</label>
+              </div>
+              <button type="submit" class="btn btn--primary commercial__submit">Enviar</button>
+            </form>
+          </div>
+        </div>
+      </section>
+
+      <!-- ========== Feedbacks — 3 cards em grid, 3 aleatórios entre 6 a cada reload ========== -->
+      <section class="feedbacks hidden" id="feedbacks" data-reveal>
+        <script type="application/json" id="feedbacks-data">
+          [
+            { "quote": "O MyWeek mudou a forma como divulgamos nossos eventos. Público mais qualificado e menos trabalho manual.", "author": "Maria S.", "role": "Produtora" },
+            { "quote": "A previsão de público nos ajuda a dimensionar estrutura e equipe. Precisão que não tínhamos antes.", "author": "Ricardo L.", "role": "Organizador" },
+            { "quote": "Dashboard claro e métricas em tempo real. Finalmente conseguimos tomar decisões baseadas em dados.", "author": "Ana C.", "role": "Gestora de Eventos" },
+            { "quote": "Integração simples com nossas redes. Em poucos cliques divulgamos e acompanhamos o engajamento.", "author": "Pedro M.", "role": "Social Media" },
+            { "quote": "A ferramenta de confirmação reduz no-show e nos dá uma base confiável para planejar o próximo evento.", "author": "Carla F.", "role": "Coordenadora" },
+            { "quote": "Relatórios prontos e visualização por período. Economizamos horas que antes gastávamos em planilhas.", "author": "Bruno T.", "role": "Analista" }
+          ]
+        </script>
+        <div class="feedbacks__orbs" aria-hidden="true">
+          <span class="feedbacks__orb feedbacks__orb--purple"></span>
+          <span class="feedbacks__orb feedbacks__orb--cyan"></span>
+        </div>
+        <div class="container feedbacks__container">
+          <h2 class="feedbacks__title">Feedbacks</h2>
+          <div class="feedbacks__grid" aria-live="polite"></div>
+        </div>
+      </section>
+    </main>
+
+    <!-- ========== Footer ========== -->
+    <footer class="footer reveal">
+      <div class="footer__bottom reveal">
+        <p class="footer__copy">&copy; 2026 MyWeek — Lançamento em 6 meses</p>
+      </div>
+    </footer>
+  </div>
+
+  <script src="src/js/countdown.js" defer></script>
+  <script src="src/js/form-handler.js" defer></script>
+  <script src="src/js/animations.js" defer></script>
+  <script src="src/js/testimonials.js" defer></script>
+  <script src="src/js/main.js" defer></script>
+</body>
+</html>

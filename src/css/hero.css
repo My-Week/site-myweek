@@ -1,0 +1,109 @@
+/* ============================================
+   MyWeek - Hero (vídeo de fundo e conteúdo)
+   ============================================ */
+
+.hero {
+  position: relative;
+  min-height: 85vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: var(--section-padding-y) 0;
+  text-align: center;
+  overflow: hidden;
+}
+
+@media (min-width: 1024px) {
+  .hero {
+    padding-top: var(--section-padding-y-desktop);
+    padding-bottom: var(--section-padding-y-desktop);
+  }
+}
+
+.hero-video {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: -1;
+  filter: brightness(0.4) saturate(0.8);
+}
+
+.hero__overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to bottom, rgba(5, 5, 8, 0.5), #050508);
+  pointer-events: none;
+}
+
+.hero__content {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  border: 1px solid rgba(255, 255, 255, 0.06);
+  border-radius: var(--radius-lg);
+  box-shadow:
+    var(--card-inner-glow),
+    0 4px 28px rgba(124, 58, 237, 0.18),
+    0 0 60px rgba(124, 58, 237, 0.12);
+  padding: var(--space-2xl) var(--space-xl);
+  min-height: 18rem;
+  backdrop-filter: blur(2px);
+  -webkit-backdrop-filter: blur(2px);
+  animation: hero-content-pulse 6s ease-in-out infinite;
+}
+
+@keyframes hero-content-pulse {
+  0%, 100% {
+    box-shadow:
+      var(--card-inner-glow),
+      0 4px 28px rgba(124, 58, 237, 0.22),
+      0 0 65px rgba(124, 58, 237, 0.16);
+    border-color: rgba(124, 58, 237, 0.35);
+  }
+  33% {
+    box-shadow:
+      var(--card-inner-glow),
+      0 4px 32px rgba(6, 182, 212, 0.2),
+      0 0 65px rgba(6, 182, 212, 0.14);
+    border-color: rgba(6, 182, 212, 0.32);
+  }
+  66% {
+    box-shadow:
+      var(--card-inner-glow),
+      0 4px 32px rgba(16, 185, 129, 0.2),
+      0 0 65px rgba(16, 185, 129, 0.14);
+    border-color: rgba(16, 185, 129, 0.32);
+  }
+}
+
+.hero__title {
+  font-size: clamp(2rem, 5vw, 4.5rem);
+  font-weight: 800;
+  letter-spacing: var(--title-letter-spacing);
+  line-height: var(--line-height-title);
+  margin-bottom: 0.45em;
+  max-width: var(--text-column-max);
+  margin-left: auto;
+  margin-right: auto;
+  text-shadow: var(--title-glow);
+  background: var(--title-gradient);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.hero__subtitle {
+  font-size: clamp(1rem, 2.5vw, 1.25rem);
+  font-weight: 300;
+  letter-spacing: 0.01em;
+  color: var(--text-muted);
+  max-width: var(--text-column-max);
+  margin: 0;
+  line-height: 1.8;
+}
