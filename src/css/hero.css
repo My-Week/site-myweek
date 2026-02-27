@@ -2,8 +2,6 @@
    MyWeek - Hero (vídeo de fundo e conteúdo)
    ============================================ */
 
-/* 100dvh = Dynamic Viewport Height: preenche a tela ignorando barras do Android que variam */
-/* background sólido: usuário vê o fundo escuro imediatamente enquanto o vídeo carrega */
 .hero {
   position: relative;
   min-height: 100vh;
@@ -15,6 +13,7 @@
   text-align: center;
   overflow: hidden;
   background-color: #050508;
+  max-width: 100%;
 }
 
 @media (min-width: 1024px) {

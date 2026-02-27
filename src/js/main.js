@@ -41,6 +41,13 @@
           setMenuOpen(false);
         });
       });
+
+      var navClose = nav.querySelector('.nav-close');
+      if (navClose) {
+        navClose.addEventListener('click', function () {
+          setMenuOpen(false);
+        });
+      }
     }
   }
 
