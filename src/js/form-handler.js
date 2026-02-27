@@ -152,6 +152,13 @@
 
   function showCommercialSuccessMessageWithAutoCloseAndLock(formEl) {
     showCommercialSuccessMessage(formEl);
+    if (window.MyWeek && typeof window.MyWeek.spawnSuccessParticles === 'function') {
+      try {
+        window.MyWeek.spawnSuccessParticles(formEl);
+      } catch (e) {
+        // não interromper fluxo do formulário se partículas falharem
+      }
+    }
     // Quando a mensagem sumir (timeout ou rolagem para fora da seção), trava o formulário
     scheduleMessageAutoClose(formEl, function () {
       lockCommercialForm(formEl);

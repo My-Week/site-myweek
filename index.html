@@ -14,7 +14,7 @@
   <link rel="apple-touch-icon" href="assets/images/logo-myweek.svg">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Lora:ital@0;1&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Outfit:wght@300;400;500;600;700;800&family=Lora:ital@0;1&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="src/css/main.css">
   <script>
     (function() {
@@ -69,7 +69,7 @@
           <a href="#download-app" data-i18n="nav.app">App</a>
           <a href="#sobre" data-i18n="nav.about">Sobre</a>
           <a href="#contact-form" data-i18n="nav.contact">Contato</a>
-          <a href="#" class="btn btn--primary nav__login js-login-url" id="header-login" data-i18n="nav.login" aria-label="Acessar login MyWeek">Login</a>
+          <a href="#" class="btn btn--primary nav__login js-login-url has-shimmer" id="header-login" data-i18n="nav.login" aria-label="Acessar login MyWeek">Login</a>
         </nav>
         <div class="nav-backdrop" aria-hidden="true"></div>
         <button type="button" class="nav-toggle" data-i18n-aria-label="nav.open" aria-label="Abrir menu" aria-expanded="false">
@@ -81,16 +81,27 @@
     </header>
 
     <main class="main">
-      <!-- ========== Hero (vídeo + CTA) ========== -->
+      <!-- ========== Hero (vídeo + mesh gradient + layout assimétrico) ========== -->
       <section class="hero" id="top">
-        <!-- playsinline evita fullscreen no iPhone; preload=auto para iniciar a reprodução -->
+        <div class="hero__mesh" aria-hidden="true"></div>
         <video class="hero-video" playsinline muted loop autoplay preload="auto" fetchpriority="high" aria-hidden="true" title="Vídeo decorativo de fundo">
           <source src="assets/videos/hero-bokeh.mp4" type="video/mp4">
         </video>
         <div class="hero__overlay" aria-hidden="true"></div>
-        <div class="container hero__content hidden" data-reveal>
-          <h1 class="hero__title" data-i18n="hero.title">Sua Curadoria Inteligente, descubra onde está sua cena</h1>
-          <p class="hero__subtitle" data-i18n="hero.subtitle">O hub definitivo de divulgação e descoberta da cena cultural de nicho com IA</p>
+        <div class="container hero__content">
+          <div class="hero__grid">
+            <div class="hero__col hero__col--text">
+              <h1 class="hero__title" data-i18n="hero.title">Sua Curadoria Inteligente, descubra onde está sua cena</h1>
+              <p class="hero__subtitle" data-i18n="hero.subtitle">O hub definitivo de divulgação e descoberta da cena cultural de nicho com IA</p>
+              <div class="hero__actions">
+                <a href="#countdown-timer" class="btn hero__btn hero__btn--primary has-shimmer" data-i18n="hero.ctaPrimary">Quero participar do lançamento</a>
+                <a href="#sobre" class="btn hero__btn hero__btn--ghost has-shimmer" data-i18n="hero.ctaSecondary">Entender como a MyWeek funciona</a>
+              </div>
+            </div>
+          </div>
+          <button type="button" class="hero__scroll" aria-label="Rolar para ver mais" onclick="document.getElementById('countdown-timer').scrollIntoView({ behavior: 'smooth' });">
+            <span class="hero__scroll-line"></span>
+          </button>
         </div>
       </section>
 
@@ -275,86 +286,76 @@
         </div>
       </section>
 
-      <!-- ========== B2C — Funcionalidades (usuário final) ========== -->
+      <!-- ========== B2C — Funcionalidades (usuário final) em Bento Grid ========== -->
       <section id="b2c-experience" class="b2c-experience">
         <div class="container">
           <p class="b2c-experience__lead" data-i18n="b2c.lead">Toda a inteligência gerada pelos produtores chega até você de forma personalizada. Pergunte ao nosso Concierge o que fazer agora — ou descubra no seu feed.</p>
-          <!-- Bloco 1: texto à esquerda, mídia à direita — Concierge IA -->
-          <div class="z-row hidden" data-reveal>
-            <div class="z-row__inner">
-              <div class="z-row__body">
-                <h2 class="z-section__title" data-i18n="b2c.block1Title">Seu guia pessoal para o underground.</h2>
-                <p class="z-section__text" data-i18n="b2c.block1Text">'Tenho 3 horas livres, o que está acontecendo no meu nicho?'. Nosso Concierge IA entende seu gosto e localização para entregar roteiros instantâneos. É a inteligência artificial a serviço da sua curiosidade cultural.</p>
-              </div>
-              <div class="z-row__media">
-                <div class="z-section__visual z-section__visual--chat z-section__visual--shadow b2c-visual b2c-visual--concert" aria-hidden="true">
-                  <div class="chat-mockup">
-                    <div class="chat-mockup__msg chat-mockup__msg--user">
-                      <span class="chat-mockup__text" data-i18n="b2c.chatUser">O que tem de bom hoje à noite perto de mim?</span>
-                    </div>
-                    <div class="chat-mockup__msg chat-mockup__msg--ia">
-                      <span class="chat-mockup__label" data-i18n="b2c.chatIALabel">Concierge IA</span>
-                      <span class="chat-mockup__text" data-i18n="b2c.chatIAText">3 eventos no seu nicho: Jazz no Blue Note 21h, Techno no D-Edge 23h e um open mic no Bar do Zé. Quer roteiro com tempo de deslocamento?</span>
-                    </div>
-                  </div>
+          <div class="features-bento hidden" data-reveal>
+            <!-- Card principal: Timing (2x2) com gráfico SVG minimalista -->
+            <article class="feature-card feature-card--timing has-shimmer">
+              <h2 class="feature-card__title" data-i18n="features.timingTitle">Timing inteligente de agenda</h2>
+              <p class="feature-card__text" data-i18n="features.timingText">Nossa IA aprende os horários em que a sua cena realmente acontece e projeta picos de interesse ao longo da semana.</p>
+              <div class="feature-card__viz feature-card__viz--chart" aria-hidden="true">
+                <svg class="feature-chart" viewBox="0 0 240 120" preserveAspectRatio="none">
+                  <defs>
+                    <linearGradient id="featureChartArea" x1="0" y1="1" x2="0" y2="0">
+                      <stop offset="0%" stop-color="#22d3ee" stop-opacity="0"/>
+                      <stop offset="100%" stop-color="#7c3aed" stop-opacity="0.26"/>
+                    </linearGradient>
+                  </defs>
+                  <path class="feature-chart__area" fill="url(#featureChartArea)" d="M0 95 C30 90 55 82 80 70 S130 42 160 35 S210 22 240 18 L240 120 L0 120 Z"></path>
+                  <path class="feature-chart__line" fill="none" stroke="#a855f7" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" d="M0 95 C30 90 55 82 80 70 S130 42 160 35 S210 22 240 18"></path>
+                </svg>
+                <div class="feature-chart__labels">
+                  <span data-i18n="b2b.sem1">Sem 1</span>
+                  <span data-i18n="b2b.sem2">Sem 2</span>
+                  <span data-i18n="b2b.sem3">Sem 3</span>
+                  <span data-i18n="b2b.sem4">Sem 4</span>
                 </div>
               </div>
-            </div>
-          </div>
+            </article>
 
-          <!-- Bloco 2: mídia à esquerda, texto à direita — Smart Feed Personalizado -->
-          <div class="z-row hidden" data-reveal>
-            <div class="z-row__inner">
-              <div class="z-row__body">
-                <h2 class="z-section__title" data-i18n="b2c.block2Title">Chega de ruído. Apenas sua cena.</h2>
-                <p class="z-section__text" data-i18n="b2c.block2Text">Esqueça o mainstream. Nosso Smart Feed prioriza eventos por afinidade real, distância e benefícios exclusivos. Visualize apenas o que importa para você, de Jazz Experimental a Post-Punk.</p>
-              </div>
-              <div class="z-row__media">
-                <div class="z-section__visual z-section__visual--feed z-section__visual--shadow b2c-visual b2c-visual--venue" aria-hidden="true">
-                  <div class="feed-mockup">
-                    <div class="feed-mockup__card feed-mockup__card--1">
-                      <span class="feed-mockup__tag feed-mockup__tag--purple">Jazz</span>
-                      <span class="feed-mockup__title" data-i18n="b2c.feedCard1">Blue Note — Hoje 21h</span>
-                    </div>
-                    <div class="feed-mockup__card feed-mockup__card--2">
-                      <span class="feed-mockup__tag feed-mockup__tag--green">Techno</span>
-                      <span class="feed-mockup__title" data-i18n="b2c.feedCard2">D-Edge — Sáb 23h</span>
-                    </div>
-                    <div class="feed-mockup__card feed-mockup__card--3">
-                      <span class="feed-mockup__tag feed-mockup__tag--purple">Post-Punk</span>
-                      <span class="feed-mockup__title" data-i18n="b2c.feedCard3">Casa da Música — Sex 22h</span>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
+            <!-- Card Público (1x2) -->
+            <article class="feature-card feature-card--audience has-shimmer">
+              <h2 class="feature-card__title" data-i18n="features.audienceTitle">Mapa vivo de público</h2>
+              <p class="feature-card__text" data-i18n="features.audienceText">Visualize o interesse por nicho, cidade e horário para entender onde sua cena pulsa mais forte.</p>
+              <ul class="feature-card__list">
+                <li><span class="feature-badge">+124%</span><span data-i18n="features.audienceItem1">Crescimento em noites de quinta</span></li>
+                <li><span class="feature-badge">73%</span><span data-i18n="features.audienceItem2">Preferem venues até 30 min de casa</span></li>
+                <li><span class="feature-badge">5</span><span data-i18n="features.audienceItem3">cenas de nicho em alta na sua cidade</span></li>
+              </ul>
+            </article>
 
-          <!-- Bloco 3: texto à esquerda, mídia à direita — Experiência Completa (Vouchers) -->
-          <div class="z-row hidden" data-reveal>
-            <div class="z-row__inner">
-              <div class="z-row__body">
-                <h2 class="z-section__title" data-i18n="b2c.block3Title">Uma experiência que vai além do evento.</h2>
-                <p class="z-section__text" data-i18n="b2c.block3Text">O MyWeek conecta você a parceiros locais. Ganhe vouchers exclusivos em restaurantes, bares e transporte ao registrar interesse em um evento. Criamos o roteiro completo para que sua única preocupação seja aproveitar a noite.</p>
-              </div>
-              <div class="z-row__media">
-                <div class="z-section__visual z-section__visual--voucher z-section__visual--shadow z-section__visual--shadow-green b2c-visual b2c-visual--night" aria-hidden="true">
-                  <div class="ticket-mockup">
-                    <div class="ticket-mockup__paper">
-                      <div class="ticket-mockup__main">
-                        <span class="ticket-mockup__event" data-i18n="b2c.ticketEvent">Jazz Night — Blue Note</span>
-                        <span class="ticket-mockup__meta" data-i18n="b2c.ticketMeta">Sáb 21h · 1 ingresso</span>
-                      </div>
-                      <div class="ticket-mockup__perf" aria-hidden="true"></div>
-                      <div class="ticket-mockup__seal">
-                        <span class="ticket-mockup__seal-pct">-20%</span>
-                        <span class="ticket-mockup__seal-label" data-i18n="b2c.ticketSeal">jantar parceiro</span>
-                      </div>
-                    </div>
-                  </div>
+            <!-- Card Performance (1x1) -->
+            <article class="feature-card feature-card--performance has-shimmer">
+              <h2 class="feature-card__title" data-i18n="features.performanceTitle">Performance em tempo real</h2>
+              <p class="feature-card__text" data-i18n="features.performanceText">Acompanhe quais eventos, dias e formatos entregam mais resultado para a sua cena.</p>
+              <div class="feature-metrics">
+                <div class="feature-metrics__item">
+                  <span class="feature-metrics__label" data-i18n="features.performanceMetric1Label">Conversão média</span>
+                  <span class="feature-metrics__value">4.8%</span>
+                </div>
+                <div class="feature-metrics__item">
+                  <span class="feature-metrics__label" data-i18n="features.performanceMetric2Label">Check-ins confirmados</span>
+                  <span class="feature-metrics__value">92%</span>
                 </div>
               </div>
-            </div>
+            </article>
+
+            <!-- Card Concierge/Experiência (1x2) -->
+            <article class="feature-card feature-card--concierge has-shimmer">
+              <h2 class="feature-card__title" data-i18n="features.conciergeTitle">Concierge IA alimentado por dados</h2>
+              <p class="feature-card__text" data-i18n="features.conciergeText">O que o usuário vê no app é o reflexo direto de timing, público e performance que a plataforma aprende todos os dias.</p>
+              <div class="feature-concierge" aria-hidden="true">
+                <div class="feature-concierge__msg feature-concierge__msg--user">
+                  <span class="feature-concierge__text" data-i18n="b2c.chatUser">O que tem de bom hoje à noite perto de mim?</span>
+                </div>
+                <div class="feature-concierge__msg feature-concierge__msg--ia">
+                  <span class="feature-concierge__label" data-i18n="b2c.chatIALabel">Concierge IA</span>
+                  <span class="feature-concierge__text" data-i18n="b2c.chatIAText">3 eventos no seu nicho: Jazz no Blue Note 21h, Techno no D-Edge 23h e um open mic no Bar do Zé. Quer roteiro com tempo de deslocamento?</span>
+                </div>
+              </div>
+            </article>
           </div>
         </div>
       </section>
@@ -371,11 +372,11 @@
               <h2 class="download-app__title" data-i18n="download.title">Leve a cena no seu bolso</h2>
               <p class="download-app__desc" data-i18n="download.desc">Descubra eventos underground e de nicho em tempo real. Curadoria inteligente no seu celular.</p>
               <div class="download-app__stores">
-                <a href="#" class="download-app__btn download-app__btn--ios js-store-link" data-store="ios" target="_blank" rel="noopener noreferrer" aria-label="Baixar na App Store">
+                <a href="#" class="download-app__btn download-app__btn--ios js-store-link has-shimmer" data-store="ios" target="_blank" rel="noopener noreferrer" aria-label="Baixar na App Store">
                   <img src="assets/images/icons8-apple-inc-50.png" alt="" class="download-app__icon download-app__icon--apple" width="24" height="24" loading="lazy">
                   <span data-i18n="download.appStore">App Store</span>
                 </a>
-                <a href="#" class="download-app__btn download-app__btn--android js-store-link" data-store="android" target="_blank" rel="noopener noreferrer" aria-label="Baixar no Google Play">
+                <a href="#" class="download-app__btn download-app__btn--android js-store-link has-shimmer" data-store="android" target="_blank" rel="noopener noreferrer" aria-label="Baixar no Google Play">
                   <img src="assets/images/icons8-google-play-50.png" alt="" class="download-app__icon download-app__icon--play" width="24" height="24" loading="lazy">
                   <span data-i18n="download.googlePlay">Google Play</span>
                 </a>
@@ -483,6 +484,11 @@
   </div>
 
   <!-- Scripts com defer: não bloqueiam a renderização do texto e do layout -->
+  <!-- GSAP + ScrollTrigger (CDN) para animações profissionais de rolagem -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js" defer></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js" defer></script>
+  <!-- VanillaTilt para tilt 3D suave em cards e botões -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/vanilla-tilt/1.8.1/vanilla-tilt.min.js" defer></script>
   <script src="src/js/i18n.js" defer></script>
   <script src="src/js/countdown.js" defer></script>
   <script src="src/js/form-handler.js" defer></script>

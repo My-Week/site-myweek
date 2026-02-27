@@ -19,6 +19,69 @@
   transform: translateY(0);
 }
 
+/* Shimmer glass genérico para cards / botões */
+.has-shimmer {
+  position: relative;
+  overflow: hidden;
+}
+
+.has-shimmer::before {
+  content: '';
+  position: absolute;
+  inset: -150%;
+  background: linear-gradient(
+    120deg,
+    transparent 0%,
+    rgba(255, 255, 255, 0.28) 45%,
+    rgba(255, 255, 255, 0.5) 50%,
+    rgba(255, 255, 255, 0.22) 55%,
+    transparent 100%
+  );
+  opacity: 0;
+  transform: translate3d(-60%, 0, 0) rotate(15deg);
+  pointer-events: none;
+  mix-blend-mode: screen;
+  animation: none;
+}
+
+.has-shimmer:hover::before,
+.has-shimmer:focus-visible::before {
+  animation: shimmer-glass 1.6s ease-out;
+}
+
+@keyframes shimmer-glass {
+  0% {
+    transform: translate3d(-70%, 0, 0) rotate(15deg);
+    opacity: 0;
+  }
+  10% {
+    opacity: 0.35;
+  }
+  45% {
+    transform: translate3d(60%, 0, 0) rotate(15deg);
+    opacity: 0.45;
+  }
+  70% {
+    opacity: 0;
+  }
+  100% {
+    transform: translate3d(80%, 0, 0) rotate(15deg);
+    opacity: 0;
+  }
+}
+
+/* Shimmer ainda mais sutil no modo claro */
+[data-theme="light"] .has-shimmer::before {
+  background: linear-gradient(
+    120deg,
+    transparent 0%,
+    rgba(255, 255, 255, 0.16) 45%,
+    rgba(255, 255, 255, 0.32) 50%,
+    rgba(255, 255, 255, 0.14) 55%,
+    transparent 100%
+  );
+}
+
 @keyframes countdownFade {
   0% {
     opacity: 0;

@@ -209,6 +209,8 @@
       if (window.MyWeek.initRevealOnScroll) window.MyWeek.initRevealOnScroll();
       if (window.MyWeek.initLineChartAnimation) window.MyWeek.initLineChartAnimation();
       if (window.MyWeek.initCountdownTimer) window.MyWeek.initCountdownTimer();
+      if (window.MyWeek.initTiltEffects) window.MyWeek.initTiltEffects();
+      if (window.MyWeek.initSpotlightFollower) window.MyWeek.initSpotlightFollower();
     }
   });
 })();

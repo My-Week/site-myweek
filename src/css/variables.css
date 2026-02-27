@@ -4,11 +4,15 @@
    ============================================ */
 
 :root {
-  /* Fundo (Rich Black) */
+  /* Fundo (Rich Black) + mesh gradient aplicado em base/hero */
   --bg-deep: #050508;
   --bg-deep-darker: #020204;
   --bg-surface: #0f0f13;
-  --body-bg: radial-gradient(circle at 50% -20%, #1a1033 0%, #050508 50%);
+  --body-bg: #050508;
+  --mesh-purple: rgba(88, 28, 135, 0.35);
+  --mesh-blue: rgba(30, 58, 138, 0.3);
+  --mesh-violet: rgba(49, 46, 129, 0.25);
+  --mesh-indigo: rgba(67, 56, 202, 0.2);
   --cta-neon: 0 0 20px rgba(124, 58, 237, 0.4);
   --text-shadow-btn: 0 1px 2px rgba(0, 0, 0, 0.25);
 
@@ -38,7 +42,6 @@
   --glass-bg: rgba(15, 15, 19, 0.6);
   --glass-border: var(--border-subtle);
   --focus-neon: 0 0 0 1px var(--primary-vibrant), 0 0 14px var(--glow-primary);
-  --glass-blur: 12px;
 
   --bg-deep-mid: #0a0a10;
   --bg-deep-soft: #08080d;
@@ -55,11 +58,30 @@
   --message-error-text: #f8a5b0;
   --card-hover-bg: rgba(15, 15, 19, 0.85);
 
-  /* Tipografia — corpo: Inter; títulos: Plus Jakarta Sans (moderna, elegante) */
+  /* Tipografia — corpo: Inter Light; títulos: Outfit ExtraBold (produto IA alto nível) */
   --font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
-  --font-family-heading: 'Plus Jakarta Sans', var(--font-family);
+  --font-family-heading: 'Outfit', var(--font-family);
+  --font-weight-display: 800;
+  --font-weight-body: 300;
+  --font-weight-body-strong: 500;
 
-  /* Espaçamento */
+  /* Micro-interações orgânicas (elástico, fluido) */
+  --ease-organic: cubic-bezier(0.16, 1, 0.3, 1);
+  --transition-organic: 0.6s var(--ease-organic);
+
+  /* Glass refinado: blur 16px, borda semi-transparente */
+  --glass-blur: 16px;
+  --glass-border-width: 1px;
+  --glass-border: 1px solid rgba(255, 255, 255, 0.06);
+  --glass-bg-subtle: rgba(255, 255, 255, 0.03);
+
+  /* Sombras coloridas suaves (soft glows) em vez de preto */
+  --shadow-soft-primary: 0 8px 32px -8px rgba(124, 58, 237, 0.25), 0 0 0 1px rgba(255, 255, 255, 0.04);
+  --shadow-soft-secondary: 0 8px 32px -8px rgba(16, 185, 129, 0.2), 0 0 0 1px rgba(255, 255, 255, 0.03);
+  --shadow-soft-cyan: 0 8px 32px -8px rgba(6, 182, 212, 0.2);
+  --shadow-card-hover: 0 24px 48px -16px rgba(124, 58, 237, 0.2), 0 0 0 1px rgba(255, 255, 255, 0.06);
+
+  /* Espaçamento negativo (whitespace): mais respiro entre seções */
   --space-xs: 0.25rem;
   --space-sm: 0.5rem;
   --space-md: 1rem;
@@ -67,11 +89,11 @@
   --space-xl: 2rem;
   --space-2xl: 3rem;
   --space-3xl: 4rem;
-  --space-4xl: 5rem;
-  --space-5xl: 6rem;
+  --space-4xl: 6rem;
+  --space-5xl: 8rem;
 
-  --section-padding-y: 5rem;
-  --section-padding-y-desktop: 7.5rem;
+  --section-padding-y: 7rem;
+  --section-padding-y-desktop: 11rem;
   --text-column-max: 37.5rem;
   --line-height-body: 1.8;
   --line-height-title: 1.4;

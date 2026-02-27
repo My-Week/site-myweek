@@ -43,7 +43,7 @@
   bottom: 0;
   height: 1px;
   background: rgba(255, 255, 255, 0.1);
-  transition: all 0.4s ease;
+  transition: all var(--transition-organic);
   pointer-events: none;
 }
 
@@ -57,7 +57,7 @@
   font-size: 1rem;
   font-weight: 500;
   color: var(--text-low);
-  transition: color 0.2s ease, transform 0.25s ease, font-size 0.25s ease, top 0.25s ease;
+  transition: color var(--transition-organic), transform var(--transition-organic), font-size var(--transition-organic), top var(--transition-organic);
 }
 
 .form-group--float .form-label {
@@ -149,6 +149,42 @@
   outline: none;
   border-color: #7c3aed;
   box-shadow: 0 4px 12px rgba(124, 58, 237, 0.2);
+}
+
+.form-group--float {
+  position: relative;
+  margin-bottom: var(--space-md);
+}
+
+.form-group--float::before {
+  content: '';
+  position: absolute;
+  inset: -2px;
+  border-radius: var(--radius-md);
+  border: 1px solid transparent;
+  background:
+    linear-gradient(#020617, #020617) padding-box,
+    linear-gradient(135deg, rgba(124, 58, 237, 0.0), rgba(56, 189, 248, 0.7), rgba(124, 58, 237, 0.0)) border-box;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.3s ease-out;
+}
+
+.form-group--float:focus-within::before {
+  opacity: 1;
+  animation: form-border-run 1.2s ease-out;
+}
+
+@keyframes form-border-run {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
 }
 
 /* Light: card comercial + neon discreto ~15% */

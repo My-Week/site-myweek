@@ -5,10 +5,10 @@
 .footer {
   margin-top: auto;
   padding: var(--space-2xl) 0;
-  background: rgba(5, 5, 8, 0.95);
-  border-top: 1px solid var(--border-subtle);
-  backdrop-filter: blur(8px);
-  -webkit-backdrop-filter: blur(8px);
+  background: rgba(5, 5, 8, 0.7);
+  border-top: var(--glass-border-width) solid rgba(255, 255, 255, 0.06);
+  backdrop-filter: blur(var(--glass-blur));
+  -webkit-backdrop-filter: blur(var(--glass-blur));
 }
 
 /* Áreas de toque mínimas 48x48px (Android/iPhone) para botões e links */
