@@ -24,7 +24,8 @@
     return re.test(trimmed);
   }
 
-  var messageAutoClose = { timeoutId: null, observer: null };
+  // Controle de auto-fechamento das mensagens (timeout + saída da seção)
+  var messageAutoClose = { timeoutId: null, observer: null, onClose: null };
 
   function clearMessageAutoClose() {
     if (messageAutoClose.timeoutId) {
@@ -35,27 +36,41 @@
       messageAutoClose.observer.disconnect();
       messageAutoClose.observer = null;
     }
+    messageAutoClose.onClose = null;
   }
 
   function removeFormMessage(formEl) {
     if (!formEl) return;
-    clearMessageAutoClose();
     var msg = formEl.querySelector('.form-message');
-    if (msg) msg.remove();
+    if (msg) {
+      msg.remove();
+    }
+    if (typeof messageAutoClose.onClose === 'function') {
+      var cb = messageAutoClose.onClose;
+      clearMessageAutoClose();
+      try {
+        cb();
+      } catch (e) {
+        // fail-safe: não quebrar a experiência se callback falhar
+      }
+    } else {
+      clearMessageAutoClose();
+    }
   }
 
-  function scheduleMessageAutoClose(formEl) {
+  function scheduleMessageAutoClose(formEl, onClose, durationMs) {
     var msg = formEl.querySelector('.form-message');
     if (!msg) return;
     clearMessageAutoClose();
+    messageAutoClose.onClose = typeof onClose === 'function' ? onClose : null;
 
     messageAutoClose.timeoutId = setTimeout(function () {
       messageAutoClose.timeoutId = null;
       removeFormMessage(formEl);
-    }, 15000);
+    }, typeof durationMs === 'number' ? durationMs : 15000);
 
     var section = formEl.closest('.commercial') || formEl.closest('section');
-    if (section) {
+    if (section && typeof IntersectionObserver !== 'undefined') {
       messageAutoClose.observer = new IntersectionObserver(
         function (entries) {
           var ent = entries[0];
@@ -71,12 +86,17 @@
 
   function showFormMessage(formEl, message, isError) {
     removeFormMessage(formEl);
+    if (!message) {
+      // apenas limpar mensagens existentes
+      return;
+    }
     var div = document.createElement('div');
     div.className = 'form-message form-message--' + (isError ? 'error' : 'success');
     div.setAttribute('role', 'alert');
     div.textContent = message;
     formEl.appendChild(div);
-    scheduleMessageAutoClose(formEl);
+    // Erros e mensagens genéricas: apenas auto-fecham, não travam o formulário
+    scheduleMessageAutoClose(formEl, null);
   }
 
   function buildCommercialSuccessMessageHtml() {
@@ -108,12 +128,53 @@
     div.setAttribute('role', 'alert');
     div.innerHTML = buildCommercialSuccessMessageHtml();
     formEl.appendChild(div);
-    scheduleMessageAutoClose(formEl);
+  }
+
+  function lockCommercialForm(formEl) {
+    if (!formEl) return;
+    var fields = formEl.querySelectorAll('input, textarea, select, button');
+    Array.prototype.forEach.call(fields, function (el) {
+      el.disabled = true;
+    });
+    formEl.classList.add('commercial__form--locked');
+  }
+
+  function showCommercialSuccessMessageWithAutoCloseAndLock(formEl) {
+    showCommercialSuccessMessage(formEl);
+    // Quando a mensagem sumir (timeout ou rolagem para fora da seção), trava o formulário
+    scheduleMessageAutoClose(formEl, function () {
+      lockCommercialForm(formEl);
+    });
   }
 
   function setSubmitState(btn, loading) {
     btn.disabled = loading;
     btn.textContent = loading ? 'Enviando…' : 'Enviar';
+  }
+
+  function resetCommercialFormState(formEl) {
+    if (!formEl) return;
+    try {
+      formEl.reset();
+    } catch (e) {
+      // ignore
+    }
+    var fields = formEl.querySelectorAll('.form-input, .form-select');
+    Array.prototype.forEach.call(fields, function (field) {
+      field.classList.remove('is-valid');
+    });
+    var submitBtn = formEl.querySelector('.commercial__submit');
+    if (submitBtn) {
+      submitBtn.classList.remove('commercial__submit--ready');
+      setSubmitState(submitBtn, false);
+    }
+    var wrap = formEl.closest('.commercial__form-wrap') || formEl.parentElement;
+    if (wrap) {
+      var glow = wrap.querySelector('.commercial__submit-glow');
+      if (glow) {
+        glow.style.opacity = '0';
+      }
+    }
   }
 
   function initContactFormProgress() {
@@ -222,6 +283,18 @@
     var form = document.querySelector('.commercial__form');
     if (!form) return;
 
+    // Se nesta sessão o usuário já enviou o formulário com sucesso, mantém bloqueado
+    try {
+      if (typeof window !== 'undefined' && window.sessionStorage && window.sessionStorage.getItem('myweek_commercial_submitted') === '1') {
+        lockCommercialForm(form);
+        // Opcional: mostra novamente a mensagem de sucesso, que some sozinha depois
+        showCommercialSuccessMessage(form);
+        scheduleMessageAutoClose(form, null);
+      }
+    } catch (e) {
+      // se sessionStorage não estiver disponível, segue fluxo normal
+    }
+
     form.addEventListener('submit', function (e) {
       e.preventDefault();
 
@@ -263,7 +336,7 @@
       /* Honeypot: se bot-field foi preenchido, não envia */
       var botField = form.querySelector('[name="bot-field"]');
       if (botField && (botField.value || '').trim() !== '') {
-        showCommercialSuccessMessage(form);
+        showCommercialSuccessMessageWithAutoCloseAndLock(form);
         form.reset();
         return;
       }
@@ -294,14 +367,25 @@
           return res.text();
         })
         .then(function () {
+          try {
+            if (typeof window !== 'undefined' && window.sessionStorage) {
+              window.sessionStorage.setItem('myweek_commercial_submitted', '1');
+            }
+          } catch (e) {
+            // ignore falhas de sessionStorage
+          }
           if (typeof console !== 'undefined' && console.log) {
             console.log('[MyWeek] Formulário enviado com sucesso.');
           }
-          showCommercialSuccessMessage(form);
+          showCommercialSuccessMessageWithAutoCloseAndLock(form);
           form.reset();
         })
         .catch(function () {
           showFormMessage(form, 'Não foi possível enviar. Tente novamente ou entre em contato por outro canal.', true);
+          // Falha no envio: mensagem dura 8s, depois limpa formulário e volta tudo ao estado inicial
+          scheduleMessageAutoClose(form, function () {
+            resetCommercialFormState(form);
+          }, 8000);
         })
         .then(function () {
           setSubmitState(submitBtn, false);
