@@ -23,6 +23,11 @@ html {
   max-width: 100%;
 }
 
+/* Oculta o layout até o i18n aplicar o idioma (evita piscar PT antes de EN) */
+html.i18n-wait .layout {
+  visibility: hidden;
+}
+
 /* Tela termina na viewport: 12 Pro (390), S20/Note (412), iPad (1024), Z Fold (344), etc. */
 body {
   font-family: var(--font-family);
@@ -30,7 +35,8 @@ body {
   letter-spacing: 0.01em;
   line-height: 1.8;
   color: var(--text-muted);
-  background: radial-gradient(circle at 50% -20%, #1a1033 0%, #050508 50%);
+  background: var(--body-bg);
+  text-shadow: var(--body-text-shadow);
   min-height: 100%;
   min-width: 0;
   width: 100%;
@@ -116,6 +122,11 @@ body::after {
   animation-delay: -5s;
 }
 
+[data-theme="light"] body::before,
+[data-theme="light"] body::after {
+  opacity: 0.04;
+}
+
 h1, h2 {
   font-family: var(--font-family-heading);
   font-weight: 800;
@@ -126,6 +137,26 @@ h1, h2 {
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
+}
+
+[data-theme="dark"] h1,
+[data-theme="dark"] h2 {
+  background: none;
+  -webkit-background-clip: initial;
+  background-clip: initial;
+  -webkit-text-fill-color: initial;
+  color: var(--text-high);
+  text-shadow: var(--title-glow);
+}
+
+[data-theme="light"] h1,
+[data-theme="light"] h2 {
+  background: none;
+  -webkit-background-clip: initial;
+  background-clip: initial;
+  -webkit-text-fill-color: initial;
+  color: var(--text-high);
+  text-shadow: var(--title-glow);
 }
 
 /* Tipografia fluida: mobile impactante (2.5rem), ultra-wide até 5rem */

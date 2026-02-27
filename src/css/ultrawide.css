@@ -101,27 +101,29 @@
     gap: var(--space-3xl);
     margin-top: var(--space-4xl);
   }
+}
 
-  /* --- Blur e Glow proporcionais para 4K (evitar pixelação) --- */
-  body::before,
-  body::after {
+/* --- Ultrawide: blur/neon apenas no tema escuro (light mantém estilos do tema) --- */
+@media (min-width: 2000px) {
+  [data-theme="dark"] body::before,
+  [data-theme="dark"] body::after {
     filter: blur(280px);
     width: 90vmax;
     height: 90vmax;
   }
 
-  .header {
+  [data-theme="dark"] .header {
     backdrop-filter: blur(28px);
     -webkit-backdrop-filter: blur(28px);
   }
 
-  .nav.is-open {
+  [data-theme="dark"] .nav.is-open {
     backdrop-filter: blur(40px);
     -webkit-backdrop-filter: blur(40px);
     box-shadow: inset 0 0 120px rgba(124, 58, 237, 0.06), 0 0 160px rgba(0, 0, 0, 0.4);
   }
 
-  .hero__content {
+  [data-theme="dark"] .hero__content {
     backdrop-filter: blur(6px);
     -webkit-backdrop-filter: blur(6px);
     box-shadow:
@@ -157,23 +159,22 @@
 }
 
 @media (min-width: 2000px) {
-
-  .countdown__inner {
+  [data-theme="dark"] .countdown__inner {
     backdrop-filter: blur(20px);
     -webkit-backdrop-filter: blur(20px);
     box-shadow: 0 0 48px rgba(124, 58, 237, 0.25);
   }
 
-  .countdown__item {
+  [data-theme="dark"] .countdown__item {
     backdrop-filter: blur(20px);
     -webkit-backdrop-filter: blur(20px);
   }
 
-  .download-app__orb {
+  [data-theme="dark"] .download-app__orb {
     filter: blur(160px);
   }
 
-  .download-app__card {
+  [data-theme="dark"] .download-app__card {
     backdrop-filter: blur(40px);
     -webkit-backdrop-filter: blur(40px);
     box-shadow:
@@ -185,11 +186,11 @@
       0 0 160px -40px rgba(6, 182, 212, 0.12);
   }
 
-  .feedbacks__orb {
+  [data-theme="dark"] .feedbacks__orb {
     filter: blur(180px);
   }
 
-  .feedback-card {
+  [data-theme="dark"] .feedback-card {
     backdrop-filter: blur(40px);
     -webkit-backdrop-filter: blur(40px);
     box-shadow:
@@ -200,7 +201,7 @@
       0 0 180px -40px rgba(6, 182, 212, 0.15);
   }
 
-  .feedback-card:hover {
+  [data-theme="dark"] .feedback-card:hover {
     box-shadow:
       0 0 0 1px rgba(124, 58, 237, 0.35),
       0 0 0 1px rgba(6, 182, 212, 0.2),
@@ -209,49 +210,49 @@
       0 0 220px -30px rgba(6, 182, 212, 0.2);
   }
 
-  .feedback-card__author {
+  [data-theme="dark"] .feedback-card__author {
     text-shadow: 0 0 40px rgba(6, 182, 212, 0.45);
   }
 
-  .commercial__inner {
+  [data-theme="dark"] .commercial__inner {
     backdrop-filter: blur(30px);
     -webkit-backdrop-filter: blur(30px);
     box-shadow: var(--card-inner-glow), 0 36px 120px rgba(0, 0, 0, 0.6);
   }
 
-  .content--about .container {
+  [data-theme="dark"] .content--about .container {
     backdrop-filter: blur(6px);
     -webkit-backdrop-filter: blur(6px);
   }
 
-  .content__pillar {
+  [data-theme="dark"] .content__pillar {
     backdrop-filter: blur(12px);
     -webkit-backdrop-filter: blur(12px);
   }
 
-  .about-text .content__title {
+  [data-theme="dark"] .about-text .content__title {
     text-shadow: 0 0 60px rgba(124, 58, 237, 0.6);
   }
 
-  .footer {
+  [data-theme="dark"] .footer {
     backdrop-filter: blur(16px);
     -webkit-backdrop-filter: blur(16px);
   }
 
-  .z-section__visual {
+  [data-theme="dark"] .z-section__visual {
     backdrop-filter: blur(24px);
     -webkit-backdrop-filter: blur(24px);
   }
 
-  .line-chart__line {
+  [data-theme="dark"] .line-chart__line {
     filter: drop-shadow(0 0 12px rgba(124, 58, 237, 0.7)) drop-shadow(0 0 24px rgba(167, 139, 250, 0.4));
   }
 
-  .heatmap__cell--best {
+  [data-theme="dark"] .heatmap__cell--best {
     box-shadow: 0 0 24px rgba(16, 185, 129, 0.3);
   }
 
-  .z-section:hover .heatmap__cell--best {
+  [data-theme="dark"] .z-section:hover .heatmap__cell--best {
     box-shadow: 0 0 32px rgba(16, 185, 129, 0.45);
   }
 }

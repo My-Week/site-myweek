@@ -31,10 +31,16 @@
       navToggle.setAttribute('aria-label', open ? 'Fechar menu' : 'Abrir menu');
     }
 
+    var navBackdrop = document.querySelector('.nav-backdrop');
     if (navToggle && nav) {
       navToggle.addEventListener('click', function () {
         setMenuOpen(!nav.classList.contains('is-open'));
       });
+      if (navBackdrop) {
+        navBackdrop.addEventListener('click', function () {
+          setMenuOpen(false);
+        });
+      }
 
       nav.querySelectorAll('a').forEach(function (link) {
         link.addEventListener('click', function () {
@@ -189,6 +195,13 @@
     initActiveLink();
     initLoginUrl();
     initStoreLinks();
+
+    if (window.MyWeek && window.MyWeek.i18n && window.MyWeek.i18n.initLangSelector) {
+      window.MyWeek.i18n.initLangSelector();
+    }
+    if (window.MyWeek && window.MyWeek.theme && window.MyWeek.theme.initThemeToggle) {
+      window.MyWeek.theme.initThemeToggle();
+    }
 
     if (window.MyWeek) {
       if (window.MyWeek.initContactFormProgress) window.MyWeek.initContactFormProgress();

@@ -8,6 +8,7 @@
   --bg-deep: #050508;
   --bg-deep-darker: #020204;
   --bg-surface: #0f0f13;
+  --body-bg: radial-gradient(circle at 50% -20%, #1a1033 0%, #050508 50%);
   --cta-neon: 0 0 20px rgba(124, 58, 237, 0.4);
   --text-shadow-btn: 0 1px 2px rgba(0, 0, 0, 0.25);
 
@@ -17,10 +18,11 @@
   --primary-vibrant: #7c3aed;
   --secondary-vibrant: #10b981;
 
-  /* Texto (High Contrast) */
-  --text-high: #ffffff;
-  --text-low: #b8b8c4;
-  --text-muted: #b8b8c4;
+  /* Texto (Dark: mais vida e hierarquia para leitura) */
+  --text-high: #f4f4fa;
+  --text-low: #d0d4e0;
+  --text-muted: #b8c0d0;
+  --body-text-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
 
   /* Bordas */
   --border-subtle: rgba(255, 255, 255, 0.05);
@@ -74,7 +76,7 @@
   --line-height-body: 1.8;
   --line-height-title: 1.4;
   --title-letter-spacing: -0.01em;
-  --title-gradient: linear-gradient(180deg, #ffffff 0%, #e2e2ec 35%, #b8b8c8 100%);
+  --title-gradient: linear-gradient(180deg, #ffffff 0%, #f4f4fc 30%, #ececf8 65%, #e4e4f4 100%);
   --title-glow: 0 0 20px rgba(124, 58, 237, 0.3);
   /* Sombra de leitura: descola texto do vidro/vídeo (luz solar) */
   --text-shadow-readability: 0 2px 4px rgba(0, 0, 0, 0.8);
@@ -91,4 +93,62 @@
   --radius-lg: 16px;
   --radius-full: 9999px;
   --reveal-transition: 0.8s ease-out;
+}
+
+/* ============================================
+   MyWeek - Light Mode (identidade preservada: roxo + ciano)
+   ============================================ */
+[data-theme="light"] {
+  --body-bg: radial-gradient(circle at 50% -20%, rgba(241, 245, 249, 0.98) 0%, #e2e8f0 40%, #f1f5f9 100%);
+  --bg-deep: #f1f5f9;
+  --bg-deep-darker: #e2e8f0;
+  --bg-surface: #ffffff;
+  --cta-neon: 0 2px 12px rgba(124, 58, 237, 0.35);
+  --text-shadow-btn: 0 1px 2px rgba(0, 0, 0, 0.1);
+
+  --primary: #7c3aed;
+  --secondary: #10b981;
+  --primary-vibrant: #6d28d9;
+  --secondary-vibrant: #059669;
+
+  --text-high: #1e293b;
+  --text-low: #475569;
+  --text-muted: #64748b;
+
+  --border-subtle: rgba(30, 41, 59, 0.12);
+  --card-inner-glow: inset 0 1px 1px rgba(255, 255, 255, 0.8);
+  --btn-glow-hover: 0 2px 16px rgba(124, 58, 237, 0.4);
+  --accent-drop-shadow: 0 4px 20px rgba(124, 58, 237, 0.15);
+  --glow-primary: rgba(124, 58, 237, 0.25);
+  --glow-secondary: rgba(16, 185, 129, 0.2);
+  --overlay-dark: rgba(241, 245, 249, 0.92);
+  --overlay-darker: rgba(255, 255, 255, 0.96);
+  --overlay-top: rgba(226, 232, 240, 0.7);
+  --glass-bg: rgba(255, 255, 255, 0.5);
+  --glass-border: rgba(30, 41, 59, 0.1);
+  --focus-neon: 0 0 0 2px var(--primary-vibrant), 0 2px 12px var(--glow-primary);
+  --glass-blur: 16px;
+
+  --bg-deep-mid: #e2e8f0;
+  --bg-deep-soft: #f8fafc;
+  --shadow-deep: rgba(30, 41, 59, 0.12);
+  --shadow-deep-soft: rgba(30, 41, 59, 0.08);
+  --bg-primary-tint: rgba(124, 58, 237, 0.1);
+  --bg-secondary-tint: rgba(16, 185, 129, 0.1);
+  --bg-primary-tint-hover: rgba(124, 58, 237, 0.08);
+  --gradient-primary-start: rgba(124, 58, 237, 0.12);
+  --message-success-bg: rgba(16, 185, 129, 0.12);
+  --message-success-border: rgba(16, 185, 129, 0.4);
+  --message-error-bg: rgba(220, 53, 69, 0.08);
+  --message-error-border: rgba(220, 53, 69, 0.4);
+  --message-error-text: #b91c1c;
+  --card-hover-bg: rgba(255, 255, 255, 0.9);
+
+  --title-gradient: linear-gradient(135deg, #312e81 0%, #4338ca 35%, #5b21b6 65%, #0891b2 100%);
+  --title-glow: 0 1px 4px rgba(15, 23, 42, 0.35);
+  --text-shadow-readability: 0 1px 2px rgba(15, 23, 42, 0.25);
+  --cyan-neon: #0891b2;
+  --cyan-neon-saturated: #0e7490;
+  --primary-text-mobile: #6d28d9;
+  --body-text-shadow: none;
 }

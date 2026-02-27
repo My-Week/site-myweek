@@ -99,22 +99,33 @@
     scheduleMessageAutoClose(formEl, null);
   }
 
+  function getI18n(key) {
+    if (window.MyWeek && window.MyWeek.i18n && typeof window.MyWeek.i18n.get === 'function') {
+      return window.MyWeek.i18n.get(key);
+    }
+    return key;
+  }
+
   function buildCommercialSuccessMessageHtml() {
     var whatsappUrl = CONFIG.whatsappUrl;
     var btnHtml = '';
+    var cta = getI18n('form.successCta');
+    var title = getI18n('form.successTitle');
+    var text = getI18n('form.successText');
+    var highlight = getI18n('form.successHighlight');
 
     if (whatsappUrl) {
       btnHtml =
         '<a class="commercial__success-cta" href="' + whatsappUrl + '" target="_blank" rel="noopener noreferrer">' +
-        'Falar com Especialista agora' +
+        cta +
         '</a>';
     }
 
     return (
       '<div class="commercial__success">' +
-      '  <h3 class="commercial__success-title">Sua marca na vitrine da cena cultural.</h3>' +
-      '  <p class="commercial__success-text">Nossa equipe entrará em contato em até 24 horas.</p>' +
-      '  <p class="commercial__success-highlight">Prepare-se para alcançar o público certo, no momento certo.</p>' +
+      '  <h3 class="commercial__success-title">' + title + '</h3>' +
+      '  <p class="commercial__success-text">' + text + '</p>' +
+      '  <p class="commercial__success-highlight">' + highlight + '</p>' +
       btnHtml +
       '</div>'
     );
@@ -149,7 +160,7 @@
 
   function setSubmitState(btn, loading) {
     btn.disabled = loading;
-    btn.textContent = loading ? 'Enviando…' : 'Enviar';
+    btn.textContent = loading ? getI18n('form.sending') : getI18n('form.submit');
   }
 
   function resetCommercialFormState(formEl) {
@@ -310,25 +321,25 @@
       var telefoneVal = (telefone.value || '').trim().replace(/\D/g, '');
 
       if (!empresaVal) {
-        showFormMessage(form, 'Informe o nome da empresa.', true);
+        showFormMessage(form, getI18n('form.errorCompany'), true);
         empresa.focus();
         return;
       }
 
       if (!emailVal) {
-        showFormMessage(form, 'Informe o e-mail.', true);
+        showFormMessage(form, getI18n('form.errorEmail'), true);
         email.focus();
         return;
       }
 
       if (!isValidEmailFormat(emailVal)) {
-        showFormMessage(form, 'Informe um e-mail válido (ex.: nome@dominio.com).', true);
+        showFormMessage(form, getI18n('form.errorEmailInvalid'), true);
         email.focus();
         return;
       }
 
       if (telefoneVal.length < 10 || telefoneVal.length > 11) {
-        showFormMessage(form, 'Informe o celular para contato por WhatsApp ou ligação (10 ou 11 dígitos).', true);
+        showFormMessage(form, getI18n('form.errorPhone'), true);
         telefone.focus();
         return;
       }
@@ -381,7 +392,7 @@
           form.reset();
         })
         .catch(function () {
-          showFormMessage(form, 'Não foi possível enviar. Tente novamente ou entre em contato por outro canal.', true);
+          showFormMessage(form, getI18n('form.sendError'), true);
           // Falha no envio: mensagem dura 8s, depois limpa formulário e volta tudo ao estado inicial
           scheduleMessageAutoClose(form, function () {
             resetCommercialFormState(form);

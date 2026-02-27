@@ -34,3 +34,8 @@
   color: var(--text-low);
   text-align: center;
 }
+
+[data-theme="light"] .footer {
+  background: rgba(241, 245, 249, 0.95);
+  border-top-color: var(--border-subtle);
+}
