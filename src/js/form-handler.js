@@ -24,14 +24,59 @@
     return re.test(trimmed);
   }
 
+  var messageAutoClose = { timeoutId: null, observer: null };
+
+  function clearMessageAutoClose() {
+    if (messageAutoClose.timeoutId) {
+      clearTimeout(messageAutoClose.timeoutId);
+      messageAutoClose.timeoutId = null;
+    }
+    if (messageAutoClose.observer) {
+      messageAutoClose.observer.disconnect();
+      messageAutoClose.observer = null;
+    }
+  }
+
+  function removeFormMessage(formEl) {
+    if (!formEl) return;
+    clearMessageAutoClose();
+    var msg = formEl.querySelector('.form-message');
+    if (msg) msg.remove();
+  }
+
+  function scheduleMessageAutoClose(formEl) {
+    var msg = formEl.querySelector('.form-message');
+    if (!msg) return;
+    clearMessageAutoClose();
+
+    messageAutoClose.timeoutId = setTimeout(function () {
+      messageAutoClose.timeoutId = null;
+      removeFormMessage(formEl);
+    }, 15000);
+
+    var section = formEl.closest('.commercial') || formEl.closest('section');
+    if (section) {
+      messageAutoClose.observer = new IntersectionObserver(
+        function (entries) {
+          var ent = entries[0];
+          if (ent && !ent.isIntersecting) {
+            removeFormMessage(formEl);
+          }
+        },
+        { threshold: 0, rootMargin: '0px' }
+      );
+      messageAutoClose.observer.observe(section);
+    }
+  }
+
   function showFormMessage(formEl, message, isError) {
-    var existing = formEl.querySelector('.form-message');
-    if (existing) existing.remove();
+    removeFormMessage(formEl);
     var div = document.createElement('div');
     div.className = 'form-message form-message--' + (isError ? 'error' : 'success');
     div.setAttribute('role', 'alert');
     div.textContent = message;
     formEl.appendChild(div);
+    scheduleMessageAutoClose(formEl);
   }
 
   function buildCommercialSuccessMessageHtml() {
@@ -56,14 +101,14 @@
   }
 
   function showCommercialSuccessMessage(formEl) {
-    var existing = formEl.querySelector('.form-message');
-    if (existing) existing.remove();
+    removeFormMessage(formEl);
 
     var div = document.createElement('div');
     div.className = 'form-message form-message--success form-message--commercial';
     div.setAttribute('role', 'alert');
     div.innerHTML = buildCommercialSuccessMessageHtml();
     formEl.appendChild(div);
+    scheduleMessageAutoClose(formEl);
   }
 
   function setSubmitState(btn, loading) {
