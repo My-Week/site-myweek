@@ -29,6 +29,23 @@ body {
   position: relative;
 }
 
+/* Mobile: mais corpo nas letras contra o brilho da tela */
+@media (max-width: 767px) {
+  body,
+  p,
+  .z-section__text,
+  .content p,
+  .content__lead,
+  .commercial__lead,
+  .b2b-platform__lead,
+  .b2c-experience__lead,
+  .countdown__footer,
+  .download-app__desc,
+  .feedback-card__quote {
+    font-weight: 500;
+  }
+}
+
 @keyframes blob-breathe {
   0%, 100% {
     opacity: 0.03;
@@ -72,20 +89,21 @@ h1, h2 {
   font-weight: 800;
   letter-spacing: var(--title-letter-spacing);
   line-height: var(--line-height-title);
-  text-shadow: var(--title-glow);
+  text-shadow: var(--title-glow), var(--text-shadow-readability);
   background: var(--title-gradient);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
 }
 
+/* Tipografia fluida: mobile impactante (2.5rem), ultra-wide até 5rem */
 h1 {
-  font-size: clamp(2rem, 5vw, 4.5rem);
+  font-size: clamp(2.5rem, 5vw, 5rem);
   margin-bottom: 0.4em;
 }
 
 h2 {
-  font-size: clamp(1.75rem, 4vw, 3rem);
+  font-size: clamp(1.5rem, 3.5vw, 3.5rem);
   margin-bottom: 0.35em;
 }
 
@@ -105,6 +123,18 @@ a:hover {
   opacity: 0.85;
 }
 
+/* iOS Safari: remove quadrado cinza no toque em botões/links clicáveis */
+button,
+.btn,
+.nav-toggle,
+.logo,
+a.btn,
+.download-app__btn,
+.commercial__submit {
+  -webkit-tap-highlight-color: transparent;
+  tap-highlight-color: transparent;
+}
+
 button {
   font-family: inherit;
   cursor: pointer;
@@ -122,19 +152,27 @@ section[id] {
   scroll-margin-top: 80px;
 }
 
+/* Mobile-first: conteúdo não encosta nas bordas */
 .container {
-  width: 92%;
+  width: 100%;
   max-width: var(--container-max);
   margin: 0 auto;
-  padding-left: 0;
-  padding-right: 0;
+  padding-left: 20px;
+  padding-right: 20px;
 }
 
 @media (max-width: 359px) {
   .container {
-    width: 96%;
-    padding-left: 0.5rem;
-    padding-right: 0.5rem;
+    padding-left: 16px;
+    padding-right: 16px;
+  }
+}
+
+@media (min-width: 1024px) {
+  .container {
+    width: 92%;
+    padding-left: var(--container-padding);
+    padding-right: var(--container-padding);
   }
 }
 

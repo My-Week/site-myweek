@@ -53,7 +53,7 @@
     return (
       '<div class="commercial__success">' +
       '  <h3 class="commercial__success-title">Sua marca na vitrine da cena cultural.</h3>' +
-      '  <p class="commercial__success-text">Recebemos seu interesse em potencializar seu evento com o MyWeek. Nossa equipe comercial analisará seu perfil e entrará em contato via WhatsApp/E-mail em até 24 horas para apresentar nossos pacotes de divulgação e curadoria estratégica.</p>' +
+      '  <p class="commercial__success-text">Nossa equipe entrará em contato em até 24 horas.</p>' +
       '  <p class="commercial__success-highlight">Prepare-se para alcançar o público certo, no momento certo.</p>' +
       btnHtml +
       '</div>'
@@ -214,34 +214,40 @@
         return;
       }
 
+      /* Honeypot: se bot-field foi preenchido, não envia */
+      var botField = form.querySelector('[name="bot-field"]');
+      if (botField && (botField.value || '').trim() !== '') {
+        showCommercialSuccessMessage(form);
+        form.reset();
+        return;
+      }
+
       showFormMessage(form, '', false);
       setSubmitState(submitBtn, true);
 
-      var payload = {
-        empresa: empresaVal,
-        email: emailVal
-      };
+      var formData = new FormData(form);
+      var body = new URLSearchParams(formData).toString();
+      if (body.indexOf('form-name') === -1) {
+        body = 'form-name=contato-comercial&' + body;
+      }
 
-      var url = getInterestUrl();
-
-      fetch(url, {
+      fetch('/', {
         method: 'POST',
         headers: {
-          'Content-Type': 'application/json'
+          'Content-Type': 'application/x-www-form-urlencoded'
         },
-        body: JSON.stringify(payload)
+        body: body
       })
         .then(function (res) {
           if (!res.ok) throw new Error('Erro ao enviar: ' + res.status);
-          return res.json().catch(function () { return {}; });
+          return res.text();
         })
         .then(function () {
           showCommercialSuccessMessage(form);
           form.reset();
         })
-        .catch(function (err) {
+        .catch(function () {
           showFormMessage(form, 'Não foi possível enviar. Tente novamente ou entre em contato por outro canal.', true);
-          setSubmitState(submitBtn, false);
         })
         .then(function () {
           setSubmitState(submitBtn, false);

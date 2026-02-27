@@ -6,6 +6,18 @@
   font-weight: 300;
 }
 
+/* Honeypot Netlify: oculto para usuários, visível apenas para bots */
+.commercial__honeypot {
+  position: absolute;
+  left: -9999px;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  margin: 0;
+  padding: 0;
+  clip: rect(0, 0, 0, 0);
+}
+
 .commercial__form {
   display: flex;
   flex-direction: column;
@@ -79,6 +91,35 @@
   border-radius: 0;
   outline: none;
   transition: all 0.4s ease;
+  box-sizing: border-box;
+}
+
+/* Mobile: campos 100% da largura; font-size 16px evita zoom automático do iOS ao focar no input */
+@media (max-width: 767px) {
+  .commercial__form .form-group,
+  .commercial__form .form-group--float,
+  .commercial__form .form-input,
+  .commercial__form .commercial__submit {
+    width: 100%;
+    max-width: 100%;
+    box-sizing: border-box;
+  }
+
+  .commercial__form .form-input,
+  .commercial__form input,
+  .commercial__form textarea,
+  .commercial__form select,
+  .form-input {
+    font-size: 16px !important;
+  }
+
+  .commercial__form .commercial__submit {
+    min-height: 48px;
+    min-width: 48px;
+    padding: 0.75rem 1.25rem;
+    -webkit-tap-highlight-color: transparent;
+    tap-highlight-color: transparent;
+  }
 }
 
 .commercial__form .form-input::placeholder {
@@ -209,10 +250,11 @@
   font-weight: 800;
   letter-spacing: -0.03em;
   line-height: 1.4;
-  background: linear-gradient(135deg, #7c3aed, #06b6d4);
+  background: linear-gradient(135deg, #7c3aed, var(--cyan-neon-saturated) 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
+  text-shadow: var(--text-shadow-readability);
 }
 
 .commercial__success-text {
@@ -220,6 +262,7 @@
   font-size: 0.9375rem;
   line-height: 1.7;
   color: var(--text-muted);
+  text-shadow: var(--text-shadow-readability);
 }
 
 .commercial__success-highlight {

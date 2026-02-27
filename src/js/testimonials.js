@@ -51,11 +51,13 @@
 
   function initTilt() {
     var cards = document.querySelectorAll('.feedback-card');
-    var maxTilt = 5;
+    var isMobile = window.innerWidth < 768 || ('ontouchstart' in window && window.innerWidth < 1024);
+    var maxTilt = isMobile ? 0 : 5;
 
     [].forEach.call(cards, function (card) {
       if (card._tiltBound) return;
       card._tiltBound = true;
+      if (maxTilt === 0) return;
       card.addEventListener('mousemove', function (e) {
         var rect = card.getBoundingClientRect();
         var x = (e.clientX - rect.left) / rect.width - 0.5;

@@ -76,6 +76,13 @@
   --title-letter-spacing: -0.01em;
   --title-gradient: linear-gradient(180deg, #ffffff 0%, #e2e2ec 35%, #b8b8c8 100%);
   --title-glow: 0 0 20px rgba(124, 58, 237, 0.3);
+  /* Sombra de leitura: descola texto do vidro/vídeo (luz solar) */
+  --text-shadow-readability: 0 2px 4px rgba(0, 0, 0, 0.8);
+  /* Ciano mais saturado para não lavar no branco sob claridade */
+  --cyan-neon: #06b6d4;
+  --cyan-neon-saturated: #00c4e0;
+  /* Roxo com contraste ≥4.5:1 no mobile para textos de leitura */
+  --primary-text-mobile: #a78bfa;
   --container-max: 87.5rem;
   --container-padding: var(--space-xl);
 
