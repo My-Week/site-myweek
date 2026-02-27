@@ -18,6 +18,15 @@
   <link rel="stylesheet" href="src/css/main.css">
 </head>
 <body>
+  <!-- Formulário oculto para o Netlify detectar no deploy (envio real via AJAX no .commercial__form) -->
+  <form name="contato-comercial" method="POST" action="/" data-netlify="true" netlify-honeypot="bot-field" style="display: none;" aria-hidden="true">
+    <input type="hidden" name="form-name" value="contato-comercial">
+    <input name="empresa" type="text">
+    <input name="email" type="email">
+    <input name="telefone" type="text">
+    <input name="bot-field" type="text" tabindex="-1" autocomplete="off">
+  </form>
+
   <div class="layout">
     <!-- ========== Header / Navegação ========== -->
     <header class="header">
@@ -403,7 +412,7 @@
           </div>
 
           <div class="commercial__form-wrap">
-            <form class="commercial__form" name="contato-comercial" data-netlify="true" action="#" method="post" netlify-honeypot="bot-field">
+            <form class="commercial__form" name="contato-comercial" method="POST" action="/" data-netlify="true" netlify-honeypot="bot-field">
               <input type="hidden" name="form-name" value="contato-comercial">
               <p class="commercial__honeypot" aria-hidden="true">
                 <label for="bot-field">Não preencha este campo</label>

@@ -232,7 +232,12 @@
         body = 'form-name=contato-comercial&' + body;
       }
 
-      fetch('/', {
+      var submitUrl = window.location.origin + (window.location.pathname || '/');
+      if (!submitUrl.endsWith('/') && !/\.[a-z0-9]+$/i.test(window.location.pathname)) {
+        submitUrl += '/';
+      }
+
+      fetch(submitUrl, {
         method: 'POST',
         headers: {
           'Content-Type': 'application/x-www-form-urlencoded'
@@ -244,6 +249,9 @@
           return res.text();
         })
         .then(function () {
+          if (typeof console !== 'undefined' && console.log) {
+            console.log('[MyWeek] Formulário enviado com sucesso.');
+          }
           showCommercialSuccessMessage(form);
           form.reset();
         })
