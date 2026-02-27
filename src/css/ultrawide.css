@@ -4,16 +4,16 @@
    ============================================ */
 
 @media (min-width: 2000px) {
-  /* --- Max-Width: conteúdo centralizado 1800px; fundo continua 100vw --- */
+  /* --- Conteúdo centralizado 1800px; fundo 100% (evitar 100vw = scroll horizontal) --- */
   .layout,
   .main {
     width: 100%;
-    max-width: 100vw;
+    max-width: 100%;
   }
 
   body {
-    width: 100vw;
-    min-width: 100vw;
+    width: 100%;
+    max-width: 100%;
     overflow-x: hidden;
   }
 
@@ -38,7 +38,7 @@
   .feedbacks,
   .footer {
     width: 100%;
-    max-width: 100vw;
+    max-width: 100%;
   }
 
   /* --- Espaçamento: design "respira" --- */
