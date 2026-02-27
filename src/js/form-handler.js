@@ -15,18 +15,13 @@
     return CONFIG.useContactEndpoint ? CONFIG.contactEndpoint : CONFIG.interestEndpoint;
   }
 
-  var PERSONAL_EMAIL_DOMAINS = [
-    'gmail.com', 'googlemail.com', 'outlook.com', 'hotmail.com', 'hotmail.com.br',
-    'live.com', 'yahoo.com', 'yahoo.com.br', 'icloud.com', 'me.com', 'mac.com',
-    'bol.com.br', 'uol.com.br', 'ig.com.br', 'terra.com.br'
-  ];
-
-  function isPersonalEmail(email) {
-    if (!email || typeof email !== 'string') return true;
-    var domain = email.split('@')[1];
-    if (!domain) return true;
-    var normalized = domain.toLowerCase().trim();
-    return PERSONAL_EMAIL_DOMAINS.some(function (d) { return normalized === d; });
+  /** Formato válido: local@domínio.tld (aceita Gmail, Outlook, etc.) */
+  function isValidEmailFormat(email) {
+    if (!email || typeof email !== 'string') return false;
+    var trimmed = email.trim();
+    if (trimmed.length < 6) return false;
+    var re = /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?(?:\.[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?)*\.[a-zA-Z]{2,}$/;
+    return re.test(trimmed);
   }
 
   function showFormMessage(formEl, message, isError) {
@@ -81,7 +76,7 @@
     if (!form) return;
 
     var fields = [];
-    ['empresa', 'email', 'dificuldade'].forEach(function (nameOrId) {
+    ['empresa', 'email', 'telefone'].forEach(function (nameOrId) {
       var field = form.querySelector('#' + nameOrId + ', [name="' + nameOrId + '"]');
       if (field) fields.push(field);
     });
@@ -125,14 +120,12 @@
       }
 
       if (name === 'email') {
-        if (!value) return false;
-        var basicEmail = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-        if (!basicEmail.test(value)) return false;
-        return !isPersonalEmail(value);
+        return value.length > 0 && isValidEmailFormat(value);
       }
 
-      if (name === 'dificuldade') {
-        return value !== '' && value !== '0' && value.length >= 2;
+      if (name === 'telefone') {
+        var digits = value.replace(/\D/g, '');
+        return digits.length >= 10 && digits.length <= 11;
       }
 
       return value.length > 0;
@@ -189,12 +182,14 @@
 
       var empresa = form.querySelector('[name="empresa"]');
       var email = form.querySelector('[name="email"]');
+      var telefone = form.querySelector('[name="telefone"]');
       var submitBtn = form.querySelector('.commercial__submit');
 
-      if (!empresa || !email || !submitBtn) return;
+      if (!empresa || !email || !telefone || !submitBtn) return;
 
       var empresaVal = (empresa.value || '').trim();
       var emailVal = (email.value || '').trim();
+      var telefoneVal = (telefone.value || '').trim().replace(/\D/g, '');
 
       if (!empresaVal) {
         showFormMessage(form, 'Informe o nome da empresa.', true);
@@ -203,14 +198,20 @@
       }
 
       if (!emailVal) {
-        showFormMessage(form, 'Informe o e-mail corporativo.', true);
+        showFormMessage(form, 'Informe o e-mail.', true);
         email.focus();
         return;
       }
 
-      if (isPersonalEmail(emailVal)) {
-        showFormMessage(form, 'Use um e-mail corporativo (não use Gmail, Outlook ou outros provedores pessoais).', true);
+      if (!isValidEmailFormat(emailVal)) {
+        showFormMessage(form, 'Informe um e-mail válido (ex.: nome@dominio.com).', true);
         email.focus();
+        return;
+      }
+
+      if (telefoneVal.length < 10 || telefoneVal.length > 11) {
+        showFormMessage(form, 'Informe o celular para contato por WhatsApp ou ligação (10 ou 11 dígitos).', true);
+        telefone.focus();
         return;
       }
 
