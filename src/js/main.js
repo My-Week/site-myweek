@@ -44,6 +44,28 @@
     }
   }
 
+  function initHeroVideo() {
+    var video = document.querySelector('.hero-video');
+    if (!video) return;
+
+    function tryPlay() {
+      if (video.paused && !video.ended && document.visibilityState === 'visible') {
+        video.play().catch(function () {});
+      }
+    }
+
+    video.play().catch(function () {});
+
+    video.addEventListener('pause', function () {
+      if (document.visibilityState !== 'visible') return;
+      setTimeout(function () { tryPlay(); }, 150);
+    });
+
+    document.addEventListener('visibilitychange', function () {
+      if (document.visibilityState === 'visible') tryPlay();
+    });
+  }
+
   function initHeaderScroll() {
     var header = document.querySelector('.header');
     if (!header) return;
@@ -155,6 +177,7 @@
 
   document.addEventListener('DOMContentLoaded', function () {
     initNavToggle();
+    initHeroVideo();
     initHeaderScroll();
     initActiveLink();
     initLoginUrl();

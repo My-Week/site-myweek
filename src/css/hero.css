@@ -24,8 +24,7 @@
   }
 }
 
-/* Mobile: ponto focal central visível, sem fundo lavado ou mal enquadrado */
-/* z-index -1 fica atrás do background #050508 do .hero: fundo visível enquanto o vídeo carrega */
+/* Video em z-index 0 para não ficar atrás do background do .hero (evita vídeo não iniciar em alguns browsers) */
 .hero-video {
   position: absolute;
   inset: 0;
@@ -33,7 +32,7 @@
   height: 100%;
   object-fit: cover;
   object-position: center center;
-  z-index: -1;
+  z-index: 0;
   filter: brightness(0.4) saturate(0.8);
   background-color: #050508;
 }
@@ -41,13 +40,14 @@
 .hero__overlay {
   position: absolute;
   inset: 0;
+  z-index: 1;
   background: linear-gradient(to bottom, rgba(5, 5, 8, 0.5), #050508);
   pointer-events: none;
 }
 
 .hero__content {
   position: relative;
-  z-index: 1;
+  z-index: 2;
   display: flex;
   flex-direction: column;
   align-items: center;

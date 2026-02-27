@@ -48,8 +48,8 @@
     <main class="main">
       <!-- ========== Hero (vídeo + CTA) ========== -->
       <section class="hero" id="top">
-        <!-- playsinline evita fullscreen forçado no iPhone; fetchpriority=high para LCP -->
-        <video class="hero-video" playsinline muted loop autoplay preload="metadata" fetchpriority="high" aria-hidden="true" title="Vídeo decorativo de fundo">
+        <!-- playsinline evita fullscreen no iPhone; preload=auto para iniciar a reprodução -->
+        <video class="hero-video" playsinline muted loop autoplay preload="auto" fetchpriority="high" aria-hidden="true" title="Vídeo decorativo de fundo">
           <source src="assets/videos/hero-bokeh.mp4" type="video/mp4">
         </video>
         <div class="hero__overlay" aria-hidden="true"></div>
