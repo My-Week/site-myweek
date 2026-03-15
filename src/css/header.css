@@ -596,6 +596,19 @@
   background: linear-gradient(135deg, #7c3aed, #10b981);
 }
 
+.btn--gray {
+  background: rgba(255, 255, 255, 0.06);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  color: var(--text-low);
+}
+
+.btn--gray:hover,
+.btn--gray:focus-visible {
+  background: rgba(255, 255, 255, 0.1);
+  border-color: rgba(255, 255, 255, 0.18);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+}
+
 /* Mobile: CTA mais sólido para ser inconfundível sob luz solar */
 @media (max-width: 767px) {
   .btn--primary,

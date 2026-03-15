@@ -10,8 +10,8 @@
   var translations = {
     pt: {
       hero: {
-        title: 'Sua Curadoria Inteligente, descubra onde está sua cena',
-        subtitle: 'O hub definitivo de divulgação e descoberta da cena cultural de nicho com IA',
+        title: 'A gente te mostra de forma inteligente o que tá rolando.',
+        subtitle: 'A forma mais fácil de encontrar e divulgar eventos que você realmente curte.',
         ctaPrimary: 'Quero participar do lançamento',
         ctaSecondary: 'Entender como a MyWeek funciona',
         visualProducerTag: 'Produtor',
@@ -23,12 +23,12 @@
         visualEvent2Title: 'Techno no D-Edge · 23h'
       },
       countdown: {
-        eyebrow: 'O futuro da cena cultural está chegando',
+        eyebrow: 'Sua forma de viver a cultura está prestes a mudar.',
         days: 'Dias',
         hours: 'Horas',
         minutes: 'Minutos',
         seconds: 'Segundos',
-        footer: 'Prepare-se para a revolução na gestão de eventos e descoberta de nichos.'
+        footer: 'Tecnologia que entende o seu estilo e organiza o seu evento.'
       },
       nav: {
         close: 'Fechar menu',
@@ -42,15 +42,19 @@
         langLabel: 'Selecionar idioma'
       },
       b2b: {
-        lead: 'O produtor é quem alimenta o ecossistema com eventos de nicho. Nossa IA transforma cada evento em dados valiosos — tags, previsões e curadoria — que beneficiam toda a rede.',
+        lead: 'Você cria o evento, a gente faz ele encontrar o público certo.',
+        lead2: 'Usamos tecnologia inteligente para organizar informações e prever tendências, garantindo que o que você produz seja descoberto pela galera que combina com seu estilo.',
         block1Title: 'Sua essência, traduzida por dados.',
-        block1Text: 'Não perca tempo decifrando algoritmos. Nossa IA processa o conteúdo do seu evento para identificar e aplicar as tags de nicho mais precisas. Garantimos que sua produção chegue exatamente aos olhos da tribo que a valoriza, maximizando o alcance orgânico dentro da nossa rede de curadoria.',
+        block1Text: 'Esqueça a dor de cabeça com algoritmos.',
+        block1Text2: 'Nossa tecnologia entende tudo sobre o seu evento e faz o trabalho pesado por você. Garantimos que sua produção chegue direto em quem realmente curte o seu estilo, aumentando seu público de forma natural e sem esforço.',
         block2Title: 'Controle total, do primeiro lote ao último clique.',
-        block2Text: 'Uma central de comando intuitiva para o seu evento. Gerencie atrações, controle a virada de lotes de ingressos e atualize sua galeria em tempo real. Com o MyWeek, a gestão operacional deixa de ser um gargalo e passa a ser sua maior vantagem competitiva.',
+        block2Text: 'Tudo o que você precisa para o seu evento, em um só lugar.',
+        block2Text2: 'Organize atrações, mude o preço dos ingressos e atualize fotos na hora, tudo de um jeito simples. Com o MyWeek, a organização deixa de ser uma preocupação e você ganha tempo para focar no que realmente importa: o sucesso do seu movimento.',
         block3Title: 'Otimização que evita o silêncio.',
-        block3Text: 'O sucesso de um evento começa na agenda. Nosso Otimizador de Timing analisa o cenário cultural da cidade para sugerir os melhores dias e horários. Evite conflitos com outros grandes eventos de nicho e garanta que o fluxo de público esteja focado apenas na sua atração.',
+        block3Text: 'Acerte na agenda sem precisar de sorte.',
+        block3Text2: 'A gente te ajuda a encontrar a brecha perfeita na programação da cidade. Saiba quais dias e horários funcionam melhor para o seu estilo de público, evitando bater de frente com outros eventos e garantindo casa cheia.',
         block4Title: 'Previsão real para decisões seguras.',
-        block4Text: 'Chega de trabalhar no escuro. Utilizamos Machine Learning para estimar seu público provável com alta taxa de confiança. Dimensione sua equipe, estoque e orçamento com base em dados concretos de interesse regional, transformando incerteza em lucro.',
+        block4Text: 'Previsões reais para o seu evento bombar. Chega de adivinhar: saiba o tamanho do seu público antes mesmo de abrir as portas. Use nossa inteligência para gastar apenas o necessário com estoque e equipe, garantindo um evento organizado e muito mais lucrativo.',
         miniDashboardTitle: 'Status de Lotes',
         lot1Label: 'Lote 1',
         lot2Label: 'Lote 2',
@@ -73,7 +77,8 @@
         text: 'Da inteligência do produtor para a palma da sua mão.'
       },
       b2c: {
-        lead: 'Toda a inteligência gerada pelos produtores chega até você de forma personalizada. Pergunte ao nosso Concierge o que fazer agora — ou descubra no seu feed.',
+        lead: 'O melhor da cidade, personalizado para você.',
+        lead2: 'Tudo o que rola de bom chega direto no seu feed. Se estiver na dúvida, é só perguntar para o nosso assistente e descobrir o rolê perfeito para agora.',
         chatUser: 'O que tem de bom hoje à noite perto de mim?',
         chatIALabel: 'Concierge IA',
         chatIAText: '3 eventos no seu nicho: Jazz no Blue Note 21h, Techno no D-Edge 23h e um open mic no Bar do Zé. Quer roteiro com tempo de deslocamento?'
@@ -82,7 +87,7 @@
         timingTitle: 'Timing inteligente de agenda',
         timingText: 'Nossa IA aprende os horários em que a sua cena realmente acontece e projeta picos de interesse ao longo da semana.',
         audienceTitle: 'Mapa vivo de público',
-        audienceText: 'Visualize o interesse por nicho, cidade e horário para entender onde sua cena pulsa mais forte.',
+        audienceText: 'Entenda onde o movimento que você gosta pulsa mais forte. Escolha o melhor horário e o bairro ideal para aproveitar o que a cidade tem de melhor, do seu jeito.',
         audienceItem1: 'Crescimento em noites de quinta',
         audienceItem2: 'Preferem venues até 30 min de casa',
         audienceItem3: 'cenas de nicho em alta na sua cidade',
@@ -90,19 +95,36 @@
         performanceText: 'Acompanhe quais eventos, dias e formatos entregam mais resultado para a sua cena.',
         performanceMetric1Label: 'Conversão média',
         performanceMetric2Label: 'Check-ins confirmados',
-        conciergeTitle: 'Concierge IA alimentado por dados',
-        conciergeText: 'O que o usuário vê no app é o reflexo direto de timing, público e performance que a plataforma aprende todos os dias.'
+        conciergeTitle: 'Seu guia particular para o rolê perfeito.',
+        conciergeText: 'O MyWeek aprende com o movimento da cidade para te mostrar apenas o que interessa. É a combinação ideal entre o horário certo e o que a galera está curtindo no momento.'
       },
       download: {
-        title: 'Leve a cena no seu bolso',
-        desc: 'Descubra eventos underground e de nicho em tempo real. Curadoria inteligente no seu celular.',
+        title: 'Leve o melhor da cidade no seu bolso.',
+        desc: 'Descubra o rolê perfeito e fuja do óbvio em tempo real.',
         appStore: 'App Store',
         googlePlay: 'Google Play',
         comingSoon: 'Em breve'
       },
+      pricing: {
+        title: 'Planos e Preços',
+        basicTitle: 'Plano Basic',
+        basicPrice: 'Grátis para sempre',
+        basicFeature1: 'Dicas do Assistente: Até 5 perguntas por dia para te ajudar a encontrar o rolê.',
+        basicFeature2: 'Descoberta: Veja os 3 eventos mais bombados da cidade agora.',
+        basicFeature3: 'Tudo o que você precisa: Feed de eventos, perfil personalizado e notificações de interesse.',
+        basicCta: 'Começar Agora',
+        premiumBadge: 'O mais escolhido',
+        premiumTitle: 'Plano Premium',
+        premiumPrice: 'R$ 29,90 / mês',
+        premiumFeature1: 'Assistente Ilimitado: Pergunte o que fazer quantas vezes quiser, sem limites.',
+        premiumFeature2: 'Descoberta VIP: Lista exclusiva baseada exatamente no que você gosta (afinidade real).',
+        premiumFeature3: 'Experiência Completa: Todos os recursos do Basic, com prioridade e inteligência refinada.',
+        premiumFeature4: 'Liberdade: Mude de plano ou cancele quando quiser, sem burocracia.',
+        premiumCta: 'Ser Premium Agora'
+      },
       about: {
-        title: 'A Inteligência por trás da Cena.',
-        manifesto: 'O MyWeek nasceu para preencher o vazio deixado pelos canais de divulgação em massa. Somos um Hub de Inteligência Cultural projetado para dar voz a eventos de nicho — do Jazz Experimental ao Post-Punk — e conectar tribos a experiências autênticas que o mainstream ignora.',
+        title: 'Sua cidade vai muito além do óbvio.',
+        manifesto: 'Cansamos da divulgação que só mostra o mesmo de sempre. O MyWeek é o guia inteligente feito para dar visibilidade a movimentos autênticos e garantir que você encontre a sua galera e os eventos que realmente combinam com o seu jeito de ser.',
         differential: 'Diferencial: Não somos apenas um calendário. Somos uma plataforma que utiliza Agentes de IA para transformar eventos em dados estratégicos para produtores e curadoria personalizada para usuários.',
         pillar1Title: 'Curadoria Humana, IA Inteligente',
         pillar1Text: 'Algoritmos que respeitam o gosto do usuário.',
@@ -110,11 +132,12 @@
         pillar2Text: 'Conexão direta entre produtores, parceiros locais e público.',
         pillar3Title: 'Dados que Geram Valor',
         pillar3Text: 'Transformação de métricas em decisões para o mercado cultural.',
-        ctaSubtitle: 'Pronto para descobrir sua próxima cena ou escalar seu evento?'
+        ctaSubtitle: 'Pronto para encontrar seu próximo rolê ou fazer seu evento bombar?'
       },
       commercial: {
         title: 'Interesse Comercial',
-        lead: 'Somos um Hub de Inteligência Cultural. Ao entrar em contato, você dá o primeiro passo para acessar dados estratégicos sobre público, timing e performance dos seus eventos de nicho.'
+        lead: 'Inteligência de verdade para quem faz a cultura acontecer.',
+        lead2: 'Vamos conversar? Descubra como usar informações reais sobre o seu público e o movimento da cidade para transformar seu evento em um sucesso garantido.'
       },
       form: {
         companyLabel: 'Nome da Empresa',
@@ -150,8 +173,8 @@
     },
     en: {
       hero: {
-        title: 'Your Smart Curation — discover where your scene is',
-        subtitle: 'The definitive hub for promoting and discovering the niche cultural scene with AI',
+        title: "We show you in a smart way what's going on.",
+        subtitle: "The easiest way to find and promote events you actually enjoy.",
         ctaPrimary: 'Join the launch',
         ctaSecondary: 'Understand how MyWeek works',
         visualProducerTag: 'Producer',
@@ -163,12 +186,12 @@
         visualEvent2Title: 'Techno at D-Edge · 11pm'
       },
       countdown: {
-        eyebrow: 'The future of the cultural scene is coming',
+        eyebrow: "Your way of living culture is about to change.",
         days: 'Days',
         hours: 'Hours',
         minutes: 'Minutes',
         seconds: 'Seconds',
-        footer: 'Get ready for the revolution in event management and niche discovery.'
+        footer: "Technology that understands your style and organizes your event."
       },
       nav: {
         close: 'Close menu',
@@ -182,15 +205,19 @@
         langLabel: 'Select language'
       },
       b2b: {
-        lead: 'Producers fuel the ecosystem with niche events. Our AI turns every event into valuable data — tags, predictions, and curation — that benefits the entire network.',
+        lead: "You create the event, we help it find the right audience.",
+        lead2: "We use smart technology to organize information and predict trends, making sure what you create gets discovered by people who match your style.",
         block1Title: 'Your essence, translated into data.',
-        block1Text: "Don't waste time deciphering algorithms. Our AI processes your event content to identify and apply the most accurate niche tags. We ensure your production reaches the right tribe, maximizing organic reach within our curation network.",
+        block1Text: "Forget the headache with algorithms.",
+        block1Text2: "Our technology understands everything about your event and does the heavy lifting for you. We make sure your production reaches people who really enjoy your style, growing your audience naturally and effortlessly.",
         block2Title: 'Full control, from first batch to last click.',
-        block2Text: 'An intuitive command center for your event. Manage lineups, control ticket batch rollovers, and update your gallery in real time. With MyWeek, operational management is no longer a bottleneck — it becomes your greatest competitive advantage.',
+        block2Text: "Everything you need for your event, in one place.",
+        block2Text2: "Organize lineups, change ticket prices, and update photos on the spot — all in a simple way. With MyWeek, organization stops being a worry and you get time to focus on what really matters: the success of your movement.",
         block3Title: 'Optimization that avoids empty venues.',
-        block3Text: "Event success starts with scheduling. Our Timing Optimizer analyzes the city's cultural landscape to suggest the best days and times. Avoid conflicts with other major niche events and keep the audience focused on your attraction.",
+        block3Text: "Get the schedule right without relying on luck.",
+        block3Text2: "We help you find the perfect slot in the city's programming. Learn which days and times work best for your audience, avoid clashing with other events, and aim for a full house.",
         block4Title: 'Real forecasts for confident decisions.',
-        block4Text: "No more working in the dark. We use Machine Learning to estimate your likely audience with high confidence. Scale your team, inventory, and budget based on concrete regional interest data, turning uncertainty into profit.",
+        block4Text: "Real forecasts so your event can crush it. Stop guessing: know your audience size before you even open the doors. Use our intelligence to spend only what you need on inventory and staff, for an organized and much more profitable event.",
         miniDashboardTitle: 'Batch Status',
         lot1Label: 'Batch 1',
         lot2Label: 'Batch 2',
@@ -213,7 +240,8 @@
         text: 'From producer intelligence to the palm of your hand.'
       },
       b2c: {
-        lead: 'All the intelligence generated by producers reaches you in a personalized way. Ask our Concierge what to do now — or discover it in your feed.',
+        lead: "The best of the city, personalized for you.",
+        lead2: "Everything good going on comes straight to your feed. If you're not sure what to do, just ask our assistant and find the perfect plan for right now.",
         chatUser: "What's good tonight near me?",
         chatIALabel: 'AI Concierge',
         chatIAText: '3 events in your niche: Jazz at Blue Note 9pm, Techno at D-Edge 11pm, and an open mic at Bar do Zé. Want an itinerary with travel time?'
@@ -222,7 +250,7 @@
         timingTitle: 'Intelligent timing for your agenda',
         timingText: 'Our AI learns when your scene truly happens and projects interest peaks throughout the week.',
         audienceTitle: 'Live audience map',
-        audienceText: 'See interest by niche, city, and time of day to understand where your scene is strongest.',
+        audienceText: "Understand where the scene you like pulses strongest. Pick the best time and the right neighborhood to enjoy the best the city has to offer, your way.",
         audienceItem1: 'Growth on Thursday nights',
         audienceItem2: 'Prefer venues within 30 minutes from home',
         audienceItem3: 'niche scenes trending in your city',
@@ -230,19 +258,36 @@
         performanceText: 'Track which events, days, and formats deliver the best results for your scene.',
         performanceMetric1Label: 'Average conversion',
         performanceMetric2Label: 'Confirmed check-ins',
-        conciergeTitle: 'Data-powered AI Concierge',
-        conciergeText: 'What users see in the app directly reflects the timing, audience, and performance the platform learns every day.'
+        conciergeTitle: "Your personal guide to the perfect night out.",
+        conciergeText: "MyWeek learns from the city's pulse to show you only what matters. It's the ideal mix of the right time and what people are into right now."
       },
       download: {
-        title: 'Take the scene in your pocket',
-        desc: 'Discover underground and niche events in real time. Smart curation on your phone.',
+        title: "Take the best of the city in your pocket.",
+        desc: "Discover the perfect plan and skip the obvious in real time.",
         appStore: 'App Store',
         googlePlay: 'Google Play',
         comingSoon: 'Coming soon'
       },
+      pricing: {
+        title: 'Plans & Pricing',
+        basicTitle: 'Basic Plan',
+        basicPrice: 'Free forever',
+        basicFeature1: 'Assistant tips: Up to 5 questions per day to help you find the perfect plan.',
+        basicFeature2: 'Discovery: See the top 3 events happening in the city right now.',
+        basicFeature3: 'Everything you need: Event feed, personalized profile, and interest notifications.',
+        basicCta: 'Get Started',
+        premiumBadge: 'Most popular',
+        premiumTitle: 'Premium Plan',
+        premiumPrice: 'R$ 29.90 / month',
+        premiumFeature1: 'Unlimited Assistant: Ask what to do as many times as you want, no limits.',
+        premiumFeature2: 'VIP Discovery: Exclusive list based on what you actually like (real affinity).',
+        premiumFeature3: 'Full Experience: All Basic features, with priority and refined intelligence.',
+        premiumFeature4: 'Freedom: Change plan or cancel whenever you want, no hassle.',
+        premiumCta: 'Go Premium Now'
+      },
       about: {
-        title: 'The Intelligence Behind the Scene.',
-        manifesto: 'MyWeek was born to fill the void left by mass promotion channels. We are a Cultural Intelligence Hub designed to give voice to niche events — from Experimental Jazz to Post-Punk — and connect tribes to authentic experiences that the mainstream ignores.',
+        title: "Your city goes way beyond the obvious.",
+        manifesto: "We got tired of promotion that only shows the same old thing. MyWeek is the smart guide built to give visibility to authentic movements and make sure you find your people and the events that really match who you are.",
         differential: 'What sets us apart: We are not just a calendar. We are a platform that uses AI Agents to turn events into strategic data for producers and personalized curation for users.',
         pillar1Title: 'Human Curation, Smart AI',
         pillar1Text: 'Algorithms that respect user taste.',
@@ -250,11 +295,12 @@
         pillar2Text: 'Direct connection between producers, local partners, and audience.',
         pillar3Title: 'Data That Generates Value',
         pillar3Text: 'Transforming metrics into decisions for the cultural market.',
-        ctaSubtitle: 'Ready to discover your next scene or scale your event?'
+        ctaSubtitle: "Ready to find your next night out or make your event crush it?"
       },
       commercial: {
         title: 'Business Interest',
-        lead: 'We are a Cultural Intelligence Hub. By getting in touch, you take the first step to access strategic data on audience, timing, and performance of your niche events.'
+        lead: "Real intelligence for everyone who makes culture happen.",
+        lead2: "Let's talk? Discover how to use real insights about your audience and the city's pulse to turn your event into a guaranteed success."
       },
       form: {
         companyLabel: 'Company Name',
@@ -385,10 +431,31 @@
 
     document.documentElement.classList.remove('i18n-wait');
 
+    if (lang === 'en') {
+      updatePremiumPriceUsd();
+    }
+
     try {
       var ev = new CustomEvent('languagechange', { detail: { lang: lang } });
       window.dispatchEvent(ev);
     } catch (e) {}
+  }
+
+  var PREMIUM_BRL = 29.9;
+
+  function updatePremiumPriceUsd() {
+    var el = document.querySelector('[data-i18n="pricing.premiumPrice"]');
+    if (!el || currentLang !== 'en') return;
+    fetch('https://api.frankfurter.app/latest?from=BRL&to=USD')
+      .then(function (res) { return res.json(); })
+      .then(function (data) {
+        var rate = data.rates && data.rates.USD;
+        if (rate != null && typeof rate === 'number') {
+          var usd = PREMIUM_BRL * rate;
+          el.textContent = '$' + usd.toFixed(2) + ' / month';
+        }
+      })
+      .catch(function () {});
   }
 
   function getLanguage() {
