@@ -9,6 +9,7 @@
 
   var translations = {
     pt: {
+      pageTitle: 'MyWeek | Sua Agenda Cultural Inteligente',
       hero: {
         title: 'A gente te mostra de forma inteligente o que tá rolando.',
         subtitle: 'A forma mais fácil de encontrar e divulgar eventos que você realmente curte.',
@@ -172,6 +173,7 @@
       ]
     },
     en: {
+      pageTitle: 'MyWeek | Your Smart Cultural Agenda',
       hero: {
         title: "We show you in a smart way what's going on.",
         subtitle: "The easiest way to find and promote events you actually enjoy.",
@@ -430,6 +432,9 @@
     }
 
     document.documentElement.classList.remove('i18n-wait');
+
+    var pageTitle = get('pageTitle');
+    if (pageTitle) document.title = pageTitle;
 
     if (lang === 'en') {
       updatePremiumPriceUsd();
