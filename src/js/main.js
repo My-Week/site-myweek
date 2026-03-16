@@ -5,7 +5,7 @@
   'use strict';
 
   var CONFIG = {
-    loginUrl: 'https://api.myweek.com.br/login',
+    loginUrl: 'https://dash.myweekoficial.com.br/login',
     storeUrls: {
       ios: null,
       android: null
