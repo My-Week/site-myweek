@@ -75,7 +75,16 @@
 
   .b2b-platform .z-row__inner,
   .b2c-experience .z-row__inner {
-    gap: 100px;
+    gap: clamp(1.5rem, 2.5vw, 2.75rem);
+  }
+
+  .showcase-rows {
+    max-width: 68rem;
+  }
+
+  .showcase-row,
+  .b2b-platform .z-row__inner {
+    gap: clamp(1.75rem, 2.5vw, 2.75rem);
   }
 
   .commercial__inner {

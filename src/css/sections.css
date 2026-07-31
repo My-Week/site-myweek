@@ -1204,7 +1204,7 @@
 
   .b2c-experience .z-row__inner {
     flex-direction: row;
-    gap: 80px;
+    gap: clamp(1.5rem, 3vw, 2.5rem);
   }
 
   .b2c-experience .z-row:nth-child(even) .z-row__inner {

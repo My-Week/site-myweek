@@ -72,9 +72,11 @@
 .showcase-rows {
   display: flex;
   flex-direction: column;
-  gap: clamp(3.5rem, 6vw, 5.5rem);
+  gap: clamp(2.75rem, 5vw, 4rem);
   width: 100%;
-  margin-top: var(--space-3xl);
+  max-width: 64rem;
+  margin-top: var(--space-2xl);
+  margin-inline: auto;
 }
 
 .b2c-experience__lead + .b2c-experience__lead {
@@ -86,7 +88,7 @@
 .b2b-platform .z-row__inner {
   display: grid;
   grid-template-columns: minmax(0, 1fr);
-  gap: clamp(2rem, 4vw, 3rem);
+  gap: clamp(1.25rem, 3vw, 1.75rem);
   align-items: center;
   width: 100%;
 }
@@ -94,7 +96,7 @@
 .showcase-row__copy,
 .b2b-platform .z-row__body {
   min-width: 0;
-  max-width: 34rem;
+  max-width: 28rem;
 }
 
 .showcase-row__media,
@@ -144,35 +146,66 @@
 }
 
 @media (min-width: 900px) {
+  /*
+   * Par texto+mídia com gap de produto (~32–40px), centralizado no container.
+   * Evita coluna 1fr que empurra o phone para a borda da tela.
+   */
   .showcase-row,
   .b2b-platform .z-row__inner {
-    grid-template-columns: minmax(0, 1fr) minmax(0, 1.05fr);
-    gap: clamp(2.5rem, 5vw, 4.5rem);
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    align-items: center;
+    justify-content: center;
+    gap: clamp(1.75rem, 3vw, 2.5rem);
   }
 
-  .showcase-row--flip .showcase-row__copy,
-  .b2b-platform .z-row--reverse .z-row__body {
-    order: 2;
-  }
-
-  .showcase-row--flip .showcase-row__media,
-  .b2b-platform .z-row--reverse .z-row__media {
-    order: 1;
+  .showcase-row--flip,
+  .b2b-platform .z-row--reverse .z-row__inner {
+    flex-direction: row-reverse;
   }
 
   .showcase-row__copy,
   .b2b-platform .z-row__body {
-    max-width: none;
+    flex: 1 1 18rem;
+    max-width: 26rem;
+    min-width: 0;
+  }
+
+  .showcase-row__media,
+  .b2b-platform .z-row__media {
+    flex: 0 0 auto;
+    width: auto;
+    max-width: min(36rem, 48%);
+    justify-content: center;
   }
 
   .screen-frame--phone {
-    max-width: 16.5rem;
-    max-height: 34rem;
+    width: 15rem;
+    max-width: 15rem;
+    max-height: 31rem;
+  }
+
+  .screen-carousel:not(.screen-carousel--desktop) {
+    width: 15rem;
+    max-width: 15rem;
   }
 
   .screen-frame--desktop {
-    max-width: 100%;
-    max-height: 26rem;
+    width: min(32rem, 100%);
+    max-width: 32rem;
+    max-height: 22rem;
+  }
+
+  .screen-carousel--desktop {
+    width: min(32rem, 100%);
+    max-width: 32rem;
+  }
+
+  .showcase-row:has(.screen-frame--desktop) .showcase-row__copy,
+  .showcase-row:has(.screen-carousel--desktop) .showcase-row__copy,
+  .b2b-platform .z-row__inner:has(.screen-frame--desktop) .z-row__body {
+    max-width: 22rem;
   }
 }
 
