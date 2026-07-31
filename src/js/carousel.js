@@ -1,16 +1,16 @@
 /**
- * MyWeek - Carrossel leve de screens (dots + prev/next + autoplay)
+ * MyWeek - Carrossel de screens (fade + dots + prev/next + autoplay)
+ * Slides empilhados no mesmo grid-area — só o .is-active fica visível.
  */
 (function () {
   'use strict';
 
   function initCarousel(root) {
-    var track = root.querySelector('.screen-carousel__track');
     var slides = root.querySelectorAll('.screen-carousel__slide');
     var prevBtn = root.querySelector('.screen-carousel__btn--prev');
     var nextBtn = root.querySelector('.screen-carousel__btn--next');
     var dotsWrap = root.querySelector('.screen-carousel__dots');
-    if (!track || slides.length < 2) return;
+    if (slides.length < 2) return;
 
     var index = 0;
     var timer = null;
@@ -22,7 +22,6 @@
 
     function goTo(i) {
       index = (i + slides.length) % slides.length;
-      track.style.transform = 'translateX(-' + index * 100 + '%)';
       slides.forEach(function (slide, n) {
         var active = n === index;
         slide.classList.toggle('is-active', active);
