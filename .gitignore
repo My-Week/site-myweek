@@ -1,0 +1,5 @@
+# Screenshots / artefatos do Playwright MCP (só validação local)
+.playwright-mcp/
+
+# Netlify CLI
+.netlify/
