@@ -11,10 +11,13 @@
     max-width: 100%;
   }
 
+  /* Não use overflow-x: hidden aqui: com overflow-y:visible o browser
+     promove overflow-y para auto e cria 2ª barra (html + body). */
   body {
     width: 100%;
     max-width: 100%;
-    overflow-x: hidden;
+    overflow-x: clip;
+    overflow-y: visible;
   }
 
   .container {
