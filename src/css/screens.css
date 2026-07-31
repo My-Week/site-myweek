@@ -228,7 +228,10 @@
   }
 }
 
-/* Ultrawide: zigzag nas bordas + screens maiores (não bloco centralizado) */
+/*
+ * Ultrawide zigzag: imagens nas bordas; texto vem até perto da mídia
+ * (gap confortável ~40–56px — sem colar, sem vazio enorme).
+ */
 @media (min-width: 2000px) {
   .showcase-rows {
     max-width: none;
@@ -238,15 +241,22 @@
 
   .showcase-row,
   .b2b-platform .z-row__inner {
-    justify-content: space-between;
-    gap: clamp(2.5rem, 4vw, 4rem);
+    /* Empacota o par na borda da imagem (direita no row normal) */
+    justify-content: flex-end;
+    gap: clamp(2.5rem, 2.5vw, 3.5rem);
     width: 100%;
+  }
+
+  .showcase-row--flip,
+  .b2b-platform .z-row--reverse .z-row__inner {
+    /* row-reverse + flex-end = par na borda esquerda (imagem lá) */
+    justify-content: flex-end;
   }
 
   .showcase-row__copy,
   .b2b-platform .z-row__body {
-    flex: 0 1 34rem;
-    max-width: 36rem;
+    flex: 0 1 32rem;
+    max-width: 34rem;
   }
 
   .showcase-row__media,
@@ -276,7 +286,7 @@
   .showcase-row:has(.screen-frame--desktop) .showcase-row__copy,
   .showcase-row:has(.screen-carousel--desktop) .showcase-row__copy,
   .b2b-platform .z-row__inner:has(.screen-frame--desktop) .z-row__body {
-    max-width: 32rem;
+    max-width: 30rem;
   }
 }
 

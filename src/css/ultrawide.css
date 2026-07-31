@@ -78,10 +78,7 @@
     gap: clamp(1.5rem, 2.5vw, 2.75rem);
   }
 
-  /*
-   * Zigzag real no ultrawide: largura total do container,
-   * texto/mídia nas bordas alternadas (não um bloco centralizado).
-   */
+  /* Zigzag: imagem na borda; texto aproxima (detalhe em screens.css @2000px) */
   .showcase-rows {
     max-width: none;
     width: 100%;
@@ -90,15 +87,15 @@
 
   .showcase-row,
   .b2b-platform .z-row__inner {
-    justify-content: space-between;
-    gap: clamp(2.5rem, 4vw, 4rem);
+    justify-content: flex-end;
+    gap: clamp(2.5rem, 2.5vw, 3.5rem);
     width: 100%;
   }
 
   .showcase-row__copy,
   .b2b-platform .z-row__body {
-    flex: 0 1 34rem;
-    max-width: 36rem;
+    flex: 0 1 32rem;
+    max-width: 34rem;
   }
 
   .showcase-row__media,
@@ -128,7 +125,7 @@
   .showcase-row:has(.screen-frame--desktop) .showcase-row__copy,
   .showcase-row:has(.screen-carousel--desktop) .showcase-row__copy,
   .b2b-platform .z-row__inner:has(.screen-frame--desktop) .z-row__body {
-    max-width: 32rem;
+    max-width: 30rem;
   }
 
   .commercial__inner {
