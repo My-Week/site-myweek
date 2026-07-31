@@ -109,7 +109,15 @@
 .hero__col--text {
   display: flex;
   flex-direction: column;
-  gap: var(--space-md);
+  gap: clamp(0.85rem, 1.5vw, 1.15rem);
+}
+
+.hero__col--text .hero__title {
+  margin-top: 0.15rem;
+}
+
+.hero__col--text .hero__actions {
+  margin-top: 0.35rem;
 }
 
 .hero__col--visual {
@@ -131,37 +139,45 @@
 
 .hero__eyebrow {
   margin: 0;
-  font-size: 0.8rem;
+  font-size: 0.85rem;
   font-weight: 600;
-  letter-spacing: 0.16em;
-  text-transform: lowercase;
-  color: var(--cyan-neon, #06b6d4);
-  opacity: 0.95;
+  letter-spacing: 0.08em;
+  text-transform: none;
+  color: #67e8f9;
+  opacity: 1;
+  text-shadow: 0 1px 10px rgba(0, 0, 0, 0.45);
 }
 
 .hero__title {
-  font-size: clamp(2rem, 4.2vw, 3.75rem);
-  font-weight: 800;
-  letter-spacing: -0.02em;
-  line-height: var(--line-height-title);
+  font-family: var(--font-family-heading);
+  font-size: clamp(1.85rem, 3.8vw, 3.15rem);
+  font-weight: 700;
+  letter-spacing: -0.025em;
+  line-height: 1.22;
   margin: 0;
-  max-width: var(--text-column-max);
-  background: linear-gradient(135deg, var(--cyan-neon) 0%, #38bdf8 25%, #a855f7 65%, var(--primary-vibrant) 100%);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  background-clip: text;
-  filter: drop-shadow(0 0 18px rgba(56, 189, 248, 0.4)) drop-shadow(0 4px 14px rgba(15, 23, 42, 0.55));
+  max-width: 22ch;
+  color: #f8fafc;
+  /* Gradiente só como realce suave — texto sólido por baixo para leitura */
+  background: none;
+  -webkit-text-fill-color: unset;
+  background-clip: unset;
+  -webkit-background-clip: unset;
+  filter: none;
+  text-shadow:
+    0 1px 2px rgba(0, 0, 0, 0.65),
+    0 4px 20px rgba(0, 0, 0, 0.45),
+    0 0 28px rgba(56, 189, 248, 0.22);
 }
 
 .hero__subtitle {
-  font-size: clamp(1rem, 2.5vw, 1.25rem);
-  font-weight: 300;
+  font-size: clamp(1.05rem, 2.2vw, 1.2rem);
+  font-weight: 400;
   letter-spacing: 0.01em;
-  color: var(--text-low);
-  max-width: var(--text-column-max);
+  color: rgba(226, 232, 240, 0.92);
+  max-width: 36ch;
   margin: 0;
-  line-height: 1.8;
-  text-shadow: var(--text-shadow-readability);
+  line-height: 1.65;
+  text-shadow: 0 1px 12px rgba(0, 0, 0, 0.5);
 }
 
 [data-theme="light"] .hero__content {
@@ -173,8 +189,19 @@
   color: var(--text-high);
 }
 
+[data-theme="light"] .hero__eyebrow {
+  color: #0891b2;
+  text-shadow: none;
+}
+
+[data-theme="light"] .hero__title {
+  color: #0f172a;
+  text-shadow: none;
+}
+
 [data-theme="light"] .hero__subtitle {
   color: var(--text-muted);
+  text-shadow: none;
 }
 
 .hero__actions {

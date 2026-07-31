@@ -6,7 +6,7 @@
 @import "variables.css";
 @import "base.css";
 @import "header.css";
-@import "hero.css";
+/* hero.css é linkado no index.html com ?v= para evitar cache de @import */
 @import "sections.css";
 /* screens.css é linkado no index.html com ?v= para evitar cache de @import */
 @import "forms.css";

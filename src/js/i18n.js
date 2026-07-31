@@ -12,9 +12,9 @@
     pt: {
       pageTitle: 'MyWeek | Sua Agenda Cultural Inteligente',
       hero: {
-        eyebrow: 'descubra onde está sua cena',
+        eyebrow: 'Descubra onde está a sua cena',
         brand: 'MyWeek',
-        title: 'A gente te mostra de forma inteligente o que tá rolando.',
+        title: 'A gente te mostra, de forma inteligente, o que está rolando.',
         subtitle: 'A forma mais fácil de encontrar e divulgar eventos que você realmente curte.',
         ctaPrimary: 'Quero participar do lançamento',
         ctaSecondary: 'Entender como a MyWeek funciona',
@@ -181,9 +181,9 @@
     en: {
       pageTitle: 'MyWeek | Your Smart Cultural Agenda',
       hero: {
-        eyebrow: 'find where your scene is',
+        eyebrow: 'Find where your scene is',
         brand: 'MyWeek',
-        title: "We show you in a smart way what's going on.",
+        title: "We show you, the smart way, what's going on.",
         subtitle: 'The easiest way to find and promote events you actually enjoy.',
         ctaPrimary: 'Join the launch',
         ctaSecondary: 'Understand how MyWeek works',
