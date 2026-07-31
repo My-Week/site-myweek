@@ -858,62 +858,22 @@
   text-align: center;
 }
 
-/* Mobile-first: column por padrão, row a partir de 1024px */
+/* Zigzag B2B — layout em grid via screens.css (.z-row__inner) */
 .b2b-platform .z-row {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  margin-bottom: 80px;
+  margin-bottom: clamp(3.5rem, 6vw, 5.5rem);
 }
 
 .b2b-platform .z-row:last-child {
   margin-bottom: 0;
 }
 
-.b2b-platform .z-row__inner {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: var(--space-2xl);
-  width: 100%;
-}
-
-.b2b-platform .z-row__body,
-.b2b-platform .z-row__media {
-  flex: 1 1 auto;
-  width: 100%;
-  min-width: 0;
-}
-
-.b2b-platform .z-row__body {
-  max-width: var(--text-column-max);
-}
-
 .b2b-platform .z-row__media {
   transition: transform var(--transition-organic);
 }
 
-.b2b-platform .z-row:hover .z-row__media {
-  transform: scale(1.02);
-}
-
-@media (min-width: 1024px) {
-  .b2b-platform .z-row {
-    margin-bottom: 120px;
-  }
-
-  .b2b-platform .z-row__inner {
-    flex-direction: row;
-    gap: 80px;
-  }
-
-  .b2b-platform .z-row:nth-child(even) .z-row__inner {
-    flex-direction: row-reverse;
-  }
-
-  .b2b-platform .z-row__body,
-  .b2b-platform .z-row__media {
-    flex: 0 0 calc(50% - 40px);
+@media (min-width: 900px) {
+  .b2b-platform .z-row:hover .z-row__media {
+    transform: translateY(-4px);
   }
 }
 
@@ -943,14 +903,21 @@
 }
 
 .b2c-experience__lead {
-  max-width: var(--text-column-max);
-  margin: 0 auto var(--space-3xl);
+  max-width: 40rem;
+  margin: 0 auto var(--space-md);
   font-size: 1.125rem;
   font-weight: 300;
   letter-spacing: 0.01em;
   line-height: 1.8;
   color: var(--text-muted);
   text-align: center;
+}
+
+.b2c-experience__lead:first-child {
+  font-size: clamp(1.35rem, 2.5vw, 1.75rem);
+  font-weight: 600;
+  color: var(--text-high);
+  margin-bottom: var(--space-sm);
 }
 
 @media (min-width: 1024px) {

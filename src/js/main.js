@@ -5,7 +5,7 @@
   'use strict';
 
   var CONFIG = {
-    loginUrl: 'https://dash.myweekoficial.com.br/login',
+    loginUrl: 'https://sandbox.myweekoficial.com.br/login',
     storeUrls: {
       ios: null,
       android: null
@@ -183,7 +183,10 @@
           return;
         }
         e.preventDefault();
-        alert('Em breve');
+        var msg = (window.MyWeek && window.MyWeek.i18n && window.MyWeek.i18n.get)
+          ? window.MyWeek.i18n.get('download.comingSoon')
+          : 'Em breve';
+        alert(msg);
       });
     });
   }

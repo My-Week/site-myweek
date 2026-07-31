@@ -34,25 +34,6 @@
         });
       });
 
-      // Stagger específico para Bento Grid
-      var bento = document.querySelector('.features-bento');
-      if (bento) {
-        var cards = bento.querySelectorAll('.feature-card');
-        if (cards.length) {
-          gsap.from(cards, {
-            y: 40,
-            duration: 0.8,
-            ease: 'power4.out',
-            stagger: 0.1,
-            scrollTrigger: {
-              trigger: bento,
-              start: 'top 80%',
-              toggleActions: 'play none none none'
-            }
-          });
-        }
-      }
-
       // Stagger para itens do menu (animação na chegada da página)
       var nav = document.querySelector('.nav');
       if (nav) {
@@ -133,7 +114,7 @@
       window.matchMedia('(prefers-reduced-motion: reduce)').matches;
     if (prefersReduced) return;
 
-    var elements = document.querySelectorAll('.feature-card, .download-app__btn, .nav__login');
+    var elements = document.querySelectorAll('.download-app__btn, .nav__login');
     if (!elements.length) return;
 
     window.VanillaTilt.init(elements, {

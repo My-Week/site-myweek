@@ -38,7 +38,7 @@ As variáveis completas ficam em `src/css/variables.css`.
 
 ### Famílias
 
-- **Títulos (H1, H2) e logo:** `--font-family-heading` → **Plus Jakarta Sans**, fallback para --font-family.
+- **Títulos (H1, H2) e logo:** `--font-family-heading` → **Outfit**, fallback para --font-family.
 - **Corpo de texto:** `--font-family` → **Inter**, fallback para -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif.
 
 ### Tamanhos e pesos
@@ -125,7 +125,7 @@ Títulos usam gradiente metálico e brilho:
 **Sempre que for pedido criar uma nova seção, componente ou trecho de UI no projeto MyWeek, leia este arquivo (`STYLEGUIDE.md`) primeiro.** O novo código deve:
 
 - Usar as variáveis e cores deste styleguide (Rich Black, Deep Purple, Electric Cyan, opacidades de glassmorphism).
-- Respeitar tipografia (Plus Jakarta Sans para títulos, Inter para corpo), tamanhos e letter-spacing descritos.
+- Respeitar tipografia (Outfit para títulos, Inter para corpo), tamanhos e letter-spacing descritos.
 - Seguir os padrões de botões, cards e inputs (neon border, blur, transição roxo → ciano na validação).
 - Usar nomenclatura BEM e duração de animações (0.8s FadeIn, 15s loop da logo).
 - Aplicar `brightness(0.4)` e `saturate(0.8)` em vídeos de fundo.

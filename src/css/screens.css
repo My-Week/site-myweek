@@ -1,0 +1,224 @@
+/* ============================================
+   MyWeek - Screen frames + showcase rows (SaaS)
+   Texto e produto em colunas claras — sem overlap
+   ============================================ */
+
+.screen-frame {
+  margin: 0;
+  position: relative;
+  display: block;
+  width: 100%;
+  overflow: hidden;
+  background: #0a0a0f;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  box-shadow:
+    0 20px 40px -18px rgba(0, 0, 0, 0.65),
+    0 0 0 1px rgba(124, 58, 237, 0.1);
+}
+
+.screen-frame--phone {
+  border-radius: 1.25rem;
+  max-width: 15.5rem;
+  width: 100%;
+  max-height: 32rem;
+  aspect-ratio: 9 / 19.5;
+  margin-inline: auto;
+}
+
+.screen-frame--desktop {
+  border-radius: var(--radius-lg);
+  width: 100%;
+  max-width: 36rem;
+  max-height: 24rem;
+  aspect-ratio: 10 / 7;
+  margin-inline: auto;
+}
+
+.screen-frame__img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center center;
+}
+
+/* Painéis web: mostrar área central já recortada (sem sidebar/topo) */
+.screen-frame--desktop .screen-frame__img {
+  object-fit: contain;
+  object-position: center top;
+  background: #f4f5f7;
+}
+
+[data-theme="dark"] .screen-frame--desktop .screen-frame__img {
+  background: #e8eaee;
+}
+
+/* App: mostrar a tela inteira (sem cortar CTAs, sheets ou listas) */
+.screen-frame--phone .screen-frame__img {
+  object-fit: contain;
+  object-position: center top;
+  background: #0a0a0f;
+}
+
+[data-theme="light"] .screen-frame {
+  background: #f8fafc;
+  border-color: rgba(124, 58, 237, 0.18);
+  box-shadow:
+    0 18px 36px -16px rgba(15, 23, 42, 0.22),
+    0 0 0 1px rgba(124, 58, 237, 0.08);
+}
+
+/* ---------- Showcase rows (B2B + B2C) ---------- */
+.showcase-rows {
+  display: flex;
+  flex-direction: column;
+  gap: clamp(3.5rem, 6vw, 5.5rem);
+  width: 100%;
+  margin-top: var(--space-3xl);
+}
+
+.b2c-experience__lead + .b2c-experience__lead {
+  margin-top: calc(var(--space-md) * -1);
+  margin-bottom: 0;
+}
+
+.showcase-row,
+.b2b-platform .z-row__inner {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr);
+  gap: clamp(2rem, 4vw, 3rem);
+  align-items: center;
+  width: 100%;
+}
+
+.showcase-row__copy,
+.b2b-platform .z-row__body {
+  min-width: 0;
+  max-width: 34rem;
+}
+
+.showcase-row__media,
+.b2b-platform .z-row__media {
+  min-width: 0;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.showcase-row__title,
+.b2b-platform .z-section__title {
+  font-family: var(--font-family-heading);
+  font-size: clamp(1.5rem, 3vw, 2.25rem);
+  font-weight: 800;
+  letter-spacing: -0.03em;
+  line-height: 1.2;
+  color: var(--text-high);
+  margin: 0 0 var(--space-md);
+}
+
+.b2b-platform .z-section__text {
+  margin: 0 0 var(--space-sm);
+  font-size: 1.05rem;
+  font-weight: 300;
+  line-height: 1.75;
+  color: var(--text-muted);
+  max-width: 32rem;
+}
+
+.b2b-platform .z-section__text:last-child {
+  margin-bottom: 0;
+}
+
+.showcase-row__text {
+  margin: 0;
+  font-size: 1.05rem;
+  font-weight: 300;
+  line-height: 1.75;
+  color: var(--text-muted);
+  max-width: 32rem;
+}
+
+.showcase-row__text + .showcase-row__text {
+  margin-top: var(--space-sm);
+}
+
+@media (min-width: 900px) {
+  .showcase-row,
+  .b2b-platform .z-row__inner {
+    grid-template-columns: minmax(0, 1fr) minmax(0, 1.05fr);
+    gap: clamp(2.5rem, 5vw, 4.5rem);
+  }
+
+  .showcase-row--flip .showcase-row__copy,
+  .b2b-platform .z-row--reverse .z-row__body {
+    order: 2;
+  }
+
+  .showcase-row--flip .showcase-row__media,
+  .b2b-platform .z-row--reverse .z-row__media {
+    order: 1;
+  }
+
+  .showcase-row__copy,
+  .b2b-platform .z-row__body {
+    max-width: none;
+  }
+
+  .screen-frame--phone {
+    max-width: 16.5rem;
+    max-height: 34rem;
+  }
+
+  .screen-frame--desktop {
+    max-width: 100%;
+    max-height: 26rem;
+  }
+}
+
+@media (max-width: 899px) {
+  .showcase-row__copy,
+  .b2b-platform .z-row__body {
+    text-align: left;
+    margin-inline: 0;
+    max-width: none;
+  }
+
+  .screen-frame--phone {
+    max-width: 13rem;
+    max-height: 28rem;
+  }
+
+  .screen-frame--desktop {
+    max-height: 16rem;
+    aspect-ratio: 10 / 7;
+  }
+}
+
+.download-app__badge {
+  display: inline-block;
+  margin: 0 auto var(--space-md);
+  padding: 0.35rem 0.9rem;
+  border-radius: var(--radius-full);
+  font-size: 0.75rem;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: #e0f2fe;
+  background: rgba(6, 182, 212, 0.18);
+  border: 1px solid rgba(6, 182, 212, 0.45);
+}
+
+[data-theme="light"] .download-app__badge {
+  color: #0e7490;
+  background: rgba(6, 182, 212, 0.12);
+  border-color: rgba(6, 182, 212, 0.35);
+}
+
+[data-theme="light"] .showcase-row__title {
+  color: var(--text-high);
+}
+
+[data-theme="light"] .showcase-row__text {
+  color: var(--text-low);
+}

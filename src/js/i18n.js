@@ -1,5 +1,6 @@
 /**
  * MyWeek - Internacionalização (PT/EN): dicionário e setLanguage
+ * Copy alinhado a Product/docs/07-landpage-copy.md e 06-claims-vs-realidade.md
  */
 (function () {
   'use strict';
@@ -11,17 +12,13 @@
     pt: {
       pageTitle: 'MyWeek | Sua Agenda Cultural Inteligente',
       hero: {
+        eyebrow: 'descubra onde está sua cena',
+        brand: 'MyWeek',
         title: 'A gente te mostra de forma inteligente o que tá rolando.',
         subtitle: 'A forma mais fácil de encontrar e divulgar eventos que você realmente curte.',
         ctaPrimary: 'Quero participar do lançamento',
         ctaSecondary: 'Entender como a MyWeek funciona',
-        visualProducerTag: 'Produtor',
-        visualProducerLabel: 'Dashboard MyWeek',
-        visualUserTag: 'Usuário',
-        visualUserLabel: 'Feed & mapa em tempo real',
-        visualEvent1Title: 'Jazz Night — Hoje · 21h',
-        visualEvent1Meta: 'Pinheiros · 7 min',
-        visualEvent2Title: 'Techno no D-Edge · 23h'
+        deviceAlt: 'Feed do app MyWeek com eventos perto de você'
       },
       countdown: {
         eyebrow: 'Sua forma de viver a cultura está prestes a mudar.',
@@ -44,64 +41,57 @@
       },
       b2b: {
         lead: 'Você cria o evento, a gente faz ele encontrar o público certo.',
-        lead2: 'Usamos tecnologia inteligente para organizar informações e prever tendências, garantindo que o que você produz seja descoberto pela galera que combina com seu estilo.',
-        block1Title: 'Sua essência, traduzida por dados.',
-        block1Text: 'Esqueça a dor de cabeça com algoritmos.',
-        block1Text2: 'Nossa tecnologia entende tudo sobre o seu evento e faz o trabalho pesado por você. Garantimos que sua produção chegue direto em quem realmente curte o seu estilo, aumentando seu público de forma natural e sem esforço.',
-        block2Title: 'Controle total, do primeiro lote ao último clique.',
-        block2Text: 'Tudo o que você precisa para o seu evento, em um só lugar.',
-        block2Text2: 'Organize atrações, mude o preço dos ingressos e atualize fotos na hora, tudo de um jeito simples. Com o MyWeek, a organização deixa de ser uma preocupação e você ganha tempo para focar no que realmente importa: o sucesso do seu movimento.',
-        block3Title: 'Otimização que evita o silêncio.',
-        block3Text: 'Acerte na agenda sem precisar de sorte.',
-        block3Text2: 'A gente te ajuda a encontrar a brecha perfeita na programação da cidade. Saiba quais dias e horários funcionam melhor para o seu estilo de público, evitando bater de frente com outros eventos e garantindo casa cheia.',
-        block4Title: 'Previsão real para decisões seguras.',
-        block4Text: 'Previsões reais para o seu evento bombar. Chega de adivinhar: saiba o tamanho do seu público antes mesmo de abrir as portas. Use nossa inteligência para gastar apenas o necessário com estoque e equipe, garantindo um evento organizado e muito mais lucrativo.',
-        miniDashboardTitle: 'Status de Lotes',
-        lot1Label: 'Lote 1',
-        lot2Label: 'Lote 2',
-        lot3Label: 'Lote 3',
-        lot4Label: 'Lote 4',
-        lot1Pct: '80% vendido',
-        lot2Pct: '45% vendido',
-        lot3Pct: '90% vendido',
-        lot4Pct: '60% vendido',
-        heatmapY: 'Horário',
-        heatmapX: 'Dia',
-        heatmapCaption: 'Qui · Sex · Sáb · Dom',
-        lineChartTitle: 'Interesse Estimado',
-        sem1: 'Sem 1',
-        sem2: 'Sem 2',
-        sem3: 'Sem 3',
-        sem4: 'Sem 4'
+        lead2: 'Organizamos a divulgação no app, medimos interesse real e conectamos parceiros locais com cupons — sem substituir a sua bilheteira.',
+        block1Title: 'Sua essência, descoberta pelo público certo.',
+        block1Text: 'Cadastre o evento uma vez. O app mostra para quem está perto e curte o seu estilo.',
+        block2Title: 'Controle do evento ao funil — inclusive ingresso.',
+        block2Text: 'Atrações, fotos, lotes, link de bilheteira externa e cupons no mesmo painel.',
+        block2Text2: 'Acompanhe interessados, cliques e resgates.',
+        block3Title: 'Comércio no entorno do rolê.',
+        block3Text: 'Benefícios no venue e ofertas de parceiros próximos — validados na hora, com histórico.',
+        block4Title: 'Mapa vivo da sua operação.',
+        block4Text: 'Veja no dashboard onde seus eventos (e os da plataforma) estão no território — filtro por UF, cidade e status.',
+        block5Title: 'Decisões com número, não com feeling.',
+        block5Text: 'KPIs de engajamento do app no dashboard — para dimensionar divulgação e operação.',
+        screenAlt1: 'Detalhe do evento no painel do organizador',
+        screenAlt2: 'Aba de ingressos com lotes e bilheteira externa',
+        screenAlt3: 'Catálogo de cupons do organizador',
+        screenAlt4: 'Mapa territorial com eventos no dashboard',
+        screenAlt5: 'Painel comercial com funil de engajamento'
       },
       transition: {
         text: 'Da inteligência do produtor para a palma da sua mão.'
       },
       b2c: {
         lead: 'O melhor da cidade, personalizado para você.',
-        lead2: 'Tudo o que rola de bom chega direto no seu feed. Se estiver na dúvida, é só perguntar para o nosso assistente e descobrir o rolê perfeito para agora.',
-        chatUser: 'O que tem de bom hoje à noite perto de mim?',
-        chatIALabel: 'Concierge IA',
-        chatIAText: '3 eventos no seu nicho: Jazz no Blue Note 21h, Techno no D-Edge 23h e um open mic no Bar do Zé. Quer roteiro com tempo de deslocamento?'
+        lead2: 'Escolha localização, período e estilos que você curte. Marque Quero ir, veja lotes, compre na bilheteira, use cupons e abra a rota até o venue.'
       },
       features: {
-        timingTitle: 'Timing inteligente de agenda',
-        timingText: 'Nossa IA aprende os horários em que a sua cena realmente acontece e projeta picos de interesse ao longo da semana.',
-        audienceTitle: 'Mapa vivo de público',
-        audienceText: 'Entenda onde o movimento que você gosta pulsa mais forte. Escolha o melhor horário e o bairro ideal para aproveitar o que a cidade tem de melhor, do seu jeito.',
-        audienceItem1: 'Crescimento em noites de quinta',
-        audienceItem2: 'Preferem venues até 30 min de casa',
-        audienceItem3: 'cenas de nicho em alta na sua cidade',
-        performanceTitle: 'Performance em tempo real',
-        performanceText: 'Acompanhe quais eventos, dias e formatos entregam mais resultado para a sua cena.',
-        performanceMetric1Label: 'Conversão média',
-        performanceMetric2Label: 'Check-ins confirmados',
-        conciergeTitle: 'Seu guia particular para o rolê perfeito.',
-        conciergeText: 'O MyWeek aprende com o movimento da cidade para te mostrar apenas o que interessa. É a combinação ideal entre o horário certo e o que a galera está curtindo no momento.'
+        timingTitle: 'Timing e descoberta perto de você',
+        timingText: 'Feed com filtros de localização (GPS/cidade + raio) e período — o rolê certo no momento certo.',
+        interestsTitle: 'Seus interesses, seu feed',
+        interestsText: 'Preferências de categorias/gêneros no perfil — a curadoria começa no que você curte.',
+        mapTitle: 'Mapa vivo de presença',
+        mapText: 'Painéis admin, organizador e parceiro com mapa territorial, filtros por UF/cidade e densidade na cidade.',
+        venueTitle: 'Do detalhe à porta do venue',
+        venueText: 'Distância, Como chegar e rota no Google Maps — utilidade no dia do evento.',
+        ticketsTitle: 'Ingresso sem ser bilheteira',
+        ticketsText: 'Lotes e preços no app; compra na Sympla/Ticketmaker — MyWeek mede o clique.',
+        funnelTitle: 'Performance do funil',
+        funnelText: 'Interessados, cliques no ingresso, cópias de promo e resgates.',
+        benefitsTitle: 'Benefícios no rolê',
+        benefitsText: 'Cupons do evento e de parceiros locais, com resgate confirmado.',
+        screenAltTiming: 'Filtros de localização e período no feed',
+        screenAltInterests: 'Preferências de categorias no perfil',
+        screenAltMap: 'Mapa territorial no painel',
+        screenAltVenue: 'Como chegar ao venue no app',
+        screenAltTickets: 'Sheet de ingressos com lotes e preços',
+        screenAltFunnel: 'Painel comercial com métricas do funil',
+        screenAltBenefits: 'Cupom de benefício no app'
       },
       download: {
         title: 'Leve o melhor da cidade no seu bolso.',
-        desc: 'Descubra o rolê perfeito e fuja do óbvio em tempo real.',
+        desc: 'Descubra o rolê perfeito e fuja do óbvio.',
         appStore: 'App Store',
         googlePlay: 'Google Play',
         comingSoon: 'Em breve'
@@ -109,36 +99,36 @@
       pricing: {
         title: 'Planos e Preços',
         basicTitle: 'Plano Basic',
-        basicPrice: 'Grátis para sempre',
-        basicFeature1: 'Dicas do Assistente: Até 5 perguntas por dia para te ajudar a encontrar o rolê.',
-        basicFeature2: 'Descoberta: Veja os 3 eventos mais bombados da cidade agora.',
-        basicFeature3: 'Tudo o que você precisa: Feed de eventos, perfil personalizado e notificações de interesse.',
+        basicPrice: 'Grátis',
+        basicFeature1: 'Feed de eventos, perfil e notificações',
+        basicFeature2: 'Descoberta personalizada com limites de filtro',
+        basicFeature3: 'Concierge em teaser (conforme entrega)',
         basicCta: 'Começar Agora',
         premiumBadge: 'O mais escolhido',
         premiumTitle: 'Plano Premium',
         premiumPrice: 'R$ 29,90 / mês',
-        premiumFeature1: 'Assistente Ilimitado: Pergunte o que fazer quantas vezes quiser, sem limites.',
-        premiumFeature2: 'Descoberta VIP: Lista exclusiva baseada exatamente no que você gosta (afinidade real).',
-        premiumFeature3: 'Experiência Completa: Todos os recursos do Basic, com prioridade e inteligência refinada.',
-        premiumFeature4: 'Liberdade: Mude de plano ou cancele quando quiser, sem burocracia.',
+        premiumFeature1: 'Mais filtros (cidade, períodos ampliados)',
+        premiumFeature2: 'Concierge ampliado / ilimitado (conforme entrega)',
+        premiumFeature3: 'Experiência Premium completa',
+        premiumFeature4: 'Cancele quando quiser',
         premiumCta: 'Ser Premium Agora'
       },
       about: {
         title: 'Sua cidade vai muito além do óbvio.',
-        manifesto: 'Cansamos da divulgação que só mostra o mesmo de sempre. O MyWeek é o guia inteligente feito para dar visibilidade a movimentos autênticos e garantir que você encontre a sua galera e os eventos que realmente combinam com o seu jeito de ser.',
-        differential: 'Diferencial: Não somos apenas um calendário. Somos uma plataforma que utiliza Agentes de IA para transformar eventos em dados estratégicos para produtores e curadoria personalizada para usuários.',
-        pillar1Title: 'Curadoria Humana, IA Inteligente',
-        pillar1Text: 'Algoritmos que respeitam o gosto do usuário.',
-        pillar2Title: 'Ecossistema Sustentável',
-        pillar2Text: 'Conexão direta entre produtores, parceiros locais e público.',
-        pillar3Title: 'Dados que Geram Valor',
-        pillar3Text: 'Transformação de métricas em decisões para o mercado cultural.',
+        manifesto: 'Cansamos da divulgação que só mostra o mesmo de sempre. MyWeek é o guia inteligente para dar visibilidade a movimentos autênticos e conectar produtores, parceiros locais e público — com demanda mensurável, não só like.',
+        differential: 'Diferencial: Não somos apenas um calendário. Somos a camada de descoberta e ativação comercial da cena — com app para o público e painel para quem faz o evento acontecer.',
+        pillar1Title: 'Curadoria + geo',
+        pillar1Text: 'O rolê certo perto de você.',
+        pillar2Title: 'Demanda mensurável',
+        pillar2Text: 'Interesse e intenção, não só impressão.',
+        pillar3Title: 'Ecossistema local',
+        pillar3Text: 'Organizer + parceiro + público no mesmo loop.',
         ctaSubtitle: 'Pronto para encontrar seu próximo rolê ou fazer seu evento bombar?'
       },
       commercial: {
         title: 'Interesse Comercial',
         lead: 'Inteligência de verdade para quem faz a cultura acontecer.',
-        lead2: 'Vamos conversar? Descubra como usar informações reais sobre o seu público e o movimento da cidade para transformar seu evento em um sucesso garantido.'
+        lead2: 'Vamos conversar? Descubra como medir interesse real e ativar parceiros no entorno do seu evento.'
       },
       form: {
         companyLabel: 'Nome da Empresa',
@@ -158,42 +148,38 @@
         honeypotLabel: 'Não preencha este campo'
       },
       feedbacks: {
-        title: 'Comentários'
+        title: 'Quem usa o app já sente a diferença'
       },
       footer: {
         copy: '© 2026 MyWeek — Lançamento em 6 meses'
       },
       feedbacksList: [
-        { quote: 'O MyWeek mudou a forma como divulgamos nossos eventos. Público mais qualificado e menos trabalho manual.', author: 'Maria S.', role: 'Produtora' },
-        { quote: 'A previsão de público nos ajuda a dimensionar estrutura e equipe. Precisão que não tínhamos antes.', author: 'Ricardo L.', role: 'Organizador' },
-        { quote: 'Dashboard claro e métricas em tempo real. Finalmente conseguimos tomar decisões baseadas em dados.', author: 'Ana C.', role: 'Gestora de Eventos' },
-        { quote: 'Integração simples com nossas redes. Em poucos cliques divulgamos e acompanhamos o engajamento.', author: 'Pedro M.', role: 'Social Media' },
-        { quote: 'A ferramenta de confirmação reduz no-show e nos dá uma base confiável para planejar o próximo evento.', author: 'Carla F.', role: 'Coordenadora' },
-        { quote: 'Relatórios prontos e visualização por período. Economizamos horas que antes gastávamos em planilhas.', author: 'Bruno T.', role: 'Analista' }
+        { quote: 'Pare de scrollar feed genérico. No MyWeek eu filtro por localização e período — e acho o rolê certo perto de mim em minutos.', author: 'Julia M.', role: 'Usuária do app' },
+        { quote: 'Marquei meus interesses uma vez e o feed ficou meu. Jazz, underground, o que eu curto — sem o óbvio da cidade.', author: 'Lucas R.', role: 'Usuário do app' },
+        { quote: 'Quero ir + Como chegar no mesmo app. No dia do evento é só abrir a rota e ir. Simples assim.', author: 'Camila T.', role: 'Usuária do app' },
+        { quote: 'Vejo lotes e preços no app e compro na bilheteira em um toque. Menos fricção, mais vontade de ir.', author: 'Diego A.', role: 'Usuário do app' },
+        { quote: 'Os cupons no venue fazem a diferença. Benefício real no rolê — não é só descoberta, é experiência completa.', author: 'Beatriz N.', role: 'Usuária do app' },
+        { quote: 'Se você curte cena de verdade, o MyWeek vira o atalho. Menos “o que tem hoje?” e mais “já sei onde estar”.', author: 'Rafael P.', role: 'Usuário do app' }
       ]
     },
     en: {
       pageTitle: 'MyWeek | Your Smart Cultural Agenda',
       hero: {
+        eyebrow: 'find where your scene is',
+        brand: 'MyWeek',
         title: "We show you in a smart way what's going on.",
-        subtitle: "The easiest way to find and promote events you actually enjoy.",
+        subtitle: 'The easiest way to find and promote events you actually enjoy.',
         ctaPrimary: 'Join the launch',
         ctaSecondary: 'Understand how MyWeek works',
-        visualProducerTag: 'Producer',
-        visualProducerLabel: 'MyWeek dashboard',
-        visualUserTag: 'User',
-        visualUserLabel: 'Feed & live map',
-        visualEvent1Title: 'Jazz Night — Today · 9pm',
-        visualEvent1Meta: 'Pinheiros · 7 min away',
-        visualEvent2Title: 'Techno at D-Edge · 11pm'
+        deviceAlt: 'MyWeek app feed with events near you'
       },
       countdown: {
-        eyebrow: "Your way of living culture is about to change.",
+        eyebrow: 'Your way of living culture is about to change.',
         days: 'Days',
         hours: 'Hours',
         minutes: 'Minutes',
         seconds: 'Seconds',
-        footer: "Technology that understands your style and organizes your event."
+        footer: 'Technology that understands your style and organizes your event.'
       },
       nav: {
         close: 'Close menu',
@@ -207,65 +193,58 @@
         langLabel: 'Select language'
       },
       b2b: {
-        lead: "You create the event, we help it find the right audience.",
-        lead2: "We use smart technology to organize information and predict trends, making sure what you create gets discovered by people who match your style.",
-        block1Title: 'Your essence, translated into data.',
-        block1Text: "Forget the headache with algorithms.",
-        block1Text2: "Our technology understands everything about your event and does the heavy lifting for you. We make sure your production reaches people who really enjoy your style, growing your audience naturally and effortlessly.",
-        block2Title: 'Full control, from first batch to last click.',
-        block2Text: "Everything you need for your event, in one place.",
-        block2Text2: "Organize lineups, change ticket prices, and update photos on the spot — all in a simple way. With MyWeek, organization stops being a worry and you get time to focus on what really matters: the success of your movement.",
-        block3Title: 'Optimization that avoids empty venues.',
-        block3Text: "Get the schedule right without relying on luck.",
-        block3Text2: "We help you find the perfect slot in the city's programming. Learn which days and times work best for your audience, avoid clashing with other events, and aim for a full house.",
-        block4Title: 'Real forecasts for confident decisions.',
-        block4Text: "Real forecasts so your event can crush it. Stop guessing: know your audience size before you even open the doors. Use our intelligence to spend only what you need on inventory and staff, for an organized and much more profitable event.",
-        miniDashboardTitle: 'Batch Status',
-        lot1Label: 'Batch 1',
-        lot2Label: 'Batch 2',
-        lot3Label: 'Batch 3',
-        lot4Label: 'Batch 4',
-        lot1Pct: '80% sold',
-        lot2Pct: '45% sold',
-        lot3Pct: '90% sold',
-        lot4Pct: '60% sold',
-        heatmapY: 'Time',
-        heatmapX: 'Day',
-        heatmapCaption: 'Thu · Fri · Sat · Sun',
-        lineChartTitle: 'Estimated Interest',
-        sem1: 'Week 1',
-        sem2: 'Week 2',
-        sem3: 'Week 3',
-        sem4: 'Week 4'
+        lead: 'You create the event, we help it find the right audience.',
+        lead2: 'We organize promotion in the app, measure real interest, and connect local partners with coupons — without replacing your ticketing.',
+        block1Title: 'Your essence, discovered by the right audience.',
+        block1Text: 'List the event once. The app shows it to people nearby who match your style.',
+        block2Title: 'From event to funnel — including tickets.',
+        block2Text: 'Lineup, photos, batches, external ticketing link, and coupons in one panel.',
+        block2Text2: 'Track interested users, clicks, and redemptions.',
+        block3Title: 'Commerce around the night out.',
+        block3Text: 'On-venue benefits and nearby partner offers — validated on the spot, with history.',
+        block4Title: 'A living map of your operation.',
+        block4Text: 'See on the dashboard where your events (and the platform’s) sit on the map — filter by state, city, and status.',
+        block5Title: 'Decisions with numbers, not gut feel.',
+        block5Text: 'App engagement KPIs on the dashboard — to size promotion and operations.',
+        screenAlt1: 'Event detail in the organizer panel',
+        screenAlt2: 'Tickets tab with batches and external ticketing',
+        screenAlt3: 'Organizer coupon catalog',
+        screenAlt4: 'Territorial map with events on the dashboard',
+        screenAlt5: 'Commercial panel with engagement funnel'
       },
       transition: {
         text: 'From producer intelligence to the palm of your hand.'
       },
       b2c: {
-        lead: "The best of the city, personalized for you.",
-        lead2: "Everything good going on comes straight to your feed. If you're not sure what to do, just ask our assistant and find the perfect plan for right now.",
-        chatUser: "What's good tonight near me?",
-        chatIALabel: 'AI Concierge',
-        chatIAText: '3 events in your niche: Jazz at Blue Note 9pm, Techno at D-Edge 11pm, and an open mic at Bar do Zé. Want an itinerary with travel time?'
+        lead: 'The best of the city, personalized for you.',
+        lead2: 'Pick location, date range, and styles you love. Mark Going, see batches, buy on the ticketing site, use coupons, and open the route to the venue.'
       },
       features: {
-        timingTitle: 'Intelligent timing for your agenda',
-        timingText: 'Our AI learns when your scene truly happens and projects interest peaks throughout the week.',
-        audienceTitle: 'Live audience map',
-        audienceText: "Understand where the scene you like pulses strongest. Pick the best time and the right neighborhood to enjoy the best the city has to offer, your way.",
-        audienceItem1: 'Growth on Thursday nights',
-        audienceItem2: 'Prefer venues within 30 minutes from home',
-        audienceItem3: 'niche scenes trending in your city',
-        performanceTitle: 'Real-time performance',
-        performanceText: 'Track which events, days, and formats deliver the best results for your scene.',
-        performanceMetric1Label: 'Average conversion',
-        performanceMetric2Label: 'Confirmed check-ins',
-        conciergeTitle: "Your personal guide to the perfect night out.",
-        conciergeText: "MyWeek learns from the city's pulse to show you only what matters. It's the ideal mix of the right time and what people are into right now."
+        timingTitle: 'Timing and discovery near you',
+        timingText: 'Feed with location filters (GPS/city + radius) and date range — the right night out at the right time.',
+        interestsTitle: 'Your interests, your feed',
+        interestsText: 'Category/genre preferences in your profile — curation starts with what you like.',
+        mapTitle: 'Living presence map',
+        mapText: 'Admin, organizer, and partner panels with territorial maps, state/city filters, and city density.',
+        venueTitle: 'From detail to the venue door',
+        venueText: 'Distance, Get directions, and Google Maps route — useful on event day.',
+        ticketsTitle: 'Tickets without being a box office',
+        ticketsText: 'Batches and prices in the app; purchase on Sympla/Ticketmaker — MyWeek measures the click.',
+        funnelTitle: 'Funnel performance',
+        funnelText: 'Interested users, ticket clicks, promo copies, and redemptions.',
+        benefitsTitle: 'Benefits on the night out',
+        benefitsText: 'Event and local partner coupons, with confirmed redemption.',
+        screenAltTiming: 'Location and date filters on the feed',
+        screenAltInterests: 'Category preferences in the profile',
+        screenAltMap: 'Territorial map on the panel',
+        screenAltVenue: 'Get directions to the venue in the app',
+        screenAltTickets: 'Tickets sheet with batches and prices',
+        screenAltFunnel: 'Commercial panel with funnel metrics',
+        screenAltBenefits: 'Benefit coupon in the app'
       },
       download: {
-        title: "Take the best of the city in your pocket.",
-        desc: "Discover the perfect plan and skip the obvious in real time.",
+        title: 'Take the best of the city in your pocket.',
+        desc: 'Discover the perfect night out and skip the obvious.',
         appStore: 'App Store',
         googlePlay: 'Google Play',
         comingSoon: 'Coming soon'
@@ -273,36 +252,36 @@
       pricing: {
         title: 'Plans & Pricing',
         basicTitle: 'Basic Plan',
-        basicPrice: 'Free forever',
-        basicFeature1: 'Assistant tips: Up to 5 questions per day to help you find the perfect plan.',
-        basicFeature2: 'Discovery: See the top 3 events happening in the city right now.',
-        basicFeature3: 'Everything you need: Event feed, personalized profile, and interest notifications.',
+        basicPrice: 'Free',
+        basicFeature1: 'Event feed, profile, and notifications',
+        basicFeature2: 'Personalized discovery with filter limits',
+        basicFeature3: 'Concierge teaser (as delivered)',
         basicCta: 'Get Started',
         premiumBadge: 'Most popular',
         premiumTitle: 'Premium Plan',
         premiumPrice: 'R$ 29.90 / month',
-        premiumFeature1: 'Unlimited Assistant: Ask what to do as many times as you want, no limits.',
-        premiumFeature2: 'VIP Discovery: Exclusive list based on what you actually like (real affinity).',
-        premiumFeature3: 'Full Experience: All Basic features, with priority and refined intelligence.',
-        premiumFeature4: 'Freedom: Change plan or cancel whenever you want, no hassle.',
+        premiumFeature1: 'More filters (city, extended date ranges)',
+        premiumFeature2: 'Expanded / unlimited Concierge (as delivered)',
+        premiumFeature3: 'Full Premium experience',
+        premiumFeature4: 'Cancel anytime',
         premiumCta: 'Go Premium Now'
       },
       about: {
-        title: "Your city goes way beyond the obvious.",
-        manifesto: "We got tired of promotion that only shows the same old thing. MyWeek is the smart guide built to give visibility to authentic movements and make sure you find your people and the events that really match who you are.",
-        differential: 'What sets us apart: We are not just a calendar. We are a platform that uses AI Agents to turn events into strategic data for producers and personalized curation for users.',
-        pillar1Title: 'Human Curation, Smart AI',
-        pillar1Text: 'Algorithms that respect user taste.',
-        pillar2Title: 'Sustainable Ecosystem',
-        pillar2Text: 'Direct connection between producers, local partners, and audience.',
-        pillar3Title: 'Data That Generates Value',
-        pillar3Text: 'Transforming metrics into decisions for the cultural market.',
-        ctaSubtitle: "Ready to find your next night out or make your event crush it?"
+        title: 'Your city goes way beyond the obvious.',
+        manifesto: 'We got tired of promotion that only shows the same old thing. MyWeek is the smart guide that gives visibility to authentic movements and connects producers, local partners, and audiences — with measurable demand, not just likes.',
+        differential: 'What sets us apart: We are not just a calendar. We are the discovery and commercial activation layer for the scene — with an app for the audience and a panel for everyone who makes the event happen.',
+        pillar1Title: 'Curation + geo',
+        pillar1Text: 'The right night out near you.',
+        pillar2Title: 'Measurable demand',
+        pillar2Text: 'Interest and intent, not just impressions.',
+        pillar3Title: 'Local ecosystem',
+        pillar3Text: 'Organizer + partner + audience in the same loop.',
+        ctaSubtitle: 'Ready to find your next night out or make your event crush it?'
       },
       commercial: {
         title: 'Business Interest',
-        lead: "Real intelligence for everyone who makes culture happen.",
-        lead2: "Let's talk? Discover how to use real insights about your audience and the city's pulse to turn your event into a guaranteed success."
+        lead: 'Real intelligence for everyone who makes culture happen.',
+        lead2: "Let's talk? Discover how to measure real interest and activate partners around your event."
       },
       form: {
         companyLabel: 'Company Name',
@@ -322,18 +301,18 @@
         honeypotLabel: 'Do not fill in this field.'
       },
       feedbacks: {
-        title: 'Feedbacks'
+        title: 'App users already feel the difference'
       },
       footer: {
         copy: '© 2026 MyWeek — Launch in 6 months'
       },
       feedbacksList: [
-        { quote: 'MyWeek changed how we promote our events. A more qualified audience and less manual work.', author: 'Maria S.', role: 'Producer' },
-        { quote: 'The audience forecast helps us scale structure and team. Accuracy we didn\'t have before.', author: 'Ricardo L.', role: 'Organizer' },
-        { quote: 'Clear dashboard and real-time metrics. We can finally make data-driven decisions.', author: 'Ana C.', role: 'Event Manager' },
-        { quote: 'Simple integration with our channels. In a few clicks we promote and track engagement.', author: 'Pedro M.', role: 'Social Media' },
-        { quote: 'The confirmation tool reduces no-show and gives us a reliable base to plan the next event.', author: 'Carla F.', role: 'Coordinator' },
-        { quote: 'Ready-to-use reports and views by period. We save hours we used to spend on spreadsheets.', author: 'Bruno T.', role: 'Analyst' }
+        { quote: 'Stop scrolling generic feeds. On MyWeek I filter by location and date — and find the right night out nearby in minutes.', author: 'Julia M.', role: 'App user' },
+        { quote: 'I set my interests once and the feed became mine. Jazz, underground, what I actually like — not the city’s obvious picks.', author: 'Lucas R.', role: 'App user' },
+        { quote: 'Going + Get directions in the same app. On event day I just open the route and go. That simple.', author: 'Camila T.', role: 'App user' },
+        { quote: 'I see batches and prices in the app and buy on the ticketing site in one tap. Less friction, more reason to go.', author: 'Diego A.', role: 'App user' },
+        { quote: 'On-venue coupons make a real difference. A real perk on the night out — not just discovery, the full experience.', author: 'Beatriz N.', role: 'App user' },
+        { quote: 'If you care about the real scene, MyWeek becomes the shortcut. Less “what’s on tonight?” and more “I already know where to be”.', author: 'Rafael P.', role: 'App user' }
       ]
     }
   };
@@ -410,6 +389,12 @@
       var key = el.getAttribute('data-i18n-title');
       var value = getNested(t, key);
       if (value != null) el.setAttribute('title', value);
+    });
+
+    document.querySelectorAll('[data-i18n-alt]').forEach(function (el) {
+      var key = el.getAttribute('data-i18n-alt');
+      var value = getNested(t, key);
+      if (value != null) el.setAttribute('alt', value);
     });
 
     var submitBtn = document.querySelector('.commercial__submit');
