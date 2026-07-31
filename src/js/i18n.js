@@ -18,7 +18,10 @@
         subtitle: 'A forma mais fácil de encontrar e divulgar eventos que você realmente curte.',
         ctaPrimary: 'Quero participar do lançamento',
         ctaSecondary: 'Entender como a My Week funciona',
-        deviceAlt: 'Feed do app My Week com eventos perto de você'
+        stackLabel: 'App My Week e painel web do organizador',
+        deviceAlt: 'Feed do app My Week com eventos perto de você',
+        logoAlt: 'Cupom e logo My Week no app',
+        dashAlt: 'Painel comercial do organizador no My Week'
       },
       countdown: {
         eyebrow: 'Sua forma de viver a cultura local está prestes a mudar.',
@@ -187,7 +190,10 @@
         subtitle: 'The easiest way to find and promote events you actually enjoy.',
         ctaPrimary: 'Join the launch',
         ctaSecondary: 'Understand how My Week works',
-        deviceAlt: 'My Week app feed with events near you'
+        stackLabel: 'My Week app and organizer web dashboard',
+        deviceAlt: 'My Week app feed with events near you',
+        logoAlt: 'My Week coupon and logo in the app',
+        dashAlt: 'My Week organizer commercial dashboard'
       },
       countdown: {
         eyebrow: 'Your way of living local culture is about to change.',

@@ -15,10 +15,10 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Outfit:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="src/css/main.css?v=hero-read-v2">
-  <link rel="stylesheet" href="src/css/hero.css?v=hero-read-v2">
-  <link rel="stylesheet" href="src/css/screens.css?v=hero-read-v2">
-  <link rel="stylesheet" href="src/css/ultrawide.css?v=hero-read-v2">
+  <link rel="stylesheet" href="src/css/main.css?v=hero-stack-v2">
+  <link rel="stylesheet" href="src/css/hero.css?v=hero-stack-v2">
+  <link rel="stylesheet" href="src/css/screens.css?v=hero-stack-v2">
+  <link rel="stylesheet" href="src/css/ultrawide.css?v=hero-stack-v2">
   <style id="carousel-critical">
     /* Garante 1 slide visível mesmo com CSS antigo em cache */
     .screen-carousel__slide { display: none !important; }
@@ -108,17 +108,49 @@
               </div>
             </div>
             <div class="hero__col hero__col--visual">
-              <div class="screen-frame screen-frame--phone hero__device">
-                <img
-                  class="screen-frame__img"
-                  src="assets/images/screens/app/consumer/01-feed.jpg"
-                  width="390"
-                  height="803"
-                  alt="Feed do app MyWeek com eventos perto de você"
-                  data-i18n-alt="hero.deviceAlt"
-                  decoding="async"
-                  fetchpriority="high"
-                >
+              <div class="hero__stack" role="img" aria-label="App My Week e painel web do organizador" data-i18n-aria-label="hero.stackLabel">
+                <div class="hero__stack-item hero__stack-item--dash">
+                  <div class="screen-frame screen-frame--desktop">
+                    <img
+                      class="screen-frame__img"
+                      src="assets/images/screens/web/organizer/03-evento-comercial.jpg"
+                      width="1016"
+                      height="708"
+                      alt="Painel comercial do organizador no My Week"
+                      data-i18n-alt="hero.dashAlt"
+                      decoding="async"
+                      fetchpriority="high"
+                    >
+                  </div>
+                </div>
+                <div class="hero__stack-item hero__stack-item--phone hero__stack-item--phone-back">
+                  <div class="screen-frame screen-frame--phone">
+                    <img
+                      class="screen-frame__img"
+                      src="assets/images/screens/app/consumer/04-cupom-beneficio.jpg"
+                      width="390"
+                      height="803"
+                      alt="Cupom e logo My Week no app"
+                      data-i18n-alt="hero.logoAlt"
+                      decoding="async"
+                      loading="lazy"
+                    >
+                  </div>
+                </div>
+                <div class="hero__stack-item hero__stack-item--phone hero__stack-item--phone-front">
+                  <div class="screen-frame screen-frame--phone">
+                    <img
+                      class="screen-frame__img"
+                      src="assets/images/screens/app/consumer/01-feed.jpg"
+                      width="390"
+                      height="803"
+                      alt="Feed do app My Week com eventos perto de você"
+                      data-i18n-alt="hero.deviceAlt"
+                      decoding="async"
+                      fetchpriority="high"
+                    >
+                  </div>
+                </div>
               </div>
             </div>
           </div>
