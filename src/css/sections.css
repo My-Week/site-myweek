@@ -1916,6 +1916,11 @@
   margin-bottom: var(--space-lg);
 }
 
+.about-text .content__lead {
+  margin-left: auto;
+  margin-right: auto;
+}
+
 .content__lead:last-of-type {
   margin-bottom: var(--space-3xl);
 }
