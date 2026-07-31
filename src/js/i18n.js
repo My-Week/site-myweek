@@ -390,6 +390,10 @@
 
     document.documentElement.lang = lang === 'pt' ? 'pt-BR' : 'en';
 
+    if (window.MyWeek && window.MyWeek.theme && typeof window.MyWeek.theme.refreshLabels === 'function') {
+      window.MyWeek.theme.refreshLabels();
+    }
+
     var t = translations[lang];
     if (!t) return;
 
