@@ -8,7 +8,7 @@
 @import "header.css";
 @import "hero.css";
 @import "sections.css";
-@import "screens.css";
+/* screens.css é linkado no index.html com ?v= para evitar cache de @import */
 @import "forms.css";
 @import "footer.css";
 @import "animations.css";

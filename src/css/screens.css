@@ -224,7 +224,7 @@
 }
 
 /* ---------- Screen carousel ---------- */
-/* Grid stack: todos os slides no mesmo slot — impossível amontoar em coluna */
+/* display:none nos inativos — zero altura extra, sem empilhar em coluna */
 .screen-carousel {
   width: 100%;
   max-width: 17rem;
@@ -246,30 +246,21 @@
 }
 
 .screen-carousel__track {
-  display: grid;
-  grid-template-areas: "slide";
+  display: block;
   width: 100%;
-  align-items: stretch;
+  position: relative;
 }
 
 .screen-carousel__slide {
-  grid-area: slide;
+  display: none;
   width: 100%;
   max-width: 100%;
   margin: 0;
   box-sizing: border-box;
-  opacity: 0;
-  visibility: hidden;
-  pointer-events: none;
-  transition: opacity 0.4s var(--ease-organic, cubic-bezier(0.25, 0.46, 0.45, 0.94));
-  z-index: 0;
 }
 
 .screen-carousel__slide.is-active {
-  opacity: 1;
-  visibility: visible;
-  pointer-events: auto;
-  z-index: 1;
+  display: block;
 }
 
 .screen-carousel__slide.screen-frame--phone,
@@ -355,8 +346,3 @@
   }
 }
 
-@media (prefers-reduced-motion: reduce) {
-  .screen-carousel__slide {
-    transition: none;
-  }
-}

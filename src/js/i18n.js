@@ -48,7 +48,7 @@
         block2Text: 'Atrações, fotos, lotes, link de bilheteira externa e cupons no mesmo painel.',
         block2Text2: 'Acompanhe interessados, cliques e resgates.',
         block3Title: 'Comércio no entorno do rolê.',
-        block3Text: 'Benefícios no venue e ofertas de parceiros próximos — validados na hora, com histórico.',
+        block3Text: 'Benefícios no local do evento e ofertas de parceiros próximos — validados na hora, com histórico.',
         block4Title: 'Mapa vivo da sua operação.',
         block4Text: 'Veja no dashboard onde seus eventos (e os da plataforma) estão no território — filtro por UF, cidade e status.',
         block5Title: 'Decisões com número, não com feeling.',
@@ -64,17 +64,17 @@
       },
       b2c: {
         lead: 'O melhor da cidade, personalizado para você.',
-        lead2: 'Escolha localização, período e estilos que você curte. Marque Quero ir, veja lotes, compre na bilheteira, use cupons e abra a rota até o venue.'
+        lead2: 'Escolha localização, período e estilos que você curte. Marque Quero ir, veja lotes, compre na bilheteira, use cupons e abra a rota até o local.'
       },
       features: {
         timingTitle: 'Timing e descoberta perto de você',
-        timingText: 'Feed com filtros de localização (GPS/cidade + raio) e período — o rolê certo no momento certo.',
+        timingText: 'Filtre o feed por onde você está e por quando quer sair — o rolê certo no momento certo.',
         interestsTitle: 'Seus interesses, seu feed',
         interestsText: 'Preferências de categorias/gêneros no perfil — a curadoria começa no que você curte.',
-        mapTitle: 'Mapa vivo de presença',
-        mapText: 'Painéis admin, organizador e parceiro com mapa territorial, filtros por UF/cidade e densidade na cidade.',
-        venueTitle: 'Do detalhe à porta do venue',
-        venueText: 'Distância, Como chegar e rota no Google Maps — utilidade no dia do evento.',
+        mapTitle: 'Mapa ao vivo da cena',
+        mapText: 'No painel, veja eventos no mapa, filtre por estado e cidade e entenda onde a cena está mais forte.',
+        venueTitle: 'Do detalhe à porta do evento',
+        venueText: 'Veja a distância, toque em Como chegar e abra a rota no Google Maps — útil no dia do rolê.',
         ticketsTitle: 'Ingresso sem ser bilheteira',
         ticketsText: 'Lotes e preços no app; compra na Sympla/Ticketmaker — MyWeek mede o clique.',
         funnelTitle: 'Performance do funil',
@@ -91,9 +91,9 @@
         screenAltMapAdmin: 'Mapa territorial admin — visão nacional',
         screenAltMapAdminCity: 'Mapa territorial admin — densidade na cidade',
         screenAltMapPartner: 'Mapa territorial do parceiro com raio',
-        screenAltVenue: 'Como chegar ao venue no app',
-        screenAltVenueApp: 'Como chegar ao venue no app',
-        screenAltVenueMaps: 'Rota no Google Maps até o venue',
+        screenAltVenue: 'Como chegar ao local do evento no app',
+        screenAltVenueApp: 'Como chegar ao local do evento no app',
+        screenAltVenueMaps: 'Rota no Google Maps até o local do evento',
         screenAltTickets: 'Sheet de ingressos com lotes e preços',
         screenAltFunnel: 'Painel comercial com métricas do funil',
         screenAltBenefits: 'Cupom de benefício no app'
@@ -103,7 +103,7 @@
         next: 'Próximo',
         timingLabel: 'Provas de filtros de localização e período',
         mapLabel: 'Mapas territoriais admin, organizador e parceiro',
-        venueLabel: 'Como chegar no app e rota no Maps'
+        venueLabel: 'Como chegar no app e rota até o local'
       },
       download: {
         title: 'Leve o melhor da cidade no seu bolso.',
@@ -174,7 +174,7 @@
         { quote: 'Marquei meus interesses uma vez e o feed ficou meu. Jazz, underground, o que eu curto — sem o óbvio da cidade.', author: 'Lucas R.', role: 'Usuário do app' },
         { quote: 'Quero ir + Como chegar no mesmo app. No dia do evento é só abrir a rota e ir. Simples assim.', author: 'Camila T.', role: 'Usuária do app' },
         { quote: 'Vejo lotes e preços no app e compro na bilheteira em um toque. Menos fricção, mais vontade de ir.', author: 'Diego A.', role: 'Usuário do app' },
-        { quote: 'Os cupons no venue fazem a diferença. Benefício real no rolê — não é só descoberta, é experiência completa.', author: 'Beatriz N.', role: 'Usuária do app' },
+        { quote: 'Os cupons no local do evento fazem a diferença. Benefício real no rolê — não é só descoberta, é experiência completa.', author: 'Beatriz N.', role: 'Usuária do app' },
         { quote: 'Se você curte cena de verdade, o MyWeek vira o atalho. Menos “o que tem hoje?” e mais “já sei onde estar”.', author: 'Rafael P.', role: 'Usuário do app' }
       ]
     },
@@ -217,7 +217,7 @@
         block2Text: 'Lineup, photos, batches, external ticketing link, and coupons in one panel.',
         block2Text2: 'Track interested users, clicks, and redemptions.',
         block3Title: 'Commerce around the night out.',
-        block3Text: 'On-venue benefits and nearby partner offers — validated on the spot, with history.',
+        block3Text: 'Benefits at the event and nearby partner offers — validated on the spot, with history.',
         block4Title: 'A living map of your operation.',
         block4Text: 'See on the dashboard where your events (and the platform’s) sit on the map — filter by state, city, and status.',
         block5Title: 'Decisions with numbers, not gut feel.',
@@ -233,17 +233,17 @@
       },
       b2c: {
         lead: 'The best of the city, personalized for you.',
-        lead2: 'Pick location, date range, and styles you love. Mark Going, see batches, buy on the ticketing site, use coupons, and open the route to the venue.'
+        lead2: 'Pick location, date range, and styles you love. Mark Going, see batches, buy on the ticketing site, use coupons, and open the route to the place.'
       },
       features: {
         timingTitle: 'Timing and discovery near you',
-        timingText: 'Feed with location filters (GPS/city + radius) and date range — the right night out at the right time.',
+        timingText: 'Filter the feed by where you are and when you want to go out — the right night out at the right time.',
         interestsTitle: 'Your interests, your feed',
         interestsText: 'Category/genre preferences in your profile — curation starts with what you like.',
-        mapTitle: 'Living presence map',
-        mapText: 'Admin, organizer, and partner panels with territorial maps, state/city filters, and city density.',
-        venueTitle: 'From detail to the venue door',
-        venueText: 'Distance, Get directions, and Google Maps route — useful on event day.',
+        mapTitle: 'Live map of the scene',
+        mapText: 'On the dashboard, see events on the map, filter by state and city, and spot where the scene is strongest.',
+        venueTitle: 'From the details to the event door',
+        venueText: 'See the distance, tap Get directions, and open the route in Google Maps — useful on the day.',
         ticketsTitle: 'Tickets without being a box office',
         ticketsText: 'Batches and prices in the app; purchase on Sympla/Ticketmaker — MyWeek measures the click.',
         funnelTitle: 'Funnel performance',
@@ -260,9 +260,9 @@
         screenAltMapAdmin: 'Admin territorial map — national view',
         screenAltMapAdminCity: 'Admin territorial map — city density',
         screenAltMapPartner: 'Partner territorial map with radius',
-        screenAltVenue: 'Get directions to the venue in the app',
-        screenAltVenueApp: 'Get directions to the venue in the app',
-        screenAltVenueMaps: 'Google Maps route to the venue',
+        screenAltVenue: 'Get directions to the event in the app',
+        screenAltVenueApp: 'Get directions to the event in the app',
+        screenAltVenueMaps: 'Google Maps route to the event',
         screenAltTickets: 'Tickets sheet with batches and prices',
         screenAltFunnel: 'Commercial panel with funnel metrics',
         screenAltBenefits: 'Benefit coupon in the app'
@@ -272,7 +272,7 @@
         next: 'Next',
         timingLabel: 'Location and period filter screenshots',
         mapLabel: 'Admin, organizer, and partner territorial maps',
-        venueLabel: 'In-app directions and Maps route'
+        venueLabel: 'In-app directions and route to the place'
       },
       download: {
         title: 'Take the best of the city in your pocket.',
@@ -343,7 +343,7 @@
         { quote: 'I set my interests once and the feed became mine. Jazz, underground, what I actually like — not the city’s obvious picks.', author: 'Lucas R.', role: 'App user' },
         { quote: 'Going + Get directions in the same app. On event day I just open the route and go. That simple.', author: 'Camila T.', role: 'App user' },
         { quote: 'I see batches and prices in the app and buy on the ticketing site in one tap. Less friction, more reason to go.', author: 'Diego A.', role: 'App user' },
-        { quote: 'On-venue coupons make a real difference. A real perk on the night out — not just discovery, the full experience.', author: 'Beatriz N.', role: 'App user' },
+        { quote: 'Coupons at the event make a real difference. A real perk on the night out — not just discovery, the full experience.', author: 'Beatriz N.', role: 'App user' },
         { quote: 'If you care about the real scene, MyWeek becomes the shortcut. Less “what’s on tonight?” and more “I already know where to be”.', author: 'Rafael P.', role: 'App user' }
       ]
     }

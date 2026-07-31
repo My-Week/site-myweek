@@ -7,7 +7,7 @@
   <meta name="keywords" content="MyWeek, eventos culturais, curadoria, produtores, divulgação eventos, cena cultural, hub inteligência cultural">
   <meta property="og:type" content="website">
   <meta property="og:title" content="MyWeek | Sua Agenda Cultural Inteligente">
-  <meta property="og:description" content="Do interesse à porta do venue — com dado e cupom no meio. Descoberta geo e ativação comercial da cena.">
+  <meta property="og:description" content="Do interesse até o local do evento — com dado e cupom no meio. Descoberta por localização e ativação comercial da cena.">
   <meta property="og:locale" content="pt_BR">
   <title>MyWeek | Sua Agenda Cultural Inteligente</title>
   <link rel="icon" type="image/svg+xml" href="assets/images/logo-myweek.svg">
@@ -15,7 +15,13 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Outfit:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="src/css/main.css?v=carousel-fade-1">
+  <link rel="stylesheet" href="src/css/main.css?v=carousel-v2">
+  <link rel="stylesheet" href="src/css/screens.css?v=carousel-v2">
+  <style id="carousel-critical">
+    /* Garante 1 slide visível mesmo com CSS antigo em cache */
+    .screen-carousel__slide { display: none !important; }
+    .screen-carousel__slide.is-active { display: block !important; }
+  </style>
   <script>
     (function() {
       var key = 'myweek_lang';
@@ -203,7 +209,7 @@
             <div class="z-row__inner">
               <div class="z-row__body">
                 <h2 class="z-section__title" data-i18n="b2b.block3Title">Comércio no entorno do rolê.</h2>
-                <p class="z-section__text" data-i18n="b2b.block3Text">Benefícios no venue e ofertas de parceiros próximos — validados na hora, com histórico.</p>
+                <p class="z-section__text" data-i18n="b2b.block3Text">Benefícios no local do evento e ofertas de parceiros próximos — validados na hora, com histórico.</p>
               </div>
               <div class="z-row__media">
                 <figure class="screen-frame screen-frame--desktop">
@@ -281,13 +287,13 @@
       <section id="b2c-experience" class="b2c-experience">
         <div class="container">
           <p class="b2c-experience__lead" data-i18n="b2c.lead">O melhor da cidade, personalizado para você.</p>
-          <p class="b2c-experience__lead" data-i18n="b2c.lead2">Escolha localização, período e estilos que você curte. Marque Quero ir, veja lotes, compre na bilheteira, use cupons e abra a rota até o venue.</p>
+          <p class="b2c-experience__lead" data-i18n="b2c.lead2">Escolha localização, período e estilos que você curte. Marque Quero ir, veja lotes, compre na bilheteira, use cupons e abra a rota até o local.</p>
 
           <div class="showcase-rows">
             <article class="showcase-row hidden" data-reveal>
               <div class="showcase-row__copy">
                 <h2 class="showcase-row__title" data-i18n="features.timingTitle">Timing e descoberta perto de você</h2>
-                <p class="showcase-row__text" data-i18n="features.timingText">Feed com filtros de localização (GPS/cidade + raio) e período — o rolê certo no momento certo.</p>
+                <p class="showcase-row__text" data-i18n="features.timingText">Filtre o feed por onde você está e por quando quer sair — o rolê certo no momento certo.</p>
               </div>
               <div class="showcase-row__media">
                 <div class="screen-carousel" data-carousel data-interval="5500" aria-roledescription="carousel" data-i18n-aria-label="carousel.timingLabel">
@@ -327,8 +333,8 @@
 
             <article class="showcase-row hidden" data-reveal>
               <div class="showcase-row__copy">
-                <h2 class="showcase-row__title" data-i18n="features.mapTitle">Mapa vivo de presença</h2>
-                <p class="showcase-row__text" data-i18n="features.mapText">Painéis admin, organizador e parceiro com mapa territorial, filtros por UF/cidade e densidade na cidade.</p>
+                <h2 class="showcase-row__title" data-i18n="features.mapTitle">Mapa ao vivo da cena</h2>
+                <p class="showcase-row__text" data-i18n="features.mapText">No painel, veja eventos no mapa, filtre por estado e cidade e entenda onde a cena está mais forte.</p>
               </div>
               <div class="showcase-row__media">
                 <div class="screen-carousel screen-carousel--desktop" data-carousel data-interval="6000" aria-roledescription="carousel" data-i18n-aria-label="carousel.mapLabel">
@@ -359,18 +365,18 @@
 
             <article class="showcase-row showcase-row--flip hidden" data-reveal>
               <div class="showcase-row__copy">
-                <h2 class="showcase-row__title" data-i18n="features.venueTitle">Do detalhe à porta do venue</h2>
-                <p class="showcase-row__text" data-i18n="features.venueText">Distância, Como chegar e rota no Google Maps — utilidade no dia do evento.</p>
+                <h2 class="showcase-row__title" data-i18n="features.venueTitle">Do detalhe à porta do evento</h2>
+                <p class="showcase-row__text" data-i18n="features.venueText">Veja a distância, toque em Como chegar e abra a rota no Google Maps — útil no dia do rolê.</p>
               </div>
               <div class="showcase-row__media">
                 <div class="screen-carousel" data-carousel data-interval="5500" aria-roledescription="carousel" data-i18n-aria-label="carousel.venueLabel">
                   <div class="screen-carousel__viewport">
                     <div class="screen-carousel__track">
                       <figure class="screen-frame screen-frame--phone screen-carousel__slide is-active">
-                        <img class="screen-frame__img" src="assets/images/screens/app/consumer/07-como-chegar.jpg" width="390" height="803" alt="Como chegar ao venue no app" data-i18n-alt="features.screenAltVenueApp" loading="lazy" decoding="async">
+                        <img class="screen-frame__img" src="assets/images/screens/app/consumer/07-como-chegar.jpg" width="390" height="803" alt="Como chegar ao local do evento no app" data-i18n-alt="features.screenAltVenueApp" loading="lazy" decoding="async">
                       </figure>
                       <figure class="screen-frame screen-frame--phone screen-carousel__slide" aria-hidden="true">
-                        <img class="screen-frame__img" src="assets/images/screens/app/consumer/07-como-chegar-02.jpg" width="360" height="740" alt="Rota no Google Maps até o venue" data-i18n-alt="features.screenAltVenueMaps" loading="lazy" decoding="async">
+                        <img class="screen-frame__img" src="assets/images/screens/app/consumer/07-como-chegar-02.jpg" width="360" height="740" alt="Rota no Google Maps até o local do evento" data-i18n-alt="features.screenAltVenueMaps" loading="lazy" decoding="async">
                       </figure>
                     </div>
                   </div>
@@ -582,13 +588,13 @@
   <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js" defer></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js" defer></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/vanilla-tilt/1.8.1/vanilla-tilt.min.js" defer></script>
-  <script src="src/js/i18n.js" defer></script>
+  <script src="src/js/i18n.js?v=carousel-v2" defer></script>
   <script src="src/js/countdown.js" defer></script>
   <script src="src/js/form-handler.js" defer></script>
   <script src="src/js/theme.js" defer></script>
   <script src="src/js/animations.js" defer></script>
   <script src="src/js/testimonials.js" defer></script>
-  <script src="src/js/carousel.js?v=carousel-fade-1" defer></script>
+  <script src="src/js/carousel.js?v=carousel-v2" defer></script>
   <script src="src/js/main.js" defer></script>
 </body>
 </html>
