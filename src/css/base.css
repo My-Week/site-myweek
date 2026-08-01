@@ -235,27 +235,18 @@ section[id] {
   scroll-margin-top: 80px;
 }
 
-/* Mobile-first: conteúdo não encosta nas bordas */
+/* Mobile-first: respiro lateral consistente em todos os breakpoints */
 .container {
   width: 100%;
   max-width: var(--container-max);
   margin: 0 auto;
-  padding-left: 20px;
-  padding-right: 20px;
-}
-
-@media (max-width: 359px) {
-  .container {
-    padding-left: 16px;
-    padding-right: 16px;
-  }
+  padding-left: clamp(1rem, 4vw, var(--container-padding));
+  padding-right: clamp(1rem, 4vw, var(--container-padding));
 }
 
 @media (min-width: 1024px) {
   .container {
     width: 92%;
-    padding-left: var(--container-padding);
-    padding-right: var(--container-padding);
   }
 }
 

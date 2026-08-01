@@ -11,17 +11,20 @@
   var translations = {
     pt: {
       pageTitle: 'MyWeek | Sua Agenda Cultural Inteligente',
+      pageDescription: 'MyWeek | Sua Agenda Cultural Inteligente. Descubra e divulgue eventos com demanda mensurável — app para o público e painel para produtores e parceiros.',
+      ogDescription: 'Do interesse até o local do evento — com dado e cupom no meio. Descoberta por localização e ativação comercial da cena.',
       hero: {
         eyebrow: 'Descubra onde está acontecendo seu rolê',
         brand: 'My Week',
-        title: 'Nós te mostramos, de forma inteligente e eficiente, o que está rolando.',
-        subtitle: 'A forma mais fácil de encontrar e divulgar eventos que você realmente curte.',
+        title: 'Descubra e divulgue eventos que têm tudo a ver com você.',
+        subtitle: 'Conectamos você ao que está acontecendo na cidade de forma simples, inteligente e rápida.',
         ctaPrimary: 'Quero participar do lançamento',
         ctaSecondary: 'Entender como a My Week funciona',
         stackLabel: 'App My Week e painel web do organizador',
         deviceAlt: 'Feed do app My Week com eventos perto de você',
         logoAlt: 'Cupom e logo My Week no app',
-        dashAlt: 'Painel comercial do organizador no My Week'
+        dashAlt: 'Painel comercial do organizador no My Week',
+        scrollLabel: 'Rolar para ver mais'
       },
       countdown: {
         eyebrow: 'Sua forma de viver a cultura local está prestes a mudar.',
@@ -29,7 +32,8 @@
         hours: 'Horas',
         minutes: 'Minutos',
         seconds: 'Segundos',
-        footer: 'Tecnologia que entende o seu estilo e organiza o seu evento.'
+        footer: 'Tecnologia que entende o seu estilo e organiza o seu evento.',
+        gridLabel: 'Contagem regressiva para o lançamento do MyWeek'
       },
       nav: {
         close: 'Fechar menu',
@@ -40,26 +44,31 @@
         contact: 'Contato',
         login: 'Login',
         open: 'Abrir menu',
-        langLabel: 'Selecionar idioma'
+        langLabel: 'Selecionar idioma',
+        mainLabel: 'Navegação principal',
+        loginAria: 'Acessar login MyWeek'
       },
       b2b: {
         lead: 'Você cria o evento, a gente faz ele ser encontrado pelo público certo.',
-        lead2: 'Organizamos a divulgação no app, medimos interesse real e conectamos parceiros locais com cupons — sem substituir a sua bilheteira.',
-        block1Title: 'Sua essência, acessada pelo público certo.',
-        block1Text: 'Cadastre o evento uma vez. O app mostra para quem está perto e curte o seu estilo.',
-        block2Title: 'Controle do evento ao funil — inclusive ingresso.',
-        block2Text: 'Atrações, fotos, lotes, link de bilheteira externa e cupons no mesmo painel.',
-        block2Text2: 'Acompanhe interessados, cliques e resgates.',
-        block3Title: 'Comércio no entorno do seu rolê.',
-        block3Text: 'Benefícios no local do evento e ofertas de parceiros próximos — validados na hora, com histórico.',
-        block4Title: 'Mapa vivo da sua operação.',
-        block4Text: 'Veja no dashboard onde seus eventos estão localizados no mapa — filtro por UF, cidade e status.',
-        block5Title: 'Decisões com número, não com feeling.',
-        block5Text: 'KPIs de engajamento do app no dashboard — para dimensionar divulgação e operação.',
+        lead2: 'Organizamos a divulgação no app, medimos interesse real e conectamos parceiros locais com cupons — sem substituir a sua bilheteria.',
+        block1Title: 'O público certo para o seu evento, sem complicação.',
+        block1Text: 'Cadastre seu evento em instantes e deixe o app exibir sua programação para quem está por perto e realmente curte seu estilo.',
+        block1Text2: 'Combinamos filtros de interesses e localização para garantir visibilidade qualificada e aumentar o engajamento do seu público em tempo real.',
+        block2Title: 'Gestão completa e métricas em tempo real para o seu evento.',
+        block2Text: 'Centralize atrações, galeria, lotes e parcerias em uma interface simples e intuitiva.',
+        block2Text2: 'Monitore o engajamento do seu público do início ao fim com dados precisos de interesse, tráfego para a bilheteria e conversão de cupons.',
+        block3Title: 'Movimente o entorno e agregue mais valor ao seu público.',
+        block3Text: 'Crie ofertas no próprio evento ou explore a rede de parceiros da região para atrair e fidelizar clientes.',
+        block3Text2: 'Validação instantânea no caixa e controle total com métricas detalhadas de cada cupom utilizado.',
+        block4Title: 'Sua operação no comando com um mapa geográfico inteligente.',
+        block4Text: 'Veja na hora onde estão todos os seus eventos no painel.',
+        block4Text2: 'Utilize filtros poderosos por Estado (UF), cidade e status para ter uma visão clara e organizada da sua presença no mercado.',
+        block5Title: 'Gestão orientada a dados para o sucesso do seu evento.',
+        block5Text: 'Indicadores de engajamento claros no seu painel para ajustar a divulgação e planejar sua operação do tamanho exato da demanda.',
         screenAlt1: 'Detalhe do evento no painel do organizador',
-        screenAlt2: 'Aba de ingressos com lotes e bilheteira externa',
+        screenAlt2: 'Aba de ingressos com lotes e venda externa',
         screenAlt3: 'Catálogo de cupons do organizador',
-        screenAlt4: 'Mapa territorial com eventos no dashboard',
+        screenAlt4: 'Mapa com eventos no painel',
         screenAlt5: 'Painel comercial com funil de engajamento'
       },
       transition: {
@@ -67,46 +76,36 @@
       },
       b2c: {
         lead: 'O melhor da cidade, personalizado para você.',
-        lead2: 'Escolha localização, período e estilos que você curte. Marque Quero ir, veja lotes, compre na bilheteira, use cupons e abra a rota até o local.'
+        lead2: 'Escolha localização, período e estilos que você curte. Marque Quero ir, veja lotes, compre na bilheteria, use cupons e abra a rota até o local.'
       },
       features: {
-        timingTitle: 'Timing e descoberta perto de você',
-        timingText: 'Filtre o feed por onde você está e por quando quer sair — o rolê certo no momento certo.',
-        interestsTitle: 'Seus interesses, seu feed',
-        interestsText: 'Preferências de categorias/gêneros no perfil — a curadoria começa no que você curte.',
-        mapTitle: 'Mapa ao vivo da cena',
-        mapText: 'No painel, veja eventos no mapa, filtre por estado e cidade e entenda onde a cena está mais forte.',
-        venueTitle: 'Do detalhe à porta do evento',
-        venueText: 'Veja a distância, toque em Como chegar e abra a rota no Google Maps — útil no dia do rolê.',
-        ticketsTitle: 'Ingresso sem ser bilheteira',
-        ticketsText: 'Lotes e preços no app; compra na Sympla/Ticketmaker — My Week mede o clique.',
-        funnelTitle: 'Performance do funil',
-        funnelText: 'Interessados, cliques no ingresso, cópias de promo e resgates.',
-        benefitsTitle: 'Benefícios no rolê',
-        benefitsText: 'Cupons do evento e de parceiros locais, com resgate confirmado.',
+        timingTitle: 'O rolê certo, no momento certo e no lugar certo.',
+        timingText: 'Descubra o que está acontecendo ao seu redor filtrando o feed por localização e data. Você no comando da sua agenda.',
+        interestsTitle: 'Um feed feito exclusivamente para você.',
+        interestsText: 'Esqueça o excesso de informações irrelevantes. Personalize seus interesses e deixe que a inteligência do app selecione apenas os eventos e atrações que combinam com o seu perfil.',
+        directionsTitle: 'A rota perfeita para o seu destino, em um toque.',
+        directionsText: 'Quando chega o momento de sair, a navegação precisa ser simples.',
+        directionsText2: 'Acompanhe a distância exata até o local e toque em Como chegar para abrir no Google Maps ou Waze. Você sai de casa com a rota pronta.',
+        ticketsTitle: 'Preços e lotes na mão, compra 100% segura.',
+        ticketsText: 'Compare os valores do evento sem precisar trocar de tela. Quando decidir ir, você é redirecionado direto para a plataforma oficial de ingressos para finalizar sua compra.',
+        benefitsTitle: 'Descontos reais para você aproveitar mais.',
+        benefitsText: 'Garanta cupons exclusivos do próprio evento ou de parceiros ao redor. Você resgata direto pelo app e aproveita o benefício na hora, sem complicação.',
         screenAltTiming: 'Filtros de localização e período no feed',
         screenAltTimingFeed: 'Chips de localização e período no feed',
         screenAltTimingLocation: 'Filtro de localização com GPS e raio',
         screenAltTimingPeriod: 'Filtro de período no feed',
         screenAltInterests: 'Preferências de categorias no perfil',
-        screenAltMap: 'Mapa territorial no painel',
-        screenAltMapOrg: 'Mapa territorial do organizador',
-        screenAltMapAdmin: 'Mapa territorial admin — visão nacional',
-        screenAltMapAdminCity: 'Mapa territorial admin — densidade na cidade',
-        screenAltMapPartner: 'Mapa territorial do parceiro com raio',
-        screenAltVenue: 'Como chegar ao local do evento no app',
-        screenAltVenueApp: 'Como chegar ao local do evento no app',
-        screenAltVenueMaps: 'Rota no Google Maps até o local do evento',
-        screenAltTickets: 'Sheet de ingressos com lotes e preços',
-        screenAltFunnel: 'Painel comercial com métricas do funil',
+        screenAltDirections: 'Como chegar ao local do evento no app',
+        screenAltDirectionsApp: 'Como chegar ao local do evento no app',
+        screenAltDirectionsMaps: 'Rota no Google Maps ou Waze até o local do evento',
+        screenAltTickets: 'Tela de ingressos com lotes e preços',
         screenAltBenefits: 'Cupom de benefício no app'
       },
       carousel: {
         prev: 'Anterior',
         next: 'Próximo',
         timingLabel: 'Provas de filtros de localização e período',
-        mapLabel: 'Mapas territoriais admin, organizador e parceiro',
-        venueLabel: 'Como chegar no app e rota até o local'
+        directionsLabel: 'Como chegar no app e rota até o local'
       },
       download: {
         title: 'Leve o melhor da cidade no seu bolso.',
@@ -121,27 +120,30 @@
         basicPrice: 'Grátis',
         basicFeature1: 'Feed de eventos, perfil e notificações',
         basicFeature2: 'Descoberta personalizada com limites de filtro',
-        basicFeature3: 'Concierge em teaser (conforme entrega)',
+        basicFeature3: 'Assistente de rolê (versão inicial)',
         basicCta: 'Começar Agora',
         premiumBadge: 'O mais escolhido',
         premiumTitle: 'Plano Premium',
         premiumPrice: 'R$ 29,90 / mês',
         premiumFeature1: 'Mais filtros (cidade, períodos ampliados)',
-        premiumFeature2: 'Concierge ampliado / ilimitado (conforme entrega)',
+        premiumFeature2: 'Assistente de rolê completo',
         premiumFeature3: 'Experiência Premium completa',
         premiumFeature4: 'Cancele quando quiser',
         premiumCta: 'Ser Premium Agora'
       },
       about: {
         title: 'Sua cidade vai muito além do óbvio.',
-        manifesto: 'Cansamos da divulgação que só mostra o mesmo de sempre. My Week é o guia inteligente para dar visibilidade a movimentos autênticos e conectar produtores, parceiros locais e público — com demanda mensurável, não só like.',
-        differential: 'Diferencial: Não somos apenas um calendário. Somos a camada de descoberta e ativação comercial da cena — com app para o público e painel para quem faz o evento acontecer.',
-        pillar1Title: 'Curadoria + geo',
-        pillar1Text: 'O rolê certo perto de você.',
-        pillar2Title: 'Demanda mensurável',
-        pillar2Text: 'Interesse e intenção, não só impressão.',
-        pillar3Title: 'Ecossistema local',
-        pillar3Text: 'Organizer + parceiro + público no mesmo loop.',
+        intro: 'Menos barulho visual, mais público no seu evento.',
+        intro2: 'A divulgação tradicional ficou previsível. O MyWeek é um guia inteligente para destacar quem faz a cultura local acontecer de verdade.',
+        intro3: 'Ligamos organizadores, comércios da região e pessoas que curtem experiências reais — com resultados concretos, não só curtida em rede social.',
+        differential: 'Muito mais que um calendário: tudo conectado.',
+        differential2: 'O MyWeek ajuda você a achar o rolê ideal e ajuda produtores e parceiros locais a atrair público de verdade — com dados claros, não só curtidas.',
+        pillar1Title: 'Perto de você',
+        pillar1Text: 'O rolê certo na sua região.',
+        pillar2Title: 'Interesse de verdade',
+        pillar2Text: 'Sabe quem quer ir — não só quem viu.',
+        pillar3Title: 'Cena local conectada',
+        pillar3Text: 'Produtor, parceiro e público no mesmo ciclo.',
         ctaSubtitle: 'Pronto para encontrar seu próximo rolê ou fazer seu evento bombar?'
       },
       commercial: {
@@ -177,24 +179,27 @@
         { quote: 'Pare de scrollar feed genérico. No MyWeek eu filtro por localização e período — e acho o rolê certo perto de mim em minutos.', author: 'Julia M.', role: 'Usuária do app' },
         { quote: 'Marquei meus interesses uma vez e o feed ficou meu. Jazz, underground, o que eu curto — sem o óbvio da cidade.', author: 'Lucas R.', role: 'Usuário do app' },
         { quote: 'Quero ir + Como chegar no mesmo app. No dia do evento é só abrir a rota e ir. Simples assim.', author: 'Camila T.', role: 'Usuária do app' },
-        { quote: 'Vejo lotes e preços no app e compro na bilheteira em um toque. Menos fricção, mais vontade de ir.', author: 'Diego A.', role: 'Usuário do app' },
+        { quote: 'Vejo lotes e preços no app e compro na bilheteria em um toque. Menos fricção, mais vontade de ir.', author: 'Diego A.', role: 'Usuário do app' },
         { quote: 'Os cupons no local do evento fazem a diferença. Benefício real no rolê — não é só descoberta, é experiência completa.', author: 'Beatriz N.', role: 'Usuária do app' },
         { quote: 'Se você curte cena de verdade, o MyWeek vira o atalho. Menos “o que tem hoje?” e mais “já sei onde estar”.', author: 'Rafael P.', role: 'Usuário do app' }
       ]
     },
     en: {
       pageTitle: 'MyWeek | Your Smart Cultural Agenda',
+      pageDescription: 'MyWeek | Your Smart Cultural Agenda. Discover and promote events with measurable demand — an app for the audience and a dashboard for producers and partners.',
+      ogDescription: 'From interest to the event place — with data and coupons in between. Location-based discovery and commercial activation of the scene.',
       hero: {
         eyebrow: 'Find where your night out is happening',
         brand: 'My Week',
-        title: "We show you, smartly and efficiently, what's going on.",
-        subtitle: 'The easiest way to find and promote events you actually enjoy.',
+        title: 'Discover and promote events that are all about you.',
+        subtitle: 'We connect you to what’s happening in the city in a simple, smart, and fast way.',
         ctaPrimary: 'Join the launch',
         ctaSecondary: 'Understand how My Week works',
         stackLabel: 'My Week app and organizer web dashboard',
         deviceAlt: 'My Week app feed with events near you',
         logoAlt: 'My Week coupon and logo in the app',
-        dashAlt: 'My Week organizer commercial dashboard'
+        dashAlt: 'My Week organizer commercial dashboard',
+        scrollLabel: 'Scroll to see more'
       },
       countdown: {
         eyebrow: 'Your way of living local culture is about to change.',
@@ -202,7 +207,8 @@
         hours: 'Hours',
         minutes: 'Minutes',
         seconds: 'Seconds',
-        footer: 'Technology that understands your style and organizes your event.'
+        footer: 'Technology that understands your style and organizes your event.',
+        gridLabel: 'Countdown to the MyWeek launch'
       },
       nav: {
         close: 'Close menu',
@@ -213,22 +219,27 @@
         contact: 'Contact',
         login: 'Login',
         open: 'Open menu',
-        langLabel: 'Select language'
+        langLabel: 'Select language',
+        mainLabel: 'Main navigation',
+        loginAria: 'Go to MyWeek login'
       },
       b2b: {
-        lead: 'You create the event, we help the right audience find it.',
+        lead: 'You create the event — we help the right audience find it.',
         lead2: 'We organize promotion in the app, measure real interest, and connect local partners with coupons — without replacing your ticketing.',
-        block1Title: 'Your essence, reached by the right audience.',
-        block1Text: 'List the event once. The app shows it to people nearby who match your style.',
-        block2Title: 'From event to funnel — including tickets.',
-        block2Text: 'Lineup, photos, batches, external ticketing link, and coupons in one panel.',
-        block2Text2: 'Track interested users, clicks, and redemptions.',
-        block3Title: 'Commerce around your night out.',
-        block3Text: 'Benefits at the event and nearby partner offers — validated on the spot, with history.',
-        block4Title: 'A living map of your operation.',
-        block4Text: 'See on the dashboard where your events are on the map — filter by state, city, and status.',
-        block5Title: 'Decisions with numbers, not gut feel.',
-        block5Text: 'App engagement KPIs on the dashboard — to size promotion and operations.',
+        block1Title: 'The right audience for your event — without the hassle.',
+        block1Text: 'List your event in moments and let the app show your lineup to people nearby who truly match your style.',
+        block1Text2: 'We combine interest and location filters to deliver qualified visibility and boost your audience engagement in real time.',
+        block2Title: 'Full management and real-time metrics for your event.',
+        block2Text: 'Centralize lineup, gallery, ticket batches, and partnerships in a simple, intuitive interface.',
+        block2Text2: 'Track your audience engagement end to end with precise data on interest, ticketing traffic, and coupon conversion.',
+        block3Title: 'Activate the area around your event and add more value for your audience.',
+        block3Text: 'Create offers at the event itself or tap into the local partner network to attract and retain customers.',
+        block3Text2: 'Instant validation at the counter and full control with detailed metrics for every redeemed coupon.',
+        block4Title: 'Take command of your operation with a smart geographic map.',
+        block4Text: 'Instantly see the location of all your events on the dashboard.',
+        block4Text2: 'Use powerful filters by state (UF), city, and status for a clear, organized view of your market presence.',
+        block5Title: 'Data-driven management for your event’s success.',
+        block5Text: 'Clear engagement metrics on your dashboard to tune promotion and plan operations to the exact size of demand.',
         screenAlt1: 'Event detail in the organizer panel',
         screenAlt2: 'Tickets tab with batches and external ticketing',
         screenAlt3: 'Organizer coupon catalog',
@@ -240,46 +251,36 @@
       },
       b2c: {
         lead: 'The best of the city, personalized for you.',
-        lead2: 'Pick location, date range, and styles you love. Mark Going, see batches, buy on the ticketing site, use coupons, and open the route to the place.'
+        lead2: 'Choose location, date range, and styles you love. Tap Going, see ticket batches, buy on the ticketing platform, use coupons, and open the route to the place.'
       },
       features: {
-        timingTitle: 'Timing and discovery near you',
-        timingText: 'Filter the feed by where you are and when you want to go out — the right night out at the right time.',
-        interestsTitle: 'Your interests, your feed',
-        interestsText: 'Category/genre preferences in your profile — curation starts with what you like.',
-        mapTitle: 'Live map of the scene',
-        mapText: 'On the dashboard, see events on the map, filter by state and city, and spot where the scene is strongest.',
-        venueTitle: 'From the details to the event door',
-        venueText: 'See the distance, tap Get directions, and open the route in Google Maps — useful on the day.',
-        ticketsTitle: 'Tickets without being a box office',
-        ticketsText: 'Batches and prices in the app; purchase on Sympla/Ticketmaker — My Week measures the click.',
-        funnelTitle: 'Funnel performance',
-        funnelText: 'Interested users, ticket clicks, promo copies, and redemptions.',
-        benefitsTitle: 'Benefits on the night out',
-        benefitsText: 'Event and local partner coupons, with confirmed redemption.',
+        timingTitle: 'The right night out — at the right time, in the right place.',
+        timingText: 'Discover what’s happening around you by filtering the feed by location and date. You’re in control of your agenda.',
+        interestsTitle: 'A feed made exclusively for you.',
+        interestsText: 'Skip the noise of irrelevant information. Customize your interests and let the app’s intelligence select only the events and attractions that match your profile.',
+        directionsTitle: 'The perfect route to your destination — in one tap.',
+        directionsText: 'When it’s time to head out, navigation should be simple.',
+        directionsText2: 'See the exact distance to the place and tap Get directions to open Google Maps or Waze. You leave home with the route ready.',
+        ticketsTitle: 'Prices and batches at hand — a 100% secure purchase.',
+        ticketsText: 'Compare event prices without switching screens. When you decide to go, you’re redirected straight to the official ticketing platform to complete your purchase.',
+        benefitsTitle: 'Real discounts so you get more out of the night.',
+        benefitsText: 'Get exclusive coupons from the event itself or nearby partners. Redeem them directly in the app and enjoy the benefit on the spot — no hassle.',
         screenAltTiming: 'Location and date filters on the feed',
         screenAltTimingFeed: 'Location and period chips on the feed',
         screenAltTimingLocation: 'Location filter with GPS and radius',
         screenAltTimingPeriod: 'Period filter on the feed',
         screenAltInterests: 'Category preferences in the profile',
-        screenAltMap: 'Territorial map on the panel',
-        screenAltMapOrg: 'Organizer territorial map',
-        screenAltMapAdmin: 'Admin territorial map — national view',
-        screenAltMapAdminCity: 'Admin territorial map — city density',
-        screenAltMapPartner: 'Partner territorial map with radius',
-        screenAltVenue: 'Get directions to the event in the app',
-        screenAltVenueApp: 'Get directions to the event in the app',
-        screenAltVenueMaps: 'Google Maps route to the event',
-        screenAltTickets: 'Tickets sheet with batches and prices',
-        screenAltFunnel: 'Commercial panel with funnel metrics',
+        screenAltDirections: 'Get directions to the event in the app',
+        screenAltDirectionsApp: 'Get directions to the event in the app',
+        screenAltDirectionsMaps: 'Google Maps or Waze route to the event place',
+        screenAltTickets: 'Tickets screen with batches and prices',
         screenAltBenefits: 'Benefit coupon in the app'
       },
       carousel: {
         prev: 'Previous',
         next: 'Next',
         timingLabel: 'Location and period filter screenshots',
-        mapLabel: 'Admin, organizer, and partner territorial maps',
-        venueLabel: 'In-app directions and route to the place'
+        directionsLabel: 'In-app directions and route to the place'
       },
       download: {
         title: 'Take the best of the city in your pocket.',
@@ -294,38 +295,41 @@
         basicPrice: 'Free',
         basicFeature1: 'Event feed, profile, and notifications',
         basicFeature2: 'Personalized discovery with filter limits',
-        basicFeature3: 'Concierge teaser (as delivered)',
+        basicFeature3: 'Night-out assistant (starter version)',
         basicCta: 'Get Started',
         premiumBadge: 'Most popular',
         premiumTitle: 'Premium Plan',
         premiumPrice: 'R$ 29.90 / month',
         premiumFeature1: 'More filters (city, extended date ranges)',
-        premiumFeature2: 'Expanded / unlimited Concierge (as delivered)',
+        premiumFeature2: 'Full night-out assistant',
         premiumFeature3: 'Full Premium experience',
         premiumFeature4: 'Cancel anytime',
         premiumCta: 'Go Premium Now'
       },
       about: {
         title: 'Your city goes way beyond the obvious.',
-        manifesto: 'We got tired of promotion that only shows the same old thing. My Week is the smart guide that gives visibility to authentic movements and connects producers, local partners, and audiences — with measurable demand, not just likes.',
-        differential: 'What sets us apart: We are not just a calendar. We are the discovery and commercial activation layer for the scene — with an app for the audience and a panel for everyone who makes the event happen.',
-        pillar1Title: 'Curation + geo',
-        pillar1Text: 'The right night out near you.',
-        pillar2Title: 'Measurable demand',
-        pillar2Text: 'Interest and intent, not just impressions.',
-        pillar3Title: 'Local ecosystem',
-        pillar3Text: 'Organizer + partner + audience in the same loop.',
+        intro: 'Less visual noise, more people at your event.',
+        intro2: 'Traditional promotion got predictable. MyWeek is a smart guide that highlights who truly makes local culture happen.',
+        intro3: 'We connect organizers, local businesses, and people who love real experiences — with concrete results, not just social likes.',
+        differential: 'More than a calendar: everything connected.',
+        differential2: 'MyWeek helps you find the ideal night out and helps producers and local partners attract real audiences — with clear data, not just likes.',
+        pillar1Title: 'Near you',
+        pillar1Text: 'The right night out in your area.',
+        pillar2Title: 'Real interest',
+        pillar2Text: 'Know who wants to go — not just who saw it.',
+        pillar3Title: 'Connected local scene',
+        pillar3Text: 'Producer, partner, and audience in the same cycle.',
         ctaSubtitle: 'Ready to find your next night out or make your event crush it?'
       },
       commercial: {
-        title: 'Business Interest',
+        title: 'Commercial Interest',
         lead: 'Real intelligence for everyone who makes culture happen.',
-        lead2: "Let's talk? Discover how to measure real interest and activate partners around your event."
+        lead2: "Shall we talk? Discover how to measure real interest and activate partners around your event."
       },
       form: {
         companyLabel: 'Company Name',
         emailLabel: 'Email',
-        phoneLabel: 'Phone (required for WhatsApp or call)',
+        phoneLabel: 'Mobile phone (required for WhatsApp or call)',
         submit: 'Submit',
         sending: 'Sending…',
         errorCompany: 'Please enter the company name.',
@@ -440,6 +444,17 @@
       var value = getNested(t, key);
       if (value != null) el.setAttribute('alt', value);
     });
+
+    document.querySelectorAll('[data-i18n-content]').forEach(function (el) {
+      var key = el.getAttribute('data-i18n-content');
+      var value = getNested(t, key);
+      if (value != null) el.setAttribute('content', value);
+    });
+
+    var ogLocale = document.querySelector('meta[property="og:locale"]');
+    if (ogLocale) {
+      ogLocale.setAttribute('content', lang === 'en' ? 'en_US' : 'pt_BR');
+    }
 
     var submitBtn = document.querySelector('.commercial__submit');
     if (submitBtn && !submitBtn.disabled) {

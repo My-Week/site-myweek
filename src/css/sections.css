@@ -350,14 +350,16 @@
 
 /* ---------- Planos e Preços ---------- */
 .pricing {
-  padding: var(--space-4xl) 0;
+  padding: var(--section-padding-y) 0;
   background: var(--bg-deep);
   overflow: visible;
+  border-top: 1px solid var(--border-subtle);
 }
 
 @media (min-width: 1024px) {
   .pricing {
-    padding: var(--space-5xl) 0;
+    padding-top: var(--section-padding-y-desktop);
+    padding-bottom: var(--section-padding-y-desktop);
   }
 }
 
@@ -849,13 +851,18 @@
 
 .b2b-platform__lead {
   max-width: var(--text-column-max);
-  margin: 0 auto var(--space-3xl);
+  margin: 0 auto var(--space-md);
   font-size: 1.125rem;
   font-weight: 300;
   letter-spacing: 0.01em;
   line-height: 1.8;
   color: var(--text-muted);
   text-align: center;
+  padding-inline: 0.25rem;
+}
+
+.b2b-platform__lead:last-of-type {
+  margin-bottom: var(--space-3xl);
 }
 
 /* Zigzag B2B — layout em grid via screens.css (.z-row__inner) */
@@ -878,21 +885,21 @@
 }
 
 .transition-lead {
-  padding: var(--space-3xl) 0;
+  padding: clamp(3.5rem, 7vw, 5.5rem) 0;
   background: linear-gradient(180deg, var(--bg-deep) 0%, var(--bg-deep-mid) 50%, var(--bg-surface) 100%);
   border-top: 1px solid var(--border-subtle);
 }
 
 .transition-lead__text {
-  margin: 0;
+  margin: 0 auto;
   font-size: clamp(1.125rem, 2.5vw, 1.5rem);
   font-weight: 600;
   letter-spacing: -0.02em;
+  line-height: 1.4;
   color: var(--text-high);
   text-align: center;
-  max-width: 28rem;
-  margin-left: auto;
-  margin-right: auto;
+  max-width: 32rem;
+  padding-inline: 0.5rem;
 }
 
 /* ---------- B2C Experience ---------- */
@@ -911,6 +918,7 @@
   line-height: 1.8;
   color: var(--text-muted);
   text-align: center;
+  padding-inline: 0.25rem;
 }
 
 .b2c-experience__lead:first-child {
@@ -918,6 +926,10 @@
   font-weight: 600;
   color: var(--text-high);
   margin-bottom: var(--space-sm);
+}
+
+.b2c-experience__lead:last-of-type {
+  margin-bottom: 0;
 }
 
 @media (min-width: 1024px) {
@@ -1851,11 +1863,12 @@
 /* Imagem de fundo: cover + centro; mobile sem fixed para não lavar */
 .content--about {
   position: relative;
-  padding: 150px 0;
+  padding: var(--section-padding-y) 0;
   background: linear-gradient(to bottom, #050508, transparent 20%, transparent 80%, #050508);
   background-attachment: scroll;
   background-size: cover;
   background-position: center center;
+  border-top: 1px solid var(--border-subtle);
 }
 
 .content--about::before {
@@ -1871,6 +1884,8 @@
 
 @media (min-width: 1024px) {
   .content--about {
+    padding-top: var(--section-padding-y-desktop);
+    padding-bottom: var(--section-padding-y-desktop);
     background-attachment: fixed;
   }
 }
@@ -1880,7 +1895,8 @@
   background: rgba(5, 5, 8, 0.4);
   backdrop-filter: blur(2px);
   -webkit-backdrop-filter: blur(2px);
-  border-radius: var(--radius-lg);
+  border-radius: 1.25rem;
+  padding-block: clamp(1.5rem, 4vw, 2.75rem);
 }
 
 .content__cta-subtitle {
@@ -1933,13 +1949,23 @@
   text-align: center;
 }
 
-.about-text__manifesto {
+.about-text__intro {
   color: rgba(255, 255, 255, 0.9);
   line-height: 1.8;
+  margin-bottom: var(--space-md);
+}
+
+.about-text__intro-lead {
+  font-size: clamp(1.15rem, 2.4vw, 1.35rem);
+  font-weight: 600;
+  color: rgba(255, 255, 255, 0.96);
+  margin-bottom: var(--space-lg);
 }
 
 .about-text__differential {
-  display: block;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   width: 100%;
   box-sizing: border-box;
   padding: var(--space-lg) var(--space-xl);
@@ -1954,6 +1980,29 @@
   backdrop-filter: blur(10px);
   -webkit-backdrop-filter: blur(10px);
   box-shadow: 0 16px 40px rgba(0, 0, 0, 0.5);
+  text-align: center;
+}
+
+.about-text__differential-title {
+  margin: 0 0 var(--space-sm);
+  max-width: 36rem;
+  width: 100%;
+  font-size: clamp(1.1rem, 2.2vw, 1.3rem);
+  font-weight: 600;
+  line-height: 1.45;
+  color: rgba(255, 255, 255, 0.98);
+  text-align: center;
+}
+
+.about-text__differential-text {
+  margin: 0;
+  max-width: 36rem;
+  width: 100%;
+  font-size: 1rem;
+  font-weight: 300;
+  line-height: 1.75;
+  color: rgba(255, 255, 255, 0.9);
+  text-align: center;
 }
 
 .content__pillars {
@@ -2625,7 +2674,11 @@
   text-shadow: var(--title-glow);
 }
 
-[data-theme="light"] .about-text__manifesto {
+[data-theme="light"] .about-text__intro {
+  color: var(--text-high);
+}
+
+[data-theme="light"] .about-text__intro-lead {
   color: var(--text-high);
 }
 
@@ -2634,6 +2687,12 @@
   background: rgba(255, 255, 255, 0.7);
   border-color: rgba(30, 41, 59, 0.12);
   box-shadow: 0 8px 24px rgba(30, 41, 59, 0.06);
+}
+
+[data-theme="light"] .about-text__differential-title,
+[data-theme="light"] .about-text__differential-text {
+  color: var(--text-high);
+  text-align: center;
 }
 
 [data-theme="light"] .content__cta-subtitle {

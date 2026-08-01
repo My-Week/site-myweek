@@ -29,16 +29,18 @@
 .screen-frame--desktop {
   border-radius: var(--radius-lg);
   width: 100%;
-  max-width: 36rem;
+  /* Evita frame mais largo que a proporção (causa faixas laterais) */
+  max-width: min(36rem, calc(24rem * 1280 / 892));
   max-height: 24rem;
   /* Proporção real dos painéis web (~1280×892) */
   aspect-ratio: 1280 / 892;
   margin-inline: auto;
+  background: #0a0a0f;
 }
 
 /* Mapas territoriais (~2:1) */
 .screen-frame--desktop-wide {
-  max-width: 40rem;
+  max-width: min(40rem, calc(20rem * 1440 / 702));
   max-height: 20rem;
   aspect-ratio: 1440 / 702;
 }
@@ -51,15 +53,15 @@
   object-position: center center;
 }
 
-/* Painéis web: mostrar área central já recortada (sem sidebar/topo) */
+/* Painéis web: preencher o frame sem faixas laterais */
 .screen-frame--desktop .screen-frame__img {
-  object-fit: contain;
+  object-fit: cover;
   object-position: center top;
-  background: #f4f5f7;
+  background: transparent;
 }
 
 [data-theme="dark"] .screen-frame--desktop .screen-frame__img {
-  background: #e8eaee;
+  background: transparent;
 }
 
 /* App: mostrar a tela inteira (sem cortar CTAs, sheets ou listas) */
@@ -77,20 +79,19 @@
     0 0 0 1px rgba(124, 58, 237, 0.08);
 }
 
+[data-theme="light"] .screen-frame--desktop {
+  background: #0a0a0f;
+}
+
 /* ---------- Showcase rows (B2B + B2C) ---------- */
 .showcase-rows {
   display: flex;
   flex-direction: column;
-  gap: clamp(2.75rem, 5vw, 4rem);
+  gap: clamp(3rem, 5.5vw, 4.5rem);
   width: 100%;
   max-width: 64rem;
-  margin-top: var(--space-2xl);
+  margin-top: clamp(2.5rem, 5vw, 3.5rem);
   margin-inline: auto;
-}
-
-.b2c-experience__lead + .b2c-experience__lead {
-  margin-top: calc(var(--space-md) * -1);
-  margin-bottom: 0;
 }
 
 .showcase-row,
@@ -201,14 +202,14 @@
   }
 
   .screen-frame--desktop {
-    width: min(32rem, 100%);
-    max-width: 32rem;
+    width: min(32rem, 100%, calc(22rem * 1280 / 892));
+    max-width: min(32rem, calc(22rem * 1280 / 892));
     max-height: 22rem;
   }
 
   .screen-frame--desktop-wide {
-    width: min(36rem, 100%);
-    max-width: 36rem;
+    width: min(36rem, 100%, calc(18rem * 1440 / 702));
+    max-width: min(36rem, calc(18rem * 1440 / 702));
     max-height: 18rem;
   }
 
@@ -239,10 +240,12 @@
 
   .screen-frame--desktop {
     max-height: 16rem;
+    max-width: min(100%, calc(16rem * 1280 / 892));
   }
 
   .screen-frame--desktop-wide {
     max-height: 12rem;
+    max-width: min(100%, calc(12rem * 1440 / 702));
   }
 }
 
@@ -296,14 +299,14 @@
 
   .screen-frame--desktop,
   .screen-carousel--desktop {
-    width: min(44rem, 52vw);
-    max-width: min(44rem, 52vw);
+    width: min(44rem, 52vw, calc(28rem * 1280 / 892));
+    max-width: min(44rem, 52vw, calc(28rem * 1280 / 892));
     max-height: 28rem;
   }
 
   .screen-frame--desktop-wide {
-    width: min(48rem, 56vw);
-    max-width: min(48rem, 56vw);
+    width: min(48rem, 56vw, calc(24rem * 1440 / 702));
+    max-width: min(48rem, 56vw, calc(24rem * 1440 / 702));
     max-height: 24rem;
   }
 
@@ -389,7 +392,7 @@
 }
 
 .screen-carousel--desktop .screen-carousel__slide.screen-frame--desktop .screen-frame__img {
-  object-fit: contain;
+  object-fit: cover;
   object-position: center top;
 }
 

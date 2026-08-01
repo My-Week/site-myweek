@@ -4,11 +4,15 @@
 
 .footer {
   margin-top: auto;
-  padding: var(--space-2xl) 0;
+  padding: clamp(2rem, 4vw, 3rem) 0;
   background: rgba(5, 5, 8, 0.7);
   border-top: var(--glass-border-width) solid rgba(255, 255, 255, 0.06);
   backdrop-filter: blur(var(--glass-blur));
   -webkit-backdrop-filter: blur(var(--glass-blur));
+  /* Sempre visível — não depende de animação reveal/scroll */
+  opacity: 1;
+  transform: none;
+  visibility: visible;
 }
 
 /* Áreas de toque mínimas 48x48px (Android/iPhone) para botões e links */
@@ -24,11 +28,16 @@
 }
 
 .footer__bottom {
-  margin-top: var(--space-xl);
+  margin: 0;
   text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.4rem;
 }
 
 .footer__copy {
+  margin: 0;
   font-size: 0.9375rem;
   font-weight: 300;
   color: var(--text-low);
@@ -36,7 +45,7 @@
 }
 
 .footer__credit {
-  margin-top: 0.35rem;
+  margin: 0;
   font-size: 0.8125rem;
   font-weight: 300;
   color: var(--text-low);

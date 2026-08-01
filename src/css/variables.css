@@ -147,6 +147,7 @@
   --overlay-darker: rgba(255, 255, 255, 0.96);
   --overlay-top: rgba(226, 232, 240, 0.7);
   --glass-bg: rgba(255, 255, 255, 0.5);
+  --glass-bg-subtle: rgba(255, 255, 255, 0.86);
   --glass-border: rgba(30, 41, 59, 0.1);
   --focus-neon: 0 0 0 2px var(--primary-vibrant), 0 2px 12px var(--glow-primary);
   --glass-blur: 16px;

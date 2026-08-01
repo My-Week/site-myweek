@@ -120,14 +120,14 @@
 
   .screen-frame--desktop,
   .screen-carousel--desktop {
-    width: min(44rem, 52vw);
-    max-width: min(44rem, 52vw);
+    width: min(44rem, 52vw, calc(28rem * 1280 / 892));
+    max-width: min(44rem, 52vw, calc(28rem * 1280 / 892));
     max-height: 28rem;
   }
 
   .screen-frame--desktop-wide {
-    width: min(48rem, 56vw);
-    max-width: min(48rem, 56vw);
+    width: min(48rem, 56vw, calc(24rem * 1440 / 702));
+    max-width: min(48rem, 56vw, calc(24rem * 1440 / 702));
     max-height: 24rem;
   }
 
@@ -159,7 +159,8 @@
   }
 
   .content--about {
-    padding: 200px 0;
+    padding-top: max(var(--section-padding-y-desktop), 8rem);
+    padding-bottom: max(var(--section-padding-y-desktop), 8rem);
   }
 
   .content__pillars {

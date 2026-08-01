@@ -3,11 +3,11 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="MyWeek | Sua Agenda Cultural Inteligente. Descubra e divulgue eventos com demanda mensurável — app para o público e painel para produtores e parceiros.">
+  <meta name="description" content="MyWeek | Sua Agenda Cultural Inteligente. Descubra e divulgue eventos com demanda mensurável — app para o público e painel para produtores e parceiros." data-i18n-content="pageDescription">
   <meta name="keywords" content="MyWeek, eventos culturais, curadoria, produtores, divulgação eventos, cena cultural, hub inteligência cultural">
   <meta property="og:type" content="website">
-  <meta property="og:title" content="MyWeek | Sua Agenda Cultural Inteligente">
-  <meta property="og:description" content="Do interesse até o local do evento — com dado e cupom no meio. Descoberta por localização e ativação comercial da cena.">
+  <meta property="og:title" content="MyWeek | Sua Agenda Cultural Inteligente" data-i18n-content="pageTitle">
+  <meta property="og:description" content="Do interesse até o local do evento — com dado e cupom no meio. Descoberta por localização e ativação comercial da cena." data-i18n-content="ogDescription">
   <meta property="og:locale" content="pt_BR">
   <title>MyWeek | Sua Agenda Cultural Inteligente</title>
   <link rel="icon" type="image/svg+xml" href="assets/images/logo-myweek.svg">
@@ -69,14 +69,14 @@
             <span class="logo__text">My Week</span>
           </div>
         </a>
-        <nav class="nav" aria-label="Navegação principal">
+        <nav class="nav" aria-label="Navegação principal" data-i18n-aria-label="nav.mainLabel">
           <button type="button" class="nav-close" data-i18n-aria-label="nav.close" data-i18n-title="nav.close" aria-label="Fechar menu" title="Fechar menu">✕</button>
           <a href="#b2b-platform" data-i18n="nav.producers">Para Produtores</a>
           <a href="#b2c-experience" data-i18n="nav.features">Funcionalidades</a>
           <a href="#download-app" data-i18n="nav.app">App</a>
           <a href="#sobre" data-i18n="nav.about">Sobre</a>
           <a href="#contact-form" data-i18n="nav.contact">Contato</a>
-          <a href="#" class="btn btn--primary nav__login js-login-url" id="header-login" data-i18n="nav.login" aria-label="Acessar login MyWeek">Login</a>
+          <a href="#" class="btn btn--primary nav__login js-login-url" id="header-login" data-i18n="nav.login" data-i18n-aria-label="nav.loginAria" aria-label="Acessar login MyWeek">Login</a>
         </nav>
         <div class="nav-backdrop" aria-hidden="true"></div>
         <button type="button" class="nav-toggle" data-i18n-aria-label="nav.open" aria-label="Abrir menu" aria-expanded="false">
@@ -100,8 +100,8 @@
             <div class="hero__col hero__col--text">
               <p class="hero__brand" data-i18n="hero.brand">My Week</p>
               <p class="hero__eyebrow" data-i18n="hero.eyebrow">Descubra onde está acontecendo seu rolê</p>
-              <h1 class="hero__title" data-i18n="hero.title">Nós te mostramos, de forma inteligente e eficiente, o que está rolando.</h1>
-              <p class="hero__subtitle" data-i18n="hero.subtitle">A forma mais fácil de encontrar e divulgar eventos que você realmente curte.</p>
+              <h1 class="hero__title" data-i18n="hero.title">Descubra e divulgue eventos que têm tudo a ver com você.</h1>
+              <p class="hero__subtitle" data-i18n="hero.subtitle">Conectamos você ao que está acontecendo na cidade de forma simples, inteligente e rápida.</p>
               <div class="hero__actions">
                 <a href="#countdown-timer" class="btn hero__btn hero__btn--primary" data-i18n="hero.ctaPrimary">Quero participar do lançamento</a>
                 <a href="#b2b-platform" class="btn hero__btn hero__btn--ghost" data-i18n="hero.ctaSecondary">Entender como a My Week funciona</a>
@@ -154,7 +154,7 @@
               </div>
             </div>
           </div>
-          <button type="button" class="hero__scroll" aria-label="Rolar para ver mais" onclick="document.getElementById('countdown-timer').scrollIntoView({ behavior: 'smooth' });">
+          <button type="button" class="hero__scroll" data-i18n-aria-label="hero.scrollLabel" aria-label="Rolar para ver mais" onclick="document.getElementById('countdown-timer').scrollIntoView({ behavior: 'smooth' });">
             <span class="hero__scroll-line"></span>
           </button>
         </div>
@@ -164,7 +164,7 @@
       <section class="countdown" id="countdown-timer">
         <div class="container countdown__inner">
           <p class="countdown__eyebrow" data-i18n="countdown.eyebrow">Sua forma de viver a cultura local está prestes a mudar.</p>
-          <div class="countdown__grid" aria-label="Contagem regressiva para o lançamento do MyWeek">
+          <div class="countdown__grid" data-i18n-aria-label="countdown.gridLabel" aria-label="Contagem regressiva para o lançamento do MyWeek">
             <div class="countdown__item">
               <span class="countdown__number" id="days">00</span>
               <span class="countdown__label" data-i18n="countdown.days">Dias</span>
@@ -190,13 +190,14 @@
       <section id="b2b-platform" class="b2b-platform">
         <div class="container">
           <p class="b2b-platform__lead" data-i18n="b2b.lead">Você cria o evento, a gente faz ele ser encontrado pelo público certo.</p>
-          <p class="b2b-platform__lead" data-i18n="b2b.lead2">Organizamos a divulgação no app, medimos interesse real e conectamos parceiros locais com cupons — sem substituir a sua bilheteira.</p>
+          <p class="b2b-platform__lead" data-i18n="b2b.lead2">Organizamos a divulgação no app, medimos interesse real e conectamos parceiros locais com cupons — sem substituir a sua bilheteria.</p>
 
           <div class="z-row hidden" data-reveal>
             <div class="z-row__inner">
               <div class="z-row__body">
-                <h2 class="z-section__title" data-i18n="b2b.block1Title">Sua essência, acessada pelo público certo.</h2>
-                <p class="z-section__text" data-i18n="b2b.block1Text">Cadastre o evento uma vez. O app mostra para quem está perto e curte o seu estilo.</p>
+                <h2 class="z-section__title" data-i18n="b2b.block1Title">O público certo para o seu evento, sem complicação.</h2>
+                <p class="z-section__text" data-i18n="b2b.block1Text">Cadastre seu evento em instantes e deixe o app exibir sua programação para quem está por perto e realmente curte seu estilo.</p>
+                <p class="z-section__text" data-i18n="b2b.block1Text2">Combinamos filtros de interesses e localização para garantir visibilidade qualificada e aumentar o engajamento do seu público em tempo real.</p>
               </div>
               <div class="z-row__media">
                 <figure class="screen-frame screen-frame--desktop">
@@ -218,9 +219,9 @@
           <div class="z-row z-row--reverse hidden" data-reveal>
             <div class="z-row__inner">
               <div class="z-row__body">
-                <h2 class="z-section__title" data-i18n="b2b.block2Title">Controle do evento ao funil — inclusive ingresso.</h2>
-                <p class="z-section__text" data-i18n="b2b.block2Text">Atrações, fotos, lotes, link de bilheteira externa e cupons no mesmo painel.</p>
-                <p class="z-section__text" data-i18n="b2b.block2Text2">Acompanhe interessados, cliques e resgates.</p>
+                <h2 class="z-section__title" data-i18n="b2b.block2Title">Gestão completa e métricas em tempo real para o seu evento.</h2>
+                <p class="z-section__text" data-i18n="b2b.block2Text">Centralize atrações, galeria, lotes e parcerias em uma interface simples e intuitiva.</p>
+                <p class="z-section__text" data-i18n="b2b.block2Text2">Monitore o engajamento do seu público do início ao fim com dados precisos de interesse, tráfego para a bilheteria e conversão de cupons.</p>
               </div>
               <div class="z-row__media">
                 <figure class="screen-frame screen-frame--desktop">
@@ -229,7 +230,7 @@
                     src="assets/images/screens/web/organizer/06-evento-ingressos.jpg"
                     width="1280"
                     height="892"
-                    alt="Aba de ingressos com lotes e bilheteira externa"
+                    alt="Aba de ingressos com lotes e venda externa"
                     data-i18n-alt="b2b.screenAlt2"
                     loading="lazy"
                     decoding="async"
@@ -242,8 +243,9 @@
           <div class="z-row hidden" data-reveal>
             <div class="z-row__inner">
               <div class="z-row__body">
-                <h2 class="z-section__title" data-i18n="b2b.block3Title">Comércio no entorno do seu rolê.</h2>
-                <p class="z-section__text" data-i18n="b2b.block3Text">Benefícios no local do evento e ofertas de parceiros próximos — validados na hora, com histórico.</p>
+                <h2 class="z-section__title" data-i18n="b2b.block3Title">Movimente o entorno e agregue mais valor ao seu público.</h2>
+                <p class="z-section__text" data-i18n="b2b.block3Text">Crie ofertas no próprio evento ou explore a rede de parceiros da região para atrair e fidelizar clientes.</p>
+                <p class="z-section__text" data-i18n="b2b.block3Text2">Validação instantânea no caixa e controle total com métricas detalhadas de cada cupom utilizado.</p>
               </div>
               <div class="z-row__media">
                 <figure class="screen-frame screen-frame--desktop">
@@ -265,8 +267,9 @@
           <div class="z-row z-row--reverse hidden" data-reveal>
             <div class="z-row__inner">
               <div class="z-row__body">
-                <h2 class="z-section__title" data-i18n="b2b.block4Title">Mapa vivo da sua operação.</h2>
-                <p class="z-section__text" data-i18n="b2b.block4Text">Veja no dashboard onde seus eventos estão localizados no mapa — filtro por UF, cidade e status.</p>
+                <h2 class="z-section__title" data-i18n="b2b.block4Title">Sua operação no comando com um mapa geográfico inteligente.</h2>
+                <p class="z-section__text" data-i18n="b2b.block4Text">Veja na hora onde estão todos os seus eventos no painel.</p>
+                <p class="z-section__text" data-i18n="b2b.block4Text2">Utilize filtros poderosos por Estado (UF), cidade e status para ter uma visão clara e organizada da sua presença no mercado.</p>
               </div>
               <div class="z-row__media">
                 <figure class="screen-frame screen-frame--desktop screen-frame--desktop-wide">
@@ -275,7 +278,7 @@
                     src="assets/images/screens/web/organizer/05-mapa-territorial-01.jpg"
                     width="1440"
                     height="728"
-                    alt="Mapa territorial com eventos no dashboard"
+                    alt="Mapa com eventos no painel"
                     data-i18n-alt="b2b.screenAlt4"
                     loading="lazy"
                     decoding="async"
@@ -288,8 +291,8 @@
           <div class="z-row hidden" data-reveal>
             <div class="z-row__inner">
               <div class="z-row__body">
-                <h2 class="z-section__title" data-i18n="b2b.block5Title">Decisões com número, não com feeling.</h2>
-                <p class="z-section__text" data-i18n="b2b.block5Text">KPIs de engajamento do app no dashboard — para dimensionar divulgação e operação.</p>
+                <h2 class="z-section__title" data-i18n="b2b.block5Title">Gestão orientada a dados para o sucesso do seu evento.</h2>
+                <p class="z-section__text" data-i18n="b2b.block5Text">Indicadores de engajamento claros no seu painel para ajustar a divulgação e planejar sua operação do tamanho exato da demanda.</p>
               </div>
               <div class="z-row__media">
                 <figure class="screen-frame screen-frame--desktop">
@@ -321,13 +324,13 @@
       <section id="b2c-experience" class="b2c-experience">
         <div class="container">
           <p class="b2c-experience__lead" data-i18n="b2c.lead">O melhor da cidade, personalizado para você.</p>
-          <p class="b2c-experience__lead" data-i18n="b2c.lead2">Escolha localização, período e estilos que você curte. Marque Quero ir, veja lotes, compre na bilheteira, use cupons e abra a rota até o local.</p>
+          <p class="b2c-experience__lead" data-i18n="b2c.lead2">Escolha localização, período e estilos que você curte. Marque Quero ir, veja lotes, compre na bilheteria, use cupons e abra a rota até o local.</p>
 
           <div class="showcase-rows">
             <article class="showcase-row hidden" data-reveal>
               <div class="showcase-row__copy">
-                <h2 class="showcase-row__title" data-i18n="features.timingTitle">Timing e descoberta perto de você</h2>
-                <p class="showcase-row__text" data-i18n="features.timingText">Filtre o feed por onde você está e por quando quer sair — o rolê certo no momento certo.</p>
+                <h2 class="showcase-row__title" data-i18n="features.timingTitle">O rolê certo, no momento certo e no lugar certo.</h2>
+                <p class="showcase-row__text" data-i18n="features.timingText">Descubra o que está acontecendo ao seu redor filtrando o feed por localização e data. Você no comando da sua agenda.</p>
               </div>
               <div class="showcase-row__media">
                 <div class="screen-carousel" data-carousel data-interval="5500" aria-roledescription="carousel" data-i18n-aria-label="carousel.timingLabel">
@@ -355,8 +358,8 @@
 
             <article class="showcase-row showcase-row--flip hidden" data-reveal>
               <div class="showcase-row__copy">
-                <h2 class="showcase-row__title" data-i18n="features.interestsTitle">Seus interesses, seu feed</h2>
-                <p class="showcase-row__text" data-i18n="features.interestsText">Preferências de categorias/gêneros no perfil — a curadoria começa no que você curte.</p>
+                <h2 class="showcase-row__title" data-i18n="features.interestsTitle">Um feed feito exclusivamente para você.</h2>
+                <p class="showcase-row__text" data-i18n="features.interestsText">Esqueça o excesso de informações irrelevantes. Personalize seus interesses e deixe que a inteligência do app selecione apenas os eventos e atrações que combinam com o seu perfil.</p>
               </div>
               <div class="showcase-row__media">
                 <figure class="screen-frame screen-frame--phone">
@@ -367,50 +370,19 @@
 
             <article class="showcase-row hidden" data-reveal>
               <div class="showcase-row__copy">
-                <h2 class="showcase-row__title" data-i18n="features.mapTitle">Mapa ao vivo da cena</h2>
-                <p class="showcase-row__text" data-i18n="features.mapText">No painel, veja eventos no mapa, filtre por estado e cidade e entenda onde a cena está mais forte.</p>
+                <h2 class="showcase-row__title" data-i18n="features.directionsTitle">A rota perfeita para o seu destino, em um toque.</h2>
+                <p class="showcase-row__text" data-i18n="features.directionsText">Quando chega o momento de sair, a navegação precisa ser simples.</p>
+                <p class="showcase-row__text" data-i18n="features.directionsText2">Acompanhe a distância exata até o local e toque em Como chegar para abrir no Google Maps ou Waze. Você sai de casa com a rota pronta.</p>
               </div>
               <div class="showcase-row__media">
-                <div class="screen-carousel screen-carousel--desktop" data-carousel data-interval="6000" aria-roledescription="carousel" data-i18n-aria-label="carousel.mapLabel">
-                  <div class="screen-carousel__viewport">
-                    <div class="screen-carousel__track">
-                      <figure class="screen-frame screen-frame--desktop screen-frame--desktop-wide screen-carousel__slide is-active">
-                        <img class="screen-frame__img" src="assets/images/screens/web/organizer/05-mapa-territorial-01.jpg" width="1440" height="728" alt="Mapa territorial do organizador" data-i18n-alt="features.screenAltMapOrg" loading="lazy" decoding="async">
-                      </figure>
-                      <figure class="screen-frame screen-frame--desktop screen-frame--desktop-wide screen-carousel__slide" aria-hidden="true">
-                        <img class="screen-frame__img" src="assets/images/screens/web/admin/05-mapa-territorial-01.jpg" width="1440" height="702" alt="Mapa territorial admin — visão nacional" data-i18n-alt="features.screenAltMapAdmin" loading="lazy" decoding="async">
-                      </figure>
-                      <figure class="screen-frame screen-frame--desktop screen-frame--desktop-wide screen-carousel__slide" aria-hidden="true">
-                        <img class="screen-frame__img" src="assets/images/screens/web/admin/05-mapa-territorial-02.jpg" width="1440" height="700" alt="Mapa territorial admin — densidade na cidade" data-i18n-alt="features.screenAltMapAdminCity" loading="lazy" decoding="async">
-                      </figure>
-                      <figure class="screen-frame screen-frame--desktop screen-frame--desktop-wide screen-carousel__slide" aria-hidden="true">
-                        <img class="screen-frame__img" src="assets/images/screens/web/partner/05-mapa-territorial-01.jpg" width="1440" height="702" alt="Mapa territorial do parceiro com raio" data-i18n-alt="features.screenAltMapPartner" loading="lazy" decoding="async">
-                      </figure>
-                    </div>
-                  </div>
-                  <div class="screen-carousel__controls">
-                    <button type="button" class="screen-carousel__btn screen-carousel__btn--prev" data-i18n-aria-label="carousel.prev" aria-label="Anterior">‹</button>
-                    <div class="screen-carousel__dots" role="tablist"></div>
-                    <button type="button" class="screen-carousel__btn screen-carousel__btn--next" data-i18n-aria-label="carousel.next" aria-label="Próximo">›</button>
-                  </div>
-                </div>
-              </div>
-            </article>
-
-            <article class="showcase-row showcase-row--flip hidden" data-reveal>
-              <div class="showcase-row__copy">
-                <h2 class="showcase-row__title" data-i18n="features.venueTitle">Do detalhe à porta do evento</h2>
-                <p class="showcase-row__text" data-i18n="features.venueText">Veja a distância, toque em Como chegar e abra a rota no Google Maps — útil no dia do rolê.</p>
-              </div>
-              <div class="showcase-row__media">
-                <div class="screen-carousel" data-carousel data-interval="5500" aria-roledescription="carousel" data-i18n-aria-label="carousel.venueLabel">
+                <div class="screen-carousel" data-carousel data-interval="5500" aria-roledescription="carousel" data-i18n-aria-label="carousel.directionsLabel">
                   <div class="screen-carousel__viewport">
                     <div class="screen-carousel__track">
                       <figure class="screen-frame screen-frame--phone screen-carousel__slide is-active">
-                        <img class="screen-frame__img" src="assets/images/screens/app/consumer/07-como-chegar.jpg" width="390" height="803" alt="Como chegar ao local do evento no app" data-i18n-alt="features.screenAltVenueApp" loading="lazy" decoding="async">
+                        <img class="screen-frame__img" src="assets/images/screens/app/consumer/07-como-chegar.jpg" width="390" height="803" alt="Como chegar ao local do evento no app" data-i18n-alt="features.screenAltDirectionsApp" loading="lazy" decoding="async">
                       </figure>
                       <figure class="screen-frame screen-frame--phone screen-carousel__slide" aria-hidden="true">
-                        <img class="screen-frame__img" src="assets/images/screens/app/consumer/07-como-chegar-02.jpg" width="390" height="803" alt="Rota no Google Maps até o local do evento" data-i18n-alt="features.screenAltVenueMaps" loading="lazy" decoding="async">
+                        <img class="screen-frame__img" src="assets/images/screens/app/consumer/07-como-chegar-02.jpg" width="390" height="803" alt="Rota no Google Maps ou Waze até o local do evento" data-i18n-alt="features.screenAltDirectionsMaps" loading="lazy" decoding="async">
                       </figure>
                     </div>
                   </div>
@@ -423,34 +395,22 @@
               </div>
             </article>
 
-            <article class="showcase-row hidden" data-reveal>
+            <article class="showcase-row showcase-row--flip hidden" data-reveal>
               <div class="showcase-row__copy">
-                <h2 class="showcase-row__title" data-i18n="features.ticketsTitle">Ingresso sem ser bilheteira</h2>
-                <p class="showcase-row__text" data-i18n="features.ticketsText">Lotes e preços no app; compra na Sympla/Ticketmaker — My Week mede o clique.</p>
+                <h2 class="showcase-row__title" data-i18n="features.ticketsTitle">Preços e lotes na mão, compra 100% segura.</h2>
+                <p class="showcase-row__text" data-i18n="features.ticketsText">Compare os valores do evento sem precisar trocar de tela. Quando decidir ir, você é redirecionado direto para a plataforma oficial de ingressos para finalizar sua compra.</p>
               </div>
               <div class="showcase-row__media">
                 <figure class="screen-frame screen-frame--phone">
-                  <img class="screen-frame__img" src="assets/images/screens/app/consumer/08-ingressos-cta-02.jpg" width="390" height="803" alt="Sheet de ingressos com lotes e preços" data-i18n-alt="features.screenAltTickets" loading="lazy" decoding="async">
-                </figure>
-              </div>
-            </article>
-
-            <article class="showcase-row showcase-row--flip hidden" data-reveal>
-              <div class="showcase-row__copy">
-                <h2 class="showcase-row__title" data-i18n="features.funnelTitle">Performance do funil</h2>
-                <p class="showcase-row__text" data-i18n="features.funnelText">Interessados, cliques no ingresso, cópias de promo e resgates.</p>
-              </div>
-              <div class="showcase-row__media">
-                <figure class="screen-frame screen-frame--desktop">
-                  <img class="screen-frame__img" src="assets/images/screens/web/organizer/03-evento-comercial.jpg" width="1280" height="892" alt="Painel comercial com métricas do funil" data-i18n-alt="features.screenAltFunnel" loading="lazy" decoding="async">
+                  <img class="screen-frame__img" src="assets/images/screens/app/consumer/08-ingressos-cta-02.jpg" width="390" height="803" alt="Tela de ingressos com lotes e preços" data-i18n-alt="features.screenAltTickets" loading="lazy" decoding="async">
                 </figure>
               </div>
             </article>
 
             <article class="showcase-row hidden" data-reveal>
               <div class="showcase-row__copy">
-                <h2 class="showcase-row__title" data-i18n="features.benefitsTitle">Benefícios no rolê</h2>
-                <p class="showcase-row__text" data-i18n="features.benefitsText">Cupons do evento e de parceiros locais, com resgate confirmado.</p>
+                <h2 class="showcase-row__title" data-i18n="features.benefitsTitle">Descontos reais para você aproveitar mais.</h2>
+                <p class="showcase-row__text" data-i18n="features.benefitsText">Garanta cupons exclusivos do próprio evento ou de parceiros ao redor. Você resgata direto pelo app e aproveita o benefício na hora, sem complicação.</p>
               </div>
               <div class="showcase-row__media">
                 <figure class="screen-frame screen-frame--phone">
@@ -501,7 +461,7 @@
                 <ul class="pricing-card__features" role="list">
                   <li class="pricing-card__feature" data-i18n="pricing.basicFeature1">Feed de eventos, perfil e notificações</li>
                   <li class="pricing-card__feature" data-i18n="pricing.basicFeature2">Descoberta personalizada com limites de filtro</li>
-                  <li class="pricing-card__feature" data-i18n="pricing.basicFeature3">Concierge em teaser (conforme entrega)</li>
+                  <li class="pricing-card__feature" data-i18n="pricing.basicFeature3">Assistente de rolê (versão inicial)</li>
                 </ul>
               </div>
             </article>
@@ -513,7 +473,7 @@
                   <p class="pricing-card__price" data-i18n="pricing.premiumPrice">R$ 29,90 / mês</p>
                   <ul class="pricing-card__features" role="list">
                     <li class="pricing-card__feature" data-i18n="pricing.premiumFeature1">Mais filtros (cidade, períodos ampliados)</li>
-                    <li class="pricing-card__feature" data-i18n="pricing.premiumFeature2">Concierge ampliado / ilimitado (conforme entrega)</li>
+                    <li class="pricing-card__feature" data-i18n="pricing.premiumFeature2">Assistente de rolê completo</li>
                     <li class="pricing-card__feature" data-i18n="pricing.premiumFeature3">Experiência Premium completa</li>
                     <li class="pricing-card__feature" data-i18n="pricing.premiumFeature4">Cancele quando quiser</li>
                   </ul>
@@ -529,12 +489,23 @@
         <div class="container">
           <div class="about-text">
             <h2 class="content__title" data-i18n="about.title">Sua cidade vai muito além do óbvio.</h2>
-            <p class="content__lead about-text__manifesto" data-i18n="about.manifesto">
-              Cansamos da divulgação que só mostra o mesmo de sempre. My Week é o guia inteligente para dar visibilidade a movimentos autênticos e conectar produtores, parceiros locais e público — com demanda mensurável, não só like.
+            <p class="content__lead about-text__intro about-text__intro-lead" data-i18n="about.intro">
+              Menos barulho visual, mais público no seu evento.
             </p>
-            <p class="content__lead about-text__differential" data-i18n="about.differential">
-              Diferencial: Não somos apenas um calendário. Somos a camada de descoberta e ativação comercial da cena — com app para o público e painel para quem faz o evento acontecer.
+            <p class="content__lead about-text__intro" data-i18n="about.intro2">
+              A divulgação tradicional ficou previsível. O MyWeek é um guia inteligente para destacar quem faz a cultura local acontecer de verdade.
             </p>
+            <p class="content__lead about-text__intro" data-i18n="about.intro3">
+              Ligamos organizadores, comércios da região e pessoas que curtem experiências reais — com resultados concretos, não só curtida em rede social.
+            </p>
+            <div class="about-text__differential">
+              <p class="about-text__differential-title" data-i18n="about.differential">
+                Muito mais que um calendário: tudo conectado.
+              </p>
+              <p class="about-text__differential-text" data-i18n="about.differential2">
+                O MyWeek ajuda você a achar o rolê ideal e ajuda produtores e parceiros locais a atrair público de verdade — com dados claros, não só curtidas.
+              </p>
+            </div>
           </div>
 
           <div class="content__pillars" role="list">
@@ -542,22 +513,22 @@
               <span class="content__pillar-icon" aria-hidden="true">
                 <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2l1.5 4.5L18 8l-4.5 1.5L12 14l-1.5-4.5L6 8l4.5-1.5L12 2z"/><path d="M8 16l1 3 3-1 1-3-3 1-2-2z"/></svg>
               </span>
-              <h3 class="content__pillar-title" data-i18n="about.pillar1Title">Curadoria + geo</h3>
-              <p class="content__pillar-text" data-i18n="about.pillar1Text">O rolê certo perto de você.</p>
+              <h3 class="content__pillar-title" data-i18n="about.pillar1Title">Perto de você</h3>
+              <p class="content__pillar-text" data-i18n="about.pillar1Text">O rolê certo na sua região.</p>
             </article>
             <article class="content__pillar content__pillar--center" role="listitem">
               <span class="content__pillar-icon" aria-hidden="true">
                 <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="3"/><path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M6.34 17.66l-1.41 1.41M19.07 4.93l-1.41 1.41"/><path d="M12 5a7 7 0 0 1 7 7 7 7 0 0 1-7 7 7 7 0 0 1-7-7 7 7 0 0 1 7-7z"/></svg>
               </span>
-              <h3 class="content__pillar-title" data-i18n="about.pillar2Title">Demanda mensurável</h3>
-              <p class="content__pillar-text" data-i18n="about.pillar2Text">Interesse e intenção, não só impressão.</p>
+              <h3 class="content__pillar-title" data-i18n="about.pillar2Title">Interesse de verdade</h3>
+              <p class="content__pillar-text" data-i18n="about.pillar2Text">Sabe quem quer ir — não só quem viu.</p>
             </article>
             <article class="content__pillar" role="listitem">
               <span class="content__pillar-icon" aria-hidden="true">
                 <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M3 3v18h18"/><path d="M18 17V9M13 17V5M8 17v-3"/></svg>
               </span>
-              <h3 class="content__pillar-title" data-i18n="about.pillar3Title">Ecossistema local</h3>
-              <p class="content__pillar-text" data-i18n="about.pillar3Text">Organizer + parceiro + público no mesmo loop.</p>
+              <h3 class="content__pillar-title" data-i18n="about.pillar3Title">Cena local conectada</h3>
+              <p class="content__pillar-text" data-i18n="about.pillar3Text">Produtor, parceiro e público no mesmo ciclo.</p>
             </article>
           </div>
 
@@ -612,8 +583,8 @@
       </section>
     </main>
 
-    <footer class="footer reveal">
-      <div class="footer__bottom reveal">
+    <footer class="footer">
+      <div class="footer__bottom">
         <p class="footer__copy" data-i18n="footer.copy">© 2026 MyWeek — Lançamento em 6 meses</p>
         <p class="footer__credit" data-i18n="footer.credit">Desenvolvido por Aeon SoftHouse</p>
       </div>
