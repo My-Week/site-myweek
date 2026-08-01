@@ -161,12 +161,12 @@
 
 .hero__stack-item--dash .screen-frame {
   max-height: none;
-  aspect-ratio: 16 / 10;
+  aspect-ratio: 1280 / 892;
 }
 
 .hero__stack-item--dash .screen-frame__img {
-  object-fit: cover;
-  object-position: center 18%;
+  object-fit: contain;
+  object-position: center top;
 }
 
 .hero__stack-item--phone {

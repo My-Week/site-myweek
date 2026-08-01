@@ -170,7 +170,8 @@
         title: 'Quem usa o app já sente a diferença'
       },
       footer: {
-        copy: '© 2026 MyWeek — Lançamento em 6 meses'
+        copy: '© 2026 MyWeek — Lançamento em 6 meses',
+        credit: 'Desenvolvido por Aeon SoftHouse'
       },
       feedbacksList: [
         { quote: 'Pare de scrollar feed genérico. No MyWeek eu filtro por localização e período — e acho o rolê certo perto de mim em minutos.', author: 'Julia M.', role: 'Usuária do app' },
@@ -342,7 +343,8 @@
         title: 'App users already feel the difference'
       },
       footer: {
-        copy: '© 2026 MyWeek — Launch in 6 months'
+        copy: '© 2026 MyWeek — Launch in 6 months',
+        credit: 'Developed by Aeon SoftHouse'
       },
       feedbacksList: [
         { quote: 'Stop scrolling generic feeds. On MyWeek I filter by location and date — and find the right night out nearby in minutes.', author: 'Julia M.', role: 'App user' },

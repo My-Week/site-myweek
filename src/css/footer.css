@@ -35,6 +35,15 @@
   text-align: center;
 }
 
+.footer__credit {
+  margin-top: 0.35rem;
+  font-size: 0.8125rem;
+  font-weight: 300;
+  color: var(--text-low);
+  text-align: center;
+  opacity: 0.85;
+}
+
 [data-theme="light"] .footer {
   background: rgba(241, 245, 249, 0.95);
   border-top-color: var(--border-subtle);

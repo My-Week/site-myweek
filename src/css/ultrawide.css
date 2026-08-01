@@ -125,6 +125,12 @@
     max-height: 28rem;
   }
 
+  .screen-frame--desktop-wide {
+    width: min(48rem, 56vw);
+    max-width: min(48rem, 56vw);
+    max-height: 24rem;
+  }
+
   .showcase-row:has(.screen-frame--desktop) .showcase-row__copy,
   .showcase-row:has(.screen-carousel--desktop) .showcase-row__copy,
   .b2b-platform .z-row__inner:has(.screen-frame--desktop) .z-row__body {
@@ -133,7 +139,13 @@
 
   .commercial__inner {
     gap: var(--space-4xl);
-    padding: var(--space-3xl);
+    padding: clamp(3rem, 3.5vw, 4rem);
+    border-radius: 1.75rem;
+  }
+
+  .commercial__form-wrap {
+    padding: 2.25rem;
+    border-radius: 1.35rem;
   }
 
   /* Cards de feedback: gap e margens maiores */
