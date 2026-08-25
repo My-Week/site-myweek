@@ -155,6 +155,22 @@
   margin-top: var(--space-sm);
 }
 
+.showcase-row--copy {
+  display: block;
+  max-width: 40rem;
+  margin-inline: auto;
+}
+
+.showcase-row--copy .showcase-row__copy {
+  max-width: none;
+  width: 100%;
+  text-align: center;
+}
+
+.showcase-row--copy .showcase-row__text {
+  margin-inline: auto;
+}
+
 @media (min-width: 900px) {
   /*
    * Par texto+mídia com gap de produto (~32–40px), centralizado no container.
@@ -222,6 +238,27 @@
   .showcase-row:has(.screen-carousel--desktop) .showcase-row__copy,
   .b2b-platform .z-row__inner:has(.screen-frame--desktop) .z-row__body {
     max-width: 22rem;
+  }
+
+  .b2b-platform .z-row--copy .z-row__inner {
+    display: block;
+    max-width: 40rem;
+    text-align: center;
+  }
+
+  .b2b-platform .z-row--copy .z-row__body {
+    max-width: none;
+  }
+
+  .b2b-platform .z-row--copy .z-section__list {
+    display: inline-block;
+    text-align: left;
+  }
+
+  .showcase-row--copy {
+    display: block;
+    max-width: 40rem;
+    margin-inline: auto;
   }
 }
 
@@ -314,6 +351,13 @@
   .showcase-row:has(.screen-carousel--desktop) .showcase-row__copy,
   .b2b-platform .z-row__inner:has(.screen-frame--desktop) .z-row__body {
     max-width: 30rem;
+  }
+
+  .showcase-row--copy {
+    display: block;
+    max-width: 44rem;
+    margin-inline: auto;
+    justify-content: center;
   }
 }
 

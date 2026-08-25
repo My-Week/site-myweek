@@ -75,6 +75,11 @@ Títulos usam gradiente metálico e brilho:
 - **Cards de conteúdo:** `blur(12px)` com fundo `var(--glass-bg)` e borda `var(--border-definition)` (1px solid rgba(255, 255, 255, 0.05)).
 - **Brilho interno:** `--card-inner-glow` (inset 0 1px 1px rgba(255, 255, 255, 0.1)).
 - Bordas semitransparentes e, no hover, borda `var(--primary-vibrant)` e sombra com --glow-primary.
+- **Cards de canal (`.channel-card`):** glass (`blur(12px)`, `--glass-bg`), eyebrow em uppercase, CTA `btn--primary`. Grid 1 col / 3 cols a partir de 768px.
+- **Verticais de parceiro (`.partner-verticals__item`):** chips em grid 2×4 (4 cols no desktop) com o mesmo glass e hover neon dos cards.
+- **Chips do Concierge (`.concierge-chips__item`):** mesma pele glass dos chips de vertical; fileira de copy sem screen (`.showcase-row--copy`).
+- **Card Canal 3 (`.canal3-card`):** um card centralizado (máx. 40rem), mesmo tratamento glass dos canais; sem tela, sem lista de features.
+- **Card B2B em planos (`.pricing-b2b`):** abaixo da matriz Basic/Premium; modelo (mensal / por evento / proposta) sem valores; chips + CTA.
 
 ### Inputs
 

@@ -1,5 +1,5 @@
 /**
- * MyWeek - #feedbacks: 3 cards em grid, 3 aleatórios entre 6 a cada reload
+ * MyWeek - #feedbacks: 3 cards em grid, 3 aleatórios (cenários, não clientes)
  */
 (function () {
   'use strict';

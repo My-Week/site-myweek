@@ -64,12 +64,19 @@
 .form-group--float .form-input:focus ~ .form-label,
 .form-group--float .form-input:not(:placeholder-shown) ~ .form-label,
 .form-group--float .form-select:valid ~ .form-label,
+.form-group--float .form-textarea:focus ~ .form-label,
+.form-group--float .form-textarea:not(:placeholder-shown) ~ .form-label,
 .form-group--float:focus-within .form-label {
   top: 0.55rem;
   transform: none;
   font-size: 0.7rem;
   letter-spacing: 0.02em;
   color: rgba(196, 181, 253, 0.95);
+}
+
+.form-group--textarea .form-label {
+  top: 1.35rem;
+  transform: none;
 }
 
 .commercial__form .form-input {
@@ -204,13 +211,51 @@
   background-repeat: no-repeat;
   background-position: right 1.15rem center;
   background-size: 0.75rem auto;
-  padding: 1.45rem 2.5rem 0.7rem 1.15rem;
+  padding: 1.45rem 3rem 0.7rem 1.15rem;
   cursor: pointer;
   font-weight: 300;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  color-scheme: dark;
+}
+
+.form-select option {
+  background: var(--bg-surface);
+  color: var(--text-high);
 }
 
 .commercial__form .form-select {
   background-color: rgba(15, 15, 22, 0.72);
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 24 24' fill='none' stroke='%23ffffff' stroke-opacity='0.5' stroke-width='1.5' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M6 9l6 6 6-6'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: right 1.15rem center;
+  background-size: 0.75rem auto;
+  padding: 1.45rem 3rem 0.7rem 1.15rem;
+}
+
+.commercial__form .form-textarea {
+  min-height: 7.5rem;
+  resize: vertical;
+  line-height: 1.5;
+  padding-top: 1.7rem;
+}
+
+[data-theme="light"] .form-select {
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 24 24' fill='none' stroke='%231e293b' stroke-opacity='0.55' stroke-width='1.5' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M6 9l6 6 6-6'/%3E%3C/svg%3E");
+  color-scheme: light;
+}
+
+[data-theme="light"] .commercial__form .form-select {
+  background-color: rgba(255, 255, 255, 0.95);
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 24 24' fill='none' stroke='%231e293b' stroke-opacity='0.55' stroke-width='1.5' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M6 9l6 6 6-6'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: right 1.15rem center;
+  background-size: 0.75rem auto;
+}
+
+[data-theme="light"] .form-group--float .form-select:valid ~ .form-label {
+  color: var(--primary-vibrant);
 }
 
 .commercial__submit {

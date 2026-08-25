@@ -4,12 +4,12 @@
    ============================================ */
 
 @import "variables.css";
-@import "base.css";
-@import "header.css";
+@import "base.css?v=css-verify-v3";
+@import "header.css?v=css-verify-v3";
 /* hero.css é linkado no index.html com ?v= para evitar cache de @import */
-@import "sections.css";
+@import "sections.css?v=copy-feb2027-v9";
 /* screens.css é linkado no index.html com ?v= para evitar cache de @import */
-@import "forms.css";
+@import "forms.css?v=css-verify-v3";
 @import "footer.css";
 @import "animations.css";
 /* ultrawide.css é linkado no index.html com ?v= para evitar cache de @import */

@@ -170,6 +170,50 @@
     btn.textContent = loading ? getI18n('form.sending') : getI18n('form.submit');
   }
 
+  var ALLOWED_CANAL = { organizer: true, partner: true, both: true, platform: true };
+
+  function getCanalParam() {
+    var canal = '';
+    try {
+      canal = (new URLSearchParams(window.location.search).get('canal') || '').toLowerCase();
+    } catch (e) {}
+    if (ALLOWED_CANAL[canal]) return canal;
+
+    var hash = window.location.hash || '';
+    var qIndex = hash.indexOf('?');
+    if (qIndex !== -1) {
+      try {
+        canal = (new URLSearchParams(hash.slice(qIndex + 1)).get('canal') || '').toLowerCase();
+      } catch (e) {}
+      if (ALLOWED_CANAL[canal]) return canal;
+    }
+    return '';
+  }
+
+  function applyCanalFromLocation(formEl) {
+    if (!formEl) return;
+    var select = formEl.querySelector('[name="canal"]');
+    var canal = getCanalParam();
+    if (!select || !canal) return;
+    select.value = canal;
+  }
+
+  function normalizeContactHash() {
+    var hash = window.location.hash || '';
+    if (hash.indexOf('#contact-form?') !== 0) return;
+    var canal = getCanalParam();
+    try {
+      var url = new URL(window.location.href);
+      url.hash = '#contact-form';
+      if (canal && !url.searchParams.get('canal')) {
+        url.searchParams.set('canal', canal);
+      }
+      window.history.replaceState({}, '', url.toString());
+    } catch (e) {
+      window.location.hash = 'contact-form';
+    }
+  }
+
   function resetCommercialFormState(formEl) {
     if (!formEl) return;
     try {
@@ -177,7 +221,8 @@
     } catch (e) {
       // ignore
     }
-    var fields = formEl.querySelectorAll('.form-input, .form-select');
+    applyCanalFromLocation(formEl);
+    var fields = formEl.querySelectorAll('.form-input, .form-select, .form-textarea');
     Array.prototype.forEach.call(fields, function (field) {
       field.classList.remove('is-valid');
     });
@@ -199,8 +244,11 @@
     var form = document.querySelector('.commercial__form');
     if (!form) return;
 
+    normalizeContactHash();
+    applyCanalFromLocation(form);
+
     var fields = [];
-    ['empresa', 'email', 'telefone'].forEach(function (nameOrId) {
+    ['canal', 'praca', 'empresa', 'email', 'telefone'].forEach(function (nameOrId) {
       var field = form.querySelector('#' + nameOrId + ', [name="' + nameOrId + '"]');
       if (field) fields.push(field);
     });
@@ -238,6 +286,14 @@
       if (!field) return false;
       var value = (field.value || '').trim();
       var name = (field.name || field.id || '').toLowerCase();
+
+      if (name === 'canal') {
+        return !!ALLOWED_CANAL[value];
+      }
+
+      if (name === 'praca') {
+        return value.length >= 2;
+      }
 
       if (name === 'empresa' || name === 'nome') {
         return value.length >= 2;
@@ -294,6 +350,17 @@
       field.addEventListener('change', updateVisualState);
     });
 
+    window.addEventListener('hashchange', function () {
+      normalizeContactHash();
+      applyCanalFromLocation(form);
+      updateVisualState();
+    });
+
+    window.addEventListener('languagechange', function () {
+      applyCanalFromLocation(form);
+      updateVisualState();
+    });
+
     updateVisualState();
   }
 
@@ -316,16 +383,32 @@
     form.addEventListener('submit', function (e) {
       e.preventDefault();
 
+      var canal = form.querySelector('[name="canal"]');
+      var praca = form.querySelector('[name="praca"]');
       var empresa = form.querySelector('[name="empresa"]');
       var email = form.querySelector('[name="email"]');
       var telefone = form.querySelector('[name="telefone"]');
       var submitBtn = form.querySelector('.commercial__submit');
 
-      if (!empresa || !email || !telefone || !submitBtn) return;
+      if (!canal || !praca || !empresa || !email || !telefone || !submitBtn) return;
 
+      var canalVal = (canal.value || '').trim();
+      var pracaVal = (praca.value || '').trim();
       var empresaVal = (empresa.value || '').trim();
       var emailVal = (email.value || '').trim();
       var telefoneVal = (telefone.value || '').trim().replace(/\D/g, '');
+
+      if (!ALLOWED_CANAL[canalVal]) {
+        showFormMessage(form, getI18n('form.errorCanal'), true);
+        canal.focus();
+        return;
+      }
+
+      if (pracaVal.length < 2) {
+        showFormMessage(form, getI18n('form.errorCity'), true);
+        praca.focus();
+        return;
+      }
 
       if (!empresaVal) {
         showFormMessage(form, getI18n('form.errorCompany'), true);

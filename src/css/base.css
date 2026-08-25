@@ -16,6 +16,7 @@ html {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   scroll-behavior: smooth;
+  scroll-padding-top: 6.75rem;
   overflow-x: clip;
   overflow-y: auto;
   height: 100%;
@@ -77,6 +78,15 @@ body {
   .commercial__lead,
   .b2b-platform__lead,
   .b2c-experience__lead,
+  .channels__lead,
+  .channels__pitch,
+  .channels__note,
+  .channel-card__text,
+  .partner-verticals__lead,
+  .canal3-card__text,
+  .canal3-card__note,
+  .pricing-b2b__text,
+  .pricing-b2b__model-desc,
   .countdown__footer,
   .download-app__desc,
   .feedback-card__quote {
@@ -231,8 +241,11 @@ button {
   background: none;
 }
 
-section[id] {
-  scroll-margin-top: 80px;
+section[id],
+[id="concierge"],
+[id="b2b-partner"],
+[id="canal3"] {
+  scroll-margin-top: 6.75rem;
 }
 
 /* Mobile-first: respiro lateral consistente em todos os breakpoints */
