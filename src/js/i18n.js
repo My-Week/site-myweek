@@ -10,7 +10,7 @@
 
   var translations = {
     pt: {
-      pageTitle: 'MyWeek | O que rola na sua cidade — sem ser a bilheteria',
+      pageTitle: 'MyWeek | O rada cultural da sua cidade',
       pageDescription: 'MyWeek mostra o que está acontecendo na sua cidade. Evento pequeno aparece. Comércio do lado ganha cupom. Show grande aponta para a bilheteria deles.',
       ogDescription: 'O ponto de encontro entre o evento e a cidade. Não somos uma tiqueteira, nem apenas um catálogo de descontos.',
       hero: {
@@ -303,7 +303,7 @@
       ]
     },
     en: {
-      pageTitle: 'MyWeek | What’s on in your city — without becoming the box office',
+      pageTitle: 'MyWeek | Your city’s cultural radar',
       pageDescription: 'MyWeek shows what’s happening in your city. Small events get seen. Shops next door get a coupon. Big shows point to their ticketing.',
       ogDescription: 'The meeting point between the event and the city. We’re not a ticket seller, nor just a discount catalog.',
       hero: {
