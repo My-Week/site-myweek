@@ -5,7 +5,7 @@
   'use strict';
 
   var CONFIG = {
-    loginUrl: 'https://sandbox.myweekoficial.com.br/login',
+    loginUrl: 'https://dashboard.myweekoficial.com.br/login',
     storeUrls: {
       ios: null,
       android: null
