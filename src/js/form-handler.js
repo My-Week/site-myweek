@@ -5,15 +5,8 @@
   'use strict';
 
   var CONFIG = {
-    interestEndpoint: '/api/events/interest',
-    contactEndpoint: '/api/contact',
-    useContactEndpoint: false,
-    whatsappUrl: null
+    whatsappUrl: 'https://wa.me/5571993184341'
   };
-
-  function getInterestUrl() {
-    return CONFIG.useContactEndpoint ? CONFIG.contactEndpoint : CONFIG.interestEndpoint;
-  }
 
   /** Formato válido: local@domínio.tld (aceita Gmail, Outlook, etc.) */
   function isValidEmailFormat(email) {
