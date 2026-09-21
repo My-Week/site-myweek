@@ -2,4 +2,7 @@
 .playwright-mcp/
 
 # Netlify CLI
-.netlify/
+.netlify/*
+
+# Exceto os marcadores de features da plataforma, que precisam ir para o deploy
+!.netlify/features/
