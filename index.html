@@ -16,11 +16,11 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Outfit:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="/src/css/main.css?v=restruct-v1">
-  <link rel="stylesheet" href="/src/css/hero.css?v=restruct-v1">
-  <link rel="stylesheet" href="/src/css/screens.css?v=restruct-v1">
-  <link rel="stylesheet" href="/src/css/ultrawide.css?v=restruct-v1">
-  <link rel="stylesheet" href="/src/css/restructure.css?v=restruct-v1">
+  <link rel="stylesheet" href="/src/css/main.css?v=restruct-v2">
+  <link rel="stylesheet" href="/src/css/hero.css?v=restruct-v2">
+  <link rel="stylesheet" href="/src/css/screens.css?v=restruct-v2">
+  <link rel="stylesheet" href="/src/css/ultrawide.css?v=restruct-v2">
+  <link rel="stylesheet" href="/src/css/restructure.css?v=restruct-v2">
   <style id="carousel-critical">
     /* Garante 1 slide visível mesmo com CSS antigo em cache */
     .screen-carousel__slide { display: none !important; }
@@ -265,9 +265,11 @@
               <div class="showcase-row__copy">
                 <h2 class="showcase-row__title" data-i18n="features.ticketsTitle">Ingressos e Entradas</h2>
                 <p class="showcase-row__text" data-i18n="features.ticketsText">O MyWeek conecta você aos melhores eventos, mas não vende ingressos.</p>
-                <p class="showcase-row__text" data-i18n="features.ticketsText2">Entrada clara: Avisamos se o evento é gratuito, pago na porta ou antecipado.</p>
-                <p class="showcase-row__text" data-i18n="features.ticketsText3">Link Oficial: O botão "Comprar" abre o site da bilheteria oficial do evento.</p>
-                <p class="showcase-row__text" data-i18n="features.ticketsText4">Atenção: Apenas clicar não reserva o seu ingresso. Finalize a compra no site para garantir o seu lugar.</p>
+                <ul class="showcase-row__list">
+                  <li data-i18n="features.ticketsText2">Entrada clara: Avisamos se o evento é gratuito, pago na porta ou antecipado.</li>
+                  <li data-i18n="features.ticketsText3">Link oficial: O botão "Comprar" abre o site da bilheteria oficial do evento.</li>
+                  <li data-i18n="features.ticketsText4">Atenção: Apenas clicar não reserva o seu ingresso. Finalize a compra no site para garantir o seu lugar.</li>
+                </ul>
               </div>
               <div class="showcase-row__media">
                 <figure class="screen-frame screen-frame--phone">
@@ -280,9 +282,11 @@
               <div class="showcase-row__copy">
                 <h2 class="showcase-row__title" data-i18n="features.benefitsTitle">Como usar seus cupons</h2>
                 <p class="showcase-row__text" data-i18n="features.benefitsText">Seja um desconto do próprio evento ou do comércio vizinho, usar é muito fácil:</p>
-                <p class="showcase-row__text" data-i18n="features.benefitsText2">Copie o código: Pegue o código direto no app.</p>
-                <p class="showcase-row__text" data-i18n="features.benefitsText3">Apresente no caixa: Na hora de pagar, informe o código ao atendente.</p>
-                <p class="showcase-row__text" data-i18n="features.benefitsText4">Pronto: Não tem QR Code para escanear e você não precisa apertar nenhum botão de "resgatar" no celular. O próprio caixa valida no sistema e o desconto entra na sua conta, na hora.</p>
+                <ul class="showcase-row__list">
+                  <li data-i18n="features.benefitsText2">Copie o código: Pegue o código direto no app.</li>
+                  <li data-i18n="features.benefitsText3">Apresente no caixa: Na hora de pagar, informe o código ao atendente.</li>
+                  <li data-i18n="features.benefitsText4">Pronto: Não tem QR Code para escanear e você não precisa apertar nenhum botão de "resgatar" no celular. O próprio caixa valida no sistema e o desconto entra na sua conta, na hora.</li>
+                </ul>
               </div>
               <div class="showcase-row__media">
                 <figure class="screen-frame screen-frame--phone">
@@ -401,22 +405,12 @@
         <div class="container">
           <div class="about-text">
             <h2 class="content__title" data-i18n="about.title">O ponto de encontro entre o evento e a cidade.</h2>
-            <p class="content__lead about-text__intro about-text__intro-lead" data-i18n="about.intro">
-              Esqueça as plataformas de ingresso tradicionais. Não somos uma tiqueteira, nem apenas um catálogo de descontos.
-            </p>
-            <p class="content__lead about-text__intro" data-i18n="about.intro2">
-              O MyWeek fica exatamente no meio: nós mostramos o que está acontecendo e conectamos o público ao comércio da rua. O evento pequeno usa a plataforma para ser visto. O comércio vizinho ganha movimento real com cupons. E o show grande? O público descobre no app e é direcionado para comprar na bilheteria oficial deles.
-            </p>
-            <p class="content__lead about-text__intro" data-i18n="about.intro3">
-              Nós montamos a agenda de quem vive a noite. Quem faz o evento e quem atende o público ganha o movimento — e nós fazemos a cidade girar sem nunca virar o caixa da sua entrada.
-            </p>
+            <p class="content__lead about-text__intro about-text__intro-lead" data-i18n="about.intro">Esqueça as plataformas de ingresso tradicionais. Não somos uma tiqueteira, nem apenas um catálogo de descontos.</p>
+            <p class="content__lead about-text__intro" data-i18n="about.intro2">O MyWeek fica exatamente no meio: nós mostramos o que está acontecendo e conectamos o público ao comércio da rua. O evento pequeno usa a plataforma para ser visto. O comércio vizinho ganha movimento real com cupons. E o show grande? O público descobre no app e é direcionado para comprar na bilheteria oficial deles.</p>
+            <p class="content__lead about-text__intro" data-i18n="about.intro3">Nós montamos a agenda de quem vive a noite. Quem faz o evento e quem atende o público ganha o movimento — e nós fazemos a cidade girar sem nunca virar o caixa da sua entrada.</p>
             <div class="about-text__differential">
-              <p class="about-text__differential-title" data-i18n="about.differential">
-                A cidade inteira na mesma tela.
-              </p>
-              <p class="about-text__differential-text" data-i18n="about.differential2">
-                O rolê e o comércio vizinho conectados de forma inteligente.
-              </p>
+              <p class="about-text__differential-title" data-i18n="about.differential">A cidade inteira na mesma tela.</p>
+              <p class="about-text__differential-text" data-i18n="about.differential2">O rolê e o comércio vizinho conectados de forma inteligente.</p>
               <ul class="about-text__differential-list">
                 <li class="about-text__differential-item">
                   <strong class="about-text__differential-label" data-i18n="about.diff1Label">A Descoberta:</strong>
@@ -495,11 +489,11 @@
   <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js" defer></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js" defer></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/vanilla-tilt/1.8.1/vanilla-tilt.min.js" defer></script>
-  <script src="/src/js/i18n.js?v=restruct-v1" defer></script>
-  <script src="/src/js/theme.js?v=restruct-v1" defer></script>
-  <script src="/src/js/animations.js?v=restruct-v1" defer></script>
-  <script src="/src/js/carousel.js?v=restruct-v1" defer></script>
-  <script src="/src/js/waitlist.js?v=restruct-v1" defer></script>
-  <script src="/src/js/main.js?v=restruct-v1" defer></script>
+  <script src="/src/js/i18n.js?v=restruct-v2" defer></script>
+  <script src="/src/js/theme.js?v=restruct-v2" defer></script>
+  <script src="/src/js/animations.js?v=restruct-v2" defer></script>
+  <script src="/src/js/carousel.js?v=restruct-v2" defer></script>
+  <script src="/src/js/waitlist.js?v=restruct-v2" defer></script>
+  <script src="/src/js/main.js?v=restruct-v2" defer></script>
 </body>
 </html>

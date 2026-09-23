@@ -139,7 +139,7 @@
         lead2: 'Entregamos um painel completo para você cadastrar a noite, gerar seus próprios cupons e acessar as métricas de quem se interessou. E o ingresso? Continua seu. Seja entrada física, lista VIP grátis ou o link que você colar. Nós trazemos o público, você dita as regras.',
         block1Title: 'Fure a bolha: Alcance quem ainda não te conhece.',
         block1Text: 'Seu evento direto na tela de quem busca o que fazer hoje.',
-        block1Text2: 'Match Perfeito: Cadastre a noite no painel e o app mostra sua festa para quem está perto e curte o seu estilo.',
+        block1Text2: 'Match perfeito: Cadastre a noite no painel e o app mostra sua festa para quem está perto e curte o seu estilo.',
         block1Text3: 'Além do WhatsApp: O seu grupo fala com os clientes antigos. Nós colocamos o seu samba, a sua sexta e o seu bairro na frente de clientes novos.',
         block2Title: 'O Painel da sua festa — sem assumir a bilheteria.',
         block2Text: 'Monte a página do evento, cole o seu link e acompanhe os números reais da sua noite.',
@@ -148,15 +148,15 @@
         block2Text4: 'Transparência total: Jogamos limpo, nós mostramos o clique e o tráfego que enviamos para você; a conversão e a venda final acontecem na sua plataforma.',
         block3Title: 'Promoções sem complicação na porta ou no balcão.',
         block3Text: 'Atraia clientes com cupons fáceis de usar e gerenciar. Sem QR Code, sem fila travada.',
-        block3Text2: 'Criação no Painel: Você define o desconto e a validade.',
-        block3Text3: 'Resgate Simples: O cliente copia o código gerado no app.',
-        block3Text4: 'Validação Rápida: O seu caixa confirma o código no nosso painel.',
-        block3Text5: 'Dados Transparentes: Saiba quantos copiaram e quantos compraram. A ferramenta é nossa, o investimento no desconto é seu.',
+        block3Text2: 'Criação no painel: Você define o desconto e a validade.',
+        block3Text3: 'Resgate simples: O cliente copia o código gerado no app.',
+        block3Text4: 'Validação rápida: O seu caixa confirma o código no nosso painel.',
+        block3Text5: 'Dados transparentes: Saiba quantos copiaram e quantos compraram. A ferramenta é nossa, o investimento no desconto é seu.',
         block4Title: 'O seu território em um único mapa.',
         block4Text: 'Veja exatamente onde as suas produções estão acontecendo no painel.',
-        block4Text2: 'Visão Global: A localização exata de todas as suas publicações ativas.',
-        block4Text3: 'Filtros Inteligentes: Busque rapidamente por estado, cidade ou status do evento.',
-        block4Text4: 'Foco Total: Apenas os seus eventos na tela. Os cupons do comércio ficam em outra área para não poluir a sua visão.',
+        block4Text2: 'Visão global: A localização exata de todas as suas publicações ativas.',
+        block4Text3: 'Filtros inteligentes: Busque rapidamente por estado, cidade ou status do evento.',
+        block4Text4: 'Foco total: Apenas os seus eventos na tela. Os cupons do comércio ficam em outra área para não poluir a sua visão.',
         block5Title: 'Do interesse até o caixa.',
         block5Text: 'Quatro números no painel. Clicar em Comprar não é venda — o ingresso continua no site deles, ou na porta.',
         funnelLabel: 'Passos: interessados, clique em Comprar, código copiado, resgate no caixa',
@@ -166,10 +166,10 @@
         funnel4: 'Resgate no caixa',
         block6Title: 'Crie a divulgação perfeita com a ajuda do app.',
         block6Text: 'Dados reais e Inteligência Artificial trabalhando para a sua noite.',
-        insight1: 'Sinais da Cidade: O painel indica o melhor dia, horário e época do mês para o seu evento.',
-        insight2: 'Clima da Noite: Ajuste o tom da festa com base no que o público da região está buscando.',
-        insight3: 'Copiloto de Texto: A IA integrada cria ou revisa a sua divulgação para garantir o impacto certo.',
-        insight4: 'Controle Total: O sistema sugere e orienta, mas quem aprova e aperta o botão de publicar é você.',
+        insight1: 'Sinais da cidade: O painel indica o melhor dia, horário e época do mês para o seu evento.',
+        insight2: 'Clima da noite: Ajuste o tom da festa com base no que o público da região está buscando.',
+        insight3: 'Copiloto de texto: A IA integrada cria ou revisa a sua divulgação para garantir o impacto certo.',
+        insight4: 'Controle total: O sistema sugere e orienta, mas quem aprova e aperta o botão de publicar é você.',
         screenAlt1: 'Detalhe do evento no painel do organizador',
         screenAlt2: 'Aba de ingressos com lotes e venda externa',
         screenAlt3: 'Catálogo de cupons do organizador',
@@ -179,15 +179,15 @@
       partner: {
         title: 'Mais clientes no balcão. Zero dor de cabeça.',
         lead: 'Traga o público da festa ao lado direto para o seu estabelecimento.',
-        benefit1: 'Visibilidade Direcionada: Você paga para o cupom aparecer para quem está perto e no clima certo para consumir.',
-        benefit2: 'Venda Real: O clique é no app, mas o resgate e o dinheiro entram no seu caixa.',
-        benefit3: 'Validação Simples: O cliente mostra o código, sua equipe valida em segundos.',
-        benefit4: 'Foco no seu Negócio: Sem montar palco e sem cadastrar evento. Você foca na sua loja, nós focamos em levar o público.',
+        benefit1: 'Visibilidade direcionada: Você paga para o cupom aparecer para quem está perto e no clima certo para consumir.',
+        benefit2: 'Venda real: O clique é no app, mas o resgate e o dinheiro entram no seu caixa.',
+        benefit3: 'Validação simples: O cliente mostra o código, sua equipe valida em segundos.',
+        benefit4: 'Foco no seu negócio: Sem montar palco e sem cadastrar evento. Você foca na sua loja, nós focamos em levar o público.',
         blockTitle: 'Seu comércio no show do lado.',
         blockText: 'Mais clientes no seu balcão com cupons inteligentes e sem burocracia.',
-        blockText2: 'Conexão Inteligente: O cupom aparece para o público do evento vizinho, filtrado por proximidade e pela "vibe" da noite.',
-        blockText3: 'Validação Descomplicada: O cliente copia o código no app e o seu caixa confirma no painel. Sem leitor de QR Code para não travar a fila.',
-        blockText4: 'Regras Claras: A promoção é por sua conta e o dinheiro fica todo com você. Nós garantimos o tráfego de pessoas, mas o MyWeek não faz reservas e não garante mesa.',
+        blockText2: 'Conexão inteligente: O cupom aparece para o público do evento vizinho, filtrado por proximidade e pela "vibe" da noite.',
+        blockText3: 'Validação descomplicada: O cliente copia o código no app e o seu caixa confirma no painel. Sem leitor de QR Code para não travar a fila.',
+        blockText4: 'Regras claras: A promoção é por sua conta e o dinheiro fica todo com você. Nós garantimos o tráfego de pessoas, mas o MyWeek não faz reservas e não garante mesa.',
         verticalsTitle: 'O que entra no app',
         verticalsLead: 'A gente junta quem está perto do evento com o tipo de comércio que combina com a noite.',
         v1: 'Restaurante',
@@ -226,7 +226,7 @@
         ticketsTitle: 'Ingressos e Entradas',
         ticketsText: 'O MyWeek conecta você aos melhores eventos, mas não vende ingressos.',
         ticketsText2: 'Entrada clara: Avisamos se o evento é gratuito, pago na porta ou antecipado.',
-        ticketsText3: 'Link Oficial: O botão "Comprar" abre o site da bilheteria oficial do evento.',
+        ticketsText3: 'Link oficial: O botão "Comprar" abre o site da bilheteria oficial do evento.',
         ticketsText4: 'Atenção: Apenas clicar não reserva o seu ingresso. Finalize a compra no site para garantir o seu lugar.',
         benefitsTitle: 'Como usar seus cupons',
         benefitsText: 'Seja um desconto do próprio evento ou do comércio vizinho, usar é muito fácil:',
@@ -281,7 +281,7 @@
         premiumFeature4: 'Clima do rolê',
         premiumFeature5: 'Visualize quem vai no evento',
         premiumCta: 'Ser Premium Agora',
-        b2bEyebrow: 'Para Negócios: Como cobramos',
+        b2bEyebrow: 'Para negócios: como cobramos',
         b2bTitle: 'Visibilidade inteligente, sem morder o seu ingresso.',
         b2bText: 'A nossa regra de ouro é clara: zero porcentagem sobre a sua bilheteria. Nós não vendemos ingressos no MyWeek. Você investe exclusivamente para destacar o seu evento ou o seu comércio para o público certo. Como entendemos que cada mercado é único, não trabalhamos com preços engessados no site; a proposta é sempre desenhada para a realidade da sua cidade.',
         b2bChoose: 'Escolha o formato que faz sentido para a sua operação:',
@@ -348,22 +348,10 @@
         sendError: 'Não foi possível enviar. Tente novamente ou fale com a gente por outro caminho.',
         honeypotLabel: 'Não preencha este campo'
       },
-      feedbacks: {
-        title: 'O que a MyWeek entrega'
-      },
       footer: {
         copy: '© 2026 MyWeek',
         credit: 'Desenvolvido por Aeon SoftHouse'
       },
-      feedbacksList: [
-        { quote: 'Filtro por lugar e data e acho a noite certa perto de mim — sem ficar rolando feed genérico.', author: 'Público no app', role: 'Cenário' },
-        { quote: 'Marquei os estilos uma vez e o feed ficou do meu gosto. Sem o óbvio da cidade.', author: 'Público no app', role: 'Cenário' },
-        { quote: 'Quero ir + Como chegar no mesmo app. No dia do evento é abrir a rota e ir.', author: 'Público no app', role: 'Cenário' },
-        { quote: 'Vejo porta, grátis ou o link da bilheteria. Comprar abre o site deles — a MyWeek não é o caixa.', author: 'Público no app', role: 'Cenário' },
-        { quote: 'Pedi fim de semana a dois, perto, com desconto. O Concierge montou a noite — sem eu ficar rolando o feed.', author: 'Público no app', role: 'Cenário' },
-        { quote: 'No painel: quem se interessou, quem clicou em Comprar, quem copiou o código e quem passou no caixa. Clicar não é ter vendido.', author: 'Organizador', role: 'Cenário' },
-        { quote: 'O cupom aparece para quem está no show do lado. A pessoa copia o código no app; o caixa confirma no painel.', author: 'Comércio perto', role: 'Cenário' }
-      ]
     },
     en: {
       pageTitle: 'MyWeek | Your city’s cultural radar',
@@ -504,15 +492,15 @@
         block2Text4: 'Full transparency: We play it straight. We show the clicks and traffic we send you; conversion and the final sale happen on your platform.',
         block3Title: 'Promotions without hassle at the door or the counter.',
         block3Text: 'Attract customers with coupons that are easy to use and manage. No QR Code, no stuck queue.',
-        block3Text2: 'Create on the Dashboard: You set the discount and the validity.',
+        block3Text2: 'Create on the dashboard: You set the discount and the validity.',
         block3Text3: 'Simple redemption: The customer copies the generated code in the app.',
         block3Text4: 'Fast validation: Your cashier confirms the code on our panel.',
         block3Text5: 'Transparent data: Know how many copied and how many bought. The tool is ours; the discount investment is yours.',
         block4Title: 'Your territory on a single map.',
         block4Text: 'See exactly where your productions are happening on the dashboard.',
-        block4Text2: 'Global View: The exact location of all your active publications.',
-        block4Text3: 'Smart Filters: Quickly search by state, city, or event status.',
-        block4Text4: 'Total Focus: Only your events on screen. Shop coupons stay in another area so they don’t clutter your view.',
+        block4Text2: 'Global view: The exact location of all your active publications.',
+        block4Text3: 'Smart filters: Quickly search by state, city, or event status.',
+        block4Text4: 'Total focus: Only your events on screen. Shop coupons stay in another area so they don’t clutter your view.',
         block5Title: 'From interest to the counter.',
         block5Text: 'Four numbers on the dashboard. A Buy click is not a sale — the ticket stays on their site, or at the door.',
         funnelLabel: 'Steps: interested, Buy click, code copied, redeemed at the counter',
@@ -522,10 +510,10 @@
         funnel4: 'Redeemed at the counter',
         block6Title: 'Create the perfect promo with help from the app.',
         block6Text: 'Real data and Artificial Intelligence working for your night.',
-        insight1: 'City Signals: The dashboard shows the best day, time, and period of the month for your event.',
-        insight2: 'Night Vibe: Tune the feel of the party based on what the local audience is looking for.',
-        insight3: 'Copy Copilot: Built-in AI creates or revises your promo to hit the right impact.',
-        insight4: 'Full Control: The system suggests and guides, but you approve and hit publish.',
+        insight1: 'City signals: The dashboard shows the best day, time, and period of the month for your event.',
+        insight2: 'Night vibe: Tune the feel of the party based on what the local audience is looking for.',
+        insight3: 'Copy copilot: Built-in AI creates or revises your promo to hit the right impact.',
+        insight4: 'Full control: The system suggests and guides, but you approve and hit publish.',
         screenAlt1: 'Event detail in the organizer panel',
         screenAlt2: 'Tickets tab with batches and external ticketing',
         screenAlt3: 'Organizer coupon catalog',
@@ -535,15 +523,15 @@
       partner: {
         title: 'More customers at the counter. Zero hassle.',
         lead: 'Bring the crowd from the party next door straight to your business.',
-        benefit1: 'Targeted Visibility: You pay for the coupon to show up for people nearby and in the right mood to spend.',
-        benefit2: 'Real Sales: The tap is in the app, but the redemption and the money land at your counter.',
-        benefit3: 'Simple Validation: The customer shows the code, your team validates it in seconds.',
-        benefit4: 'Focus on Your Business: No stage to build and no events to list. You focus on your shop, we focus on bringing the crowd.',
+        benefit1: 'Targeted visibility: You pay for the coupon to show up for people nearby and in the right mood to spend.',
+        benefit2: 'Real sales: The tap is in the app, but the redemption and the money land at your counter.',
+        benefit3: 'Simple validation: The customer shows the code, your team validates it in seconds.',
+        benefit4: 'Focus on your business: No stage to build and no events to list. You focus on your shop, we focus on bringing the crowd.',
         blockTitle: 'Your business at the show next door.',
         blockText: 'More customers at your counter with smart coupons and no red tape.',
-        blockText2: 'Smart Connection: The coupon shows up for the neighboring event’s crowd, filtered by proximity and the night’s vibe.',
-        blockText3: 'Hassle-free Validation: The customer copies the code in the app and your counter confirms it on the panel. No QR reader, so the line doesn’t stall.',
-        blockText4: 'Clear Rules: The promo is on you and the money stays yours. We bring the foot traffic, but MyWeek doesn’t take reservations or guarantee a table.',
+        blockText2: 'Smart connection: The coupon shows up for the neighboring event’s crowd, filtered by proximity and the night’s vibe.',
+        blockText3: 'Hassle-free validation: The customer copies the code in the app and your counter confirms it on the panel. No QR reader, so the line doesn’t stall.',
+        blockText4: 'Clear rules: The promo is on you and the money stays yours. We bring the foot traffic, but MyWeek doesn’t take reservations or guarantee a table.',
         verticalsTitle: 'What goes in the app',
         verticalsLead: 'We match people near the event with the kind of business that fits the night.',
         v1: 'Restaurant',
@@ -637,7 +625,7 @@
         premiumFeature4: 'Night-out weather',
         premiumFeature5: 'See who’s going to the event',
         premiumCta: 'Go Premium Now',
-        b2bEyebrow: 'For Business: How we charge',
+        b2bEyebrow: 'For business: how we charge',
         b2bTitle: 'Smart visibility, without biting into your ticket sales.',
         b2bText: 'Our golden rule is clear: zero percentage on your box office. We don’t sell tickets on MyWeek. You invest only to highlight your event or business to the right audience. Because every market is unique, we don’t lock prices on the site; the proposal is always shaped around your city’s reality.',
         b2bChoose: 'Choose the format that fits your operation:',
@@ -704,22 +692,10 @@
         sendError: 'Unable to send. Please try again or reach us another way.',
         honeypotLabel: 'Do not fill in this field.'
       },
-      feedbacks: {
-        title: 'What MyWeek delivers'
-      },
       footer: {
         copy: '© 2026 MyWeek',
         credit: 'Developed by Aeon SoftHouse'
       },
-      feedbacksList: [
-        { quote: 'Filter by place and date and find the right night nearby — without scrolling a generic feed.', author: 'App audience', role: 'Scenario' },
-        { quote: 'I marked my styles once and the feed matched my taste. Not the city’s obvious picks.', author: 'App audience', role: 'Scenario' },
-        { quote: 'Going + Get directions in the same app. On event day, open the route and go.', author: 'App audience', role: 'Scenario' },
-        { quote: 'See door, free, or the ticketing link. Buy opens their site — MyWeek is not the checkout.', author: 'App audience', role: 'Scenario' },
-        { quote: 'I asked for a weekend for two, nearby, with a discount. Concierge built the night — no scrolling the feed.', author: 'App audience', role: 'Scenario' },
-        { quote: 'On the dashboard: who was interested, who tapped Buy, who copied the code, and who cleared the counter. A click is not a sale.', author: 'Organizer', role: 'Scenario' },
-        { quote: 'The coupon shows up for people at the show next door. They copy the code in the app; the counter confirms it on the panel.', author: 'Shop nearby', role: 'Scenario' }
-      ]
     }
   };
 
@@ -874,12 +850,6 @@
     return currentLang;
   }
 
-  function getFeedbacks() {
-    var t = translations[currentLang];
-    if (!t || !t.feedbacksList) t = translations[DEFAULT_LANG];
-    return t && t.feedbacksList ? t.feedbacksList : [];
-  }
-
   function initLangSelector() {
     var nav = document.querySelector('.nav');
     if (!nav) return;
@@ -943,7 +913,6 @@
     setLanguage: setLanguage,
     getLanguage: getLanguage,
     get: get,
-    getFeedbacks: getFeedbacks,
     initLangSelector: initLangSelector
   };
 })();
