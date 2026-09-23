@@ -1,0 +1,571 @@
+/* ============================================
+   MyWeek - Seções da reestruturação (home B2C + /negocios B2B)
+   Usa os tokens de variables.css: funciona em dark e light.
+   ============================================ */
+
+/* ---------- Navegação: CTA da página + login discreto ---------- */
+.nav .nav__cta.btn--primary {
+  padding: 10px 22px;
+  font-size: 0.9375rem;
+  color: #ffffff;
+  text-shadow: var(--text-shadow-btn);
+}
+
+/* Login deixa de ser a ação mais forte do header */
+.nav a.nav__login {
+  color: var(--text-muted);
+  font-weight: var(--font-weight-body-strong);
+}
+
+.nav a.nav__login:hover {
+  color: var(--text-high);
+}
+
+/* ---------- Botão fantasma fora do hero ---------- */
+.btn--ghost {
+  background: transparent;
+  border: 1px solid var(--border-subtle);
+  color: var(--text-high);
+}
+
+.btn--ghost:hover {
+  border-color: var(--primary-vibrant);
+  box-shadow: var(--btn-glow-hover);
+}
+
+/* ---------- Hero: nota da janela de lançamento ---------- */
+.hero__note {
+  margin-top: var(--space-lg);
+  font-size: 0.875rem;
+  line-height: 1.6;
+  color: var(--text-muted);
+  max-width: 34rem;
+}
+
+/* ---------- Como funciona (o ciclo) ---------- */
+.loop {
+  position: relative;
+  padding: var(--section-padding-y) 0;
+  background: var(--bg-deep);
+}
+
+@media (min-width: 1024px) {
+  .loop {
+    padding-top: var(--section-padding-y-desktop);
+    padding-bottom: var(--section-padding-y-desktop);
+  }
+}
+
+.loop__title {
+  font-family: var(--font-family-heading);
+  font-size: clamp(1.75rem, 4vw, 2.75rem);
+  font-weight: var(--font-weight-display);
+  letter-spacing: var(--title-letter-spacing);
+  line-height: var(--line-height-title);
+  color: var(--text-high);
+  text-align: center;
+  margin-bottom: 0.4em;
+}
+
+.loop__lead {
+  font-size: 1.05rem;
+  font-weight: var(--font-weight-body);
+  color: var(--text-low);
+  text-align: center;
+  margin: 0 auto var(--space-3xl);
+  max-width: 34rem;
+}
+
+.loop__grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--space-xl);
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  counter-reset: none;
+}
+
+@media (min-width: 768px) {
+  .loop__grid {
+    grid-template-columns: repeat(3, 1fr);
+    gap: var(--space-2xl);
+  }
+}
+
+.loop__step {
+  position: relative;
+  padding: var(--space-2xl) var(--space-xl);
+  background: var(--glass-bg-subtle);
+  backdrop-filter: blur(var(--glass-blur));
+  -webkit-backdrop-filter: blur(var(--glass-blur));
+  border: var(--glass-border-width) solid var(--border-subtle);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-soft-primary);
+  transition: transform var(--transition-organic), box-shadow var(--transition-organic);
+}
+
+.loop__step:hover {
+  transform: translateY(-3px);
+  box-shadow: var(--shadow-card-hover);
+}
+
+.loop__num {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 2.25rem;
+  height: 2.25rem;
+  margin-bottom: var(--space-lg);
+  border-radius: var(--radius-full);
+  background: var(--bg-primary-tint);
+  border: 1px solid rgba(124, 58, 237, 0.35);
+  color: var(--primary-vibrant);
+  font-family: var(--font-family-heading);
+  font-size: 1.05rem;
+  font-weight: 700;
+}
+
+.loop__step-title {
+  font-family: var(--font-family-heading);
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: var(--text-high);
+  margin-bottom: 0.5em;
+}
+
+.loop__step-text {
+  font-size: 0.9875rem;
+  font-weight: var(--font-weight-body);
+  line-height: 1.75;
+  color: var(--text-low);
+}
+
+/* ---------- Lista de espera ---------- */
+.waitlist {
+  position: relative;
+  padding: var(--section-padding-y) 0;
+  background: var(--bg-deep);
+  overflow: hidden;
+}
+
+@media (min-width: 1024px) {
+  .waitlist {
+    padding-top: var(--section-padding-y-desktop);
+    padding-bottom: var(--section-padding-y-desktop);
+  }
+}
+
+.waitlist__orbs {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  z-index: 0;
+}
+
+.waitlist__orb {
+  position: absolute;
+  width: 50vmin;
+  height: 50vmin;
+  border-radius: 50%;
+  filter: blur(80px);
+  opacity: 0.12;
+  animation: waitlist-orb-float 18s ease-in-out infinite;
+}
+
+.waitlist__orb--purple {
+  background: #7c3aed;
+  top: 8%;
+  left: -8%;
+}
+
+.waitlist__orb--cyan {
+  background: #06b6d4;
+  bottom: 8%;
+  right: -8%;
+  animation-delay: -9s;
+}
+
+@keyframes waitlist-orb-float {
+  0%, 100% {
+    transform: translate(0, 0) scale(1);
+    opacity: 0.12;
+  }
+  50% {
+    transform: translate(6%, -5%) scale(1.06);
+    opacity: 0.18;
+  }
+}
+
+.waitlist__container {
+  position: relative;
+  z-index: 1;
+}
+
+.waitlist__card {
+  max-width: 42rem;
+  margin: 0 auto;
+  padding: var(--space-3xl) var(--space-2xl);
+  text-align: center;
+  background: var(--glass-bg-subtle);
+  backdrop-filter: blur(var(--glass-blur));
+  -webkit-backdrop-filter: blur(var(--glass-blur));
+  border: var(--glass-border-width) solid var(--border-subtle);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-soft-primary);
+}
+
+.waitlist__badge {
+  display: inline-block;
+  margin-bottom: var(--space-lg);
+  padding: 0.3rem 0.85rem;
+  border-radius: var(--radius-full);
+  background: var(--bg-primary-tint);
+  border: 1px solid rgba(124, 58, 237, 0.3);
+  color: var(--primary-vibrant);
+  font-size: 0.75rem;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.waitlist__title {
+  font-family: var(--font-family-heading);
+  font-size: clamp(1.6rem, 3.6vw, 2.4rem);
+  font-weight: var(--font-weight-display);
+  letter-spacing: var(--title-letter-spacing);
+  line-height: var(--line-height-title);
+  color: var(--text-high);
+  margin-bottom: 0.4em;
+}
+
+.waitlist__text {
+  font-size: 1rem;
+  font-weight: var(--font-weight-body);
+  line-height: 1.75;
+  color: var(--text-low);
+  max-width: 32rem;
+  margin: 0 auto var(--space-2xl);
+}
+
+.waitlist__form {
+  position: relative;
+  text-align: left;
+}
+
+.waitlist__fields {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--space-md);
+}
+
+@media (min-width: 600px) {
+  .waitlist__fields {
+    grid-template-columns: 1.4fr 1fr;
+    gap: var(--space-lg);
+  }
+}
+
+.waitlist__submit {
+  width: 100%;
+  margin-top: var(--space-lg);
+}
+
+@media (min-width: 600px) {
+  .waitlist__submit {
+    width: auto;
+    min-width: 16rem;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
+.waitlist__privacy {
+  margin-top: var(--space-md);
+  font-size: 0.8125rem;
+  color: var(--text-muted);
+  text-align: center;
+}
+
+.waitlist__form--locked .form-input,
+.waitlist__form--locked .waitlist__submit {
+  opacity: 0.5;
+}
+
+.waitlist__success {
+  text-align: center;
+}
+
+.waitlist__success-title {
+  font-family: var(--font-family-heading);
+  font-size: 1.15rem;
+  font-weight: 700;
+  margin-bottom: 0.35em;
+}
+
+.waitlist__success-text {
+  font-size: 0.9375rem;
+  line-height: 1.7;
+}
+
+.waitlist__stores {
+  margin-top: var(--space-2xl);
+  padding-top: var(--space-xl);
+  border-top: 1px solid var(--border-subtle);
+}
+
+.waitlist__stores-note {
+  margin-bottom: var(--space-lg);
+  font-size: 0.8125rem;
+  color: var(--text-muted);
+}
+
+/* ---------- Transparência ---------- */
+.transparency {
+  padding: var(--section-padding-y) 0;
+  background: var(--bg-deep-soft);
+}
+
+@media (min-width: 1024px) {
+  .transparency {
+    padding-top: var(--section-padding-y-desktop);
+    padding-bottom: var(--section-padding-y-desktop);
+  }
+}
+
+.transparency__title {
+  font-family: var(--font-family-heading);
+  font-size: clamp(1.6rem, 3.6vw, 2.4rem);
+  font-weight: var(--font-weight-display);
+  letter-spacing: var(--title-letter-spacing);
+  line-height: var(--line-height-title);
+  color: var(--text-high);
+  text-align: center;
+  margin-bottom: 0.4em;
+}
+
+.transparency__lead {
+  font-size: 1rem;
+  font-weight: var(--font-weight-body);
+  color: var(--text-low);
+  text-align: center;
+  margin: 0 auto var(--space-3xl);
+  max-width: 34rem;
+}
+
+.transparency__list {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--space-lg);
+  list-style: none;
+  margin: 0 auto;
+  padding: 0;
+  max-width: 62rem;
+}
+
+@media (min-width: 768px) {
+  .transparency__list {
+    grid-template-columns: repeat(3, 1fr);
+    gap: var(--space-xl);
+  }
+}
+
+.transparency__item {
+  padding: var(--space-xl);
+  border-left: 2px solid rgba(124, 58, 237, 0.4);
+  background: var(--glass-bg-subtle);
+  border-radius: 0 var(--radius-md) var(--radius-md) 0;
+}
+
+.transparency__label {
+  display: block;
+  margin-bottom: 0.4em;
+  font-family: var(--font-family-heading);
+  font-size: 1.05rem;
+  font-weight: 700;
+  color: var(--text-high);
+}
+
+.transparency__text {
+  display: block;
+  font-size: 0.9375rem;
+  font-weight: var(--font-weight-body);
+  line-height: 1.75;
+  color: var(--text-low);
+}
+
+/* ---------- CTA de fim de seção (/negocios) ---------- */
+.section-cta {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  gap: var(--space-lg);
+  margin-top: var(--space-3xl);
+}
+
+.section-cta__whats {
+  font-size: 0.9375rem;
+  font-weight: var(--font-weight-body-strong);
+  color: var(--text-low);
+  text-decoration: underline;
+  text-underline-offset: 4px;
+}
+
+.section-cta__whats:hover {
+  color: var(--primary-vibrant);
+}
+
+/* ---------- Ponte para negócios (home) ---------- */
+.biz-teaser {
+  padding: var(--section-padding-y) 0;
+  background: var(--bg-deep-mid);
+}
+
+.biz-teaser__inner {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-2xl);
+  align-items: flex-start;
+  padding: var(--space-3xl) var(--space-2xl);
+  background: var(--glass-bg-subtle);
+  border: var(--glass-border-width) solid var(--border-subtle);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-soft-primary);
+}
+
+@media (min-width: 900px) {
+  .biz-teaser__inner {
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+  }
+}
+
+.biz-teaser__eyebrow {
+  margin-bottom: var(--space-sm);
+  font-size: 0.75rem;
+  font-weight: 600;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--primary-vibrant);
+}
+
+.biz-teaser__title {
+  font-family: var(--font-family-heading);
+  font-size: clamp(1.4rem, 3vw, 2rem);
+  font-weight: var(--font-weight-display);
+  letter-spacing: var(--title-letter-spacing);
+  line-height: var(--line-height-title);
+  color: var(--text-high);
+  margin-bottom: 0.4em;
+}
+
+.biz-teaser__text {
+  font-size: 0.9875rem;
+  font-weight: var(--font-weight-body);
+  line-height: 1.75;
+  color: var(--text-low);
+  max-width: 34rem;
+}
+
+.biz-teaser__actions {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: var(--space-md);
+  flex-shrink: 0;
+}
+
+/* ---------- Planos: ponte para o modelo comercial ---------- */
+.pricing__business-note {
+  margin-top: var(--space-2xl);
+  text-align: center;
+  font-size: 0.9375rem;
+  color: var(--text-muted);
+}
+
+.pricing__business-note a {
+  margin-left: 0.35rem;
+  color: var(--primary-vibrant);
+  font-weight: var(--font-weight-body-strong);
+  text-decoration: underline;
+  text-underline-offset: 4px;
+}
+
+/* ---------- Contato: WhatsApp como alternativa ao formulário ---------- */
+.commercial__alt {
+  margin-top: var(--space-lg);
+  text-align: center;
+  font-size: 0.9375rem;
+  color: var(--text-muted);
+}
+
+.commercial__alt a {
+  margin-left: 0.35rem;
+  color: var(--primary-vibrant);
+  font-weight: var(--font-weight-body-strong);
+  text-decoration: underline;
+  text-underline-offset: 4px;
+}
+
+/* ---------- Rodapé: links das duas portas ---------- */
+.footer__links {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: var(--space-lg);
+  padding-bottom: var(--space-lg);
+}
+
+.footer__links a {
+  font-size: 0.9375rem;
+  color: var(--text-muted);
+  transition: color var(--transition-organic);
+}
+
+.footer__links a:hover {
+  color: var(--primary-vibrant);
+}
+
+/* ---------- Hero de /negocios: sem vídeo, mais compacto ---------- */
+.hero--business {
+  min-height: auto;
+  padding-top: 9rem;
+  padding-bottom: var(--space-4xl);
+}
+
+.hero--business .hero__stack--dash-only {
+  display: flex;
+  justify-content: center;
+}
+
+/* ---------- Listas dentro das fileiras do app (home) ---------- */
+/* Mesma pele de .z-section__list, que vive nas fileiras do B2B. */
+.showcase-row__list {
+  list-style: none;
+  margin: var(--space-md) 0 0;
+  padding: 0;
+}
+
+.showcase-row__list li {
+  position: relative;
+  margin-bottom: var(--space-sm);
+  padding-left: 1.25rem;
+  font-size: 1rem;
+  font-weight: 450;
+  line-height: var(--line-height-body);
+  color: var(--text-low);
+}
+
+.showcase-row__list li::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0.5em;
+  width: 4px;
+  height: 4px;
+  border-radius: 50%;
+  background: var(--secondary-vibrant);
+}

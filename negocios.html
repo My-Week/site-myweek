@@ -1,0 +1,543 @@
+<!DOCTYPE html>
+<html lang="pt-BR" data-theme="dark" data-title-key="pageTitleBusiness">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Coloque seu evento ou seu comércio na frente de quem já está na cidade. Você paga para aparecer, não pelo que vende. Peça a proposta da sua cidade." data-i18n-content="pageDescriptionBusiness">
+  <meta name="keywords" content="divulgação de eventos, painel do organizador, cupom para comércio local, bilheteria, MyWeek para negócios">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="MyWeek para negócios | Seu evento na frente da cidade" data-i18n-content="pageTitleBusiness">
+  <meta property="og:description" content="Visibilidade para eventos e comércio local. Zero porcentagem sobre a sua bilheteria." data-i18n-content="ogDescriptionBusiness">
+  <meta property="og:locale" content="pt_BR">
+  <link rel="canonical" href="https://myweekoficial.com.br/negocios">
+  <title>MyWeek para negócios | Seu evento na frente da cidade</title>
+  <link rel="icon" type="image/svg+xml" href="/assets/images/logo-myweek.svg">
+  <link rel="apple-touch-icon" href="/assets/images/logo-myweek.svg">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Outfit:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/src/css/main.css?v=restruct-v2">
+  <link rel="stylesheet" href="/src/css/hero.css?v=restruct-v2">
+  <link rel="stylesheet" href="/src/css/screens.css?v=restruct-v2">
+  <link rel="stylesheet" href="/src/css/ultrawide.css?v=restruct-v2">
+  <link rel="stylesheet" href="/src/css/restructure.css?v=restruct-v2">
+  <style id="carousel-critical">
+    /* Garante 1 slide visível mesmo com CSS antigo em cache */
+    .screen-carousel__slide { display: none !important; }
+    .screen-carousel__slide.is-active { display: block !important; }
+  </style>
+  <script>
+    (function() {
+      var key = 'myweek_lang';
+      var stored;
+      try { stored = localStorage.getItem(key); } catch (e) {}
+      var lang = (stored === 'en' || stored === 'pt') ? stored : (function() {
+        try {
+          var n = (typeof navigator !== 'undefined' && navigator.language ? navigator.language : '').toLowerCase();
+          return (n.indexOf('pt') === 0) ? 'pt' : 'en';
+        } catch (e) { return 'en'; }
+      })();
+      window.__MYWEEK_LANG = lang;
+      document.documentElement.lang = lang === 'en' ? 'en' : 'pt-BR';
+      if (lang === 'en') document.documentElement.classList.add('i18n-wait');
+    })();
+  </script>
+  <script>
+    (function() {
+      try {
+        var t = localStorage.getItem('myweek_theme');
+        document.documentElement.setAttribute('data-theme', (t === 'light' || t === 'dark') ? t : 'dark');
+      } catch (e) {}
+    })();
+  </script>
+</head>
+<body>
+  <div class="layout">
+
+    <!-- ========== Header / Navegação ========== -->
+    <header class="header">
+      <div class="container">
+        <a href="/" class="logo" aria-label="MyWeek - Página inicial">
+          <img src="/assets/images/logo-myweek.svg" alt="Logo MyWeek" class="logo__icon" width="38" height="38">
+          <div class="logo-wrapper">
+            <span class="logo__text">My Week</span>
+          </div>
+        </a>
+        <nav class="nav" aria-label="Navegação principal" data-i18n-aria-label="nav.mainLabel">
+          <button type="button" class="nav-close" data-i18n-aria-label="nav.close" data-i18n-title="nav.close" aria-label="Fechar menu" title="Fechar menu">✕</button>
+          <a href="#canais" data-i18n="nav.howItWorks">Como funciona</a>
+          <a href="#b2b-platform" data-i18n="nav.organizer">Organizador</a>
+          <a href="#b2b-partner" data-i18n="nav.partner">Comércio</a>
+          <a href="#canal3" data-i18n="nav.platform">Bilheteria</a>
+          <a href="/" data-i18n="nav.forPublic">Para o público</a>
+
+          <a href="#" class="nav__login js-login-url" data-i18n="nav.login" data-i18n-aria-label="nav.loginAria" aria-label="Acessar login MyWeek">Login</a>
+          <a href="#contact-form" class="btn btn--primary nav__cta" data-i18n="nav.contact">Contato</a>
+
+        </nav>
+        <div class="nav-backdrop" aria-hidden="true"></div>
+        <button type="button" class="nav-toggle" data-i18n-aria-label="nav.open" aria-label="Abrir menu" aria-expanded="false">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+      </div>
+    </header>
+
+    <main class="main">
+
+      <!-- ========== Hero — negócios ========== -->
+      <section class="hero hero--business" id="top">
+        <div class="hero__mesh" aria-hidden="true"></div>
+        <div class="hero__overlay" aria-hidden="true"></div>
+        <div class="container hero__content">
+          <div class="hero__grid hero__grid--business">
+            <div class="hero__col hero__col--text">
+              <p class="hero__brand" data-i18n="bizHero.eyebrow">MyWeek para negócios</p>
+              <h1 class="hero__title" data-i18n="bizHero.title">Seu evento na frente de quem já está na cidade.</h1>
+              <p class="hero__subtitle" data-i18n="bizHero.subtitle">Você paga para aparecer, não pelo que vende. O ingresso, a porta e o caixa continuam seus.</p>
+              <div class="hero__actions">
+                <a href="#contact-form" class="btn hero__btn hero__btn--primary" data-i18n="bizHero.ctaPrimary">Pedir proposta da minha cidade</a>
+                <a class="btn hero__btn hero__btn--ghost js-whatsapp-url" href="https://wa.me/5571993184341" target="_blank" rel="noopener noreferrer" data-i18n="bizHero.ctaSecondary" data-i18n-aria-label="whatsapp.aria">Falar no WhatsApp</a>
+              </div>
+            </div>
+            <div class="hero__col hero__col--visual">
+              <div class="hero__stack hero__stack--dash-only" role="img" aria-label="Painel web do organizador My Week">
+                <div class="hero__stack-item hero__stack-item--dash">
+                  <div class="screen-frame screen-frame--desktop">
+                    <img
+                      class="screen-frame__img"
+                      src="/assets/images/screens/web/organizer/03-evento-comercial.jpg"
+                      width="1280"
+                      height="892"
+                      alt="Painel comercial do organizador no My Week"
+                      data-i18n-alt="hero.dashAlt"
+                      decoding="async"
+                      fetchpriority="high"
+                    >
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ========== Para quem é ========== -->
+      <section class="channels hidden" id="canais" data-reveal>
+        <div class="container">
+          <h2 class="channels__title" data-i18n="channels.title">Para quem é o MyWeek?</h2>
+          <p class="channels__lead" data-i18n="channels.lead">Nós somos a vitrine, não a bilheteria. Conectamos o que está rolando hoje com quem já está na cidade, entregando a solução certa para cada parceiro:</p>
+          <div class="channels__grid">
+            <article class="channel-card">
+              <p class="channel-card__eyebrow" data-i18n="channels.organizerEyebrow">Organizador</p>
+              <h3 class="channel-card__title" data-i18n="channels.organizerTitle">Feito para o seu evento</h3>
+              <p class="channel-card__text" data-i18n="channels.organizerText">A gente sabe que quem produz formatos menores só quer uma coisa: ser encontrado pelo público certo.</p>
+              <p class="channel-card__text" data-i18n="channels.organizerText2">Com o MyWeek, o seu show ou bar ao vivo entra direto na tela de quem quer sair hoje. Nós não nos metemos na sua operação: você pode cobrar na porta, fazer evento gratuito ou usar o link da sua própria venda. O nosso trabalho é levar o público até você.</p>
+              <a href="#b2b-platform" class="btn btn--primary channel-card__cta" data-i18n="channels.organizerCta">Ver o painel</a>
+            </article>
+            <article class="channel-card">
+              <p class="channel-card__eyebrow" data-i18n="channels.partnerEyebrow">Parceiro</p>
+              <h3 class="channel-card__title" data-i18n="channels.partnerTitle">Movimente o seu negócio</h3>
+              <p class="channel-card__text" data-i18n="channels.partnerText">Sabe aquela multidão que vai ao show na sua rua? Eles podem terminar a noite consumindo com você.</p>
+              <p class="channel-card__text" data-i18n="channels.partnerText2">Com o MyWeek, você cria cupons de desconto exclusivos para quem está indo aos eventos próximos. Nós conectamos a fome, a sede ou a necessidade (como um estacionamento) de quem está na rua com o seu negócio.</p>
+              <a href="#b2b-partner" class="btn btn--primary channel-card__cta" data-i18n="channels.partnerCta">Ver os cupons</a>
+            </article>
+            <article class="channel-card">
+              <p class="channel-card__eyebrow" data-i18n="channels.platformEyebrow">Bilheteria</p>
+              <h3 class="channel-card__title" data-i18n="channels.platformTitle">Amplie o alcance do seu evento</h3>
+              <p class="channel-card__text" data-i18n="channels.platformText">Para shows e grandes produções, o MyWeek atua como o principal canal de descoberta da cidade.</p>
+              <p class="channel-card__text" data-i18n="channels.platformText2">Nós não competimos com a sua tiqueteira. Nosso trabalho é colocar o seu espetáculo na frente do público certo e garantir um redirecionamento rápido e seguro para o seu site oficial. Você ganha visibilidade máxima na cidade sem alterar em nada a sua operação de vendas.</p>
+              <a href="#canal3" class="btn btn--primary channel-card__cta" data-i18n="channels.platformCta">Conversar sobre o começo</a>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      
+      <!-- ========== Organizador ========== -->
+      <section id="b2b-platform" class="b2b-platform">
+        <div class="container">
+          <h2 class="b2b-platform__title" data-i18n="b2b.title">O controle da sua noite volta para você.</h2>
+          <p class="b2b-platform__lead" data-i18n="b2b.lead">No nosso modelo, você paga pela visibilidade no app, não pelo seu sucesso. Nós cobramos para o evento aparecer, mas quem chega na porta é seu.</p>
+          <p class="b2b-platform__lead" data-i18n="b2b.lead2">Entregamos um painel completo para você cadastrar a noite, gerar seus próprios cupons e acessar as métricas de quem se interessou. E o ingresso? Continua seu. Seja entrada física, lista VIP grátis ou o link que você colar. Nós trazemos o público, você dita as regras.</p>
+
+          <div class="z-row hidden" data-reveal>
+            <div class="z-row__inner">
+              <div class="z-row__body">
+                <h2 class="z-section__title" data-i18n="b2b.block1Title">Fure a bolha: Alcance quem ainda não te conhece.</h2>
+                <p class="z-section__text" data-i18n="b2b.block1Text">Seu evento direto na tela de quem busca o que fazer hoje.</p>
+                <ul class="z-section__list">
+                  <li data-i18n="b2b.block1Text2">Match perfeito: Cadastre a noite no painel e o app mostra sua festa para quem está perto e curte o seu estilo.</li>
+                  <li data-i18n="b2b.block1Text3">Além do WhatsApp: O seu grupo fala com os clientes antigos. Nós colocamos o seu samba, a sua sexta e o seu bairro na frente de clientes novos.</li>
+                </ul>
+              </div>
+              <div class="z-row__media">
+                <figure class="screen-frame screen-frame--desktop">
+                  <img
+                    class="screen-frame__img"
+                    src="/assets/images/screens/web/organizer/02-evento-detalhe.jpg"
+                    width="1280"
+                    height="892"
+                    alt="Detalhe do evento no painel do organizador"
+                    data-i18n-alt="b2b.screenAlt1"
+                    loading="lazy"
+                    decoding="async"
+                  >
+                </figure>
+              </div>
+            </div>
+          </div>
+
+          <div class="z-row z-row--reverse hidden" data-reveal>
+            <div class="z-row__inner">
+              <div class="z-row__body">
+                <h2 class="z-section__title" data-i18n="b2b.block2Title">O Painel da sua festa — sem assumir a bilheteria.</h2>
+                <p class="z-section__text" data-i18n="b2b.block2Text">Monte a página do evento, cole o seu link e acompanhe os números reais da sua noite.</p>
+                <ul class="z-section__list">
+                  <li data-i18n="b2b.block2Text2">Do seu jeito: Suba fotos, atrações e defina o formato (link de vendas, grátis ou entrada na porta).</li>
+                  <li data-i18n="b2b.block2Text3">Métricas claras: Acompanhe o número de interessados e de cupons gerados.</li>
+                  <li data-i18n="b2b.block2Text4">Transparência total: Jogamos limpo, nós mostramos o clique e o tráfego que enviamos para você; a conversão e a venda final acontecem na sua plataforma.</li>
+                </ul>
+              </div>
+              <div class="z-row__media">
+                <figure class="screen-frame screen-frame--desktop">
+                  <img
+                    class="screen-frame__img"
+                    src="/assets/images/screens/web/organizer/06-evento-ingressos.jpg"
+                    width="1280"
+                    height="892"
+                    alt="Aba de ingressos com lotes e venda externa"
+                    data-i18n-alt="b2b.screenAlt2"
+                    loading="lazy"
+                    decoding="async"
+                  >
+                </figure>
+              </div>
+            </div>
+          </div>
+
+          <div class="z-row hidden" data-reveal>
+            <div class="z-row__inner">
+              <div class="z-row__body">
+                <h2 class="z-section__title" data-i18n="b2b.block3Title">Promoções sem complicação na porta ou no balcão.</h2>
+                <p class="z-section__text" data-i18n="b2b.block3Text">Atraia clientes com cupons fáceis de usar e gerenciar. Sem QR Code, sem fila travada.</p>
+                <ul class="z-section__list">
+                  <li data-i18n="b2b.block3Text2">Criação no painel: Você define o desconto e a validade.</li>
+                  <li data-i18n="b2b.block3Text3">Resgate simples: O cliente copia o código gerado no app.</li>
+                  <li data-i18n="b2b.block3Text4">Validação rápida: O seu caixa confirma o código no nosso painel.</li>
+                  <li data-i18n="b2b.block3Text5">Dados transparentes: Saiba quantos copiaram e quantos compraram. A ferramenta é nossa, o investimento no desconto é seu.</li>
+                </ul>
+              </div>
+              <div class="z-row__media">
+                <figure class="screen-frame screen-frame--desktop">
+                  <img
+                    class="screen-frame__img"
+                    src="/assets/images/screens/web/organizer/04-cupons-catalogo.jpg"
+                    width="1280"
+                    height="892"
+                    alt="Catálogo de cupons do organizador"
+                    data-i18n-alt="b2b.screenAlt3"
+                    loading="lazy"
+                    decoding="async"
+                  >
+                </figure>
+              </div>
+            </div>
+          </div>
+
+          <div class="z-row z-row--reverse hidden" data-reveal>
+            <div class="z-row__inner">
+              <div class="z-row__body">
+                <h2 class="z-section__title" data-i18n="b2b.block4Title">O seu território em um único mapa.</h2>
+                <p class="z-section__text" data-i18n="b2b.block4Text">Veja exatamente onde as suas produções estão acontecendo no painel.</p>
+                <ul class="z-section__list">
+                  <li data-i18n="b2b.block4Text2">Visão global: A localização exata de todas as suas publicações ativas.</li>
+                  <li data-i18n="b2b.block4Text3">Filtros inteligentes: Busque rapidamente por estado, cidade ou status do evento.</li>
+                  <li data-i18n="b2b.block4Text4">Foco total: Apenas os seus eventos na tela. Os cupons do comércio ficam em outra área para não poluir a sua visão.</li>
+                </ul>
+              </div>
+              <div class="z-row__media">
+                <figure class="screen-frame screen-frame--desktop screen-frame--desktop-wide">
+                  <img
+                    class="screen-frame__img"
+                    src="/assets/images/screens/web/organizer/05-mapa-territorial-01.jpg"
+                    width="1440"
+                    height="728"
+                    alt="Mapa com eventos no painel"
+                    data-i18n-alt="b2b.screenAlt4"
+                    loading="lazy"
+                    decoding="async"
+                  >
+                </figure>
+              </div>
+            </div>
+          </div>
+
+          <div class="z-row hidden" data-reveal>
+            <div class="z-row__inner">
+              <div class="z-row__body">
+                <h2 class="z-section__title" data-i18n="b2b.block5Title">Do interesse até o caixa.</h2>
+                <p class="z-section__text" data-i18n="b2b.block5Text">Quatro números no painel. Clicar em Comprar não é venda — o ingresso continua no site deles, ou na porta.</p>
+                <ol class="funnel-steps" data-i18n-aria-label="b2b.funnelLabel">
+                  <li class="funnel-steps__item">
+                    <span class="funnel-steps__num">1</span>
+                    <span class="funnel-steps__label" data-i18n="b2b.funnel1">Interessados</span>
+                  </li>
+                  <li class="funnel-steps__item">
+                    <span class="funnel-steps__num">2</span>
+                    <span class="funnel-steps__label" data-i18n="b2b.funnel2">Clique em Comprar</span>
+                  </li>
+                  <li class="funnel-steps__item">
+                    <span class="funnel-steps__num">3</span>
+                    <span class="funnel-steps__label" data-i18n="b2b.funnel3">Código copiado</span>
+                  </li>
+                  <li class="funnel-steps__item">
+                    <span class="funnel-steps__num">4</span>
+                    <span class="funnel-steps__label" data-i18n="b2b.funnel4">Resgate no caixa</span>
+                  </li>
+                </ol>
+              </div>
+              <div class="z-row__media">
+                <figure class="screen-frame screen-frame--desktop">
+                  <img
+                    class="screen-frame__img"
+                    src="/assets/images/screens/web/organizer/03-evento-comercial.jpg"
+                    width="1280"
+                    height="892"
+                    alt="Painel comercial com interesse, clique, código e resgate no caixa"
+                    data-i18n-alt="b2b.screenAlt5"
+                    loading="lazy"
+                    decoding="async"
+                  >
+                </figure>
+              </div>
+            </div>
+          </div>
+
+          <div class="z-row z-row--copy hidden" data-reveal>
+            <div class="z-row__inner">
+              <div class="z-row__body">
+                <h2 class="z-section__title" data-i18n="b2b.block6Title">Crie a divulgação perfeita com a ajuda do app.</h2>
+                <p class="z-section__text" data-i18n="b2b.block6Text">Dados reais e Inteligência Artificial trabalhando para a sua noite.</p>
+                <ul class="z-section__list">
+                  <li data-i18n="b2b.insight1">Sinais da cidade: O painel indica o melhor dia, horário e época do mês para o seu evento.</li>
+                  <li data-i18n="b2b.insight2">Clima da noite: Ajuste o tom da festa com base no que o público da região está buscando.</li>
+                  <li data-i18n="b2b.insight3">Copiloto de texto: A IA integrada cria ou revisa a sua divulgação para garantir o impacto certo.</li>
+                  <li data-i18n="b2b.insight4">Controle total: O sistema sugere e orienta, mas quem aprova e aperta o botão de publicar é você.</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+
+          <div class="section-cta">
+            <a href="?canal=organizer#contact-form" class="btn btn--primary section-cta__btn" data-i18n="b2b.cta">Pedir proposta da minha cidade</a>
+            <a class="section-cta__whats js-whatsapp-url" href="https://wa.me/5571993184341" target="_blank" rel="noopener noreferrer" data-i18n="whatsapp.label" data-i18n-aria-label="whatsapp.aria">Falar no WhatsApp</a>
+          </div>
+        </div>
+      </section>
+
+      
+      <!-- ========== Comércio parceiro ========== -->
+      <section id="b2b-partner" class="b2b-platform b2b-partner">
+        <div class="container">
+          <h2 class="b2b-platform__title" data-i18n="partner.title">Mais clientes no balcão. Zero dor de cabeça.</h2>
+          <p class="b2b-platform__lead" data-i18n="partner.lead">Traga o público da festa ao lado direto para o seu estabelecimento.</p>
+          <ul class="z-section__list b2b-platform__list">
+            <li data-i18n="partner.benefit1">Visibilidade direcionada: Você paga para o cupom aparecer para quem está perto e no clima certo para consumir.</li>
+            <li data-i18n="partner.benefit2">Venda real: O clique é no app, mas o resgate e o dinheiro entram no seu caixa.</li>
+            <li data-i18n="partner.benefit3">Validação simples: O cliente mostra o código, sua equipe valida em segundos.</li>
+            <li data-i18n="partner.benefit4">Foco no seu negócio: Sem montar palco e sem cadastrar evento. Você foca na sua loja, nós focamos em levar o público.</li>
+          </ul>
+
+          <div class="z-row hidden" data-reveal>
+            <div class="z-row__inner">
+              <div class="z-row__body">
+                <h2 class="z-section__title" data-i18n="partner.blockTitle">Seu comércio no show do lado.</h2>
+                <p class="z-section__text" data-i18n="partner.blockText">Mais clientes no seu balcão com cupons inteligentes e sem burocracia.</p>
+                <ul class="z-section__list">
+                  <li data-i18n="partner.blockText2">Conexão inteligente: O cupom aparece para o público do evento vizinho, filtrado por proximidade e pela "vibe" da noite.</li>
+                  <li data-i18n="partner.blockText3">Validação descomplicada: O cliente copia o código no app e o seu caixa confirma no painel. Sem leitor de QR Code para não travar a fila.</li>
+                  <li data-i18n="partner.blockText4">Regras claras: A promoção é por sua conta e o dinheiro fica todo com você. Nós garantimos o tráfego de pessoas, mas o MyWeek não faz reservas e não garante mesa.</li>
+                </ul>
+              </div>
+              <div class="z-row__media">
+                <figure class="screen-frame screen-frame--desktop screen-frame--desktop-wide">
+                  <img
+                    class="screen-frame__img"
+                    src="/assets/images/screens/web/partner/05-mapa-territorial-01.jpg"
+                    width="1440"
+                    height="728"
+                    alt="Mapa do parceiro com cobertura e eventos próximos"
+                    data-i18n-alt="partner.screenAlt"
+                    loading="lazy"
+                    decoding="async"
+                  >
+                </figure>
+              </div>
+            </div>
+          </div>
+
+          <div class="partner-verticals hidden" data-reveal>
+            <h3 class="partner-verticals__title" data-i18n="partner.verticalsTitle">O que entra no app</h3>
+            <p class="partner-verticals__lead" data-i18n="partner.verticalsLead">A gente junta quem está perto do evento com o tipo de comércio que combina com a noite.</p>
+            <ul class="partner-verticals__grid">
+              <li class="partner-verticals__item" data-i18n="partner.v1">Restaurante</li>
+              <li class="partner-verticals__item" data-i18n="partner.v2">Bar</li>
+              <li class="partner-verticals__item" data-i18n="partner.v3">Beleza</li>
+              <li class="partner-verticals__item" data-i18n="partner.v4">Moda</li>
+              <li class="partner-verticals__item" data-i18n="partner.v5">Transporte</li>
+              <li class="partner-verticals__item" data-i18n="partner.v6">Hospedagem</li>
+              <li class="partner-verticals__item" data-i18n="partner.v7">Estacionamento</li>
+              <li class="partner-verticals__item" data-i18n="partner.v8">Bem-estar</li>
+            </ul>
+            <a href="?canal=partner#contact-form" class="btn btn--primary partner-verticals__cta" data-i18n="partner.cta">Pedir proposta da cidade</a>
+          </div>
+        </div>
+      </section>
+
+      
+      <!-- ========== Bilheteria ========== -->
+      <section id="canal3" class="canal3 hidden" data-reveal>
+        <div class="container">
+          <article class="canal3-card">
+            <p class="canal3-card__eyebrow" data-i18n="canal3.eyebrow">O Começo: Risco zero para a sua bilheteria.</p>
+            <h2 class="canal3-card__title" data-i18n="canal3.title">Os eventos da cidade ganham destaque no nosso app. A conversão continua, exclusivamente, no site de vocês.</h2>
+            <p class="canal3-card__text" data-i18n="canal3.text">A nossa proposta é começar com um piloto em apenas uma cidade. Os eventos entram no app e nós enviamos o tráfego, entregando relatórios transparentes de cliques. Se houver movimento e resultado real, nós avançamos. Discussões sobre porcentagem por venda ou comissão ficam para um segundo momento.</p>
+            <p class="canal3-card__note" data-i18n="canal3.note">Jogamos limpo: sabemos que clicar não é ter comprado. E acima de tudo, respeitamos o seu negócio: não colocamos a sua marca no nosso app sem alinhamento prévio. O cadastro e a integração são feitos a quatro mãos, nunca de forma unilateral.</p>
+            <a href="?canal=platform#contact-form" class="btn btn--primary canal3-card__cta" data-i18n="canal3.cta">Conversar sobre o começo</a>
+          </article>
+        </div>
+      </section>
+
+      
+      <!-- ========== Transparência (o combinado) ========== -->
+      <section class="transparency hidden" id="transparencia" data-reveal>
+        <div class="container">
+          <h2 class="transparency__title" data-i18n="transparency.title">O que a gente não faz</h2>
+          <p class="transparency__lead" data-i18n="transparency.lead">Combinado claro desde o começo, para não ter surpresa depois.</p>
+          <ul class="transparency__list">
+            <li class="transparency__item">
+              <strong class="transparency__label" data-i18n="transparency.item1Label">Não vendemos ingresso.</strong>
+              <span class="transparency__text" data-i18n="transparency.item1Text">Zero porcentagem sobre a sua bilheteria. O botão Comprar abre o site oficial do evento.</span>
+            </li>
+            <li class="transparency__item">
+              <strong class="transparency__label" data-i18n="transparency.item2Label">Clique não é venda.</strong>
+              <span class="transparency__text" data-i18n="transparency.item2Text">Mostramos o tráfego que enviamos. A conversão acontece na sua plataforma, e a gente diz isso no painel.</span>
+            </li>
+            <li class="transparency__item">
+              <strong class="transparency__label" data-i18n="transparency.item3Label">Não mexemos na sua operação.</strong>
+              <span class="transparency__text" data-i18n="transparency.item3Text">Cobrança na porta, lista grátis ou link próprio: quem define é você. Nenhuma marca entra no app sem alinhamento.</span>
+            </li>
+          </ul>
+        </div>
+      </section>
+
+      <!-- ========== Modelo comercial ========== -->
+      <section class="pricing pricing--business hidden" id="planos" data-reveal>
+        <div class="container">
+          <article class="pricing-b2b">
+            <p class="pricing-b2b__eyebrow" data-i18n="pricing.b2bEyebrow">Para negócios: como cobramos</p>
+            <h3 class="pricing-b2b__title" data-i18n="pricing.b2bTitle">Visibilidade inteligente, sem morder o seu ingresso.</h3>
+            <p class="pricing-b2b__text" data-i18n="pricing.b2bText">A nossa regra de ouro é clara: zero porcentagem sobre a sua bilheteria. Nós não vendemos ingressos no MyWeek. Você investe exclusivamente para destacar o seu evento ou o seu comércio para o público certo. Como entendemos que cada mercado é único, não trabalhamos com preços engessados no site; a proposta é sempre desenhada para a realidade da sua cidade.</p>
+            <p class="pricing-b2b__choose" data-i18n="pricing.b2bChoose">Escolha o formato que faz sentido para a sua operação:</p>
+            <ul class="pricing-b2b__models">
+              <li class="pricing-b2b__model">
+                <strong class="pricing-b2b__model-name" data-i18n="pricing.b2bMonthly">Plano Mensal</strong>
+                <span class="pricing-b2b__model-desc" data-i18n="pricing.b2bMonthlyDesc">Assinatura ideal para comércios locais ou casas noturnas com agenda frequente.</span>
+              </li>
+              <li class="pricing-b2b__model">
+                <strong class="pricing-b2b__model-name" data-i18n="pricing.b2bPerEvent">Por Evento</strong>
+                <span class="pricing-b2b__model-desc" data-i18n="pricing.b2bPerEventDesc">Pagamento pontual e focado para destacar uma produção específica.</span>
+              </li>
+              <li class="pricing-b2b__model">
+                <strong class="pricing-b2b__model-name" data-i18n="pricing.b2bProposal">Proposta da Cidade</strong>
+                <span class="pricing-b2b__model-desc" data-i18n="pricing.b2bProposalDesc">Para grandes bilheterias e expansão, começamos com um piloto local e construímos o modelo de negócios lado a lado com você.</span>
+              </li>
+            </ul>
+            <a href="#contact-form" class="btn btn--primary pricing-b2b__cta" data-i18n="pricing.b2bCta">Pedir proposta da cidade</a>
+          </article>
+        </div>
+      </section>
+
+      <!-- ========== Fale com a gente ========== -->
+      <section class="commercial hidden" id="contact-form" data-reveal>
+        <div class="container commercial__inner">
+          <div class="commercial__copy">
+            <h2 class="commercial__title" data-i18n="commercial.title">Fale com a gente</h2>
+            <p class="commercial__lead" data-i18n="commercial.lead">Peça a proposta da sua cidade.</p>
+            <p class="commercial__lead" data-i18n="commercial.lead2">Diga se você faz o evento, tem um comércio perto ou é a bilheteria. A gente volta com o modelo — mensal ou por evento.</p>
+          </div>
+
+          <div class="commercial__form-wrap">
+            <form class="commercial__form" name="contato-comercial" method="POST" action="/" data-netlify="true" netlify-honeypot="bot-field">
+              <input type="hidden" name="form-name" value="contato-comercial">
+              <p class="commercial__honeypot" aria-hidden="true">
+                <label for="bot-field" data-i18n="form.honeypotLabel">Não preencha este campo</label>
+                <input id="bot-field" name="bot-field" type="text" tabindex="-1" autocomplete="off">
+              </p>
+              <div class="form-group form-group--float">
+                <select class="form-input form-select" id="canal" name="canal" required>
+                  <option value="" disabled selected hidden></option>
+                  <option value="organizer" data-i18n="form.canalOrganizer">Organizador — evento</option>
+                  <option value="partner" data-i18n="form.canalPartner">Parceiro — comércio perto</option>
+                  <option value="both" data-i18n="form.canalBoth">Os dois</option>
+                  <option value="platform" data-i18n="form.canalPlatform">Bilheteria</option>
+                </select>
+                <label class="form-label" for="canal" data-i18n="form.canalLabel">O que você faz</label>
+              </div>
+              <div class="form-group form-group--float">
+                <input class="form-input" type="text" id="praca" name="praca" placeholder=" " required autocomplete="address-level2">
+                <label class="form-label" for="praca" data-i18n="form.cityLabel">Cidade</label>
+              </div>
+              <div class="form-group form-group--float">
+                <input class="form-input" type="text" id="empresa" name="empresa" placeholder=" " autocomplete="organization">
+                <label class="form-label" for="empresa" data-i18n="form.companyLabel">Nome da Empresa</label>
+              </div>
+              <div class="form-group form-group--float">
+                <input class="form-input" type="email" id="email" name="email" placeholder=" " required autocomplete="email">
+                <label class="form-label" for="email" data-i18n="form.emailLabel">E-mail</label>
+              </div>
+              <div class="form-group form-group--float">
+                <input class="form-input" type="tel" id="telefone" name="telefone" placeholder=" " autocomplete="tel" inputmode="tel" data-i18n-aria-label="form.phoneLabel">
+                <label class="form-label" for="telefone" data-i18n="form.phoneLabel">Celular (obrigatório para WhatsApp ou ligação)</label>
+              </div>
+              <div class="form-group form-group--float form-group--textarea">
+                <textarea class="form-input form-textarea" id="mensagem" name="mensagem" placeholder=" " rows="4"></textarea>
+                <label class="form-label" for="mensagem" data-i18n="form.messageLabel">Mensagem (opcional)</label>
+              </div>
+              <button type="submit" class="btn btn--primary commercial__submit" data-i18n="form.submit">Enviar</button>
+            </form>
+            <p class="commercial__alt">
+              <span data-i18n="commercial.altText">Prefere conversar agora?</span>
+              <a class="js-whatsapp-url" href="https://wa.me/5571993184341" target="_blank" rel="noopener noreferrer" data-i18n="whatsapp.label" data-i18n-aria-label="whatsapp.aria">Falar no WhatsApp</a>
+            </p>
+          </div>
+        </div>
+      </section>
+
+          </main>
+
+    <footer class="footer">
+      <div class="container footer__links">
+        <a href="/" data-i18n="nav.forPublic">Para o público</a>
+        <a href="/negocios" data-i18n="nav.businesses">Para negócios</a>
+        <a class="js-whatsapp-url" href="https://wa.me/5571993184341" target="_blank" rel="noopener noreferrer" data-i18n="whatsapp.label" data-i18n-aria-label="whatsapp.aria">Falar no WhatsApp</a>
+      </div>
+      <div class="footer__bottom">
+        <p class="footer__copy" data-i18n="footer.copy">© 2026 MyWeek</p>
+        <p class="footer__credit" data-i18n="footer.credit">Desenvolvido por Aeon SoftHouse</p>
+      </div>
+    </footer>
+  </div>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js" defer></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js" defer></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/vanilla-tilt/1.8.1/vanilla-tilt.min.js" defer></script>
+  <script src="/src/js/i18n.js?v=restruct-v2" defer></script>
+  <script src="/src/js/theme.js?v=restruct-v2" defer></script>
+  <script src="/src/js/animations.js?v=restruct-v2" defer></script>
+  <script src="/src/js/form-handler.js?v=restruct-v2" defer></script>
+  <script src="/src/js/main.js?v=restruct-v2" defer></script>
+</body>
+</html>

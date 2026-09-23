@@ -1,0 +1,4 @@
+# Serve negocios.html em /negocios sem depender do "Pretty URLs" do Netlify.
+# Status 200 = rewrite: a URL na barra continua /negocios.
+/negocios    /negocios.html   200
+/negocios/   /negocios.html   200
