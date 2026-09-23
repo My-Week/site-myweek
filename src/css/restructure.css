@@ -11,14 +11,37 @@
   text-shadow: var(--text-shadow-btn);
 }
 
-/* Login deixa de ser a ação mais forte do header */
+/* Login: botão secundário. Visível como botão, sem competir com o CTA da
+   página, que continua sendo o único botão em degradê. A borda e o fundo
+   próprios garantem que o botão apareça mesmo se a cor do texto falhar. */
 .nav a.nav__login {
-  color: var(--text-muted);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 9px 20px;
+  font-size: 0.9375rem;
   font-weight: var(--font-weight-body-strong);
+  border-radius: var(--radius-md);
+  background: rgba(255, 255, 255, 0.06);
+  border: 1px solid rgba(255, 255, 255, 0.22);
+  color: var(--text-high);
 }
 
-.nav a.nav__login:hover {
+.nav a.nav__login:hover,
+.nav a.nav__login:focus-visible {
+  background: rgba(255, 255, 255, 0.12);
+  border-color: var(--primary-vibrant);
   color: var(--text-high);
+}
+
+[data-theme="light"] .nav a.nav__login {
+  background: rgba(30, 41, 59, 0.04);
+  border-color: rgba(30, 41, 59, 0.22);
+}
+
+[data-theme="light"] .nav a.nav__login:hover,
+[data-theme="light"] .nav a.nav__login:focus-visible {
+  background: rgba(30, 41, 59, 0.08);
 }
 
 /* ---------- Botão fantasma fora do hero ---------- */
