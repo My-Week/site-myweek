@@ -80,6 +80,11 @@ Títulos usam gradiente metálico e brilho:
 - **Chips do Concierge (`.concierge-chips__item`):** mesma pele glass dos chips de vertical; fileira de copy sem screen (`.showcase-row--copy`).
 - **Card Canal 3 (`.canal3-card`):** um card centralizado (máx. 40rem), mesmo tratamento glass dos canais; sem tela, sem lista de features.
 - **Card B2B em planos (`.pricing-b2b`):** abaixo da matriz Basic/Premium; modelo (mensal / por evento / proposta) sem valores; chips + CTA.
+- **Passos do ciclo (`.loop__step`):** grid 1 col / 3 cols a partir de 768px; número em chip roxo, título Outfit, texto Inter. Só na home.
+- **Lista de espera (`.waitlist__card`):** card glass centralizado (máx. 42rem) com badge, formulário de 2 campos e os botões de loja abaixo de um divisor. Só na home.
+- **Transparência (`.transparency__item`):** três colunas com borda-guia roxa à esquerda; carrega as ressalvas que antes abriam os textos comerciais.
+- **CTA de fim de seção (`.section-cta`):** `btn--primary` para o formulário (com `?canal=`) mais link de WhatsApp. Fecha cada perfil em `/negocios`.
+- **Ponte para negócios (`.biz-teaser`):** faixa no fim da home que leva para `/negocios`.
 
 ### Inputs
 
@@ -87,6 +92,19 @@ Títulos usam gradiente metálico e brilho:
 - **Transição de validação (Roxo → Ciano):** quando o formulário está válido, o botão de envio usa gradiente até **#06b6d4** (Electric Cyan) e animação `contact-submit-pulse` com sombra em roxo e ciano.
 - Inputs genéricos em foco: `border-color: #7c3aed` e `box-shadow: 0 4px 12px rgba(124, 58, 237, 0.2)`.
 - Transição dos inputs: `all 0.4s ease` (form float) e `0.2s ease` (border/box-shadow).
+
+---
+
+## 3.1 Estrutura de páginas
+
+O site tem duas portas, uma marca:
+
+- **`index.html` (`/`)** — público (B2C): hero, como funciona, o app, lista de espera, planos Basic/Premium, sobre e a ponte para negócios.
+- **`negocios.html` (`/negocios`)** — comercial (B2B): hero próprio, os três perfis (organizador, comércio, bilheteria), transparência, modelo de cobrança e formulário.
+
+Cada página carrega só o JS que usa. `negocios.html` declara
+`data-title-key="pageTitleBusiness"` no `<html>` para o i18n trocar o `<title>` certo.
+Estilos das seções da reestruturação ficam em `src/css/restructure.css`.
 
 ---
 
@@ -121,7 +139,9 @@ Títulos usam gradiente metálico e brilho:
 ### Imagens
 
 - Uso de `max-width: 100%`, `height: auto`, `display: block` quando aplicável.
-- Assets em `assets/images/`, `assets/videos/`, `assets/svgs/`; referenciar a partir da raiz (ex.: `assets/images/…`).
+- Assets em `assets/images/`, `assets/videos/`, `assets/svgs/`.
+- **Caminhos root-relative obrigatórios** (`/assets/images/…`, `/src/css/…`): o site tem mais de uma
+  página (`/` e `/negocios`) e caminho relativo quebra fora da raiz.
 
 ---
 

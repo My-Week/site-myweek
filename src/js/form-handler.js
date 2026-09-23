@@ -4,9 +4,10 @@
 (function () {
   'use strict';
 
-  var CONFIG = {
-    whatsappUrl: 'https://wa.me/5571993184341'
-  };
+  /** Fonte unica do numero: CONFIG.whatsappUrl em main.js */
+  function getWhatsappUrl() {
+    return (window.MyWeek && window.MyWeek.whatsappUrl) || '';
+  }
 
   /** Formato válido: local@domínio.tld (aceita Gmail, Outlook, etc.) */
   function isValidEmailFormat(email) {
@@ -100,7 +101,7 @@
   }
 
   function buildCommercialSuccessMessageHtml() {
-    var whatsappUrl = CONFIG.whatsappUrl;
+    var whatsappUrl = getWhatsappUrl();
     var btnHtml = '';
     var cta = getI18n('form.successCta');
     var title = getI18n('form.successTitle');
@@ -289,7 +290,7 @@
       }
 
       if (name === 'empresa' || name === 'nome') {
-        return value.length >= 2;
+        return true; // opcional
       }
 
       if (name === 'email') {
@@ -298,7 +299,7 @@
 
       if (name === 'telefone') {
         var digits = value.replace(/\D/g, '');
-        return digits.length >= 10 && digits.length <= 11;
+        return digits.length === 0 || (digits.length >= 10 && digits.length <= 11);
       }
 
       return value.length > 0;
@@ -383,13 +384,12 @@
       var telefone = form.querySelector('[name="telefone"]');
       var submitBtn = form.querySelector('.commercial__submit');
 
-      if (!canal || !praca || !empresa || !email || !telefone || !submitBtn) return;
+      if (!canal || !praca || !email || !submitBtn) return;
 
       var canalVal = (canal.value || '').trim();
       var pracaVal = (praca.value || '').trim();
-      var empresaVal = (empresa.value || '').trim();
       var emailVal = (email.value || '').trim();
-      var telefoneVal = (telefone.value || '').trim().replace(/\D/g, '');
+      var telefoneVal = telefone ? (telefone.value || '').trim().replace(/\D/g, '') : '';
 
       if (!ALLOWED_CANAL[canalVal]) {
         showFormMessage(form, getI18n('form.errorCanal'), true);
@@ -400,12 +400,6 @@
       if (pracaVal.length < 2) {
         showFormMessage(form, getI18n('form.errorCity'), true);
         praca.focus();
-        return;
-      }
-
-      if (!empresaVal) {
-        showFormMessage(form, getI18n('form.errorCompany'), true);
-        empresa.focus();
         return;
       }
 
@@ -421,7 +415,7 @@
         return;
       }
 
-      if (telefoneVal.length < 10 || telefoneVal.length > 11) {
+      if (telefoneVal && (telefoneVal.length < 10 || telefoneVal.length > 11)) {
         showFormMessage(form, getI18n('form.errorPhone'), true);
         telefone.focus();
         return;
@@ -444,10 +438,9 @@
         body = 'form-name=contato-comercial&' + body;
       }
 
-      var submitUrl = window.location.origin + (window.location.pathname || '/');
-      if (!submitUrl.endsWith('/') && !/\.[a-z0-9]+$/i.test(window.location.pathname)) {
-        submitUrl += '/';
-      }
+      // Netlify Forms recebe o POST na raiz do site; a partir de /negocios o
+      // caminho da pagina atual nao existe como endpoint.
+      var submitUrl = window.location.origin + '/';
 
       fetch(submitUrl, {
         method: 'POST',

@@ -10,16 +10,69 @@
 
   var translations = {
     pt: {
-      pageTitle: 'MyWeek | O rada cultural da sua cidade',
+      pageTitle: 'MyWeek | O radar cultural da sua cidade',
+      pageTitleBusiness: 'MyWeek para negócios | Seu evento na frente da cidade',
+      pageDescriptionBusiness: 'Coloque seu evento ou seu comércio na frente de quem já está na cidade. Você paga para aparecer, não pelo que vende. Peça a proposta da sua cidade.',
+      ogDescriptionBusiness: 'Visibilidade para eventos e comércio local. Zero porcentagem sobre a sua bilheteria.',
+      loop: {
+        title: 'Como a cidade gira no MyWeek',
+        lead: 'Um ciclo só, três lados ganhando.',
+        step1Title: 'O evento aparece',
+        step1Text: 'Quem produz cadastra a noite e ela entra na tela de quem está procurando o que fazer hoje, por perto e no estilo certo.',
+        step2Title: 'O público descobre',
+        step2Text: 'Filtra por lugar, data e gosto, marca Quero ir, vê se é porta, grátis ou link da bilheteria, e abre a rota.',
+        step3Title: 'O comércio do lado fatura',
+        step3Text: 'O bar, o restaurante ou o estacionamento perto do evento oferece um cupom para quem está indo — e recebe no próprio caixa.'
+      },
+      waitlist: {
+        badge: 'Em validação',
+        title: 'Seja um dos primeiros a usar.',
+        text: 'Estamos abrindo o MyWeek com um grupo inicial de usuários, cidade por cidade. Deixe seu e-mail e a gente avisa quando chegar na sua.',
+        emailLabel: 'Seu melhor e-mail',
+        cityLabel: 'Sua cidade',
+        submit: 'Quero ser avisado',
+        sending: 'Enviando...',
+        successTitle: 'Pronto, você está na lista.',
+        successText: 'A gente avisa assim que o MyWeek abrir na sua cidade. Sem spam, só o aviso do lançamento.',
+        errorEmail: 'Informe um e-mail para a gente avisar você.',
+        errorEmailInvalid: 'Esse e-mail parece inválido. Confira e tente de novo.',
+        errorCity: 'Informe a sua cidade.',
+        sendError: 'Não conseguimos enviar agora. Tente novamente em instantes.',
+        storesNote: 'App Store e Google Play em breve.',
+        privacy: 'Usamos seu e-mail só para avisar do lançamento.',
+        window: 'Validação com os primeiros usuários agora. Lançamento oficial entre dezembro de 2026 e fevereiro de 2027.'
+      },
+      bizHero: {
+        eyebrow: 'MyWeek para negócios',
+        title: 'Seu evento na frente de quem já está na cidade.',
+        subtitle: 'Você paga para aparecer, não pelo que vende. O ingresso, a porta e o caixa continuam seus.',
+        ctaPrimary: 'Pedir proposta da minha cidade',
+        ctaSecondary: 'Falar no WhatsApp',
+        backToApp: 'Ver o app do público'
+      },
+      transparency: {
+        title: 'O que a gente não faz',
+        lead: 'Combinado claro desde o começo, para não ter surpresa depois.',
+        item1Label: 'Não vendemos ingresso.',
+        item1Text: 'Zero porcentagem sobre a sua bilheteria. O botão Comprar abre o site oficial do evento.',
+        item2Label: 'Clique não é venda.',
+        item2Text: 'Mostramos o tráfego que enviamos. A conversão acontece na sua plataforma, e a gente diz isso no painel.',
+        item3Label: 'Não mexemos na sua operação.',
+        item3Text: 'Cobrança na porta, lista grátis ou link próprio: quem define é você. Nenhuma marca entra no app sem alinhamento.'
+      },
+      whatsapp: {
+        label: 'Falar no WhatsApp',
+        aria: 'Falar com o time comercial da MyWeek no WhatsApp'
+      },
       pageDescription: 'MyWeek mostra o que está acontecendo na sua cidade. Evento pequeno aparece. Comércio do lado ganha cupom. Show grande aponta para a bilheteria deles.',
       ogDescription: 'O ponto de encontro entre o evento e a cidade. Não somos uma tiqueteira, nem apenas um catálogo de descontos.',
       hero: {
         eyebrow: '',
         brand: 'MyWeek',
-        title: 'O app que conecta a cidade',
-        subtitle: 'Não somos apenas intermediários de vendas, nem apenas um catálogo de cupons. No nosso app, o público descobre o que fazer e os eventos da cidade giram: o evento pequeno aparece, o comércio vizinho lucra com quem passa, e o show grande ganha tráfego direto para o site oficial. Nós somos o radar cultural da sua cidade.',
-        ctaPrimary: 'Cadastrar minha cidade',
-        ctaSecondary: 'Ver para quem é',
+        title: 'O radar cultural da sua cidade.',
+        subtitle: 'Descubra o que está acontecendo hoje perto de você — e o desconto do comércio ao lado, no mesmo app.',
+        ctaPrimary: 'Entrar na lista de espera',
+        ctaSecondary: 'Como funciona',
         stackLabel: 'App My Week e painel web do organizador',
         deviceAlt: 'Feed do app My Week com eventos perto de você',
         logoAlt: 'Cupom e logo My Week no app',
@@ -42,8 +95,14 @@
         close: 'Fechar menu',
         businesses: 'Para negócios',
         producers: 'Para negócios',
-        features: 'App',
-        app: 'App',
+        features: 'O app',
+        app: 'O app',
+        howItWorks: 'Como funciona',
+        forPublic: 'Para o público',
+        organizer: 'Organizador',
+        partner: 'Comércio',
+        platform: 'Bilheteria',
+        waitlist: 'Lista de espera',
         pricing: 'Planos',
         about: 'Sobre',
         contact: 'Contato',
@@ -74,6 +133,7 @@
         platformCta: 'Conversar sobre o começo'
       },
       b2b: {
+        cta: 'Pedir proposta da minha cidade',
         title: 'O controle da sua noite volta para você.',
         lead: 'No nosso modelo, você paga pela visibilidade no app, não pelo seu sucesso. Nós cobramos para o evento aparecer, mas quem chega na porta é seu.',
         lead2: 'Entregamos um painel completo para você cadastrar a noite, gerar seus próprios cupons e acessar as métricas de quem se interessou. E o ingresso? Continua seu. Seja entrada física, lista VIP grátis ou o link que você colar. Nós trazemos o público, você dita as regras.',
@@ -231,7 +291,9 @@
         b2bPerEventDesc: 'Pagamento pontual e focado para destacar uma produção específica.',
         b2bProposal: 'Proposta da Cidade',
         b2bProposalDesc: 'Para grandes bilheterias e expansão, começamos com um piloto local e construímos o modelo de negócios lado a lado com você.',
-        b2bCta: 'Pedir proposta da cidade'
+        b2bCta: 'Pedir proposta da cidade',
+        businessNote: 'Tem um evento ou um comércio? O modelo comercial fica na página de negócios.',
+        businessLink: 'Ver planos para negócios'
       },
       about: {
         title: 'O ponto de encontro entre o evento e a cidade.',
@@ -257,7 +319,8 @@
       commercial: {
         title: 'Fale com a gente',
         lead: 'Peça a proposta da sua cidade.',
-        lead2: 'Diga se você faz o evento, tem um comércio perto ou é a bilheteria. A gente volta com o modelo — mensal ou por evento.'
+        lead2: 'Diga se você faz o evento, tem um comércio perto ou é a bilheteria. A gente volta com o modelo — mensal ou por evento.',
+        altText: 'Prefere conversar agora?'
       },
       form: {
         canalLabel: 'O que você faz',
@@ -266,9 +329,9 @@
         canalBoth: 'Os dois',
         canalPlatform: 'Bilheteria',
         cityLabel: 'Cidade',
-        companyLabel: 'Nome da Empresa',
+        companyLabel: 'Empresa ou nome do local (opcional)',
         emailLabel: 'E-mail',
-        phoneLabel: 'Celular (obrigatório para WhatsApp ou ligação)',
+        phoneLabel: 'Celular ou WhatsApp (opcional)',
         messageLabel: 'Mensagem (opcional)',
         submit: 'Enviar',
         sending: 'Enviando…',
@@ -277,7 +340,7 @@
         errorCompany: 'Informe o nome da empresa.',
         errorEmail: 'Informe o e-mail.',
         errorEmailInvalid: 'Informe um e-mail válido (ex.: nome@dominio.com).',
-        errorPhone: 'Informe o celular para contato por WhatsApp ou ligação (10 ou 11 dígitos).',
+        errorPhone: 'O celular precisa ter 10 ou 11 dígitos, ou pode ficar em branco.',
         successTitle: 'Recebemos. Vamos falar da sua cidade.',
         successText: 'Nossa equipe entra em contato em até 24 horas.',
         successHighlight: 'Prepare-se para aparecer na frente de quem já está saindo.',
@@ -304,15 +367,68 @@
     },
     en: {
       pageTitle: 'MyWeek | Your city’s cultural radar',
+      pageTitleBusiness: 'MyWeek for business | Your event in front of the city',
+      pageDescriptionBusiness: 'Put your event or your shop in front of people already in the city. You pay to be seen, not for what you sell. Ask for your city proposal.',
+      ogDescriptionBusiness: 'Visibility for events and local business. Zero percentage on your ticket sales.',
+      loop: {
+        title: 'How the city moves on MyWeek',
+        lead: 'One loop, three sides winning.',
+        step1Title: 'The event gets seen',
+        step1Text: 'Organizers post the night and it lands on the screen of people looking for something to do today, nearby and in the right style.',
+        step2Title: 'People discover it',
+        step2Text: 'Filter by place, date and taste, tap Going, see whether it is door, free or a ticketing link, and open the route.',
+        step3Title: 'The shop next door earns',
+        step3Text: 'The bar, the restaurant or the parking lot near the venue offers a coupon to people heading there — and gets paid at its own counter.'
+      },
+      waitlist: {
+        badge: 'In validation',
+        title: 'Be one of the first to use it.',
+        text: 'We are opening MyWeek with an initial group of users, city by city. Leave your email and we will tell you when it reaches yours.',
+        emailLabel: 'Your best email',
+        cityLabel: 'Your city',
+        submit: 'Notify me',
+        sending: 'Sending...',
+        successTitle: 'You are on the list.',
+        successText: 'We will reach out as soon as MyWeek opens in your city. No spam, just the launch notice.',
+        errorEmail: 'Please enter an email so we can reach you.',
+        errorEmailInvalid: 'That email looks invalid. Please check and try again.',
+        errorCity: 'Please enter your city.',
+        sendError: 'We could not send it right now. Please try again in a moment.',
+        storesNote: 'App Store and Google Play coming soon.',
+        privacy: 'We use your email only to announce the launch.',
+        window: 'Validation with our first users is open now. Official launch between December 2026 and February 2027.'
+      },
+      bizHero: {
+        eyebrow: 'MyWeek for business',
+        title: 'Your event in front of people already in the city.',
+        subtitle: 'You pay to be seen, not for what you sell. The ticket, the door and the register stay yours.',
+        ctaPrimary: 'Ask for my city proposal',
+        ctaSecondary: 'Chat on WhatsApp',
+        backToApp: 'See the consumer app'
+      },
+      transparency: {
+        title: 'What we do not do',
+        lead: 'Clear terms from the start, so there are no surprises later.',
+        item1Label: 'We do not sell tickets.',
+        item1Text: 'Zero percentage on your ticket sales. The Buy button opens the event\'s official site.',
+        item2Label: 'A click is not a sale.',
+        item2Text: 'We show the traffic we send. Conversion happens on your platform, and we say so on the dashboard.',
+        item3Label: 'We do not touch your operation.',
+        item3Text: 'Door price, free list or your own link: you decide. No brand goes into the app without alignment.'
+      },
+      whatsapp: {
+        label: 'Chat on WhatsApp',
+        aria: 'Chat with the MyWeek sales team on WhatsApp'
+      },
       pageDescription: 'MyWeek shows what’s happening in your city. Small events get seen. Shops next door get a coupon. Big shows point to their ticketing.',
       ogDescription: 'The meeting point between the event and the city. We’re not a ticket seller, nor just a discount catalog.',
       hero: {
         eyebrow: '',
         brand: 'MyWeek',
-        title: 'The app that connects the city',
-        subtitle: 'We’re not just a sales middleman, and we’re not just a coupon catalog. In our app, people find what to do and the city’s events start moving: the small event gets seen, the neighboring shop profits from people passing by, and the big show gets traffic straight to the official site. We’re your city’s cultural radar.',
-        ctaPrimary: 'Register my city',
-        ctaSecondary: 'See who it’s for',
+        title: 'Your city’s cultural radar.',
+        subtitle: 'Find what’s happening near you today — and the discount from the shop next door, in the same app.',
+        ctaPrimary: 'Join the waitlist',
+        ctaSecondary: 'How it works',
         stackLabel: 'My Week app and organizer web dashboard',
         deviceAlt: 'My Week app feed with events near you',
         logoAlt: 'My Week coupon and logo in the app',
@@ -335,6 +451,12 @@
         close: 'Close menu',
         businesses: 'For business',
         producers: 'For business',
+        howItWorks: 'How it works',
+        forPublic: 'For the public',
+        organizer: 'Organizer',
+        partner: 'Local business',
+        platform: 'Ticketing',
+        waitlist: 'Waitlist',
         features: 'App',
         app: 'App',
         pricing: 'Plans',
@@ -367,6 +489,7 @@
         platformCta: 'Talk about getting started'
       },
       b2b: {
+        cta: 'Ask for my city proposal',
         title: 'Control of your night comes back to you.',
         lead: 'In our model, you pay for visibility in the app, not for your success. We charge for the event to show up, but whoever arrives at the door is yours.',
         lead2: 'We give you a full dashboard to list the night, create your own coupons, and see metrics on who was interested. And the ticket? It stays yours. Physical entry, a free VIP list, or the link you paste. We bring the crowd, you set the rules.',
@@ -524,7 +647,9 @@
         b2bPerEventDesc: 'One-off, focused payment to spotlight a specific production.',
         b2bProposal: 'City Proposal',
         b2bProposalDesc: 'For large ticketing and expansion, we start with a local pilot and build the business model side by side with you.',
-        b2bCta: 'Ask for a city proposal'
+        b2bCta: 'Ask for a city proposal',
+        businessNote: 'Running an event or a shop? The commercial model lives on the business page.',
+        businessLink: 'See business plans'
       },
       about: {
         title: 'The meeting point between the event and the city.',
@@ -550,7 +675,8 @@
       commercial: {
         title: 'Talk to us',
         lead: 'Ask for a proposal for your city.',
-        lead2: 'Tell us if you throw the event, have a shop nearby, or are the box office. We’ll come back with the model — monthly or per event.'
+        lead2: 'Tell us if you throw the event, have a shop nearby, or are the box office. We’ll come back with the model — monthly or per event.',
+        altText: 'Rather talk right now?'
       },
       form: {
         canalLabel: 'What you do',
@@ -559,9 +685,9 @@
         canalBoth: 'Both',
         canalPlatform: 'Ticketing',
         cityLabel: 'City',
-        companyLabel: 'Company Name',
+        companyLabel: 'Company or venue name (optional)',
         emailLabel: 'Email',
-        phoneLabel: 'Mobile phone (required for WhatsApp or call)',
+        phoneLabel: 'Mobile or WhatsApp (optional)',
         messageLabel: 'Message (optional)',
         submit: 'Submit',
         sending: 'Sending…',
@@ -570,7 +696,7 @@
         errorCompany: 'Please enter the company name.',
         errorEmail: 'Please enter your email.',
         errorEmailInvalid: 'Please enter a valid email (e.g., name@domain.com).',
-        errorPhone: 'Please enter your phone number for WhatsApp or call (10 or 11 digits).',
+        errorPhone: 'The phone number needs 10 or 11 digits, or you can leave it blank.',
         successTitle: 'Got it. We’ll talk about your city.',
         successText: 'Our team will get back to you within 24 hours.',
         successHighlight: 'Get ready to show up in front of people already heading out.',
@@ -713,7 +839,8 @@
 
     document.documentElement.classList.remove('i18n-wait');
 
-    var pageTitle = get('pageTitle');
+    var titleKey = document.documentElement.getAttribute('data-title-key') || 'pageTitle';
+    var pageTitle = get(titleKey);
     if (pageTitle) document.title = pageTitle;
 
     if (lang === 'en') {
@@ -781,7 +908,7 @@
     ptBtn.setAttribute('data-lang', 'pt');
     ptBtn.setAttribute('aria-label', 'Português');
     ptBtn.setAttribute('aria-pressed', currentLang === 'pt' ? 'true' : 'false');
-    ptBtn.innerHTML = '<span class="lang-switcher__flag lang-switcher__flag--br" aria-hidden="true"><img src="assets/images/icons8-brazil-30.png" width="30" height="30" alt="" decoding="async"></span>';
+    ptBtn.innerHTML = '<span class="lang-switcher__flag lang-switcher__flag--br" aria-hidden="true"><img src="/assets/images/icons8-brazil-30.png" width="30" height="30" alt="" decoding="async"></span>';
 
     var enBtn = document.createElement('button');
     enBtn.type = 'button';
@@ -789,7 +916,7 @@
     enBtn.setAttribute('data-lang', 'en');
     enBtn.setAttribute('aria-label', 'English');
     enBtn.setAttribute('aria-pressed', currentLang === 'en' ? 'true' : 'false');
-    enBtn.innerHTML = '<span class="lang-switcher__flag lang-switcher__flag--us" aria-hidden="true"><img src="assets/images/icons8-usa-30.png" width="30" height="30" alt="" decoding="async"></span>';
+    enBtn.innerHTML = '<span class="lang-switcher__flag lang-switcher__flag--us" aria-hidden="true"><img src="/assets/images/icons8-usa-30.png" width="30" height="30" alt="" decoding="async"></span>';
 
     wrap.appendChild(ptBtn);
     wrap.appendChild(enBtn);

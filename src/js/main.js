@@ -6,6 +6,7 @@
 
   var CONFIG = {
     loginUrl: 'https://dashboard.myweekoficial.com.br/login',
+    whatsappUrl: 'https://wa.me/5571993184341',
     storeUrls: {
       ios: null,
       android: null
@@ -182,17 +183,37 @@
         if (url) {
           return;
         }
+        // App ainda nao publicado: em vez de um alert sem saida, leva para a
+        // lista de espera e foca o campo de e-mail.
         e.preventDefault();
-        var msg = (window.MyWeek && window.MyWeek.i18n && window.MyWeek.i18n.get)
-          ? window.MyWeek.i18n.get('download.comingSoon')
-          : 'Em breve';
-        alert(msg);
+        var target = document.getElementById('lista-espera');
+        if (!target) return;
+        target.scrollIntoView({ behavior: 'smooth', block: 'center' });
+        var emailField = target.querySelector('[name="email"]');
+        if (emailField) {
+          window.setTimeout(function () {
+            try { emailField.focus({ preventScroll: true }); } catch (err) { emailField.focus(); }
+          }, 600);
+        }
       });
     });
   }
 
+  function initWhatsappLinks() {
+    if (!CONFIG.whatsappUrl) return;
+    document.querySelectorAll('.js-whatsapp-url').forEach(function (el) {
+      el.setAttribute('href', CONFIG.whatsappUrl);
+      el.setAttribute('target', '_blank');
+      el.setAttribute('rel', 'noopener noreferrer');
+    });
+  }
+
+  window.MyWeek = window.MyWeek || {};
+  window.MyWeek.whatsappUrl = CONFIG.whatsappUrl;
+
   document.addEventListener('DOMContentLoaded', function () {
     initNavToggle();
+    initWhatsappLinks();
     initHeroVideo();
     initHeaderScroll();
     initActiveLink();
