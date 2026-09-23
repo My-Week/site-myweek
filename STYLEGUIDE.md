@@ -68,6 +68,7 @@ Títulos usam gradiente metálico e brilho:
   - Box-shadow reforçada: `0 8px 32px var(--glow-primary)`, borda `0 0 0 1px var(--primary-vibrant)` e --btn-glow-hover.
 - **Botão “pronto” (validação):** gradiente para Electric Cyan (#06b6d4) e animação de pulso (contact-submit-pulse).
 - Transição: `0.25s cubic-bezier(0.25, 0.46, 0.45, 0.94)` para transform e box-shadow.
+- **Header:** só um botão em gradiente por página, que é o CTA dela (`.nav__cta`). O login (`.nav__login`) é botão secundário, com fundo e borda próprios em vez de cor de texto apenas — assim ele continua visível como botão mesmo se a cor do texto falhar.
 
 ### Cards
 
