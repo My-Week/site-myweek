@@ -109,8 +109,15 @@ exclusão de conta e dados, com link no rodapé de todas as páginas. Reaproveit
 Netlify `exclusao-dados` em `src/js/deletion.js`. Não usa `data-reveal`: o conteúdo precisa aparecer
 mesmo sem JS.
 
-Cada página carrega só o JS que usa. `negocios.html` e `excluir-conta.html` declaram
-`data-title-key` (`pageTitleBusiness`, `pageTitleDeletion`) no `<html>` para o i18n trocar o `<title>` certo.
+**`privacidade.html` (`/privacidade`)** é a Política de Privacidade informada nas lojas, também com link
+no rodapé de todas as páginas. O texto é só em português (`lang="pt-BR"` no `<main>`); cabeçalho e
+rodapé seguem o i18n. Estilos em `src/css/privacy.css`: índice fixo ao lado no desktop e tabelas que
+viram cartões no celular (rótulo em `data-label`). Também sem `data-reveal`. Ao mudar o texto,
+atualize a versão no topo da página e `PRIVACY_VERSION` no app (`features/onboarding/constants.ts`).
+
+Cada página carrega só o JS que usa. `negocios.html`, `excluir-conta.html` e `privacidade.html` declaram
+`data-title-key` (`pageTitleBusiness`, `pageTitleDeletion`, `pageTitlePrivacy`) no `<html>` para o i18n
+trocar o `<title>` certo.
 Estilos das seções da reestruturação ficam em `src/css/restructure.css`.
 
 ---

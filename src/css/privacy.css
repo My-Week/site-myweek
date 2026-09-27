@@ -1,0 +1,322 @@
+/* ============================================
+   MyWeek - Política de Privacidade (/privacidade)
+   Texto longo: índice fixo ao lado no desktop e tabelas que viram
+   cartões no celular. Tokens de variables.css: dark e light.
+   ============================================ */
+
+/* ---------- Abertura ---------- */
+.privacy {
+  padding: var(--space-3xl) 0 var(--section-padding-y);
+}
+
+@media (min-width: 1024px) {
+  .privacy {
+    padding-top: var(--space-4xl);
+  }
+}
+
+.privacy__intro {
+  max-width: 46rem;
+  margin: 0 auto var(--space-3xl);
+  text-align: center;
+}
+
+/* Mesmo eyebrow de /excluir-conta (.deletion__eyebrow) */
+.privacy__eyebrow {
+  margin-bottom: var(--space-md);
+  font-size: 0.75rem;
+  font-weight: 600;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--primary-text-mobile);
+}
+
+.privacy__title {
+  font-size: clamp(2rem, 4.5vw, 3.25rem);
+}
+
+.privacy__lead {
+  max-width: 38rem;
+  margin: 0 auto var(--space-md);
+  font-size: 1.05rem;
+  line-height: 1.75;
+  color: var(--text-low);
+}
+
+.privacy__meta {
+  font-size: 0.8125rem;
+  color: var(--text-muted);
+}
+
+/* ---------- Índice + texto ---------- */
+.privacy__layout {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr);
+  gap: var(--space-2xl);
+  max-width: 68rem;
+  margin: 0 auto;
+}
+
+@media (min-width: 1024px) {
+  .privacy__layout {
+    grid-template-columns: 15rem minmax(0, 1fr);
+    gap: var(--space-3xl);
+    align-items: start;
+  }
+}
+
+.privacy-toc {
+  padding: var(--space-lg);
+  border: var(--border-definition);
+  border-radius: var(--radius-lg);
+  background: var(--glass-bg-subtle);
+}
+
+@media (min-width: 1024px) {
+  .privacy-toc {
+    position: sticky;
+    top: 6.5rem;
+    max-height: calc(100vh - 8rem);
+    overflow-y: auto;
+  }
+}
+
+.privacy-toc__title {
+  margin-bottom: var(--space-sm);
+  font-size: 0.75rem;
+  font-weight: 600;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--text-muted);
+}
+
+.privacy-toc__list {
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.privacy-toc__link {
+  font-size: 0.875rem;
+  line-height: 1.5;
+  color: var(--text-low);
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+.privacy-toc__link:hover,
+.privacy-toc__link:focus-visible {
+  color: var(--primary-text-mobile);
+}
+
+.privacy__content {
+  min-width: 0;
+  max-width: 46rem;
+}
+
+/* ---------- Resumo ---------- */
+/* Mesma pele dos cartões de /excluir-conta (.deletion-data__card) */
+.privacy-summary {
+  padding: var(--space-xl);
+  border-left: 2px solid rgba(124, 58, 237, 0.4);
+  border-radius: 0 var(--radius-md) var(--radius-md) 0;
+  background: var(--glass-bg-subtle);
+}
+
+.privacy-summary__title {
+  margin-bottom: var(--space-md);
+  font-family: var(--font-family-heading);
+  font-size: 1.15rem;
+  font-weight: 700;
+  color: var(--text-high);
+}
+
+/* ---------- Seções ---------- */
+.privacy-section {
+  margin-top: var(--space-2xl);
+  padding-top: var(--space-2xl);
+  border-top: 1px solid var(--border-subtle);
+  scroll-margin-top: 6rem;
+}
+
+.privacy-section__title {
+  font-size: clamp(1.35rem, 2.4vw, 1.75rem);
+  margin-bottom: var(--space-md);
+}
+
+.privacy-section__subtitle {
+  margin: var(--space-xl) 0 var(--space-sm);
+  font-family: var(--font-family-heading);
+  font-size: 1.1rem;
+  font-weight: 700;
+  line-height: 1.4;
+  color: var(--text-high);
+}
+
+.privacy-section p {
+  font-size: 0.975rem;
+  line-height: 1.75;
+  color: var(--text-low);
+}
+
+.privacy-section p + p,
+.privacy-section p + .privacy-list,
+.privacy-list + p {
+  margin-top: var(--space-md);
+}
+
+.privacy-section a,
+.privacy-summary a {
+  color: var(--primary-text-mobile);
+  text-decoration: underline;
+  text-underline-offset: 3px;
+  overflow-wrap: anywhere;
+}
+
+.privacy-section strong,
+.privacy-summary strong {
+  font-weight: 600;
+  color: var(--text-high);
+}
+
+/* Lista com o ponto roxo de /excluir-conta (.deletion-data__item) */
+.privacy-list {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-sm);
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.privacy-list__item {
+  position: relative;
+  padding-left: 1.25rem;
+  font-size: 0.975rem;
+  line-height: 1.75;
+  color: var(--text-low);
+}
+
+.privacy-list__item::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0.7em;
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: var(--primary-vibrant);
+}
+
+/* ---------- Tabelas ---------- */
+.privacy-table {
+  width: 100%;
+  margin-top: var(--space-md);
+  border-collapse: collapse;
+  font-size: 0.9rem;
+  line-height: 1.6;
+}
+
+.privacy-table th {
+  padding: 0.75rem;
+  border-bottom: 1px solid var(--border-subtle);
+  background: var(--glass-bg-subtle);
+  font-weight: 600;
+  text-align: left;
+  vertical-align: bottom;
+  color: var(--text-high);
+}
+
+.privacy-table td {
+  padding: 0.75rem;
+  border-bottom: 1px solid var(--border-subtle);
+  vertical-align: top;
+  color: var(--text-low);
+}
+
+.privacy-table td:first-child {
+  color: var(--text-high);
+}
+
+/* No celular cada linha vira um cartão; o rótulo da coluna vem de data-label. */
+@media (max-width: 767px) {
+  .privacy-table thead {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+    clip: rect(0 0 0 0);
+    white-space: nowrap;
+  }
+
+  .privacy-table,
+  .privacy-table tbody,
+  .privacy-table tr,
+  .privacy-table td {
+    display: block;
+    width: 100%;
+  }
+
+  .privacy-table tr {
+    margin-bottom: var(--space-md);
+    padding: var(--space-md);
+    border: var(--border-definition);
+    border-radius: var(--radius-md);
+    background: var(--glass-bg-subtle);
+  }
+
+  .privacy-table td {
+    padding: 0.2rem 0;
+    border: 0;
+  }
+
+  .privacy-table td + td {
+    margin-top: var(--space-sm);
+  }
+
+  .privacy-table td::before {
+    content: attr(data-label);
+    display: block;
+    font-size: 0.7rem;
+    font-weight: 600;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: var(--text-muted);
+  }
+}
+
+/* ---------- Contato ---------- */
+.privacy-contact {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr);
+  gap: var(--space-md);
+  margin: var(--space-md) 0 0;
+}
+
+.privacy-contact__term {
+  font-size: 0.75rem;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--text-muted);
+}
+
+.privacy-contact__value {
+  margin: 0.15rem 0 0;
+  font-size: 0.975rem;
+  line-height: 1.7;
+  color: var(--text-low);
+}
+
+/* Dado que só a empresa pode preencher. Nenhum pode sobrar na versão publicada. */
+.privacy-placeholder {
+  padding: 0 0.3em;
+  border-radius: var(--radius-sm);
+  outline: 1px dashed rgba(250, 204, 21, 0.75);
+  background: rgba(250, 204, 21, 0.18);
+  font-weight: 600;
+  color: var(--text-high);
+}

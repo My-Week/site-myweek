@@ -16,6 +16,8 @@
       ogDescriptionBusiness: 'Visibilidade para eventos e comércio local. Zero porcentagem sobre a sua bilheteria.',
       pageTitleDeletion: 'MyWeek | Excluir conta e dados',
       pageDescriptionDeletion: 'Peça a exclusão da sua conta no app MyWeek e dos dados ligados a ela, sem abrir o app. Veja o que é excluído e o que fica guardado.',
+      pageTitlePrivacy: 'MyWeek | Política de Privacidade',
+      pageDescriptionPrivacy: 'Como o MyWeek coleta, usa, compartilha e protege seus dados pessoais no app e no site, e como exercer seus direitos pela LGPD.',
       loop: {
         title: 'Como a cidade gira no MyWeek',
         lead: 'Um ciclo só, três lados ganhando.',
@@ -400,6 +402,7 @@
       footer: {
         copy: '© 2026 MyWeek',
         credit: 'Desenvolvido por Aeon SoftHouse',
+        privacy: 'Política de Privacidade',
         deleteAccount: 'Excluir conta e dados'
       },
     },
@@ -410,6 +413,8 @@
       ogDescriptionBusiness: 'Visibility for events and local business. Zero percentage on your ticket sales.',
       pageTitleDeletion: 'MyWeek | Delete account and data',
       pageDescriptionDeletion: 'Request deletion of your MyWeek app account and the data linked to it, without opening the app. See what is deleted and what is kept.',
+      pageTitlePrivacy: 'MyWeek | Privacy Policy',
+      pageDescriptionPrivacy: 'How MyWeek collects, uses, shares and protects your personal data in the app and on the website. The policy is in Portuguese.',
       loop: {
         title: 'How the city moves on MyWeek',
         lead: 'One loop, three sides winning.',
@@ -794,6 +799,7 @@
       footer: {
         copy: '© 2026 MyWeek',
         credit: 'Developed by Aeon SoftHouse',
+        privacy: 'Privacy Policy',
         deleteAccount: 'Delete account and data'
       },
     }

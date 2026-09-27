@@ -1,0 +1,1180 @@
+<!doctype html>
+<html lang="pt-BR" data-theme="dark" data-title-key="pageTitlePrivacy">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Como o MyWeek coleta, usa, compartilha e protege seus dados pessoais no app e no site, e como exercer seus direitos pela LGPD."
+      data-i18n-content="pageDescriptionPrivacy"
+    />
+    <meta property="og:type" content="website" />
+    <meta
+      property="og:title"
+      content="MyWeek | Política de Privacidade"
+      data-i18n-content="pageTitlePrivacy"
+    />
+    <meta
+      property="og:description"
+      content="Como o MyWeek coleta, usa, compartilha e protege seus dados pessoais no app e no site, e como exercer seus direitos pela LGPD."
+      data-i18n-content="pageDescriptionPrivacy"
+    />
+    <meta property="og:locale" content="pt_BR" />
+    <link rel="canonical" href="https://myweekoficial.com.br/privacidade" />
+    <title>MyWeek | Política de Privacidade</title>
+    <link
+      rel="icon"
+      type="image/svg+xml"
+      href="/assets/images/logo-myweek.svg"
+    />
+    <link rel="apple-touch-icon" href="/assets/images/logo-myweek.svg" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Outfit:wght@300;400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="/src/css/main.css?v=restruct-v2" />
+    <link rel="stylesheet" href="/src/css/ultrawide.css?v=restruct-v2" />
+    <link rel="stylesheet" href="/src/css/restructure.css?v=restruct-v2" />
+    <link rel="stylesheet" href="/src/css/privacy.css?v=privacidade-v1" />
+    <script>
+      (function () {
+        var key = 'myweek_lang';
+        var stored;
+        try {
+          stored = localStorage.getItem(key);
+        } catch (e) {}
+        var lang =
+          stored === 'en' || stored === 'pt'
+            ? stored
+            : (function () {
+                try {
+                  var n = (
+                    typeof navigator !== 'undefined' && navigator.language
+                      ? navigator.language
+                      : ''
+                  ).toLowerCase();
+                  return n.indexOf('pt') === 0 ? 'pt' : 'en';
+                } catch (e) {
+                  return 'en';
+                }
+              })();
+        window.__MYWEEK_LANG = lang;
+        document.documentElement.lang = lang === 'en' ? 'en' : 'pt-BR';
+        if (lang === 'en') document.documentElement.classList.add('i18n-wait');
+      })();
+    </script>
+    <script>
+      (function () {
+        try {
+          var t = localStorage.getItem('myweek_theme');
+          document.documentElement.setAttribute(
+            'data-theme',
+            t === 'light' || t === 'dark' ? t : 'dark',
+          );
+        } catch (e) {}
+      })();
+    </script>
+  </head>
+  <body>
+    <div class="layout">
+      <!-- ========== Header / Navegação ========== -->
+      <header class="header">
+        <div class="container">
+          <a href="/" class="logo" aria-label="MyWeek - Página inicial">
+            <img
+              src="/assets/images/logo-myweek.svg"
+              alt="Logo MyWeek"
+              class="logo__icon"
+              width="38"
+              height="38"
+            />
+            <div class="logo-wrapper">
+              <span class="logo__text">My Week</span>
+            </div>
+          </a>
+          <nav
+            class="nav"
+            aria-label="Navegação principal"
+            data-i18n-aria-label="nav.mainLabel"
+          >
+            <button
+              type="button"
+              class="nav-close"
+              data-i18n-aria-label="nav.close"
+              data-i18n-title="nav.close"
+              aria-label="Fechar menu"
+              title="Fechar menu"
+            >
+              ✕
+            </button>
+            <a href="/" data-i18n="nav.forPublic">Para o público</a>
+            <a href="/negocios" data-i18n="nav.businesses">Para negócios</a>
+
+            <a
+              href="#"
+              class="btn nav__login js-login-url"
+              data-i18n="nav.login"
+              data-i18n-aria-label="nav.loginAria"
+              aria-label="Acessar login MyWeek"
+              >Login</a
+            >
+          </nav>
+          <div class="nav-backdrop" aria-hidden="true"></div>
+          <button
+            type="button"
+            class="nav-toggle"
+            data-i18n-aria-label="nav.open"
+            aria-label="Abrir menu"
+            aria-expanded="false"
+          >
+            <span></span>
+            <span></span>
+            <span></span>
+          </button>
+        </div>
+      </header>
+
+      <!-- Texto só em português: lang fixo para leitores de tela mesmo com o site em inglês. -->
+      <main class="main" lang="pt-BR">
+        <!-- ========== Política de Privacidade ==========
+           URL informada na Google Play e na App Store. Sem data-reveal: o texto
+           não pode depender de JS para aparecer. Ao mudar o texto, atualize a
+           versão abaixo e PRIVACY_VERSION no app (features/onboarding/constants.ts). -->
+        <article class="privacy" id="top">
+          <div class="container">
+            <header class="privacy__intro">
+              <p class="privacy__eyebrow">Privacidade e dados</p>
+              <h1 class="privacy__title">Política de Privacidade</h1>
+              <p class="privacy__lead">
+                Como o MyWeek coleta, usa, compartilha e protege os seus dados
+                pessoais no app e no site, e como você controla tudo isso.
+              </p>
+              <p class="privacy__meta">
+                Versão 2026-09-27 · Última atualização: 27 de setembro de 2026
+              </p>
+            </header>
+
+            <div class="privacy__layout">
+              <nav class="privacy-toc" aria-labelledby="privacy-toc-title">
+                <p class="privacy-toc__title" id="privacy-toc-title">
+                  Nesta página
+                </p>
+                <ol class="privacy-toc__list">
+                  <li>
+                    <a class="privacy-toc__link" href="#quem-somos"
+                      >1. Quem somos</a
+                    >
+                  </li>
+                  <li>
+                    <a class="privacy-toc__link" href="#dados"
+                      >2. Quais dados coletamos</a
+                    >
+                  </li>
+                  <li>
+                    <a class="privacy-toc__link" href="#finalidades"
+                      >3. Para que usamos seus dados</a
+                    >
+                  </li>
+                  <li>
+                    <a class="privacy-toc__link" href="#compartilhamento"
+                      >4. Com quem compartilhamos</a
+                    >
+                  </li>
+                  <li>
+                    <a class="privacy-toc__link" href="#inteligencia-artificial"
+                      >5. Inteligência artificial no Concierge</a
+                    >
+                  </li>
+                  <li>
+                    <a class="privacy-toc__link" href="#transferencia"
+                      >6. Transferência internacional</a
+                    >
+                  </li>
+                  <li>
+                    <a class="privacy-toc__link" href="#retencao"
+                      >7. Por quanto tempo guardamos</a
+                    >
+                  </li>
+                  <li>
+                    <a class="privacy-toc__link" href="#direitos"
+                      >8. Seus direitos</a
+                    >
+                  </li>
+                  <li>
+                    <a class="privacy-toc__link" href="#seguranca"
+                      >9. Segurança</a
+                    >
+                  </li>
+                  <li>
+                    <a class="privacy-toc__link" href="#permissoes"
+                      >10. Permissões do aparelho</a
+                    >
+                  </li>
+                  <li>
+                    <a class="privacy-toc__link" href="#menores"
+                      >11. Crianças e adolescentes</a
+                    >
+                  </li>
+                  <li>
+                    <a class="privacy-toc__link" href="#cookies"
+                      >12. Cookies e armazenamento no navegador</a
+                    >
+                  </li>
+                  <li>
+                    <a class="privacy-toc__link" href="#alteracoes"
+                      >13. Mudanças nesta política</a
+                    >
+                  </li>
+                </ol>
+              </nav>
+
+              <div class="privacy__content">
+                <section
+                  class="privacy-summary"
+                  aria-labelledby="privacy-summary-title"
+                >
+                  <h2 class="privacy-summary__title" id="privacy-summary-title">
+                    Em resumo
+                  </h2>
+                  <ul class="privacy-list">
+                    <li class="privacy-list__item">
+                      <strong>O que usamos:</strong> dados da sua conta Google
+                      ou Apple, sua localização (com a sua permissão), seus
+                      gostos e o que você marca no app, para mostrar eventos
+                      perto de você.
+                    </li>
+                    <li class="privacy-list__item">
+                      <strong>O que não fazemos:</strong> não vendemos seus
+                      dados e não os usamos para publicidade de terceiros.
+                    </li>
+                    <li class="privacy-list__item">
+                      <strong>Organizadores e parceiros:</strong> veem só
+                      números agregados, sem nada que identifique você.
+                    </li>
+                    <li class="privacy-list__item">
+                      <strong>Localização:</strong> guardamos o local do
+                      cadastro e o último usado nos filtros, não um histórico.
+                    </li>
+                    <li class="privacy-list__item">
+                      <strong>Concierge:</strong> as perguntas passam por
+                      serviços de inteligência artificial, sem o seu nome,
+                      e-mail ou coordenadas.
+                    </li>
+                    <li class="privacy-list__item">
+                      <strong>Você no controle:</strong> acesse, corrija ou
+                      exclua seus dados quando quiser. A exclusão da conta pode
+                      ser pedida em
+                      <a href="/excluir-conta"
+                        >myweekoficial.com.br/excluir-conta</a
+                      >.
+                    </li>
+                  </ul>
+                </section>
+
+                <!-- 1 -->
+                <section
+                  class="privacy-section"
+                  id="quem-somos"
+                  aria-labelledby="quem-somos-title"
+                >
+                  <h2 class="privacy-section__title" id="quem-somos-title">
+                    1. Quem somos
+                  </h2>
+                  <p>
+                    O MyWeek é um app para descobrir eventos e benefícios perto
+                    de você. Esta política explica como tratamos dados pessoais
+                    no <strong>app MyWeek</strong> (Android e iOS) e no
+                    <strong>site myweekoficial.com.br</strong>, de acordo com a
+                    Lei Geral de Proteção de Dados (LGPD, Lei nº 13.709/2018) e
+                    o Marco Civil da Internet (Lei nº 12.965/2014).
+                  </p>
+                  <p>
+                    O controlador dos seus dados, quem decide como eles são
+                    tratados, é
+                    <mark class="privacy-placeholder">[RAZÃO SOCIAL]</mark>,
+                    inscrita no CNPJ sob o nº
+                    <mark class="privacy-placeholder">[CNPJ]</mark>, com sede em
+                    <mark class="privacy-placeholder">[ENDEREÇO COMPLETO]</mark>
+                    (“MyWeek” ou “nós”).
+                  </p>
+                  <p>
+                    Esta política complementa os Termos de Uso do MyWeek. Os
+                    dados das contas profissionais de organizadores e parceiros
+                    no painel MyWeek para negócios seguem o contrato e os termos
+                    desse serviço.
+                  </p>
+                </section>
+
+                <!-- 2 -->
+                <section
+                  class="privacy-section"
+                  id="dados"
+                  aria-labelledby="dados-title"
+                >
+                  <h2 class="privacy-section__title" id="dados-title">
+                    2. Quais dados coletamos
+                  </h2>
+
+                  <h3 class="privacy-section__subtitle">
+                    2.1 Dados que você nos informa
+                  </h3>
+                  <ul class="privacy-list">
+                    <li class="privacy-list__item">
+                      <strong>Conta:</strong> nome, e-mail e o identificador da
+                      sua conta Google ou Apple, usados para você entrar no app.
+                      No iPhone, a Apple permite ocultar seu e-mail; nesse caso,
+                      recebemos um endereço de encaminhamento criado por ela.
+                    </li>
+                    <li class="privacy-list__item">
+                      <strong>Perfil:</strong> nome de exibição, foto de perfil
+                      (opcional) e telefone (opcional).
+                    </li>
+                    <li class="privacy-list__item">
+                      <strong>Preferências:</strong> estilos de evento, raio de
+                      busca, cidade escolhida no filtro de localização (Premium)
+                      e se você aparece em “Quem vai”.
+                    </li>
+                    <li class="privacy-list__item">
+                      <strong>Consentimentos:</strong> o aceite dos Termos de
+                      Uso e desta política, com data e versão, e suas escolhas
+                      sobre receber novidades por e-mail e por SMS.
+                    </li>
+                    <li class="privacy-list__item">
+                      <strong>Assinatura Premium:</strong> CPF, forma de
+                      pagamento (PIX, cartão de crédito ou de débito) e situação
+                      da assinatura. Os dados do cartão são digitados na página
+                      do Asaas, nosso provedor de pagamentos: o MyWeek não
+                      recebe nem guarda o número do seu cartão.
+                    </li>
+                    <li class="privacy-list__item">
+                      <strong>Concierge:</strong> as perguntas que você escreve,
+                      as respostas que o app gera e as avaliações que você dá a
+                      elas.
+                    </li>
+                    <li class="privacy-list__item">
+                      <strong>Formulários do site:</strong> e-mail e cidade na
+                      lista de espera; empresa, cidade, e-mail, telefone e
+                      mensagem no contato comercial; e-mail, tipo de pedido e
+                      mensagem no pedido de exclusão.
+                    </li>
+                  </ul>
+
+                  <h3 class="privacy-section__subtitle">
+                    2.2 Dados coletados quando você usa o app
+                  </h3>
+                  <ul class="privacy-list">
+                    <li class="privacy-list__item">
+                      <strong>Localização:</strong> com a sua permissão, a
+                      localização precisa do aparelho (GPS), só enquanto o app
+                      está em uso. Guardamos o local informado no cadastro e o
+                      último local usado nos filtros, com a precisão e o horário
+                      da leitura, e a cidade e o estado correspondentes. Não
+                      guardamos histórico dos lugares por onde você passa.
+                    </li>
+                    <li class="privacy-list__item">
+                      <strong>Atividade no app:</strong> eventos que você marca
+                      como Quero ir, toques no link de ingressos, códigos de
+                      cupom copiados e notificações lidas.
+                    </li>
+                    <li class="privacy-list__item">
+                      <strong>Aparelho:</strong> o fuso horário e um
+                      identificador para enviar notificações, ligado à sua
+                      conta. O OneSignal, serviço que entrega as notificações,
+                      também recebe dados técnicos do aparelho, como modelo,
+                      sistema operacional, idioma e endereço IP.
+                    </li>
+                    <li class="privacy-list__item">
+                      <strong>Registros de acesso:</strong> endereço IP, data e
+                      hora de cada acesso aos nossos servidores.
+                    </li>
+                  </ul>
+
+                  <h3 class="privacy-section__subtitle">
+                    2.3 Dados que ficam só no seu aparelho
+                  </h3>
+                  <ul class="privacy-list">
+                    <li class="privacy-list__item">
+                      <strong>Google Agenda (opcional):</strong> se você ativar
+                      a sincronização, o app pede ao Google permissão para
+                      gerenciar eventos da sua agenda e lê o e-mail da conta
+                      Google usada. A autorização fica no armazenamento seguro
+                      do aparelho. O app usa essa permissão só para criar e
+                      remover na sua agenda os eventos que você marca no MyWeek
+                      e para encontrar os que ele mesmo criou. Não lemos seus
+                      outros compromissos, e nada disso passa pelos nossos
+                      servidores.
+                    </li>
+                    <li class="privacy-list__item">
+                      <strong>Fotos:</strong> ao trocar a foto de perfil, o app
+                      recebe só a imagem que você escolher na galeria.
+                    </li>
+                    <li class="privacy-list__item">
+                      <strong>Sessão:</strong> as chaves de acesso à sua conta
+                      ficam no armazenamento seguro do aparelho.
+                    </li>
+                  </ul>
+                  <p>
+                    O uso de informações recebidas das APIs do Google segue a
+                    <a
+                      href="https://developers.google.com/terms/api-services-user-data-policy"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      >Política de Dados do Usuário dos Serviços de API do
+                      Google</a
+                    >, incluindo os requisitos de Uso Limitado.
+                  </p>
+
+                  <h3 class="privacy-section__subtitle">
+                    2.4 O que não coletamos
+                  </h3>
+                  <p>
+                    Não acessamos seus contatos, mensagens, arquivos ou dados de
+                    saúde e não pedimos dados sensíveis, como origem racial,
+                    religião ou opinião política. Não usamos seus dados para
+                    publicidade de terceiros e não vendemos dados pessoais.
+                  </p>
+                </section>
+
+                <!-- 3 -->
+                <section
+                  class="privacy-section"
+                  id="finalidades"
+                  aria-labelledby="finalidades-title"
+                >
+                  <h2 class="privacy-section__title" id="finalidades-title">
+                    3. Para que usamos seus dados
+                  </h2>
+                  <p>
+                    Só tratamos dados pessoais com uma base legal prevista na
+                    LGPD (art. 7º). A tabela mostra cada finalidade, os dados
+                    usados e a base legal.
+                  </p>
+                  <table class="privacy-table">
+                    <thead>
+                      <tr>
+                        <th scope="col">Para quê</th>
+                        <th scope="col">Dados usados</th>
+                        <th scope="col">Base legal</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <td data-label="Para quê">
+                          Criar sua conta, fazer login e manter você conectado
+                        </td>
+                        <td data-label="Dados usados">
+                          Nome, e-mail, identificador Google ou Apple, registros
+                          de acesso
+                        </td>
+                        <td data-label="Base legal">
+                          Execução de contrato (art. 7º, V)
+                        </td>
+                      </tr>
+                      <tr>
+                        <td data-label="Para quê">
+                          Mostrar eventos perto de você e aplicar os filtros de
+                          lugar, data e estilo
+                        </td>
+                        <td data-label="Dados usados">
+                          Localização, cidade, raio de busca, preferências
+                        </td>
+                        <td data-label="Base legal">
+                          Execução de contrato (art. 7º, V); o GPS depende da
+                          permissão que você dá no aparelho
+                        </td>
+                      </tr>
+                      <tr>
+                        <td data-label="Para quê">
+                          Personalizar o feed e as sugestões
+                        </td>
+                        <td data-label="Dados usados">
+                          Preferências, eventos marcados como Quero ir
+                        </td>
+                        <td data-label="Base legal">
+                          Execução de contrato (art. 7º, V)
+                        </td>
+                      </tr>
+                      <tr>
+                        <td data-label="Para quê">
+                          Responder suas perguntas no Concierge
+                        </td>
+                        <td data-label="Dados usados">
+                          Perguntas, histórico da conversa, distância até os
+                          eventos sugeridos
+                        </td>
+                        <td data-label="Base legal">
+                          Execução de contrato (art. 7º, V)
+                        </td>
+                      </tr>
+                      <tr>
+                        <td data-label="Para quê">
+                          Enviar notificações: lembrete na véspera dos eventos
+                          marcados, aviso de cancelamento e novidades perto de
+                          você
+                        </td>
+                        <td data-label="Dados usados">
+                          Identificador de notificações, eventos marcados,
+                          localização e cidade
+                        </td>
+                        <td data-label="Base legal">
+                          Consentimento (art. 7º, I), dado pela permissão de
+                          notificações do aparelho
+                        </td>
+                      </tr>
+                      <tr>
+                        <td data-label="Para quê">
+                          Enviar novidades por e-mail e SMS, se você autorizar
+                        </td>
+                        <td data-label="Dados usados">E-mail, telefone</td>
+                        <td data-label="Base legal">
+                          Consentimento (art. 7º, I)
+                        </td>
+                      </tr>
+                      <tr>
+                        <td data-label="Para quê">
+                          Mostrar sua foto em “Quem vai” para quem também vai ao
+                          evento
+                        </td>
+                        <td data-label="Dados usados">
+                          Foto de perfil, eventos marcados como Quero ir
+                        </td>
+                        <td data-label="Base legal">
+                          Legítimo interesse (art. 7º, IX), com aviso no app e
+                          opção de sair a qualquer momento
+                        </td>
+                      </tr>
+                      <tr>
+                        <td data-label="Para quê">
+                          Cobrar e gerenciar a assinatura Premium
+                        </td>
+                        <td data-label="Dados usados">
+                          Nome, e-mail, CPF, dados da assinatura
+                        </td>
+                        <td data-label="Base legal">
+                          Execução de contrato (art. 7º, V) e cumprimento de
+                          obrigação legal (art. 7º, II)
+                        </td>
+                      </tr>
+                      <tr>
+                        <td data-label="Para quê">
+                          Mostrar o clima no Início (Premium)
+                        </td>
+                        <td data-label="Dados usados">Localização</td>
+                        <td data-label="Base legal">
+                          Execução de contrato (art. 7º, V)
+                        </td>
+                      </tr>
+                      <tr>
+                        <td data-label="Para quê">
+                          Gerar números agregados para organizadores e parceiros
+                        </td>
+                        <td data-label="Dados usados">
+                          Atividade no app, sempre agregada, sem identificar
+                          você
+                        </td>
+                        <td data-label="Base legal">
+                          Legítimo interesse (art. 7º, IX)
+                        </td>
+                      </tr>
+                      <tr>
+                        <td data-label="Para quê">
+                          Melhorar o app e o Concierge e corrigir erros
+                        </td>
+                        <td data-label="Dados usados">
+                          Perguntas e avaliações do Concierge, dados técnicos
+                        </td>
+                        <td data-label="Base legal">
+                          Legítimo interesse (art. 7º, IX)
+                        </td>
+                      </tr>
+                      <tr>
+                        <td data-label="Para quê">
+                          Proteger o serviço contra fraude e abuso e guardar
+                          registros de acesso
+                        </td>
+                        <td data-label="Dados usados">
+                          Endereço IP, data e hora, identificador da conta
+                        </td>
+                        <td data-label="Base legal">
+                          Cumprimento de obrigação legal (Marco Civil, art. 15)
+                          e legítimo interesse (art. 7º, IX)
+                        </td>
+                      </tr>
+                      <tr>
+                        <td data-label="Para quê">
+                          Atender você e cumprir pedidos sobre seus direitos
+                        </td>
+                        <td data-label="Dados usados">
+                          E-mail, mensagens e dados do pedido
+                        </td>
+                        <td data-label="Base legal">
+                          Cumprimento de obrigação legal (art. 7º, II) e
+                          exercício regular de direitos (art. 7º, VI)
+                        </td>
+                      </tr>
+                      <tr>
+                        <td data-label="Para quê">Lista de espera do site</td>
+                        <td data-label="Dados usados">E-mail, cidade</td>
+                        <td data-label="Base legal">
+                          Consentimento (art. 7º, I)
+                        </td>
+                      </tr>
+                      <tr>
+                        <td data-label="Para quê">
+                          Contato comercial pelo site
+                        </td>
+                        <td data-label="Dados usados">
+                          Empresa, cidade, e-mail, telefone, mensagem
+                        </td>
+                        <td data-label="Base legal">
+                          Procedimentos preliminares a um contrato, a seu pedido
+                          (art. 7º, V)
+                        </td>
+                      </tr>
+                    </tbody>
+                  </table>
+                  <p>
+                    Quando a base legal é o consentimento, você pode retirá-lo
+                    quando quiser. Quando é o legítimo interesse, você pode se
+                    opor ao tratamento. Veja como na seção 8.
+                  </p>
+                </section>
+
+                <!-- 4 -->
+                <section
+                  class="privacy-section"
+                  id="compartilhamento"
+                  aria-labelledby="compartilhamento-title"
+                >
+                  <h2
+                    class="privacy-section__title"
+                    id="compartilhamento-title"
+                  >
+                    4. Com quem compartilhamos
+                  </h2>
+
+                  <h3 class="privacy-section__subtitle">
+                    4.1 Outros usuários: “Quem vai”
+                  </h3>
+                  <p>
+                    Quando você marca Quero ir em um evento, sua foto de perfil
+                    pode aparecer para outros usuários Premium que também
+                    marcaram Quero ir nesse evento. Seu nome, e-mail e telefone
+                    não aparecem. Para sair dessa lista, desative a opção
+                    Aparecer em “Quem vai” no seu perfil.
+                  </p>
+
+                  <h3 class="privacy-section__subtitle">
+                    4.2 Organizadores e parceiros
+                  </h3>
+                  <p>
+                    Organizadores de eventos e comércios parceiros recebem só
+                    números agregados, como quantas pessoas marcaram Quero ir,
+                    tocaram no link de ingressos ou copiaram um cupom, sem nada
+                    que identifique você. O código do cupom é o mesmo para
+                    todos: o parceiro confere o código no caixa sem receber seus
+                    dados.
+                  </p>
+
+                  <h3 class="privacy-section__subtitle">
+                    4.3 Fornecedores que trabalham para nós
+                  </h3>
+                  <p>
+                    Estes fornecedores tratam dados em nosso nome, só para as
+                    tarefas abaixo:
+                  </p>
+                  <table class="privacy-table">
+                    <thead>
+                      <tr>
+                        <th scope="col">Fornecedor</th>
+                        <th scope="col">Para quê</th>
+                        <th scope="col">Dados</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <td data-label="Fornecedor">Google</td>
+                        <td data-label="Para quê">
+                          Login com Google, mapa do app no Android, inteligência
+                          artificial do Concierge (Gemini) e fontes do site
+                        </td>
+                        <td data-label="Dados">
+                          Dados da conta Google, uso do mapa, texto das
+                          perguntas ao Concierge, endereço IP
+                        </td>
+                      </tr>
+                      <tr>
+                        <td data-label="Fornecedor">Apple</td>
+                        <td data-label="Para quê">
+                          Iniciar sessão com a Apple e mapa do app no iPhone
+                        </td>
+                        <td data-label="Dados">
+                          Dados da conta Apple, uso do mapa
+                        </td>
+                      </tr>
+                      <tr>
+                        <td data-label="Fornecedor">Groq</td>
+                        <td data-label="Para quê">
+                          Inteligência artificial do Concierge
+                        </td>
+                        <td data-label="Dados">
+                          Texto das perguntas e da conversa, dados públicos dos
+                          eventos sugeridos e a distância até eles
+                        </td>
+                      </tr>
+                      <tr>
+                        <td data-label="Fornecedor">OneSignal</td>
+                        <td data-label="Para quê">Envio das notificações</td>
+                        <td data-label="Dados">
+                          Identificador do aparelho e da conta, dados técnicos
+                          do aparelho, conteúdo das notificações
+                        </td>
+                      </tr>
+                      <tr>
+                        <td data-label="Fornecedor">Asaas</td>
+                        <td data-label="Para quê">Pagamentos do Premium</td>
+                        <td data-label="Dados">
+                          Nome, e-mail, CPF, dados da cobrança
+                        </td>
+                      </tr>
+                      <tr>
+                        <td data-label="Fornecedor">Cloudflare</td>
+                        <td data-label="Para quê">
+                          Rede e segurança da conexão com o app, armazenamento
+                          de fotos e mídias e entrega de arquivos do site
+                        </td>
+                        <td data-label="Dados">
+                          Endereço IP, foto de perfil, dados que trafegam entre
+                          o app e nossos servidores
+                        </td>
+                      </tr>
+                      <tr>
+                        <td data-label="Fornecedor">
+                          OpenStreetMap (Nominatim)
+                        </td>
+                        <td data-label="Para quê">
+                          Descobrir a cidade a partir da sua localização
+                        </td>
+                        <td data-label="Dados">Coordenadas</td>
+                      </tr>
+                      <tr>
+                        <td data-label="Fornecedor">Open-Meteo</td>
+                        <td data-label="Para quê">Clima no Início (Premium)</td>
+                        <td data-label="Dados">Coordenadas</td>
+                      </tr>
+                      <tr>
+                        <td data-label="Fornecedor">Netlify</td>
+                        <td data-label="Para quê">
+                          Hospedagem do site e dos formulários
+                        </td>
+                        <td data-label="Dados">
+                          Dados dos formulários, endereço IP
+                        </td>
+                      </tr>
+                      <tr>
+                        <td data-label="Fornecedor">Provedores de nuvem</td>
+                        <td data-label="Para quê">
+                          Servidores e banco de dados do MyWeek
+                        </td>
+                        <td data-label="Dados">
+                          Os dados descritos nesta política
+                        </td>
+                      </tr>
+                    </tbody>
+                  </table>
+
+                  <h3 class="privacy-section__subtitle">4.4 Autoridades</h3>
+                  <p>
+                    Podemos compartilhar dados quando a lei exigir, por ordem
+                    judicial ou pedido de autoridade competente, ou para
+                    proteger direitos do MyWeek, dos usuários ou de terceiros.
+                  </p>
+
+                  <h3 class="privacy-section__subtitle">
+                    4.5 Mudanças na empresa
+                  </h3>
+                  <p>
+                    Em caso de fusão, aquisição ou venda do MyWeek, os dados
+                    podem passar para a empresa sucessora, que deverá respeitar
+                    esta política.
+                  </p>
+
+                  <h3 class="privacy-section__subtitle">
+                    4.6 Sites e apps de terceiros
+                  </h3>
+                  <p>
+                    O MyWeek não vende ingressos. O botão de compra abre o site
+                    oficial do evento, e os links de rota, WhatsApp e outros
+                    levam a serviços de terceiros, que seguem as próprias
+                    políticas de privacidade.
+                  </p>
+                </section>
+
+                <!-- 5 -->
+                <section
+                  class="privacy-section"
+                  id="inteligencia-artificial"
+                  aria-labelledby="inteligencia-artificial-title"
+                >
+                  <h2
+                    class="privacy-section__title"
+                    id="inteligencia-artificial-title"
+                  >
+                    5. Inteligência artificial no Concierge
+                  </h2>
+                  <p>
+                    O Concierge usa inteligência artificial para entender sua
+                    pergunta e sugerir eventos da agenda do MyWeek. Para isso,
+                    enviamos à Groq, que gera as respostas, e ao Google
+                    (Gemini), usado como alternativa e para buscar eventos pelo
+                    sentido da pergunta:
+                  </p>
+                  <ul class="privacy-list">
+                    <li class="privacy-list__item">
+                      o texto da pergunta e das mensagens anteriores da mesma
+                      conversa;
+                    </li>
+                    <li class="privacy-list__item">
+                      dados públicos dos eventos candidatos: título, categorias,
+                      data e hora, se é gratuito, se tem benefícios e a
+                      distância até você.
+                    </li>
+                  </ul>
+                  <p>
+                    Não enviamos seu nome, e-mail, telefone ou suas coordenadas.
+                    Esses provedores tratam o conteúdo conforme os próprios
+                    termos, que podem permitir o uso para melhorar os serviços
+                    deles. Por isso, não escreva dados pessoais, dados sensíveis
+                    ou informações de outras pessoas nas perguntas.
+                  </p>
+                  <p>
+                    As respostas são geradas automaticamente e podem conter
+                    erros: confira data, local e preço no detalhe do evento. As
+                    sugestões do feed e do Concierge são personalizadas pelos
+                    seus gostos e pela sua localização. Você pode pedir
+                    informações sobre os critérios usados e a revisão de
+                    decisões tomadas só com base em tratamento automatizado
+                    (art. 20 da LGPD).
+                  </p>
+                </section>
+
+                <!-- 6 -->
+                <section
+                  class="privacy-section"
+                  id="transferencia"
+                  aria-labelledby="transferencia-title"
+                >
+                  <h2 class="privacy-section__title" id="transferencia-title">
+                    6. Transferência internacional
+                  </h2>
+                  <p>
+                    Alguns fornecedores da seção 4 ficam ou processam dados fora
+                    do Brasil, por exemplo nos Estados Unidos e na Europa. Essas
+                    transferências são necessárias para prestar o serviço que
+                    você usa (art. 33, IX, da LGPD). Enviamos a cada fornecedor
+                    só o necessário para a tarefa dele: para a consulta do
+                    clima, por exemplo, vão só as coordenadas.
+                  </p>
+                </section>
+
+                <!-- 7 -->
+                <section
+                  class="privacy-section"
+                  id="retencao"
+                  aria-labelledby="retencao-title"
+                >
+                  <h2 class="privacy-section__title" id="retencao-title">
+                    7. Por quanto tempo guardamos
+                  </h2>
+                  <ul class="privacy-list">
+                    <li class="privacy-list__item">
+                      <strong>Conta ativa:</strong> guardamos seus dados
+                      enquanto a conta existir. O último local usado nos filtros
+                      é substituído a cada nova leitura.
+                    </li>
+                    <li class="privacy-list__item">
+                      <strong>Conta desativada:</strong> se você desativar a
+                      conta no app, os dados continuam guardados para que você
+                      possa voltar a entrar com a mesma conta. Para apagá-los,
+                      peça a exclusão (seção 8).
+                    </li>
+                    <li class="privacy-list__item">
+                      <strong>Conta excluída:</strong> depois que você confirma
+                      o pedido de exclusão, apagamos seus dados em até 15 dias.
+                    </li>
+                    <li class="privacy-list__item">
+                      <strong>O que fica guardado depois da exclusão:</strong>
+                      registros de acesso (IP, data e hora) por 6 meses, como
+                      exige o Marco Civil da Internet (art. 15); registros de
+                      pagamento do Premium pelo prazo da legislação fiscal (5
+                      anos); dados necessários para cumprir outra obrigação
+                      legal ou para nos defender em processos, pelo prazo
+                      previsto em lei (art. 16 da LGPD); e números anonimizados,
+                      que não identificam você.
+                    </li>
+                    <li class="privacy-list__item">
+                      <strong>Formulários do site:</strong> a lista de espera
+                      fica guardada até o lançamento na sua cidade ou até você
+                      pedir para sair; os contatos comerciais, enquanto durar a
+                      conversa ou a relação comercial; e os pedidos de exclusão,
+                      pelo tempo necessário para comprovar que foram atendidos.
+                    </li>
+                  </ul>
+                </section>
+
+                <!-- 8 -->
+                <section
+                  class="privacy-section"
+                  id="direitos"
+                  aria-labelledby="direitos-title"
+                >
+                  <h2 class="privacy-section__title" id="direitos-title">
+                    8. Seus direitos
+                  </h2>
+                  <p>Pela LGPD (art. 18), você pode:</p>
+                  <ul class="privacy-list">
+                    <li class="privacy-list__item">
+                      confirmar se tratamos seus dados e ter acesso a eles;
+                    </li>
+                    <li class="privacy-list__item">
+                      corrigir dados incompletos, inexatos ou desatualizados;
+                    </li>
+                    <li class="privacy-list__item">
+                      pedir a anonimização, o bloqueio ou a eliminação de dados
+                      desnecessários, excessivos ou tratados em desacordo com a
+                      lei;
+                    </li>
+                    <li class="privacy-list__item">
+                      pedir a portabilidade dos seus dados para outro
+                      fornecedor;
+                    </li>
+                    <li class="privacy-list__item">
+                      pedir a eliminação dos dados tratados com o seu
+                      consentimento;
+                    </li>
+                    <li class="privacy-list__item">
+                      saber com quem compartilhamos seus dados;
+                    </li>
+                    <li class="privacy-list__item">
+                      saber que pode não dar consentimento e o que acontece
+                      nesse caso;
+                    </li>
+                    <li class="privacy-list__item">
+                      retirar o consentimento a qualquer momento;
+                    </li>
+                    <li class="privacy-list__item">
+                      se opor a tratamentos baseados em legítimo interesse;
+                    </li>
+                    <li class="privacy-list__item">
+                      pedir a revisão de decisões tomadas só com base em
+                      tratamento automatizado;
+                    </li>
+                    <li class="privacy-list__item">
+                      reclamar à Autoridade Nacional de Proteção de Dados
+                      (ANPD).
+                    </li>
+                  </ul>
+
+                  <h3 class="privacy-section__subtitle">
+                    Como exercer seus direitos
+                  </h3>
+                  <ul class="privacy-list">
+                    <li class="privacy-list__item">
+                      <strong>No app:</strong> edite nome, foto e telefone em
+                      Perfil › Editar perfil; mude estilos, raio de busca e
+                      cidade; saia de “Quem vai”; desligue a sincronização com a
+                      Google Agenda; ou desative a conta.
+                    </li>
+                    <li class="privacy-list__item">
+                      <strong>No aparelho:</strong> permita ou bloqueie
+                      localização, notificações e fotos nas configurações do
+                      sistema.
+                    </li>
+                    <li class="privacy-list__item">
+                      <strong>Exclusão da conta:</strong> peça em
+                      <a href="/excluir-conta"
+                        >myweekoficial.com.br/excluir-conta</a
+                      >, sem precisar abrir o app.
+                    </li>
+                    <li class="privacy-list__item">
+                      <strong>Novidades por e-mail e SMS:</strong> para deixar
+                      de receber, use a opção de descadastro da própria mensagem
+                      ou escreva para o encarregado.
+                    </li>
+                    <li class="privacy-list__item">
+                      <strong>Demais pedidos:</strong> escreva para
+                      <a href="mailto:myweekoficial@gmail.com"
+                        >myweekoficial@gmail.com</a
+                      >
+                    </li>
+                  </ul>
+                  <p>
+                    Podemos pedir informações para confirmar que o pedido é seu.
+                    Respondemos em até 15 dias.
+                  </p>
+                </section>
+
+                <!-- 9 -->
+                <section
+                  class="privacy-section"
+                  id="seguranca"
+                  aria-labelledby="seguranca-title"
+                >
+                  <h2 class="privacy-section__title" id="seguranca-title">
+                    9. Segurança
+                  </h2>
+                  <p>
+                    Usamos conexão criptografada (HTTPS) entre o app, o site e
+                    nossos servidores; guardamos as chaves de acesso no
+                    armazenamento seguro do aparelho; renovamos as sessões com
+                    frequência; limitamos o acesso aos dados às pessoas e aos
+                    sistemas que precisam deles; e aplicamos limites contra
+                    abuso.
+                  </p>
+                  <p>
+                    Nenhum sistema é totalmente seguro. Se um incidente de
+                    segurança puder trazer risco ou dano relevante a você,
+                    avisaremos você e a ANPD, como manda a LGPD (art. 48).
+                  </p>
+                </section>
+
+                <!-- 10 -->
+                <section
+                  class="privacy-section"
+                  id="permissoes"
+                  aria-labelledby="permissoes-title"
+                >
+                  <h2 class="privacy-section__title" id="permissoes-title">
+                    10. Permissões do aparelho
+                  </h2>
+                  <ul class="privacy-list">
+                    <li class="privacy-list__item">
+                      <strong>Localização (enquanto o app está em uso):</strong>
+                      para mostrar eventos perto de você e o clima. Sem ela, o
+                      filtro por GPS não funciona.
+                    </li>
+                    <li class="privacy-list__item">
+                      <strong>Notificações:</strong> para lembretes, avisos de
+                      cancelamento e novidades.
+                    </li>
+                    <li class="privacy-list__item">
+                      <strong>Fotos:</strong> para escolher a foto de perfil.
+                    </li>
+                    <li class="privacy-list__item">
+                      <strong>Google Agenda (opcional):</strong> para adicionar
+                      à sua agenda os eventos que você marca.
+                    </li>
+                  </ul>
+                  <p>
+                    Você pode mudar essas permissões quando quiser nas
+                    configurações do aparelho.
+                  </p>
+                </section>
+
+                <!-- 11 -->
+                <section
+                  class="privacy-section"
+                  id="menores"
+                  aria-labelledby="menores-title"
+                >
+                  <h2 class="privacy-section__title" id="menores-title">
+                    11. Crianças e adolescentes
+                  </h2>
+                  <p>
+                    O MyWeek é destinado a pessoas com 18 anos ou mais. Não
+                    coletamos de propósito dados de crianças e adolescentes; se
+                    soubermos que isso aconteceu, apagaremos os dados. Se você é
+                    responsável por um menor de idade que criou uma conta,
+                    escreva para
+                    <a href="mailto:myweekoficial@gmail.com"
+                      >myweekoficial@gmail.com</a
+                    >
+                  </p>
+                </section>
+
+                <!-- 12 -->
+                <section
+                  class="privacy-section"
+                  id="cookies"
+                  aria-labelledby="cookies-title"
+                >
+                  <h2 class="privacy-section__title" id="cookies-title">
+                    12. Cookies e armazenamento no navegador
+                  </h2>
+                  <p>
+                    O site não usa cookies de publicidade nem ferramentas de
+                    análise de visitas. Ele guarda no seu navegador só a sua
+                    preferência de tema (claro ou escuro) e de idioma e a
+                    informação de que você já enviou um formulário.
+                  </p>
+                  <p>
+                    Para carregar fontes e scripts, o site usa o Google Fonts e
+                    o cdnjs, da Cloudflare, que recebem o endereço IP do seu
+                    aparelho. Na versão em inglês, o site consulta o serviço
+                    Frankfurter para mostrar o preço do Premium em dólar.
+                  </p>
+                </section>
+
+                <!-- 13 -->
+                <section
+                  class="privacy-section"
+                  id="alteracoes"
+                  aria-labelledby="alteracoes-title"
+                >
+                  <h2 class="privacy-section__title" id="alteracoes-title">
+                    13. Mudanças nesta política
+                  </h2>
+                  <p>
+                    Podemos atualizar esta política quando o app mudar ou a lei
+                    exigir. A data e a versão no topo da página mostram a última
+                    atualização. Se a mudança for relevante, avisaremos no app
+                    e, quando a lei exigir, pediremos seu consentimento de novo.
+                  </p>
+                </section>
+              </div>
+            </div>
+          </div>
+        </article>
+      </main>
+
+      <footer class="footer">
+        <div class="container footer__links">
+          <a href="/" data-i18n="nav.forPublic">Para o público</a>
+          <a href="/negocios" data-i18n="nav.businesses">Para negócios</a>
+          <a
+            class="js-whatsapp-url"
+            href="https://wa.me/5571993184341"
+            target="_blank"
+            rel="noopener noreferrer"
+            data-i18n="whatsapp.label"
+            data-i18n-aria-label="whatsapp.aria"
+            >Falar no WhatsApp</a
+          >
+          <a href="/privacidade" data-i18n="footer.privacy" aria-current="page"
+            >Política de Privacidade</a
+          >
+          <a href="/excluir-conta" data-i18n="footer.deleteAccount"
+            >Excluir conta e dados</a
+          >
+        </div>
+        <div class="footer__bottom">
+          <p class="footer__copy" data-i18n="footer.copy">© 2026 MyWeek</p>
+          <p class="footer__credit" data-i18n="footer.credit">
+            Desenvolvido por Aeon SoftHouse
+          </p>
+        </div>
+      </footer>
+    </div>
+
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/vanilla-tilt/1.8.1/vanilla-tilt.min.js"
+      defer
+    ></script>
+    <script src="/src/js/i18n.js?v=privacidade-v1" defer></script>
+    <script src="/src/js/theme.js?v=restruct-v2" defer></script>
+    <script src="/src/js/animations.js?v=restruct-v2" defer></script>
+    <script src="/src/js/main.js?v=restruct-v2" defer></script>
+  </body>
+</html>

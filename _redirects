@@ -6,3 +6,7 @@
 # URL de exclusão de conta informada na Google Play.
 /excluir-conta    /excluir-conta.html   200
 /excluir-conta/   /excluir-conta.html   200
+
+# URL da Política de Privacidade informada na Google Play e na App Store.
+/privacidade    /privacidade.html   200
+/privacidade/   /privacidade.html   200
