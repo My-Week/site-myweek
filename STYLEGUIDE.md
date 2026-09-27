@@ -103,8 +103,14 @@ O site tem duas portas, uma marca:
 - **`index.html` (`/`)** — público (B2C): hero, como funciona, o app, lista de espera, planos Basic/Premium, sobre e a ponte para negócios.
 - **`negocios.html` (`/negocios`)** — comercial (B2B): hero próprio, os três perfis (organizador, comércio, bilheteria), transparência, modelo de cobrança e formulário.
 
-Cada página carrega só o JS que usa. `negocios.html` declara
-`data-title-key="pageTitleBusiness"` no `<html>` para o i18n trocar o `<title>` certo.
+Fora das duas portas, **`excluir-conta.html` (`/excluir-conta`)** atende a Google Play: pedido de
+exclusão de conta e dados, com link no rodapé de todas as páginas. Reaproveita o card do contato
+(`.commercial__inner`, `.commercial__form`), com o resto em `src/css/deletion.css` e o formulário
+Netlify `exclusao-dados` em `src/js/deletion.js`. Não usa `data-reveal`: o conteúdo precisa aparecer
+mesmo sem JS.
+
+Cada página carrega só o JS que usa. `negocios.html` e `excluir-conta.html` declaram
+`data-title-key` (`pageTitleBusiness`, `pageTitleDeletion`) no `<html>` para o i18n trocar o `<title>` certo.
 Estilos das seções da reestruturação ficam em `src/css/restructure.css`.
 
 ---

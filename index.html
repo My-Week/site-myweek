@@ -69,6 +69,13 @@
     <input name="cidade" type="text">
     <input name="bot-field" type="text" tabindex="-1" autocomplete="off">
   </form>
+  <form name="exclusao-dados" method="POST" action="/" data-netlify="true" netlify-honeypot="bot-field" style="display: none;" aria-hidden="true">
+    <input type="hidden" name="form-name" value="exclusao-dados">
+    <input name="tipo" type="text">
+    <input name="email" type="email">
+    <textarea name="detalhes"></textarea>
+    <input name="bot-field" type="text" tabindex="-1" autocomplete="off">
+  </form>
 
   <div class="layout">
 
@@ -478,6 +485,7 @@
         <a href="/" data-i18n="nav.forPublic">Para o público</a>
         <a href="/negocios" data-i18n="nav.businesses">Para negócios</a>
         <a class="js-whatsapp-url" href="https://wa.me/5571993184341" target="_blank" rel="noopener noreferrer" data-i18n="whatsapp.label" data-i18n-aria-label="whatsapp.aria">Falar no WhatsApp</a>
+        <a href="/excluir-conta" data-i18n="footer.deleteAccount">Excluir conta e dados</a>
       </div>
       <div class="footer__bottom">
         <p class="footer__copy" data-i18n="footer.copy">© 2026 MyWeek</p>
@@ -489,7 +497,7 @@
   <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js" defer></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js" defer></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/vanilla-tilt/1.8.1/vanilla-tilt.min.js" defer></script>
-  <script src="/src/js/i18n.js?v=restruct-v2" defer></script>
+  <script src="/src/js/i18n.js?v=exclusao-v1" defer></script>
   <script src="/src/js/theme.js?v=restruct-v2" defer></script>
   <script src="/src/js/animations.js?v=restruct-v2" defer></script>
   <script src="/src/js/carousel.js?v=restruct-v2" defer></script>

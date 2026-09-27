@@ -1,0 +1,256 @@
+/* ============================================
+   MyWeek - Exclusão de conta e dados (/excluir-conta)
+   Página exigida pela Google Play. O card e os campos reaproveitam o
+   contato de /negocios (.commercial__inner, .commercial__form); aqui fica
+   só o que é desta página. Tokens de variables.css: dark e light.
+   ============================================ */
+
+/* ---------- Abertura ---------- */
+.deletion {
+  padding: var(--space-3xl) 0 var(--section-padding-y);
+}
+
+@media (min-width: 1024px) {
+  .deletion {
+    padding-top: var(--space-4xl);
+  }
+}
+
+.deletion__intro {
+  max-width: 44rem;
+  margin: 0 auto var(--space-3xl);
+  text-align: center;
+}
+
+.deletion__eyebrow {
+  margin-bottom: var(--space-md);
+  font-size: 0.75rem;
+  font-weight: 600;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--primary-text-mobile);
+}
+
+.deletion__title {
+  font-size: clamp(2rem, 4.5vw, 3.25rem);
+}
+
+.deletion__lead {
+  max-width: 36rem;
+  margin: 0 auto;
+  font-size: 1.05rem;
+  line-height: 1.75;
+  color: var(--text-low);
+}
+
+/* ---------- Passos (coluna de texto do card) ---------- */
+.deletion__heading {
+  font-size: clamp(1.4rem, 2.6vw, 1.75rem);
+  margin-bottom: var(--space-sm);
+}
+
+.deletion-steps {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-lg);
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.deletion-steps__item {
+  display: grid;
+  grid-template-columns: 2.25rem minmax(0, 1fr);
+  gap: var(--space-md);
+  align-items: start;
+}
+
+/* Mesmo chip de número do ciclo da home (.loop__num) */
+.deletion-steps__num {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 2.25rem;
+  height: 2.25rem;
+  border-radius: var(--radius-full);
+  background: var(--bg-primary-tint);
+  border: 1px solid rgba(124, 58, 237, 0.35);
+  color: var(--primary-vibrant);
+  font-family: var(--font-family-heading);
+  font-size: 1.05rem;
+  font-weight: 700;
+}
+
+.deletion-steps__title {
+  margin-bottom: 0.25em;
+  font-family: var(--font-family-heading);
+  font-size: 1.1rem;
+  font-weight: 700;
+  line-height: 1.4;
+  color: var(--text-high);
+}
+
+.deletion-steps__text {
+  font-size: 0.9375rem;
+  line-height: 1.7;
+  color: var(--text-low);
+}
+
+.deletion__note {
+  margin-top: var(--space-sm);
+  padding: var(--space-md) var(--space-lg);
+  border-left: 2px solid rgba(124, 58, 237, 0.4);
+  border-radius: 0 var(--radius-md) var(--radius-md) 0;
+  background: var(--glass-bg-subtle);
+  font-size: 0.9375rem;
+  line-height: 1.7;
+  color: var(--text-low);
+}
+
+.deletion__link {
+  align-self: flex-start;
+  font-size: 0.9375rem;
+  font-weight: var(--font-weight-body-strong);
+  color: var(--primary-text-mobile);
+  text-decoration: underline;
+  text-underline-offset: 4px;
+}
+
+/* ---------- Formulário ---------- */
+/* Pílula em degradê como o envio do contato, mas sem o pulso de "pronto":
+   não faz sentido empolgar ninguém a excluir a conta. */
+.deletion__submit {
+  width: 100%;
+  margin-top: var(--space-sm);
+  border-radius: var(--radius-full);
+}
+
+.deletion__submit:disabled {
+  opacity: 0.7;
+  cursor: not-allowed;
+  transform: none;
+}
+
+.deletion__privacy {
+  font-size: 0.8125rem;
+  color: var(--text-muted);
+  text-align: center;
+}
+
+.deletion__form--locked .form-input,
+.deletion__form--locked .deletion__submit {
+  opacity: 0.5;
+}
+
+/* Select desativado sai da validação e perde o :valid que sobe o rótulo */
+.deletion__form--locked .form-select ~ .form-label {
+  top: 0.55rem;
+  transform: none;
+  font-size: 0.7rem;
+  letter-spacing: 0.02em;
+}
+
+.deletion__success-title {
+  margin-bottom: 0.35em;
+  font-family: var(--font-family-heading);
+  font-size: 1.15rem;
+  font-weight: 700;
+}
+
+.deletion__success-text {
+  font-size: 0.9375rem;
+  line-height: 1.7;
+}
+
+/* ---------- O que é excluído / o que fica ---------- */
+.deletion-data {
+  padding: var(--section-padding-y) 0;
+  background: var(--bg-deep-soft);
+  border-top: 1px solid var(--border-subtle);
+}
+
+.deletion-data__title {
+  font-size: clamp(1.6rem, 3.6vw, 2.4rem);
+  text-align: center;
+  margin-bottom: 0.4em;
+}
+
+.deletion-data__lead {
+  max-width: 34rem;
+  margin: 0 auto var(--space-3xl);
+  color: var(--text-low);
+  text-align: center;
+}
+
+.deletion-data__grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--space-lg);
+  max-width: 62rem;
+  margin: 0 auto;
+}
+
+@media (min-width: 768px) {
+  .deletion-data__grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: var(--space-xl);
+  }
+}
+
+/* Mesma pele dos itens de transparência (.transparency__item); o que fica
+   guardado leva o ciano para separar do que sai. */
+.deletion-data__card {
+  padding: var(--space-xl);
+  border-left: 2px solid rgba(124, 58, 237, 0.4);
+  border-radius: 0 var(--radius-md) var(--radius-md) 0;
+  background: var(--glass-bg-subtle);
+}
+
+.deletion-data__card--kept {
+  border-left-color: rgba(6, 182, 212, 0.45);
+}
+
+.deletion-data__card-title {
+  margin-bottom: var(--space-md);
+  font-family: var(--font-family-heading);
+  font-size: 1.15rem;
+  font-weight: 700;
+  color: var(--text-high);
+}
+
+.deletion-data__list {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-md);
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.deletion-data__item {
+  position: relative;
+  padding-left: 1.25rem;
+  font-size: 0.9375rem;
+  line-height: 1.7;
+  color: var(--text-low);
+}
+
+.deletion-data__item::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0.65em;
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: var(--primary-vibrant);
+}
+
+.deletion-data__card--kept .deletion-data__item::before {
+  background: var(--cyan-neon);
+}
+
+.deletion-data__label {
+  font-weight: 600;
+  color: var(--text-high);
+}

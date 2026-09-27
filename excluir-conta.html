@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="pt-BR" data-theme="dark" data-title-key="pageTitleDeletion">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Peça a exclusão da sua conta no app MyWeek e dos dados ligados a ela, sem abrir o app. Veja o que é excluído e o que fica guardado." data-i18n-content="pageDescriptionDeletion">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="MyWeek | Excluir conta e dados" data-i18n-content="pageTitleDeletion">
+  <meta property="og:description" content="Peça a exclusão da sua conta no app MyWeek e dos dados ligados a ela, sem abrir o app. Veja o que é excluído e o que fica guardado." data-i18n-content="pageDescriptionDeletion">
+  <meta property="og:locale" content="pt_BR">
+  <link rel="canonical" href="https://myweekoficial.com.br/excluir-conta">
+  <title>MyWeek | Excluir conta e dados</title>
+  <link rel="icon" type="image/svg+xml" href="/assets/images/logo-myweek.svg">
+  <link rel="apple-touch-icon" href="/assets/images/logo-myweek.svg">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Outfit:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/src/css/main.css?v=restruct-v2">
+  <link rel="stylesheet" href="/src/css/ultrawide.css?v=restruct-v2">
+  <link rel="stylesheet" href="/src/css/restructure.css?v=restruct-v2">
+  <link rel="stylesheet" href="/src/css/deletion.css?v=exclusao-v1">
+  <script>
+    (function() {
+      var key = 'myweek_lang';
+      var stored;
+      try { stored = localStorage.getItem(key); } catch (e) {}
+      var lang = (stored === 'en' || stored === 'pt') ? stored : (function() {
+        try {
+          var n = (typeof navigator !== 'undefined' && navigator.language ? navigator.language : '').toLowerCase();
+          return (n.indexOf('pt') === 0) ? 'pt' : 'en';
+        } catch (e) { return 'en'; }
+      })();
+      window.__MYWEEK_LANG = lang;
+      document.documentElement.lang = lang === 'en' ? 'en' : 'pt-BR';
+      if (lang === 'en') document.documentElement.classList.add('i18n-wait');
+    })();
+  </script>
+  <script>
+    (function() {
+      try {
+        var t = localStorage.getItem('myweek_theme');
+        document.documentElement.setAttribute('data-theme', (t === 'light' || t === 'dark') ? t : 'dark');
+      } catch (e) {}
+    })();
+  </script>
+</head>
+<body>
+  <div class="layout">
+
+    <!-- ========== Header / Navegação ========== -->
+    <header class="header">
+      <div class="container">
+        <a href="/" class="logo" aria-label="MyWeek - Página inicial">
+          <img src="/assets/images/logo-myweek.svg" alt="Logo MyWeek" class="logo__icon" width="38" height="38">
+          <div class="logo-wrapper">
+            <span class="logo__text">My Week</span>
+          </div>
+        </a>
+        <nav class="nav" aria-label="Navegação principal" data-i18n-aria-label="nav.mainLabel">
+          <button type="button" class="nav-close" data-i18n-aria-label="nav.close" data-i18n-title="nav.close" aria-label="Fechar menu" title="Fechar menu">✕</button>
+          <a href="/" data-i18n="nav.forPublic">Para o público</a>
+          <a href="/negocios" data-i18n="nav.businesses">Para negócios</a>
+
+          <a href="#" class="btn nav__login js-login-url" data-i18n="nav.login" data-i18n-aria-label="nav.loginAria" aria-label="Acessar login MyWeek">Login</a>
+
+        </nav>
+        <div class="nav-backdrop" aria-hidden="true"></div>
+        <button type="button" class="nav-toggle" data-i18n-aria-label="nav.open" aria-label="Abrir menu" aria-expanded="false">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+      </div>
+    </header>
+
+    <main class="main">
+
+      <!-- ========== Pedido de exclusão ==========
+           URL informada na Google Play. Sem data-reveal: o conteúdo não pode
+           depender de JS para aparecer. -->
+      <section class="deletion" id="top">
+        <div class="container">
+          <div class="deletion__intro">
+            <p class="deletion__eyebrow" data-i18n="deletion.eyebrow">Privacidade e dados</p>
+            <h1 class="deletion__title" data-i18n="deletion.title">Excluir sua conta e seus dados do MyWeek</h1>
+            <p class="deletion__lead" data-i18n="deletion.lead">Por aqui você pede a exclusão da sua conta no app MyWeek e dos dados ligados a ela. Não precisa abrir o app nem fazer login.</p>
+          </div>
+
+          <div class="commercial__inner">
+            <div class="commercial__copy">
+              <h2 class="deletion__heading" data-i18n="deletion.stepsTitle">Como pedir</h2>
+              <ol class="deletion-steps">
+                <li class="deletion-steps__item">
+                  <span class="deletion-steps__num" aria-hidden="true">1</span>
+                  <div>
+                    <h3 class="deletion-steps__title" data-i18n="deletion.step1Title">Envie o pedido</h3>
+                    <p class="deletion-steps__text" data-i18n="deletion.step1Text">Preencha o formulário com o e-mail da sua conta no MyWeek e diga se quer excluir a conta inteira ou só alguns dados.</p>
+                  </div>
+                </li>
+                <li class="deletion-steps__item">
+                  <span class="deletion-steps__num" aria-hidden="true">2</span>
+                  <div>
+                    <h3 class="deletion-steps__title" data-i18n="deletion.step2Title">Confirme por e-mail</h3>
+                    <p class="deletion-steps__text" data-i18n="deletion.step2Text">A gente escreve para esse e-mail para confirmar que a conta é sua. Nada é excluído antes disso.</p>
+                  </div>
+                </li>
+                <li class="deletion-steps__item">
+                  <span class="deletion-steps__num" aria-hidden="true">3</span>
+                  <div>
+                    <h3 class="deletion-steps__title" data-i18n="deletion.step3Title">Exclusão concluída</h3>
+                    <p class="deletion-steps__text" data-i18n="deletion.step3Text">Depois da confirmação, excluímos o que você pediu em até 15 dias e avisamos por e-mail quando terminar.</p>
+                  </div>
+                </li>
+              </ol>
+              <p class="deletion__note" data-i18n="deletion.premiumNote">Assina o Premium? Cancele a assinatura na Google Play ou na App Store antes. Excluir a conta não cancela a cobrança da loja.</p>
+              <a class="deletion__link" href="#dados" data-i18n="deletion.dataLink">Ver o que é excluído e o que fica guardado</a>
+            </div>
+
+            <div class="commercial__form-wrap">
+              <form class="commercial__form deletion__form" name="exclusao-dados" method="POST" action="/" data-netlify="true" netlify-honeypot="bot-field" novalidate>
+                <input type="hidden" name="form-name" value="exclusao-dados">
+                <p class="commercial__honeypot" aria-hidden="true">
+                  <label for="deletion-bot-field" data-i18n="form.honeypotLabel">Não preencha este campo</label>
+                  <input id="deletion-bot-field" name="bot-field" type="text" tabindex="-1" autocomplete="off">
+                </p>
+                <div class="form-group form-group--float">
+                  <select class="form-input form-select" id="deletion-tipo" name="tipo" required>
+                    <option value="conta" selected data-i18n="deletion.typeAccount">A conta inteira</option>
+                    <option value="dados" data-i18n="deletion.typeData">Só alguns dados</option>
+                  </select>
+                  <label class="form-label" for="deletion-tipo" data-i18n="deletion.typeLabel">O que você quer excluir</label>
+                </div>
+                <div class="form-group form-group--float">
+                  <input class="form-input" type="email" id="deletion-email" name="email" placeholder=" " required autocomplete="email">
+                  <label class="form-label" for="deletion-email" data-i18n="deletion.emailLabel">E-mail da conta</label>
+                </div>
+                <div class="form-group form-group--float form-group--textarea">
+                  <textarea class="form-input form-textarea" id="deletion-detalhes" name="detalhes" placeholder=" " rows="4"></textarea>
+                  <label class="form-label" for="deletion-detalhes" data-i18n="deletion.detailsLabel">Mensagem (opcional)</label>
+                </div>
+                <button type="submit" class="btn btn--primary deletion__submit" data-i18n="deletion.submit">Pedir exclusão</button>
+                <p class="deletion__privacy" data-i18n="deletion.privacy">Usamos este e-mail só para confirmar e responder ao seu pedido.</p>
+              </form>
+              <p class="commercial__alt">
+                <span data-i18n="deletion.altText">Prefere falar com uma pessoa?</span>
+                <a class="js-whatsapp-url" href="https://wa.me/5571993184341" target="_blank" rel="noopener noreferrer" data-i18n="whatsapp.label" data-i18n-aria-label="deletion.whatsappAria">Falar no WhatsApp</a>
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ========== O que é excluído / o que fica ========== -->
+      <section class="deletion-data" id="dados">
+        <div class="container">
+          <h2 class="deletion-data__title" data-i18n="deletion.dataTitle">O que acontece com os seus dados</h2>
+          <p class="deletion-data__lead" data-i18n="deletion.dataLead">Quando a conta é excluída, isto é o que sai de vez e o que ainda fica guardado, e por quanto tempo.</p>
+          <div class="deletion-data__grid">
+            <article class="deletion-data__card">
+              <h3 class="deletion-data__card-title" data-i18n="deletion.deletedTitle">O que é excluído</h3>
+              <ul class="deletion-data__list">
+                <li class="deletion-data__item">
+                  <strong class="deletion-data__label" data-i18n="deletion.deleted1Label">Conta e perfil:</strong>
+                  <span data-i18n="deletion.deleted1Text">nome, e-mail e preferências de estilos e cidade.</span>
+                </li>
+                <li class="deletion-data__item">
+                  <strong class="deletion-data__label" data-i18n="deletion.deleted2Label">Atividade no app:</strong>
+                  <span data-i18n="deletion.deleted2Text">eventos marcados como Quero ir, cupons copiados e conversas com o Concierge.</span>
+                </li>
+                <li class="deletion-data__item">
+                  <strong class="deletion-data__label" data-i18n="deletion.deleted3Label">Localização e aparelho:</strong>
+                  <span data-i18n="deletion.deleted3Text">localização usada nos filtros e o registro do celular para notificações.</span>
+                </li>
+              </ul>
+            </article>
+            <article class="deletion-data__card deletion-data__card--kept">
+              <h3 class="deletion-data__card-title" data-i18n="deletion.keptTitle">O que fica guardado</h3>
+              <ul class="deletion-data__list">
+                <li class="deletion-data__item">
+                  <strong class="deletion-data__label" data-i18n="deletion.kept1Label">Registros de acesso (IP, data e hora):</strong>
+                  <span data-i18n="deletion.kept1Text">por 6 meses, como exige o Marco Civil da Internet (Lei 12.965/2014, art. 15). Depois, são apagados.</span>
+                </li>
+                <li class="deletion-data__item">
+                  <strong class="deletion-data__label" data-i18n="deletion.kept2Label">Pagamentos do Premium:</strong>
+                  <span data-i18n="deletion.kept2Text">os registros de cobrança ficam pelo prazo da legislação fiscal (5 anos).</span>
+                </li>
+                <li class="deletion-data__item">
+                  <strong class="deletion-data__label" data-i18n="deletion.kept3Label">Números anônimos:</strong>
+                  <span data-i18n="deletion.kept3Text">totais, como quantas pessoas marcaram Quero ir num evento, continuam nos relatórios de organizadores e parceiros, sem nada que identifique você.</span>
+                </li>
+              </ul>
+            </article>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <div class="container footer__links">
+        <a href="/" data-i18n="nav.forPublic">Para o público</a>
+        <a href="/negocios" data-i18n="nav.businesses">Para negócios</a>
+        <a class="js-whatsapp-url" href="https://wa.me/5571993184341" target="_blank" rel="noopener noreferrer" data-i18n="whatsapp.label" data-i18n-aria-label="whatsapp.aria">Falar no WhatsApp</a>
+        <a href="/excluir-conta" data-i18n="footer.deleteAccount">Excluir conta e dados</a>
+      </div>
+      <div class="footer__bottom">
+        <p class="footer__copy" data-i18n="footer.copy">© 2026 MyWeek</p>
+        <p class="footer__credit" data-i18n="footer.credit">Desenvolvido por Aeon SoftHouse</p>
+      </div>
+    </footer>
+  </div>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/vanilla-tilt/1.8.1/vanilla-tilt.min.js" defer></script>
+  <script src="/src/js/i18n.js?v=exclusao-v1" defer></script>
+  <script src="/src/js/theme.js?v=restruct-v2" defer></script>
+  <script src="/src/js/animations.js?v=restruct-v2" defer></script>
+  <script src="/src/js/deletion.js?v=exclusao-v1" defer></script>
+  <script src="/src/js/main.js?v=restruct-v2" defer></script>
+</body>
+</html>

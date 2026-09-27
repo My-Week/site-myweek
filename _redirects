@@ -2,3 +2,7 @@
 # Status 200 = rewrite: a URL na barra continua /negocios.
 /negocios    /negocios.html   200
 /negocios/   /negocios.html   200
+
+# URL de exclusão de conta informada na Google Play.
+/excluir-conta    /excluir-conta.html   200
+/excluir-conta/   /excluir-conta.html   200
